@@ -1,0 +1,216 @@
+/*
+
+My Colors:
+	Black    #20201D
+	Dark     #727365
+	Meduim   #BDBFAA
+	Light    #F2F0D5
+	Pink     #D93B48
+	Red      #D93232
+
+ */
+
+/* CSS Shorthand:
+	margin: TBLR;
+	margin: TB LR;
+	margin: T LR B;
+	margin: T R B L;
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:700italic&text=Alexander%20Klapheke);
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,600);
+
+/**** Structure ****/
+
+html {
+	margin: 0px 5px;
+	padding: 0px 5px;
+	/* background: #95A4B2 url(bg/acanthus.jpg) no-repeat center center fixed; */
+	background: #20201D;
+	/* background: #BDBFAA; */
+	/* -webkit-background-size: cover; */
+	/* -moz-background-size: cover; */
+	/* -o-background-size: cover; */
+	/* background-size: cover; */
+}
+
+body {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-kerning: normal;
+	font-variant-ligatures: common-ligatures;
+	line-height: 26px;
+	color: #BDBFAA;
+	-webkit-text-size-adjust:none;
+	min-height: 100%;
+	margin: 26px auto 0px;
+	padding: 60px 60px;
+}
+
+#content {
+	min-height:100%;
+}
+
+header {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 24pt;
+	color: #727365;
+	margin: 26px 0px 0px;
+	padding: 0px 20px 6px;
+}
+
+/**** Headings ****/
+
+h1, h2, h3, h4, h5, h6 {
+	color: #F2F0D5;
+	font-family: 'Playfair Display';
+	font-weight: bold;
+	font-style: normal;
+	/* text-shadow: 1px 1px 4px #D93B48; */
+	margin: 0px;
+}
+
+
+h1 {
+	font-size: 54px;
+	line-height: 64px;
+}
+
+h2 {
+	font-size: 24pt;
+	line-height: 34px;
+	margin-bottom: 18px;
+}
+
+h3 {
+	font-size: 24pt;
+}
+
+h4 {
+	font-size: 16pt;
+}
+
+h5 {
+	font-size: 16pt;
+}
+
+h6 {
+	font-size: 16pt;
+}
+
+/**** Text ****/
+
+p, address, figure, .vcard, ol, ul { /* major block-level elements */
+    margin: 0px 0px 26px;
+}
+
+#content p {
+	/* font-family: 'Old Standard TT', 'Georgia', sans-serif; */
+	text-align: justify;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+#content p + p {
+    text-indent: 2em; /* indent paragraphs after first */
+}
+
+/* abbr { */
+/* 	border-bottom: 1px dotted #727365; */
+/* } */
+
+/**** Links ****/
+
+.link {
+	display: inline-block;
+}
+
+.largelinks {
+	text-align: center;
+    margin: 26px 0px 0px;
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 36px;
+}
+
+.smalllinks {
+	text-align: center;
+    margin: 26px 0px 0px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+a[href], .smalllinks a[href] {
+	color: #BDBFAA;
+	text-decoration: none;
+	outline: none;
+	-webkit-transition: color 0.6s ease-in-out, text-shadow 0.6s ease-in-out;
+	-moz-transition:    color 0.6s ease-in-out, text-shadow 0.6s ease-in-out;
+	-o-transition:      color 0.6s ease-in-out, text-shadow 0.6s ease-in-out;
+	-ms-transition:     color 0.6s ease-in-out, text-shadow 0.6s ease-in-out;
+	transition:         color 0.6s ease-in-out, text-shadow 0.6s ease-in-out;
+}
+
+a[href]:hover, a[href]:active, a[href]:focus {
+	color: #BDBFAA !important;
+}
+
+/**** Selection ****/
+
+::selection {
+	background-color: #727365;
+	color: #F2F0D5;
+}
+
+::-moz-selection {
+	background-color: #727365;
+	color: #F2F0D5;
+}
+
+/**** Mobile Viewing ****/
+
+/* for iPads */
+@media only screen and (min-width: 800px) and (max-width: 956px){
+	body{
+		margin: 12px 5px 0px;
+		padding: 0px 5px;
+	}
+	.largelinks, .smalllinks {
+		margin: 26px 26px 0px;
+	}
+}
+
+/* for iPads */
+@media only screen and (min-width: 480px) and (max-width: 800px){
+	body{
+		margin: 12px 5px 0px;
+		padding: 0px 5px;
+	}
+	.largelinks, .smalllinks {
+		margin: 26px 26px 0px;
+	}
+}
+
+/* for iPhones */
+@media only screen and (max-width: 480px){
+	body{
+		margin: 12px 5px 0px;
+		padding: 0px 5px;
+	}
+	.largelinks, .smalllinks {
+		margin: 26px 26px 0px;
+	}
+}
+

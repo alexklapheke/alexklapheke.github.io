@@ -1,0 +1,6 @@
+		<item>
+			<title>$pagetitle$</title>
+			<link>https://alexklapheke.github.io/blog/$sourcefile$</link>
+			<description>$body$</description>
+			<pubDate>$date$</pubDate>
+		</item>
