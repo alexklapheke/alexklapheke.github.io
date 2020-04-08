@@ -93,6 +93,15 @@ abbr {
 	border-bottom: 1px dotted #BDBFAA;
 }
 
+ul {
+	padding-left: 0px;
+	list-style-type: disclosure-closed;
+}
+
+li::marker {
+	color: #9BA0A9;
+}
+
 dt img {
 	display: block;
 	border: 2px solid #081220;
