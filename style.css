@@ -93,6 +93,10 @@ dt img {
 	border: 2px solid #081220;
 }
 
+dt {
+	font-weight: bold;
+}
+
 dd {
 	margin-left: 0px;
 }
@@ -119,7 +123,6 @@ header a {
 }
 
 .fleuron {
-	color: #9BA0A9;
 	margin: 0px 0.5em;
 }
 
