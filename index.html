@@ -6,12 +6,14 @@
 		<meta name="author" content="Alexander Klapheke">
 		<meta name="robots" content="index,follow">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-		<meta name="msapplication-TileColor" content="#FFFFFF">
+		<meta name="msapplication-TileColor" content="#20201D">
 		<meta name="msapplication-TileImage" content="tile-icon.png">
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> 
+		<meta name="apple-mobile-web-app-title" content="Alex Klapheke">
+
+		<link rel="canonical" href="http://people.fas.harvard.edu/~klapheke/">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link rel="stylesheet" title="Default style" href="style.css">
-		<link rel="shortcut icon" type="image/x-icon" href="shield.ico">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="pgpkey" type="application/pgp-keys" href="0x2DF094AB.asc" title="Alexander Klapheke's Public Key" />
 
 		<title>Alexander Klapheke</title>
@@ -20,19 +22,91 @@
 	<body>
 
 		<header>
-			<h1 style="font-style:italic;">Alexander <abbr title="[kl&#601;&#39;pik]">Klapheke</abbr></h1>
-			<div class="largelinks">
-				<span class="link">&ensp;&nbsp;<a style="color:#0077b5" href="https://www.linkedin.com/in/alexander-klapheke">linkedin</a>&ensp;&nbsp;</span>
-				<span class="link">&ensp;&nbsp;<a style="color:#4183c4" href="https://github.com/alexklapheke">github</a>&ensp;&nbsp;</span>
-			</div>
+			<!-- http://microformats.org/wiki/hcard -->
+			<div class="vcard">
+			<h1>
+				<span class="given-name">Alexander</span>
+				<span class="family-name"><abbr class="ipa" lang="x-ipa" title="[kl&#601;&#39;pik]">Klapheke</abbr></span>
+			</h1>
 
-			<div class="smalllinks">
-				<a class='email href="mailto:x@y"' href='&#x20;m&#97;&#x69;&#108;&#116;&#111;&#x3A;%&#x32;&#x30;k&#x6C;&#x61;&#x70;&#104;%&#x36;&#x35;&#37;6&#98;e&#x25;&#52;&#48;&#x66;&#x61;&#x73;&#x25;2&#x65;&#x25;6&#x38;&#97;%&#x37;&#50;&#x25;&#x37;&#x36;&#x61;r&#x64;%&#50;&#101;%&#x36;5&#x64;&#37;&#x37;&#x35;?  '>&#x6b;&#108;a&#x70;heke&#64;fa&#x73;<!-- mailto:abuse@hotmail.com </a> -->&shy;&#46;h&#x61;&#x72;v&#x61;&#x72;&#x64;&#46;&#x65;du</a>
-				&emsp;
-				<a href="0x2DF094AB.asc">public&nbsp;key</a>
+				<div id="contact">
+					<!-- http://hcard.geekhood.net/encode/ -->
+					<a
+					class='email
+					href="mailto:x@y"
+					'
+					href
+					=	'	
+					&#x20;&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;%20&#x61;&#x6c;&#x25;6&#x35;%7&#x38;&#x25;&#54;&#98;la&#x25;7&#x30;h&#37;6&#x35;&#x25;&#x36;&#x62;&#37;&#x36;&#x35;&#37;&#x34;0&#x67;&#109;&#97;%&#x36;9l&#x25;&#50;&#101;%&#x36;&#51;&#111;&#x6d;&#x3f;
+					'>&#97;&#x6c;&#x65;&#120;&#x6B;lap&#x68;&#x65;k<!--
+					mailto:abuse@hotmail.com
+					</a>
+					-->&shy;&#x65;&#64;&#103;&#109;&#x61;i&#108;&#x2E;&#99;&#x6f;&#109;</a>,
+
+					<a href="0x2DF094AB.asc">public key</a> <span class="grayed">(<abbr title="F1BD E18B 7525 95A9 7BC4 FB04 A349 9FF5 2DF0 94AB">fingerprint</abbr>)</span>
+
+					<span class="fleuron">&#9753;</span>
+
+					<a href="https://linkedin.com/in/alexander-klapheke">LinkedIn</a>
+
+					<span class="fleuron">&#9753;</span>
+
+					<a href="https://github.com/alexklapheke">GitHub</a>
+					
+					<span class="fleuron">&#9753;</span>
+					
+					<a href="https://gist.github.com/alexklapheke">Gists</a>
+				</div>
 			</div>
 		</header>
 
+		<div class="row">
+
+			<div id="content">
+
+				<section>
+					<p>I'm a data scientist and self-taught coder (Python, R, Haskell) with a broad academic background (linguistics, math) and over 10 years&rsquo; experience explaining technical concepts to laypeople. See some of my work:</p>
+				</section>
+
+				<section>
+					<h2>Data Analyses</h2>
+
+					<dl>
+						<dt>
+								SAT vs. ACT <span class="grayed">(Forthcoming)</span>
+								<img src="images/sat-act.png" alt="">
+						</dt>
+						<dd>Standardized tests across states</dd>
+					</dl>
+				</section>
+
+				<section>
+					<h2>Tools</h2>
+
+					<dl>
+						<dt>
+							<a href="https://github.com/alexklapheke/vim-chat">
+								<img src="images/vim-chat.png" alt="">
+							</a>
+						</dt>
+						<dd>CHAT syntax file for Vim</dd>
+					</dl>
+				</section>
+
+				<section>
+				<h2>Fun</h2>
+
+				<dl>
+					<dt> 
+						<a href="pythagorean.pdf">
+							<img src="images/pythagorean.png" alt="">
+						</a>
+					</dt>
+					<dd>Proofs of the Pythagorean Theorem (<a href="https://gist.github.com/alexklapheke/d202b90631a3ca8b155e7bda988eadd1">source</a>)</dd>
+				</dl>
+				</section>
+
+			</div>
+		</div>
 	</body>
 </html>
-
