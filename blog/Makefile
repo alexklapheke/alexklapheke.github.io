@@ -18,7 +18,7 @@ endef
 
 .PHONY : clean blog
 
-blog : clean rss.xml
+blog : clean rss.xml index.html
 
 clean :
 	rm -f rss.xml
@@ -28,6 +28,7 @@ clean :
 	pandoc -t html+smart             \
 		-V 'lang=en-US'              \
 		-V date="$(pubdate_pretty)"  \
+		--template=templates/blogpost.html \
 		--standalone                 \
 		--css=include/style.css      \
 		--toc                        \
@@ -47,17 +48,19 @@ clean :
 		$< | tac >> rss-items.xml
 
 index.html : $(html)
-	tac index-items.html >> index.html
+	cat templates/index-header.html >> index.html
+	tac index-items.html            >> index.html
+	cat templates/index-footer.html >> index.html
 
 rss.xml : $(html)
-	echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>" >> rss.xml
-	echo "<rss version=\"2.0\">" >> rss.xml
-	echo "	<channel>" >> rss.xml
-	echo "		<title>Alex Klapheke</title>" >> rss.xml
+	echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>"            >> rss.xml
+	echo "<rss version=\"2.0\">"                                  >> rss.xml
+	echo "	<channel>"                                            >> rss.xml
+	echo "		<title>Alex Klapheke</title>"                     >> rss.xml
 	echo "		<link>https://alexklapheke.github.io/blog</link>" >> rss.xml
-	echo "		<description></description>" >> rss.xml
-	echo "		<lastBuildDate>$(pubdate)</lastBuildDate>" >> rss.xml
-	tac rss-items.xml >> rss.xml
-	echo "	</channel>" >> rss.xml
-	echo "</rss>" >> rss.xml
+	echo "		<description></description>"                      >> rss.xml
+	echo "		<lastBuildDate>$(pubdate)</lastBuildDate>"        >> rss.xml
+	tac rss-items.xml                                             >> rss.xml
+	echo "	</channel>"                                           >> rss.xml
+	echo "</rss>"                                                 >> rss.xml
 
