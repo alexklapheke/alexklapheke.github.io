@@ -2,12 +2,13 @@
 
 html {
 	height: 100%;
-	margin: 0px 5px;
-	padding: 0px 5px;
-	background: #DFE8F7;
+	margin: 0px;
+	padding: 0px;
 }
 
 body {
+	display: grid;
+	grid-template-columns: 280px 680px auto;
 	font-family: 'Lora', serif;
 	font-size: 14px;
 	font-weight: normal;
@@ -19,10 +20,9 @@ body {
 	background: #FAFAFA;
 	color: #081220;
 	box-sizing: content-box;
-	max-width: 615px;
 	min-height: 100%;
 	margin: 0px auto;
-	padding: 60px 60px 30px;
+	padding: 0px;
 }
 
 section {
@@ -30,7 +30,12 @@ section {
 }
 
 header {
-	margin-bottom: 26px;
+	background: #DFE8F7;
+	padding: 30px;
+}
+
+article {
+	padding: 30px;
 }
 
 hr {
@@ -46,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 32px;
-	line-height: 39px;
+	line-height: 48px;
 	color: #CE2A07;
 }
 
