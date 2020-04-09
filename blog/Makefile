@@ -1,3 +1,8 @@
+# To publish a blog post:
+#     1. Copy all files from blog/drafts to blog/publish
+#     2. Run $ make blog
+#     3. RSS feed and site homepage will be automatically updated
+
 markdown = $(wildcard publish/*.md)
 html = $(patsubst publish/%.md,%.html,$(markdown))
 
@@ -68,4 +73,3 @@ rss.xml : $(html)
 	tac rss-items.xml                                             >> rss.xml
 	echo "	</channel>"                                           >> rss.xml
 	echo "</rss>"                                                 >> rss.xml
-
