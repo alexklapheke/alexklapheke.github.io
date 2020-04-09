@@ -18,13 +18,28 @@ endef
 
 .PHONY : clean blog
 
-blog : clean rss.xml
+blog : rss.xml
 
 clean :
 	rm -f rss.xml
-	rm -f index.html
 
-%.html : publish/%.md
+%.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html
+	if [ ! -e $@ ]; then \
+		pandoc -t html+smart                   \
+			--template=templates/index-item.html \
+			-V date=$(pubdate)                 \
+			-V date_terse=$(pubdate_terse)     \
+			-V target=$@                   \
+			$(pandoc_body_options)             \
+			$< -o index-item.html;      \
+			sed -i '/<ul id="bloglist">/r index-item.html' ../index.html; \
+			rm index-item.html; \
+		pandoc -t html+smart                   \
+			--template=templates/rss.xml       \
+			-V date=$(pubdate_terse)           \
+			$(pandoc_body_options)             \
+			$< | tac >> rss-items.xml;         \
+	fi
 	pandoc -t html+smart                   \
 		--css=style.css                    \
 		--standalone                       \
@@ -36,26 +51,14 @@ clean :
 		--toc                              \
 		$(pandoc_body_options)             \
 		-o $@ $<
-	pandoc -t html+smart                   \
-		--template=templates/index.html    \
-		-V date=$(pubdate)                 \
-		-V date_terse=$(pubdate_terse)     \
-		$(pandoc_body_options)             \
-		$< | tac >> index-items.html
-	pandoc -t html+smart                   \
-		--template=templates/rss.xml       \
-		-V date=$(pubdate)                 \
-		-V sourcefile=$@                   \
-		$(pandoc_body_options)             \
-		$< | tac >> rss-items.xml
 
 index.html : $(html)
-	cat templates/index-header.html >> index.html
+	cat templates/index-header.html >  index.html
 	tac index-items.html            >> index.html
 	cat templates/index-footer.html >> index.html
 
 rss.xml : $(html)
-	echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>"            >> rss.xml
+	echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>"            >  rss.xml
 	echo "<rss version=\"2.0\">"                                  >> rss.xml
 	echo "	<channel>"                                            >> rss.xml
 	echo "		<title>Alex Klapheke</title>"                     >> rss.xml
