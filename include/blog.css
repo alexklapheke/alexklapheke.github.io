@@ -3,6 +3,28 @@ html {
 }
 
 body {
-  width: 720px;
-  padding: 30px;
+  width: 600px;
+  padding: 30px 60px;
+}
+
+/* http://hartshorne.ca/2005/07/27/footnotes_v_sidenotes/ */
+@media (min-width: 1062px){
+	.sidenotes > ol > li {
+		font-size: 8pt;
+		position: absolute;
+		right: 20px;
+		top: 0;
+		width: calc((100% - 800px)/2);
+		padding: 0em 0.5em;
+		margin: -1em -0.5em;
+	}
+
+	.sidenotes > hr {
+		display: none;
+	}
+
+	.leftnote {
+		left: 28px;
+		right: auto;
+	}
 }

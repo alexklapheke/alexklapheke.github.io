@@ -22,11 +22,16 @@ article {
   display: grid;
 	grid-template: "data  blog"
 		            "tools blog"
-		            "fun   blog";
+		            "fun   blog" / 660px auto;
 }
 
 #blogposts {
 	grid-area: blog;
+}
+
+#blogposts time {
+	margin-left: 0.5em;
+	color: #9BA0A9;
 }
 
 dt img {
