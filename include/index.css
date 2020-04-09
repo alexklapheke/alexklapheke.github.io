@@ -1,0 +1,88 @@
+section {
+	margin-bottom: 52px;
+}
+
+header {
+	background: #DFE8F7;
+	padding: 30px;
+	position: fixed;
+	width: 220px;
+	height: 100%;
+}
+
+header h1 {
+	display: inline-block;
+	font-size: 44px;
+	margin-bottom: 26px;
+}
+
+article {
+	padding: 30px 0px 30px 30px;
+	margin-left: 280px;
+  display: grid;
+	grid-template: "data  blog"
+		            "tools blog"
+		            "fun   blog";
+}
+
+#blogposts {
+	grid-area: blog;
+}
+
+dt img {
+	display: block;
+	border: 2px solid #081220;
+}
+
+header a {
+	display: inline-block;
+	color: #0658CF;
+	font-size: 14px;
+}
+
+.rss {
+	margin-left: 0.25em;
+}
+
+.fleuron {
+	margin: 0px 0.5em;
+}
+
+@media only screen and (max-width: 1200px){
+	article {
+		padding: 30px;
+		margin-left: 280px;
+		display: grid;
+		grid-template: "data"
+		               "tools"
+		               "fun"
+		               "blog";
+		}
+}
+
+@media only screen and (max-width: 960px){
+	body {
+		overflow-x: hidden;
+	}
+	
+	header {
+		position: static;
+		display: grid;
+		width: calc(100vw - 60px);
+		grid-template: "title pic"
+		               "blurb blurb";
+	}
+	
+	#blurb {
+		grid-area: blurb;
+	}
+	
+	#pic {
+		grid-area: pic;
+	}
+	
+	article {
+		margin-left: 0px;
+    display: block;
+	}
+}

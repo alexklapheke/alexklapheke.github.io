@@ -1,5 +1,5 @@
-markdown = $(wildcard *.md)
-html = $(patsubst %.md,%.html,$(markdown))
+markdown = $(wildcard publish/*.md)
+html = $(patsubst publish/%.md,%.html,$(markdown))
 
 pubdate = $(shell date -Iseconds)
 pubdate_pretty = $(shell date -d $(pubdate) +"%A, %B %e, %Y")
@@ -18,33 +18,35 @@ endef
 
 .PHONY : clean blog
 
-blog : clean rss.xml index.html
+blog : clean rss.xml
 
 clean :
 	rm -f rss.xml
 	rm -f index.html
 
-%.html : %.md
-	pandoc -t html+smart             \
-		-V 'lang=en-US'              \
-		-V date="$(pubdate_pretty)"  \
+%.html : publish/%.md
+	pandoc -t html+smart                   \
+		--css=style.css                    \
+		--standalone                       \
+		-V 'lang=en-US'                    \
+		-V date="$(pubdate_pretty)"        \
 		--template=templates/blogpost.html \
-		--standalone                 \
-		--css=include/style.css      \
-		--toc                        \
-		$(pandoc_body_options)       \
+		--resource-path=publish            \
+		--extract-media=images             \
+		--toc                              \
+		$(pandoc_body_options)             \
 		-o $@ $<
-	pandoc -t html+smart             \
-		--template=templates/index.html \
-		-V date=$(pubdate)           \
-		-V date_terse=$(pubdate_terse) \
-		$(pandoc_body_options)       \
+	pandoc -t html+smart                   \
+		--template=templates/index.html    \
+		-V date=$(pubdate)                 \
+		-V date_terse=$(pubdate_terse)     \
+		$(pandoc_body_options)             \
 		$< | tac >> index-items.html
-	pandoc -t html+smart             \
-		--template=templates/rss.xml \
-		-V date=$(pubdate)           \
-		-V sourcefile=$@             \
-		$(pandoc_body_options)       \
+	pandoc -t html+smart                   \
+		--template=templates/rss.xml       \
+		-V date=$(pubdate)                 \
+		-V sourcefile=$@                   \
+		$(pandoc_body_options)             \
 		$< | tac >> rss-items.xml
 
 index.html : $(html)

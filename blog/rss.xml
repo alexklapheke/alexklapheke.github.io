@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+	<channel>
+		<title>Alex Klapheke</title>
+		<link>https://alexklapheke.github.io/blog</link>
+		<description></description>
+		<lastBuildDate>2020-04-09T11:22:55-04:00</lastBuildDate>
+		<item>
+			<title>Poor Man&#8217;s Version Control</title>
+			<link>https://alexklapheke.github.io/blog/publish/versioncontrol.md</link>
+			<description><p>I&#8217;ve often been told to use version control for my personal projects. While I do use it for big projects, I&#8217;ve generally found it <a href="https://xkcd.com/1597/">overkill</a> for small ones like papers. For those, I have a &#8220;poor man&#8217;s version control&#8221; system. The basic idea is this: create a dedicated directory for your project. The file you&#8217;re working on is called <code>working</code>. Whenever you send out a draft, or hit a milestone (i.e., commit), make a copy of <code>working</code> and rename it to the current date, in the format <code>YYYY-MM-DD</code> (if you send out multiple drafts in a day, tack on the approximate time). When the project is submitted/published, delete <code>working</code>.</p>
+<p>Let&#8217;s walk through this step by step.</p>
+<p>You&#8217;re writing a paper for a class. You start by creating a directory called <code>Paper</code> (or whatever) and a file called <code>working.docx</code> in your directory, and begin writing the paper in that file. Your directory looks like this:</p>
+<figure>
+<img src="vc1.png" alt="Initial directory" style="width:4.5in" /><figcaption>Initial directory</figcaption>
+</figure>
+<p>Now on September 10, your instructor asks for a copy of your first draft. You send <code>working.docx</code>, then make a copy of it called <code>2018-09-10.docx</code>. The <a href="https://xkcd.com/1179/">date format</a> is important&#8212;it ensures that your drafts will be in chronological order when sorted alphabetically. This is year, then month, then day, separated by hyphens, with leading zeroes if necessary (so September is <code>09</code>, not just <code>9</code>).</p>
+<figure>
+<img src="vc2.png" alt="Directory with one draft" style="width:4.5in" /><figcaption>Directory with one draft</figcaption>
+</figure>
+<p>If you want, you can add a substantive label, like &#8220;First Draft&#8221;, but don&#8217;t add spurious labels like &#8220;edit&#8221; (which is what <em>all</em> your drafts are) or &#8220;final&#8221; (which is hardly guaranteed). Stick to labels that uniquely identify <em>this</em> draft among all of them. This is a name, not a commit message.</p>
+<figure>
+<img src="vc3.png" alt="Directory with one labelled draft" style="width:4.5in" /><figcaption>Directory with one labelled draft</figcaption>
+</figure>
+<p>Once you&#8217;ve created a dated draft, <em>do not</em> edit it. These are snapshots of your work over time. The only file you ever change is <code>working</code>.</p>
+<p>It&#8217;s a good idea to create drafts fairly often, even if you&#8217;re not sending them out to anyone. E.g., if you&#8217;re going on vacation for a week, create a draft before you leave (you can label it <code>LastBeforeVacation</code>). This is a natural milestone, since it represents a break in the writing process.</p>
+<p>After you&#8217;ve created several drafts, your directory will look like this:</p>
+<figure>
+<img src="vc4.png" alt="Directory with several drafts" style="width:4.5in" /><figcaption>Directory with several drafts</figcaption>
+</figure>
+<p>Finally, when the paper is officially submitted, and can definitely no longer be changed, delete <code>working.docx</code> (it should be identical to the last dated draft anyway). You now have a perfectly browsable timeline of your work.</p>
+<p>A few things to note:</p>
+<ul>
+<li>While it may look jarring at first to see filenames that are just numbers, don&#8217;t add a prefix to your files (such as <code>Paper-2018-09-10.docx</code>). If they are inconsistently prefixed it will mess up your chronological order. The directory name should be enough to tell you what you&#8217;re looking at.</li>
+<li>Also, I strongly recommend against doing this with multiple files in parallel, e.g., if you have a presentation that goes with your document. It&#8217;s difficult to keep them matching; you may end up with a situation like the one below, in which it&#8217;s unclear which document <code>2018-10-14.pptx</code> corresponds to. Try, if at all possible, to keep everything in one file.</li>
+</ul>
+<figure>
+<img src="vc5.png" alt="Directory with poor organization" style="width:4.5in" /><figcaption>Directory with poor organization</figcaption>
+</figure>
+<p>This system has several advantages:</p>
+<ul>
+<li>It makes it easy to search your drafts, even if you don&#8217;t label them: if you know your first draft was due on September 10, or remember sending one to your supervisor on Wednesday, you can find that particular draft easily.</li>
+<li>It avoids ludicrous filenames like <code>paper1_edit_edit-draft.FINALDRAFT2-final.docx</code> that just create clutter. Rather than use a meaningless addition like <code>edit</code> to designate a new draft, you use the (always meaningful) current date.</li>
+<li>It eliminates the need to guess ahead of time which draft will be &#8220;final&#8221;&#8212;it will simply be the last one in the directory.</li>
+<li>It gives you a sense, just by glancing at the directory, of how long your project took, start to finish.</li>
+<li>Unlike git, a total beginner can use it right away with no learning curve.</li>
+</ul>
+<p>I do think it&#8217;s worth learning proper version control. This system won&#8217;t be able to handle a large project with many files. But for smaller ones, it&#8217;s dead simple to use, and is definitely an improvement on no system at all.</p></description>
+			<pubDate>2020-04-09T11:22:53-04:00</pubDate>
+		</item>
+	</channel>
+</rss>
