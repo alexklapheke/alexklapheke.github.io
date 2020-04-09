@@ -142,6 +142,10 @@ header a {
 	font-size: 14px;
 }
 
+.rss {
+	margin-left: 0.25em;
+}
+
 .grayed {
 	color: #9BA0A9;
 }
