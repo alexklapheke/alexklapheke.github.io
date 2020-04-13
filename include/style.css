@@ -102,6 +102,12 @@ a:hover, a:active, a:focus {
 	text-shadow: 1px 1px 4px #BDD1EE; /* #D93B48 */
 }
 
+blockquote {
+	margin-left: 0em;
+	padding-left: 1em;
+	border-left: 0.5em solid #9BA0A9;
+}
+
 .grayed {
 	color: #9BA0A9;
 }

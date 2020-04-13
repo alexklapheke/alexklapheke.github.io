@@ -2,6 +2,7 @@
 #     1. Copy all files from blog/drafts to blog/publish
 #     2. Run $ make blog
 #     3. RSS feed and site homepage will be automatically updated
+#     4. Validate RSS feed: https://validator.w3.org/feed/
 
 markdown = $(wildcard publish/*.md)
 html = $(patsubst publish/%.md,%.html,$(markdown))
@@ -30,7 +31,7 @@ clean :
 
 %.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html
 	if [ ! -e $@ ]; then \
-		pandoc -t html+smart                   \
+		pandoc -t html5+smart                   \
 			--template=templates/index-item.html \
 			-V date=$(pubdate)                 \
 			-V date_terse=$(pubdate_terse)     \
@@ -39,13 +40,13 @@ clean :
 			$< -o index-item.html;      \
 			sed -i '/<ul id="bloglist">/r index-item.html' ../index.html; \
 			rm index-item.html; \
-		pandoc -t html+smart                   \
+		pandoc -t html5+smart                   \
 			--template=templates/rss.xml       \
 			-V date=$(pubdate_terse)           \
 			$(pandoc_body_options)             \
 			$< | tac >> rss-items.xml;         \
 	fi
-	pandoc -t html+smart                   \
+	pandoc -t html5+smart                   \
 		--css=/include/style.css           \
 		--css=/include/blog.css            \
 		--standalone                       \
