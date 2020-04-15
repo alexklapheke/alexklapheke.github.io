@@ -84,6 +84,10 @@ header a {
 		grid-template: "title pic"
 		               "blurb blurb";
 	}
+
+	figure {
+		margin: 0px 0px 0px 10px;
+	}
 	
 	#blurb {
 		grid-area: blurb;
@@ -96,5 +100,17 @@ header a {
 	article {
 		margin-left: 0px;
     display: block;
+	}
+}
+
+@media only screen and (max-width: 679px){
+	dt img {
+		max-width: 100%;
+	}
+}
+
+@media only screen and (max-width: 425px){
+	header {
+		display: block;
 	}
 }
