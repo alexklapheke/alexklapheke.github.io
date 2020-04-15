@@ -36,7 +36,6 @@ clean :
 			--template=templates/index-item.html                          \
 			-V date=$(pubdate)                                            \
 			-V date_terse=$(pubdate_terse)                                \
-			-V source=$(markdown)                                         \
 			-V target=$@                                                  \
 			$(pandoc_body_options)                                        \
 			$< -o index-item.html;                                        \

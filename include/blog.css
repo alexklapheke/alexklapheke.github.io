@@ -8,16 +8,25 @@ body {
 }
 
 header {
-	position: relative;
 	margin-bottom: 52px;
 }
 
-.sourcelink {
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	color: #9BA0A9;
-}
+/*
+ * Markdown source links:
+ *
+ * <a class="sourcelink" href="$source$">Markdown source</a>
+ *
+ * header {
+ * 	position: relative;
+ * }
+ * 
+ * .sourcelink {
+ * 	position: absolute;
+ * 	right: 0px;
+ * 	top: 0px;
+ * 	color: #9BA0A9;
+ * }
+ */
 
 /* http://hartshorne.ca/2005/07/27/footnotes_v_sidenotes/ */
 @media (min-width: 1062px){
