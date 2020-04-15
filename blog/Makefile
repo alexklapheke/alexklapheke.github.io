@@ -4,8 +4,9 @@
 #     3. RSS feed and site homepage will be automatically updated
 #     4. Validate RSS feed: https://validator.w3.org/feed/
 
-markdown = $(wildcard publish/*.md)
-html = $(patsubst publish/%.md,%.html,$(markdown))
+source = $(wildcard publish/*.md)
+markdown = $(patsubst publish/%.md,%.md,$(source))
+html = $(patsubst publish/%.md,%.html,$(source))
 
 pubdate = $(shell date -Iseconds)
 pubdate_pretty = $(shell date -d $(pubdate) +"%A, %B %e, %Y")
@@ -30,33 +31,34 @@ clean :
 	rm -f rss.xml
 
 %.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html
-	if [ ! -e $@ ]; then \
-		pandoc -t html5+smart                   \
-			--template=templates/index-item.html \
-			-V date=$(pubdate)                 \
-			-V date_terse=$(pubdate_terse)     \
-			-V target=$@                   \
-			$(pandoc_body_options)             \
-			$< -o index-item.html;      \
+	if [ ! -e $@ ]; then                                                  \
+		pandoc -t html5+smart                                             \
+			--template=templates/index-item.html                          \
+			-V date=$(pubdate)                                            \
+			-V date_terse=$(pubdate_terse)                                \
+			-V source=$(markdown)                                         \
+			-V target=$@                                                  \
+			$(pandoc_body_options)                                        \
+			$< -o index-item.html;                                        \
 			sed -i '/<ul id="bloglist">/r index-item.html' ../index.html; \
-			rm index-item.html; \
-		pandoc -t html5+smart                   \
-			--template=templates/rss.xml       \
-			-V date=$(pubdate_terse)           \
-			$(pandoc_body_options)             \
-			$< | tac >> rss-items.xml;         \
+			rm index-item.html;                                           \
+		pandoc -t html5+smart                                             \
+			--template=templates/rss.xml                                  \
+			-V date=$(pubdate_terse)                                      \
+			$(pandoc_body_options)                                        \
+			$< | tac >> rss-items.xml;                                    \
 	fi
-	pandoc -t html5+smart                   \
-		--css=/include/style.css           \
-		--css=/include/blog.css            \
-		--standalone                       \
-		-V 'lang=en-US'                    \
-		-V date="$(pubdate_pretty)"        \
-		--template=templates/blogpost.html \
-		--resource-path=publish            \
-		--extract-media=images             \
-		--toc                              \
-		$(pandoc_body_options)             \
+	pandoc -t html5+smart                                                 \
+		--css=/include/style.css                                          \
+		--css=/include/blog.css                                           \
+		--standalone                                                      \
+		-V 'lang=en-US'                                                   \
+		-V date="$(pubdate_pretty)"                                       \
+		--template=templates/blogpost.html                                \
+		--resource-path=publish                                           \
+		--extract-media=images                                            \
+		--toc                                                             \
+		$(pandoc_body_options)                                            \
 		-o $@ $<
 
 index.html : $(html)

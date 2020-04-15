@@ -7,6 +7,18 @@ body {
   padding: 30px 60px;
 }
 
+header {
+	position: relative;
+	margin-bottom: 52px;
+}
+
+.sourcelink {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	color: #9BA0A9;
+}
+
 /* http://hartshorne.ca/2005/07/27/footnotes_v_sidenotes/ */
 @media (min-width: 1062px){
 	.sidenotes > ol > li {
