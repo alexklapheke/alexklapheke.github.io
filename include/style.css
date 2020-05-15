@@ -150,6 +150,11 @@ blockquote {
 	margin: 0px 0.5em;
 }
 
+.bullet {
+	margin: 0px 0.2em;
+	color: #9BA0A9;
+}
+
 ::selection {
 	color: #DFE8F7;
 	background-color: #081220;
