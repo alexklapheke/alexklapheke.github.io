@@ -1,17 +1,17 @@
 /*
  * Colors:
- * 
+ *
  * Text/background colors:
  * #FAFAFA white
  * #090A0C black
  * #C34540 red
  * #51693A check green
  * #333E47 dark gray
- * 
+ *
  * Structural colors:
  * #D1D8DE border gray (table cells)
  * #D6D5CD border gray (blockquotes etc.)
- * 
+ *
  */
 
 header {
@@ -49,12 +49,6 @@ article {
 	margin-left: 280px;
 }
 
-header h1 {
-	display: inline-block;
-	font-size: 44px;
-	margin-bottom: 26px;
-}
-
 table {
 	border-collapse: collapse;
 }
@@ -81,10 +75,24 @@ a {
 }
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
+	font-family: "Linux Libertine O", serif;
+	font-style: normal;
+	font-variant: small-caps;
+	text-transform: lowercase;
 	margin: 20px 0px 12px 0px;
+	color: #C34540;
+}
+
+#titleblock h1 {
+	font-family: "Lora";
+	font-variant: none;
+	text-transform: none;
+	color: #081220;
 }
 
 h1.title {
+	font-family: 'Lora', serif;
+	font-style: italic;
 	margin-top: 0px;
 }
 
@@ -127,6 +135,17 @@ article p, article li, article dd {
 		-moz-hyphens: auto;
 			hyphens: auto;
 	line-height: 1.25em;
+}
+
+/* https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/ */
+sup, sub {
+	vertical-align: baseline;
+	position: relative;
+	top: -0.4em;
+}
+
+sub {
+	top: 0.4em;
 }
 
 /* p + p {
@@ -254,7 +273,7 @@ img {
 	body {
 		overflow-x: hidden;
 	}
-	
+
 	header {
 		position: static;
 		display: grid;
@@ -266,15 +285,15 @@ img {
 	figure {
 		margin: 0px 0px 0px 10px;
 	}
-	
+
 	#blurb {
 		grid-area: blurb;
 	}
-	
+
 	#pic {
 		grid-area: pic;
 	}
-	
+
 	article {
 		margin-left: 0px;
     display: block;
