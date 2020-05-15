@@ -186,6 +186,16 @@ blockquote {
 	border: 1px solid #D6D5CD;
 }
 
+.epigraph {
+	padding: 0em 1.2em;
+	font-style: italic;
+	color: #333E47;
+}
+
+math[display="block"] {
+	margin: 14px 0px;
+}
+
 pre, code {
 	border: 1px solid #D6D5CD;
 	font-family: "Linux Libertine Mono O", monospace;
