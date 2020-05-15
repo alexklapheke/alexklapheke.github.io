@@ -48,8 +48,8 @@ clean :
 			$< | tac >> rss-items.xml;                                    \
 	fi
 	pandoc -t html5+smart                                                 \
-		--css=/include/style.css                                          \
-		--css=/include/blog.css                                           \
+		--css=../include/style.css                                        \
+		--css=../include/blog.css                                         \
 		--standalone                                                      \
 		-V 'lang=en-US'                                                   \
 		-V date="$(pubdate_pretty)"                                       \
