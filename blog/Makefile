@@ -4,6 +4,8 @@
 #     3. RSS feed and site homepage will be automatically updated
 #     4. Validate RSS feed: https://validator.w3.org/feed/
 
+# Markdown word counter from <https://github.com/gandreadis/markdown-word-count>
+
 source = $(wildcard publish/*.md)
 markdown = $(patsubst publish/%.md,%.md,$(source))
 html = $(patsubst publish/%.md,%.html,$(source))
@@ -35,7 +37,6 @@ clean :
 		pandoc -t html5+smart                                             \
 			--template=templates/index-item.html                          \
 			-V date=$(pubdate)                                            \
-			-V date_terse=$(pubdate_terse)                                \
 			-V target=$@                                                  \
 			$(pandoc_body_options)                                        \
 			$< -o index-item.html;                                        \
@@ -53,6 +54,8 @@ clean :
 		--standalone                                                      \
 		-V 'lang=en-US'                                                   \
 		-V date="$(pubdate_pretty)"                                       \
+		-V date_terse=$(pubdate_terse)                                    \
+		-V wordcount=$(shell mwc.py $<)                                   \
 		--template=templates/blogpost.html                                \
 		--resource-path=publish                                           \
 		--extract-media=images                                            \
