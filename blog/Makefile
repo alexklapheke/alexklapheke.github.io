@@ -10,9 +10,7 @@ source = $(wildcard publish/*.md)
 markdown = $(patsubst publish/%.md,%.md,$(source))
 html = $(patsubst publish/%.md,%.html,$(source))
 
-pubdate = $(shell date -Iseconds)
-pubdate_pretty = $(shell date -d $(pubdate) +"%A, %B %e, %Y")
-pubdate_terse = $(shell date -d $(pubdate) +"%F")
+now = $(shell date -Iseconds)
 
 define pandoc_body_options
 --mathml \
@@ -33,10 +31,15 @@ clean :
 	rm -f rss.xml
 
 %.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html
+	sed -i 's/\$$DATE\$$/$(now)/' $<;                                     \
+	pubdate=$$(pandoc -t plain --template=templates/date.plain $<);       \
+	pubdate_pretty=$$(date -d $$pubdate +"%A, %B %e, %Y");                \
+	pubdate_terse=$$(date -d $$pubdate +%F);                              \
 	if [ ! -e $@ ]; then                                                  \
 		pandoc -t html5+smart                                             \
 			--template=templates/index-item.html                          \
-			-V date=$(pubdate)                                            \
+			-V date=$$pubdate                                             \
+			-V date_terse=$$pubdate_terse                                 \
 			-V target=$@                                                  \
 			$(pandoc_body_options)                                        \
 			$< -o index-item.html;                                        \
@@ -44,17 +47,18 @@ clean :
 			rm index-item.html;                                           \
 		pandoc -t html5+smart                                             \
 			--template=templates/rss.xml                                  \
-			-V date=$(pubdate_terse)                                      \
+			-V date=$$pubdate                                             \
+			-V date_terse=$$pubdate_terse                                 \
 			$(pandoc_body_options)                                        \
 			$< | tac >> rss-items.xml;                                    \
-	fi
+	fi;                                                                   \
 	pandoc -t html5+smart                                                 \
 		--css=../include/style.css                                        \
 		--css=../include/blog.css                                         \
 		--standalone                                                      \
 		-V 'lang=en-US'                                                   \
-		-V date="$(pubdate_pretty)"                                       \
-		-V date_terse=$(pubdate_terse)                                    \
+		-V date=$$pubdate                                                 \
+		-V date_pretty="$$pubdate_pretty"                                 \
 		-V wordcount=$(shell mwc.py $<)                                   \
 		--template=templates/blogpost.html                                \
 		--resource-path=publish                                           \
