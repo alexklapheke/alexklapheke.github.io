@@ -4,33 +4,31 @@
 		<title>Alex Klapheke</title>
 		<link>https://alexklapheke.github.io/blog</link>
 		<description></description>
-		<lastBuildDate></lastBuildDate>
+		<lastBuildDate>2020-05-15T14:55:28-04:00</lastBuildDate>
 		<item>
 			<title>First Blog Post</title>
 			<link>https://alexklapheke.github.io/blog/publish/firstpost.md</link>
-			<description><div class="epigraph">
-<p>&#8220;Better say nothing at all. Language is worth a thousand pounds a word!&#8221; &#8212;Alice, in <em>Through the Looking-Glass</em></p>
-</div>
-<section id="i." class="level1">
-<h1>I.</h1>
-<p>Lorem ipsum dolor sit amet, <a href="https://en.wikipedia.org/">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
-</section>
-<section id="ii." class="level1">
-<h1>II.</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:</p>
-<blockquote>
-<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</blockquote>
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mo>log</mo><mo stretchy="false" form="prefix">(</mo><mi>&#937;</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">S = k_B\log(\Omega)</annotation></semantics></math> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</section>
-<section class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>This is a footnote.<a href="#fnref1" class="footnote-back">&#8617;</a></p></li>
-<li id="fn2"><p>This is a longer footnote: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#fnref2" class="footnote-back">&#8617;</a></p></li>
-</ol>
-</section></description>
 			<pubDate>2020-05-15T12:45:02-04:00</pubDate>
+	<description>
+&lt;div class=&quot;epigraph&quot;&gt;
+&lt;p&gt;&ldquo;Better say nothing at all. Language is worth a thousand pounds a word!&rdquo; &mdash;Alice, in &lt;em&gt;Through the Looking-Glass&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&quot;i.&quot;&gt;I.&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, &lt;a href=&quot;https://en.wikipedia.org/&quot;&gt;consectetur adipisicing elit&lt;/a&gt;, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;a href=&quot;#fn2&quot; class=&quot;footnote-ref&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;ii.&quot;&gt;II.&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. &lt;br /&gt;&lt;span class=&quot;math display&quot;&gt;&lt;em&gt;S&lt;/em&gt;&#8196;=&#8196;&lt;em&gt;k&lt;/em&gt;&lt;sub&gt;&lt;em&gt;B&lt;/em&gt;&lt;/sub&gt;log&#8198;(&lt;em&gt;&Omega;&lt;/em&gt;)&lt;/span&gt;&lt;br /&gt; Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;This is a footnote.&lt;a href=&quot;#fnref1&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;This is a longer footnote: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;a href=&quot;#fnref2&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+	</description>
 		</item>
 	</channel>
 </rss>

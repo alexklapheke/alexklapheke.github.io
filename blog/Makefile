@@ -15,7 +15,6 @@ now = $(shell date -Iseconds)
 define pandoc_body_options
 --mathml \
 --section-divs \
---ascii \
 --filter=pandoc-crossref \
 --filter=pandoc-citeproc \
 --highlight-style=pygments \
@@ -31,40 +30,47 @@ clean :
 	rm -f rss.xml
 
 %.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html
-	sed -i 's/\$$DATE\$$/$(now)/' $<;                                     \
-	pubdate=$$(pandoc -t plain --template=templates/date.plain $<);       \
-	pubdate_pretty=$$(date -d $$pubdate +"%A, %B %e, %Y");                \
-	pubdate_terse=$$(date -d $$pubdate +%F);                              \
-	if [ ! -e $@ ]; then                                                  \
-		pandoc -t html5+smart                                             \
-			--template=templates/index-item.html                          \
-			-V date=$$pubdate                                             \
-			-V date_terse=$$pubdate_terse                                 \
-			-V target=$@                                                  \
-			$(pandoc_body_options)                                        \
-			$< -o index-item.html;                                        \
-			sed -i '/<ul id="bloglist">/r index-item.html' ../index.html; \
-			rm index-item.html;                                           \
-		pandoc -t html5+smart                                             \
-			--template=templates/rss.xml                                  \
-			-V date=$$pubdate                                             \
-			-V date_terse=$$pubdate_terse                                 \
-			$(pandoc_body_options)                                        \
-			$< | tac >> rss-items.xml;                                    \
-	fi;                                                                   \
-	pandoc -t html5+smart                                                 \
-		--css=../include/style.css                                        \
-		--css=../include/blog.css                                         \
-		--standalone                                                      \
-		-V 'lang=en-US'                                                   \
-		-V date=$$pubdate                                                 \
-		-V date_pretty="$$pubdate_pretty"                                 \
-		-V wordcount=$(shell mwc.py $<)                                   \
-		--template=templates/blogpost.html                                \
-		--resource-path=publish                                           \
-		--extract-media=images                                            \
-		--toc                                                             \
-		$(pandoc_body_options)                                            \
+	sed -i 's/\$$DATE\$$/$(now)/' $<;                                                   \
+	pubdate=$$(pandoc -t plain --template=templates/date.plain $<);                     \
+	pubdate_pretty=$$(date -d $$pubdate +"%A, %B %e, %Y");                              \
+	pubdate_terse=$$(date -d $$pubdate +%F);                                            \
+	if [ ! -e $@ ]; then                                                                \
+		pandoc -t html5+smart                                                           \
+			--ascii                                                                     \
+			--template=templates/index-item.html                                        \
+			-V date=$$pubdate                                                           \
+			-V date_terse=$$pubdate_terse                                               \
+			-V target=$@                                                                \
+			$(pandoc_body_options)                                                      \
+			$< -o index-item.html;                                                      \
+			sed -i '/<ul id="bloglist">/r index-item.html' ../index.html;               \
+			rm index-item.html;                                                         \
+		echo "		</item>" >> rss-items.xml;                                          \
+		echo "	</description>" >> rss-items.xml;                                       \
+		pandoc publish/firstpost.md -t html | recode utf8..html | tac >> rss-items.xml; \
+		echo "	<description>" >> rss-items.xml;                                        \
+		pandoc -t html5+smart                                                           \
+			--ascii                                                                     \
+			--template=templates/rss.xml                                                \
+			-V date=$$pubdate                                                           \
+			-V date_terse=$$pubdate_terse                                               \
+			$(pandoc_body_options)                                                      \
+			$< | tac >> rss-items.xml;                                                  \
+		echo "		<item>" >> rss-items.xml;                                           \
+	fi;                                                                                 \
+	pandoc -t html5+smart                                                               \
+		--css=../include/style.css                                                      \
+		--css=../include/blog.css                                                       \
+		--standalone                                                                    \
+		-V 'lang=en-US'                                                                 \
+		-V date=$$pubdate                                                               \
+		-V date_pretty="$$pubdate_pretty"                                               \
+		-V wordcount=$(shell mwc.py $<)                                                 \
+		--template=templates/blogpost.html                                              \
+		--resource-path=publish                                                         \
+		--extract-media=images                                                          \
+		--toc                                                                           \
+		$(pandoc_body_options)                                                          \
 		-o $@ $<
 
 index.html : $(html)
@@ -79,7 +85,7 @@ rss.xml : $(html)
 	echo "		<title>Alex Klapheke</title>"                     >> rss.xml
 	echo "		<link>https://alexklapheke.github.io/blog</link>" >> rss.xml
 	echo "		<description></description>"                      >> rss.xml
-	echo "		<lastBuildDate>$(pubdate)</lastBuildDate>"        >> rss.xml
+	echo "		<lastBuildDate>$(now)</lastBuildDate>"            >> rss.xml
 	tac rss-items.xml                                             >> rss.xml
 	echo "	</channel>"                                           >> rss.xml
 	echo "</rss>"                                                 >> rss.xml

@@ -71,7 +71,11 @@ td {
 }
 
 a {
-	color: #333E47;
+	color: #042639;
+}
+
+article a {
+	text-decoration: underline;
 }
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
@@ -196,9 +200,11 @@ math[display="block"] {
 	margin: 14px 0px;
 }
 
-pre, code {
+pre, code, kbd, var, samp {
 	border: 1px solid #D6D5CD;
 	font-family: "Linux Libertine Mono O", monospace;
+	font-size: 12px;
+	line-height: 14px;
 }
 
 pre > code {
