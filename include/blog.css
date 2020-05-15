@@ -1,32 +1,230 @@
-html {
-  background: #DFE8F7;
-}
-
-body {
-  width: 600px;
-  padding: 30px 60px;
-}
+/*
+ * Colors:
+ * 
+ * Text/background colors:
+ * #FAFAFA white
+ * #090A0C black
+ * #C34540 red
+ * #51693A check green
+ * #333E47 dark gray
+ * 
+ * Structural colors:
+ * #D1D8DE border gray (table cells)
+ * #D6D5CD border gray (blockquotes etc.)
+ * 
+ */
 
 header {
-	margin-bottom: 52px;
+	background: #DFE8F7;
+	padding: 30px;
+	position: fixed;
+	width: 220px;
+	height: 100%;
 }
 
-/*
- * Markdown source links:
- *
- * <a class="sourcelink" href="$source$">Markdown source</a>
- *
- * header {
- * 	position: relative;
- * }
- * 
- * .sourcelink {
- * 	position: absolute;
- * 	right: 0px;
- * 	top: 0px;
- * 	color: #9BA0A9;
- * }
- */
+header h1 {
+	font-family: 'Lora', serif;
+	display: inline-block;
+	font-size: 44px;
+	margin-bottom: 26px;
+}
+
+header a {
+	display: inline-block;
+	color: #0658CF;
+	font-size: 14px;
+}
+
+header h1 a {
+	font-size: 44px;
+}
+
+header h1 a:hover, header h1 a:active, header h1 a:focus {
+	text-shadow: 1px 1px 4px #FFCCCC;
+}
+
+article {
+	max-width: 660px;
+	padding: 30px 0px 30px 30px;
+	margin-left: 280px;
+}
+
+header h1 {
+	display: inline-block;
+	font-size: 44px;
+	margin-bottom: 26px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	border-width: 1px;
+	border-style: solid;
+	-moz-border-radius: 0px;
+	padding: 2px 8px;
+	vertical-align: top;
+}
+
+th {
+	font-weight: bold;
+	border-color: #090A0C;
+}
+
+td {
+	border-color: #D1D8DE;
+}
+
+a {
+	color: #333E47;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+	margin: 20px 0px 12px 0px;
+}
+
+h1.title {
+	margin-top: 0px;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	/* color: #090A0C; */
+	color: #CE2A07;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 16pt;
+}
+h2 {
+	font-size: 14pt;
+}
+h3 {
+	font-size: 13pt;
+}
+h4 {
+	font-size: 12pt;
+}
+h5 {
+	font-size: 11pt;
+}
+h6 {
+	font-size: 10pt;
+}
+
+.checkmark {
+	color: #51693A;
+}
+.ballotx {
+	color: #C34540;
+}
+
+article p, article li, article dd {
+	text-align: justify;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+			hyphens: auto;
+	line-height: 1.25em;
+}
+
+/* p + p {
+	text-indent: 2em; /* indent paragraphs after first
+} */
+
+/* .level1 {
+	-webkit-columns: 640px auto;
+		-moz-columns: 640px auto;
+			columns: 640px auto;
+} */
+
+#TOC {
+	border: 1px solid #D6D5CD;
+	display: inline-block;
+	padding-right: 10px;
+}
+
+/* #TOC:before {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #333E47;
+	content: "Contents";
+} */
+
+.toc-section-number, .header-section-number {
+	color: #090A0C;
+}
+
+.toc-section-number:after, .header-section-number:after {
+	content: ".	";
+	color: #090A0C;
+}
+
+blockquote {
+	/* font-size: 8pt; */
+	padding: 0em 1.2em;
+	border: 1px solid #D6D5CD;
+}
+
+pre, code {
+	border: 1px solid #D6D5CD;
+	font-family: "Linux Libertine Mono O", monospace;
+}
+
+pre > code {
+	border: none;
+}
+
+ol, ul {
+	list-style-position: outside;
+	padding-left: 25px;
+}
+
+ol.example {
+	/* width: 100%; */
+	padding: 0.6em 0.4em 0.4em 2.4em;
+	border: 1px solid #D1D8DE !important;
+}
+
+ol ol.example, ul ol.example {
+	margin-bottom: 10px;
+}
+
+ol:not(.example) > li > ol,
+ol:not(.example) > li > ul,
+ol:not(.example) > li > dl,
+ul > li > ol,
+ul > li > ul,
+ul > li > dl {
+	border-left: 1px dashed #D1D8DE;
+}
+
+dl {
+	margin: 0px;
+	padding: 0px 0px 0px 10px;
+}
+
+dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+
+dt {
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+dd {
+	margin-bottom: 1em;
+}
+
+img {
+	/* float: right; */
+	/* clear: both; */
+	display: block;
+	margin: 2em 2em;
+}
 
 /* http://hartshorne.ca/2005/07/27/footnotes_v_sidenotes/ */
 @media (min-width: 1062px){
@@ -34,7 +232,9 @@ header {
 		font-size: 8pt;
 		position: absolute;
 		right: 20px;
-		top: 0;
+		top: 0; /* default */
+		/* min-width: 170px; */
+		/* width: 270px; */
 		width: calc((100% - 800px)/2);
 		padding: 0em 0.5em;
 		margin: -1em -0.5em;
@@ -47,5 +247,43 @@ header {
 	.leftnote {
 		left: 28px;
 		right: auto;
+	}
+}
+
+@media only screen and (max-width: 960px){
+	body {
+		overflow-x: hidden;
+	}
+	
+	header {
+		position: static;
+		display: grid;
+		width: calc(100vw - 60px);
+		grid-template: "title pic"
+		               "blurb blurb";
+	}
+
+	figure {
+		margin: 0px 0px 0px 10px;
+	}
+	
+	#blurb {
+		grid-area: blurb;
+	}
+	
+	#pic {
+		grid-area: pic;
+	}
+	
+	article {
+		margin-left: 0px;
+    display: block;
+	}
+}
+
+@media only print {
+	a {
+		color: #090A0C;
+		text-decoration: none;
 	}
 }

@@ -36,11 +36,64 @@
 		<title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 	</head>
 	<body>
+		<header>
+			<!-- http://microformats.org/wiki/hcard -->
+			<div class="vcard">
+			<h1>
+				<a href="https://alexklapheke.github.io">
+				<span class="given-name">Alexander</span>
+				<span class="family-name"><abbr class="ipa" lang="x-ipa" title="[kl&#601;&#39;pik]">Klapheke</abbr></span>
+				</a>
+			</h1>
+
+				<div id="contact">
+					<!-- http://hcard.geekhood.net/encode/ -->
+					<a
+					class='email
+					href="mailto:x@y"
+					'
+					href
+					=	'
+					&#x20;&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;%20&#x61;&#x6c;&#x25;6&#x35;%7&#x38;&#x25;&#54;&#98;la&#x25;7&#x30;h&#37;6&#x35;&#x25;&#x36;&#x62;&#37;&#x36;&#x35;&#37;&#x34;0&#x67;&#109;&#97;%&#x36;9l&#x25;&#50;&#101;%&#x36;&#51;&#111;&#x6d;&#x3f;
+					'>&#97;&#x6c;&#x65;&#120;&#x6B;lap&#x68;&#x65;k<!--
+					mailto:abuse@hotmail.com
+					</a>
+					-->&shy;&#x65;&#64;&#103;&#109;&#x61;i&#108;&#x2E;&#99;&#x6f;&#109;</a>
+					<br>
+					<a href="0x2DF094AB.asc">Public key</a> <span class="grayed">(<abbr title="F1BD E18B 7525 95A9 7BC4 FB04 A349 9FF5 2DF0 94AB">fingerprint</abbr>)</span>
+
+					<br><br>
+
+					<a href="https://linkedin.com/in/alexander-klapheke">LinkedIn</a>
+
+					<span class="fleuron">&#9753;</span>
+
+					<a href="https://github.com/alexklapheke">GitHub</a>
+
+					<span class="fleuron">&#9753;</span>
+
+					<a href="https://gist.github.com/alexklapheke">Gists</a>
+				</div>
+			</div>
+
+			<p id="blurb">I&rsquo;m a data scientist and self-taught coder (Python, R, Haskell) with a background in linguistics and math and over 10 years&rsquo; experience explaining technical concepts to laypeople.</p>
+
+			<div id="blogroll">
+				<h2>Blogroll</h2>
+
+				<ul>
+					<li><a href="https://www.3quarksdaily.com">3 Quarks Daily</a></li>
+					<li><a href="https://www.futilitycloset.com">Futility Closet</a></li>
+					<li><a href="https://www.slatestarcodex.com">Slate Star Codex</a></li>
+				</ul>
+			</div>
+		</header>
+	<article>
 	$for(include-before)$
 	$include-before$
 	$endfor$
 	$if(title)$
-	<header>
+	<div id="titleblock">
 	<h1 class="title">$title$</h1>
 	$if(subtitle)$
 	<p class="subtitle">$subtitle$</p>
@@ -51,7 +104,7 @@
 	$if(date)$
 	<p class="date">$date$</p>
 	$endif$
-	</header>
+	</div>
 	$endif$
 	$if(toc)$
 	<nav id="$idprefix$TOC">
