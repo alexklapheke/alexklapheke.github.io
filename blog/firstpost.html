@@ -12,7 +12,7 @@
 				<style type="text/css">
 		a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; position: absolute; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -25,13 +25,11 @@ code.sourceCode { white-space: pre-wrap; }
 a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
 pre.numberSource a.sourceLine
-  { position: relative; }
-pre.numberSource a.sourceLine:empty
-  { position: absolute; }
+  { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all;
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -137,12 +135,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 	<article>
 			<div id="titleblock">
 	<h1 class="title">First Blog Post</h1>
-			<p><time datetime="2020-05-15T12:45:02-04:00" class="date">Friday, May 15, 2020</time> &bull; <span class="wordcount">209 words</span></p>
+			<p><time datetime="2020-05-15T12:45:02-04:00" class="date">Friday, May 15, 2020</time> &bull; <span class="wordcount">213 words</span></p>
 		</div>
 			<nav id="TOC">
 	<ul>
 <li><a href="#part-i.">Part I.</a></li>
-<li><a href="#part-ii.">Part II.</a></li>
+<li><a href="#part-ii.">Part II.</a><ul>
+<li><a href="#section-1">Section 1</a></li>
+<li><a href="#section-2">Section 2</a></li>
+</ul></li>
 <li><a href="#references">References</a></li>
 </ul>
 	</nav>
@@ -152,16 +153,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="part-i." class="level1">
 <h1>Part I.</h1>
 <p>Lorem ipsum dolor sit amet, <a href="https://en.wikipedia.org/">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource c number"><code class="sourceCode c"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="dt">int</span> main(<span class="dt">void</span>) {</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">    printf(<span class="st">&quot;Hello, world!&quot;</span>);</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">}</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource c number"><code class="sourceCode c"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">int</span> main(<span class="dt">void</span>) {</a>
+<a class="sourceLine" id="cb1-2" title="2">    printf(<span class="st">&quot;Hello, world!&quot;</span>);</a>
+<a class="sourceLine" id="cb1-3" title="3">}</a></code></pre></div>
 </section>
 <section id="part-ii." class="level1">
 <h1>Part II.</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua (<span class="citation" data-cites="chomsky1957syntactic">Chomsky (1957)</span>):</p>
+<section id="section-1" class="level2">
+<h2>Section 1</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua <span class="citation" data-cites="chomsky1957syntactic">(Chomsky 1957)</span>:</p>
 <blockquote>
 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </blockquote>
+</section>
+<section id="section-2" class="level2">
+<h2>Section 2</h2>
 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mo>log</mo><mo stretchy="false" form="prefix">(</mo><mi>Ω</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">S = k_B\log(\Omega)</annotation></semantics></math> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <table>
 <thead>
@@ -205,6 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
+</section>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1>References</h1>
