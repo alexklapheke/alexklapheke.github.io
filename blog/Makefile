@@ -30,6 +30,8 @@ clean :
 	rm -f rss.xml
 
 %.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html
+	proselint $<;                                                                                 \
+	if [[ $(read -p "Continue? ") ~= [nN] ]]; then exit; fi;                                      \
 	sed -i 's/\$$DATE\$$/$(now)/' $<;                                                             \
 	pubdate=$$(pandoc -t plain --template=templates/date.plain $<);                               \
 	pubdate_pretty=$$(date -d $$pubdate +"%A, %B %e, %Y");                                        \

@@ -95,8 +95,13 @@ dt img {
 	
 	article {
 		margin-left: 0px;
-    display: block;
+		display: block;
 	}
+
+	footer {
+		margin-left: 0px;
+	}
+
 }
 
 @media only screen and (max-width: 679px){

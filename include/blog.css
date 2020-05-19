@@ -70,6 +70,19 @@ td {
 	border-color: #D1D8DE;
 }
 
+hr {
+  height: 0px;
+  border: none;
+  text-align: center;
+  padding-bottom: 24px;
+  color: #9BA0A9;
+}
+
+hr::before {
+  content: "⁎ ⁎ ⁎ ⁎ ⁎";
+  font-size: 20px;
+}
+
 a {
 	color: #042639;
 }
@@ -82,6 +95,7 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
 	font-family: "Linux Libertine O", serif;
 	font-style: normal;
 	font-variant: small-caps;
+	font-variant-numeric: oldstyle-nums;
 	text-transform: lowercase;
 	margin: 20px 0px 12px 0px;
 	color: #C34540;
