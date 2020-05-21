@@ -30,8 +30,7 @@ clean :
 	rm -f rss.xml
 
 %.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html
-	proselint $<;                                                                                 \
-	if [[ $(read -p "Continue? ") ~= [nN] ]]; then exit; fi;                                      \
+	proselint --compact $<;                                                                       \
 	sed -i 's/\$$DATE\$$/$(now)/' $<;                                                             \
 	pubdate=$$(pandoc -t plain --template=templates/date.plain $<);                               \
 	pubdate_pretty=$$(date -d $$pubdate +"%A, %B %e, %Y");                                        \
@@ -59,6 +58,7 @@ clean :
 			$(pandoc_body_options)                                                                \
 			$< | tac >> rss-items.xml;                                                            \
 		echo "		<item>" >> rss-items.xml;                                                     \
+		echo "New post $@ created at $$pubdate.";                                                 \
 	fi;                                                                                           \
 	pandoc -t html5+smart                                                                         \
 		--css=../include/style.css                                                                \
@@ -73,7 +73,8 @@ clean :
 		--extract-media=images                                                                    \
 		--toc                                                                                     \
 		$(pandoc_body_options)                                                                    \
-		-o $@ $<
+		-o $@ $<;                                                                                 \
+	echo "Post $@ published."
 
 index.html : $(html)
 	cat templates/index-header.html >  index.html

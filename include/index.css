@@ -38,6 +38,10 @@ footer {
 	background: #DFE8F7;
 }
 
+figure {
+	margin: 14px 0px;
+}
+
 #blogposts {
 	grid-area: blog;
 }

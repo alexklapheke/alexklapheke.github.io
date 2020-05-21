@@ -210,6 +210,10 @@ blockquote {
 	color: #333E47;
 }
 
+.epigraph em, em em {
+	font-style: normal;
+}
+
 math[display="block"] {
 	margin: 14px 0px;
 }
