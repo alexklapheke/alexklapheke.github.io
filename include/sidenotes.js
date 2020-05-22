@@ -19,7 +19,7 @@ window.onload = function() {
 		// put note flush with reference, but don't overlap previous notes
 		fn.style.top = (Math.max(prevbot, reftop)) + "px";
 
-		fnref.onmouseover = function(e) { fn.style.background = "#f6f5eb"; };
-		fnref.onmouseout  = function(e) { fn.style.background = "none";    };
+		fnref.onmouseover = function(e) { fn.classList.add("hovered"); };
+		fnref.onmouseout  = function(e) { fn.classList.remove("hovered"); };
 	});
 }

@@ -293,6 +293,21 @@ img {
 		margin: -1em -0.5em;
 	}
 
+	/* .sidenotes > ol > li.hovered::marker, */
+	/* .sidenotes > ol > li:target::marker { */
+	/* 	color: #C34540; */
+	/* } */
+
+	.sidenotes > ol > li {
+		padding: 1px 11px;
+	}
+
+	.sidenotes > ol > li.hovered,
+	.sidenotes > ol > li:target {
+		padding: 0px 10px;
+		border: 1px solid #D6D5CD;
+	}
+
 	.sidenotes > hr {
 		display: none;
 	}
