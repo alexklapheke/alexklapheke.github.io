@@ -51,6 +51,18 @@ figure {
 	color: #9BA0A9;
 }
 
+dl {
+	margin-bottom: 0px;
+}
+
+dt {
+	font-size: 16px;
+}
+
+dd {
+	margin-bottom: 28px;
+}
+
 dt img {
 	display: block;
 	border: 2px solid #081220;
