@@ -1,3 +1,19 @@
+/*
+ * Colors:
+ *
+ * Text/background colors:
+ * #FAFAFA white
+ * #090A0C black
+ * #C34540 red
+ * #51693A check green
+ * #333E47 dark gray
+ *
+ * Structural colors:
+ * #D1D8DE border gray (table cells)
+ * #D6D5CD border gray (blockquotes etc.)
+ *
+ */
+
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap&subset=latin-ext');
 
 @font-face {
@@ -48,7 +64,7 @@ body {
 	font-kerning: normal;
 	font-variant-ligatures: common-ligatures;
 	line-height: 22px;
-	background: #FAFAFA;
+	background: #FFFFFF;
 	color: #081220;
 	box-sizing: content-box;
 	min-height: 100%;
