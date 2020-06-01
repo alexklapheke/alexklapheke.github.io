@@ -189,6 +189,15 @@ blockquote {
 	border: 1px solid #D6D5CD;
 }
 
+div.sourceCode {
+	overflow: hidden;
+}
+
+pre.sourceCode {
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
 .epigraph {
 	padding: 0em 1.2em;
 	font-style: italic;
@@ -264,10 +273,14 @@ img {
 	margin: 2em 2em;
 }
 
+a.footnote-back {
+	color: #9BA0A9;
+}
+
 /* http://hartshorne.ca/2005/07/27/footnotes_v_sidenotes/ */
 @media (min-width: 1062px){
 	.sidenotes > ol > li {
-		font-size: 8pt;
+		font-size: 85%;
 		position: absolute;
 		right: 20px;
 		top: 0; /* default */
@@ -276,6 +289,10 @@ img {
 		width: calc((100% - 800px)/2);
 		padding: 0em 0.5em;
 		margin: -1em -0.5em;
+	}
+	
+	.sidenotes > ol > li code {
+		font-size: 85%;
 	}
 
 	/* .sidenotes > ol > li.hovered::marker, */
