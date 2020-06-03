@@ -71,8 +71,6 @@
 					<a href="../AlexanderKlapheke-Resume.pdf">R&eacute;sum&eacute;</a>
 				</div>
 			</div>
-				</div>
-			</div>
 
 			<p id="blurb">I&rsquo;m a data scientist and self-taught coder (Python, R, Haskell) with a background in linguistics and math and over 10 years&rsquo; experience explaining technical concepts to laypeople.</p>
 
@@ -80,10 +78,11 @@
 				<h2>Blogroll</h2>
 
 				<ul>
-					<li><a href="https://www.3quarksdaily.com">3 Quarks Daily</a></li>
-					<li><a href="https://www.futilitycloset.com">Futility Closet</a></li>
-					<li><a href="https://languagelog.ldc.upenn.edu/nll/">Language Log</a></li>
-					<li><a href="https://www.slatestarcodex.com">Slate Star Codex</a></li>
+					<li><abbr title="An excellent aggregator of interesting articles and weekly magazine"><a href="https://www.3quarksdaily.com">3 Quarks Daily</a></abbr></li>
+					<li><abbr title="A collection of bite-sized intellectual curiosities"><a href="https://www.futilitycloset.com">Futility Closet</a></abbr></li>
+					<li><abbr title="One of the best blogs about linguistics, and probably the broadest in scope"><a href="https://languagelog.ldc.upenn.edu/nll/">Language Log</a></abbr></li>
+					<li><abbr title="A blog about rationalism and why we think the way we do"><a href="https://www.slatestarcodex.com">Slate Star Codex</a></abbr></li>
+					<li><abbr title="Ad-free, curated internet radio streams spanning diverse genres"><a href="http://somafm.com/">SomaFM</a></abbr></li>
 				</ul>
 			</div>
 		</header>
@@ -98,7 +97,13 @@
 	<p class="subtitle">$subtitle$</p>
 	$endif$
 	$if(date)$
-	<p><time datetime="$date$" class="date">$date_pretty$</time> <span class="bullet">&bull;</span> <span class="wordcount">$wordcount$ words</span></p>
+	<p>
+		<time datetime="$date$" class="date">$date_pretty$</time>
+		<span class="bullet">&bull;</span>
+		<span class="wordcount">$wordcount$ words</span>
+		<span class="bullet">&bull;</span>
+		<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
+	</p>
 	$endif$
 	</div>
 	$endif$

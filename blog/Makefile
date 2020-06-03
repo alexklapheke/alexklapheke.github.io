@@ -13,6 +13,7 @@ html = $(patsubst publish/%.md,%.html,$(source))
 now = $(shell date -Iseconds)
 
 define pandoc_body_options
+--ascii \
 --mathml \
 --section-divs \
 --filter=pandoc-crossref \
@@ -30,14 +31,13 @@ clean :
 	rm -f rss.xml
 
 %.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html
-	proselint --compact $<;                                                                       \
+	proselint $<;                                                                                 \
 	sed -i 's/\$$DATE\$$/$(now)/' $<;                                                             \
 	pubdate=$$(pandoc -t plain --template=templates/date.plain $<);                               \
 	pubdate_pretty=$$(date -d $$pubdate +"%A, %B %e, %Y");                                        \
 	pubdate_terse=$$(date -d $$pubdate +%F);                                                      \
 	if [ ! -e $@ ]; then                                                                          \
 		pandoc -t html5+smart                                                                     \
-			--ascii                                                                               \
 			--template=templates/index-item.html                                                  \
 			-V date=$$pubdate                                                                     \
 			-V date_terse=$$pubdate_terse                                                         \
@@ -51,7 +51,6 @@ clean :
 		pandoc publish/firstpost.md -t html | recode utf8..XML-standalone | tac >> rss-items.xml; \
 		echo "	<description>" >> rss-items.xml;                                                  \
 		pandoc -t html5+smart                                                                     \
-			--ascii                                                                               \
 			--template=templates/rss.xml                                                          \
 			-V date=$$pubdate                                                                     \
 			-V date_terse=$$pubdate_terse                                                         \
