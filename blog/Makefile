@@ -18,7 +18,7 @@ define pandoc_body_options
 --section-divs \
 --filter=pandoc-crossref \
 --filter=pandoc-citeproc \
---highlight-style=pygments \
+--highlight-style=kate \
 --syntax-definition=$(HOME)/.pandoc/org-mode.xml \
 --bibliography=$(HOME)/texmf/bibtex/bib/references.bib
 endef
