@@ -21,6 +21,11 @@ window.onload = function() {
 		// get position of footnote reference
 		var reftop = fnref.getBoundingClientRect().top - bodytop;
 
+		// I don't know why this adjustment is necessary
+		if (elem.tagName == "FIGCAPTION") {
+			reftop += 14;
+		}
+
 		// put note flush with reference, but don't overlap previous notes
 		fn.style.top = (Math.max(prevbot, reftop)) + "px";
 

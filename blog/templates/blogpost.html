@@ -2,37 +2,44 @@
 <html lang="en-US">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="generator" content="pandoc" />
+$if(author)$
+$for(author-meta)$
+		<meta name="author" content="$author-meta$" />
+$endfor$
+$else$
 		<meta name="author" content="Alexander Klapheke">
-		$if(date-meta)$
+$endif$
+$if(date-meta)$
 		<meta name="dcterms.date" content="$date-meta$" />
-		$endif$
+$endif$
 		<meta name="robots" content="index,follow">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="last-modified" content="">
-		$if(keywords)$
+$if(keywords)$
 		<meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
-		$endif$
+$endif$
 
 		<link rel="canonical" href="https://alexklapheke.github.io/blog/$outputfile$">
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-		$if(highlighting-css)$
+$if(highlighting-css)$
 		<style type="text/css">
-		$highlighting-css$
+$highlighting-css$
 		</style>
-		$endif$
-		$for(css)$
+$endif$
+$for(css)$
 		<link rel="stylesheet" href="$css$" />
-		$endfor$
-		$if(math)$
-		$math$
-		$endif$
+$endfor$
+$if(math)$
+$math$
+$endif$
 		<!--[if lt IE 9]>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
 		<![endif]-->
 		<script src="../include/sidenotes.js" charset="utf-8"></script>
-		$for(header-includes)$
-		$header-includes$
-		$endfor$
+$for(header-includes)$
+$header-includes$
+$endfor$
 
 		<title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 	</head>
@@ -87,35 +94,39 @@
 			</div>
 		</header>
 	<article>
-	$for(include-before)$
-	$include-before$
-	$endfor$
-	$if(title)$
+$for(include-before)$
+$include-before$
+$endfor$
+$if(title)$
 	<div id="titleblock">
 	<h1 class="title">$title$</h1>
-	$if(subtitle)$
+$if(subtitle)$
 	<p class="subtitle">$subtitle$</p>
-	$endif$
-	$if(date)$
+$endif$
+$if(date)$
 	<p>
 		<time datetime="$date$" class="date">$date_pretty$</time>
 		<span class="bullet">&bull;</span>
 		<span class="wordcount">$wordcount$ words</span>
 		<span class="bullet">&bull;</span>
 		<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
+$if(addenda)$
+		<span class="bullet">&bull;</span>
+		<span class="addenda">&#128206; $for(addenda)$$addenda$$sep$, $endfor$</span>
+$endif$
 	</p>
-	$endif$
+$endif$
 	</div>
-	$endif$
-	$if(toc)$
+$endif$
+$if(toc)$
 	<nav id="$idprefix$TOC">
-	$table-of-contents$
+$table-of-contents$
 	</nav>
-	$endif$
-	$body$
-	$for(include-after)$
-	$include-after$
-	$endfor$
+$endif$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
 	</article>
 	</body>
 </html>
