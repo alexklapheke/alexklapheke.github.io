@@ -37,6 +37,7 @@ $endif$
 			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
 		<![endif]-->
 		<script src="../include/sidenotes.js" charset="utf-8"></script>
+		<script src="../include/sorttable.js" charset="utf-8"></script>
 $for(header-includes)$
 $header-includes$
 $endfor$
@@ -46,7 +47,7 @@ $endfor$
 	<body>
 		<header>
 			<!-- http://microformats.org/wiki/hcard -->
-			<div class="vcard">
+			<div class="author vcard">
 			<h1>
 				<a href="https://alexklapheke.github.io">
 				<span class="given-name">Alexander</span>
@@ -93,40 +94,46 @@ $endfor$
 				</ul>
 			</div>
 		</header>
-	<article>
+		<article class="hentry">
 $for(include-before)$
 $include-before$
 $endfor$
 $if(title)$
-	<div id="titleblock">
-	<h1 class="title">$title$</h1>
+		<div id="titleblock">
+		<h1 class="entry-title">$title$</h1>
 $if(subtitle)$
-	<p class="subtitle">$subtitle$</p>
+		<p class="subtitle">$subtitle$</p>
 $endif$
 $if(date)$
-	<p>
-		<time datetime="$date$" class="date">$date_pretty$</time>
-		<span class="bullet">&bull;</span>
-		<span class="wordcount">$wordcount$ words</span>
-		<span class="bullet">&bull;</span>
-		<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
+		<p>
+			<time datetime="$date$" class="published">$date_pretty$</time>
+			<span class="bullet">&bull;</span>
+			<span class="wordcount">$wordcount$ words</span>
+			<span class="bullet">&bull;</span>
+			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
+$if(versions)$
+			<span class="bullet">&bull;</span>
+			<abbr class="versions" title="The code in this blog post was written using: $for(versions)$$versions$$sep$, $endfor$">Version info</abbr>
+$endif$
 $if(addenda)$
-		<span class="bullet">&bull;</span>
-		<span class="addenda">&#128206; $for(addenda)$$addenda$$sep$, $endfor$</span>
+			<span class="bullet">&bull;</span>
+			<span class="addenda">&#128206; $for(addenda)$$addenda$$sep$, $endfor$</span>
 $endif$
-	</p>
+		</p>
 $endif$
-	</div>
+		</div>
 $endif$
 $if(toc)$
-	<nav id="$idprefix$TOC">
+		<nav id="$idprefix$TOC">
 $table-of-contents$
-	</nav>
+		</nav>
 $endif$
+			<div class="entry-content">
 $body$
 $for(include-after)$
 $include-after$
 $endfor$
-	</article>
+			</div>
+		</article>
 	</body>
 </html>

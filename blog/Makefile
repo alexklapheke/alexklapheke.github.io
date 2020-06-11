@@ -73,7 +73,9 @@ clean :
 		--toc                                                                                     \
 		$(pandoc_body_options)                                                                    \
 		-o $@ $<;                                                                                 \
-	echo "Post $@ published."
+	sed -i 's/<table>/<table class="sortable">/' $@;                                              \
+	sed -i 's/<thead>/<thead title="Click to sort">/' $@;                                         \
+	echo "Post $@ content updated."
 
 index.html : $(html)
 	cat templates/index-header.html >  index.html
