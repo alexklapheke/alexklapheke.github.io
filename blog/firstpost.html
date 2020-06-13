@@ -89,7 +89,7 @@ code span.wa { color: #bf0303; } /* Warning */
 	<body>
 		<header>
 			<!-- http://microformats.org/wiki/hcard -->
-			<div class="vcard">
+			<div class="author vcard">
 			<h1>
 				<a href="https://alexklapheke.github.io">
 				<span class="given-name">Alexander</span>
@@ -136,18 +136,20 @@ code span.wa { color: #bf0303; } /* Warning */
 				</ul>
 			</div>
 		</header>
-	<article>
-	<div id="titleblock">
-	<h1 class="title">First Blog Post</h1>
-	<p>
-		<time datetime="2020-05-15T12:45:02-04:00" class="date">Friday, May 15, 2020</time>
-		<span class="bullet">&bull;</span>
-		<span class="wordcount">431 words</span>
-		<span class="bullet">&bull;</span>
-		<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
-	</p>
-	</div>
-	<nav id="TOC">
+		<article class="hentry">
+		<div id="titleblock">
+		<h1 class="entry-title">First Blog Post</h1>
+		<p>
+			<time datetime="2020-05-15T12:45:02-04:00" class="published">Friday, May 15, 2020</time>
+			<span class="bullet">&bull;</span>
+			<span class="wordcount">431 words</span>
+			<span class="bullet">&bull;</span>
+			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
+			<span class="bullet">&bull;</span>
+			<a class="source" href="firstpost.md">View source</a>
+		</p>
+		</div>
+		<nav id="TOC">
 <ul>
 <li><a href="#part-i.">Part I.</a></li>
 <li><a href="#part-ii.">Part II.</a><ul>
@@ -156,7 +158,8 @@ code span.wa { color: #bf0303; } /* Warning */
 </ul></li>
 <li><a href="#references">References</a></li>
 </ul>
-	</nav>
+		</nav>
+			<div class="entry-content">
 <div class="epigraph">
 <p>&#8220;Better say nothing at all. Language is worth a thousand pounds a word!&#8221; &#8212;Alice, in <em>Through the Looking-Glass</em></p>
 </div>
@@ -243,6 +246,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <li id="fn2"><p>This is a longer footnote: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#fnref2" class="footnote-back">&#8617;</a></p></li>
 </ol>
 </section>
-	</article>
+			</div>
+		</article>
 	</body>
 </html>

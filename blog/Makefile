@@ -67,12 +67,19 @@ clean :
 		-V date=$$pubdate                                                                         \
 		-V date_pretty="$$pubdate_pretty"                                                         \
 		-V wordcount=$(shell mwc.py $<)                                                           \
+		-V markdown=$(patsubst publish/%.md,%.md,$<)                                              \
 		--template=templates/blogpost.html                                                        \
 		--resource-path=publish                                                                   \
 		--extract-media=images                                                                    \
 		--toc                                                                                     \
 		$(pandoc_body_options)                                                                    \
 		-o $@ $<;                                                                                 \
+	pandoc -t markdown                                                                            \
+		--standalone                                                                              \
+		--atx-headers                                                                             \
+		--resource-path=publish                                                                   \
+		--extract-media=images                                                                    \
+		-o $(patsubst publish/%.md,%.md,$<) $<;                                                   \
 	sed -i 's/<table>/<table class="sortable">/' $@;                                              \
 	sed -i 's/<thead>/<thead title="Click to sort">/' $@;                                         \
 	echo "Post $@ content updated."
@@ -86,9 +93,10 @@ rss.xml : $(html)
 	echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>"            >  rss.xml
 	echo "<rss version=\"2.0\">"                                  >> rss.xml
 	echo "	<channel>"                                            >> rss.xml
-	echo "		<title>Alex Klapheke</title>"                     >> rss.xml
-	echo "		<link>https://alexklapheke.github.io/blog</link>" >> rss.xml
+	echo "		<title>Alexander Klapheke</title>"                >> rss.xml
+	echo "		<link>https://alexklapheke.github.io/</link>"     >> rss.xml
 	echo "		<description></description>"                      >> rss.xml
+	echo "		<language>en-US</language>"                       >> rss.xml
 	echo "		<lastBuildDate>$(now)</lastBuildDate>"            >> rss.xml
 	tac rss-items.xml                                             >> rss.xml
 	echo "	</channel>"                                           >> rss.xml
