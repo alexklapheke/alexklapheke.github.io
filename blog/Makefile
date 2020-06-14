@@ -51,6 +51,7 @@ clean :
 		pandoc publish/firstpost.md -t html | recode utf8..XML-standalone | tac >> rss-items.xml; \
 		echo "	<description>" >> rss-items.xml;                                                  \
 		pandoc -t html5+smart                                                                     \
+			--strip-comments                                                                      \
 			--template=templates/rss.xml                                                          \
 			-V date=$$pubdate                                                                     \
 			-V date_terse=$$pubdate_terse                                                         \
@@ -60,6 +61,7 @@ clean :
 		echo "New post $@ created at $$pubdate.";                                                 \
 	fi;                                                                                           \
 	pandoc -t html5+smart                                                                         \
+		--strip-comments                                                                          \
 		--css=../include/style.css                                                                \
 		--css=../include/blog.css                                                                 \
 		--standalone                                                                              \
@@ -75,6 +77,7 @@ clean :
 		$(pandoc_body_options)                                                                    \
 		-o $@ $<;                                                                                 \
 	pandoc -t markdown                                                                            \
+		--strip-comments                                                                          \
 		--standalone                                                                              \
 		--atx-headers                                                                             \
 		--resource-path=publish                                                                   \
