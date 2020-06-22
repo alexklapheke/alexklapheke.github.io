@@ -262,7 +262,6 @@ dt, dd {
 }
 
 dt {
-	font-size: 11pt;
 	font-weight: bold;
 }
 
@@ -278,6 +277,10 @@ img {
 	margin: 2em 2em; */
 }
 
+img.outline {
+	border: 1px solid #D6D5CD;
+}
+
 figure {
 	margin: 0px;
 }
@@ -287,7 +290,7 @@ a.footnote-back, span.header-section-number, span.header-section-number::after {
 }
 
 /* http://hartshorne.ca/2005/07/27/footnotes_v_sidenotes/ */
-@media (min-width: 1062px){
+@media (min-width: 1200px){
 	.sidenotes > ol > li, figcaption.sidenote, caption.sidenote {
 		font-size: 85%;
 		position: absolute;
@@ -295,7 +298,7 @@ a.footnote-back, span.header-section-number, span.header-section-number::after {
 		top: 0; /* default */
 		/* min-width: 170px; */
 		/* width: 270px; */
-		width: calc((100% - 800px)/2);
+		width: calc(100% - 800px - 250px - 10px);
 		padding: 1px 11px;
 		margin: -1em -0.5em;
 	}

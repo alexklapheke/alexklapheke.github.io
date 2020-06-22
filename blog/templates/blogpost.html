@@ -121,6 +121,10 @@ $if(addenda)$
 $endif$
 			<span class="bullet">&bull;</span>
 			<a class="source" href="$markdown$">View source</a>
+$if(tags)$
+			<span class="bullet">&bull;</span>
+			<span class="tags">&#127991; $for(tags)$$tags$$sep$, $endfor$</span>
+$endif$
 		</p>
 $endif$
 		</div>

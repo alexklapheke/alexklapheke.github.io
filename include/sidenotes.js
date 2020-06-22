@@ -1,4 +1,4 @@
-window.addEventListener("load", function() {
+function placeSidenotes() {
 	// Apply class to whole container
 	var footnotes = document.getElementsByClassName("footnotes");
 	for (let elem of footnotes){elem.classList.add("sidenotes")};
@@ -42,4 +42,7 @@ window.addEventListener("load", function() {
 		// store bottom of this note for positioning next note
 		prevbot = fn.getBoundingClientRect().bottom - bodytop
 	});
-});
+}
+
+window.addEventListener("load", placeSidenotes);
+window.addEventListener("resize", placeSidenotes);
