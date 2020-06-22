@@ -10,6 +10,8 @@ source = $(wildcard publish/*.md)
 markdown = $(patsubst publish/%.md,%.md,$(source))
 html = $(patsubst publish/%.md,%.html,$(source))
 
+bibfile = $(HOME)/texmf/bibtex/bib/references.bib
+
 now = $(shell date -Iseconds)
 
 define pandoc_body_options
@@ -20,7 +22,7 @@ define pandoc_body_options
 --filter=pandoc-citeproc \
 --highlight-style=kate \
 --syntax-definition=$(HOME)/.pandoc/org-mode.xml \
---bibliography=$(HOME)/texmf/bibtex/bib/references.bib
+--bibliography=$(bibfile)
 endef
 
 .PHONY : clean blog
@@ -30,7 +32,7 @@ blog : rss.xml
 clean :
 	rm -f rss.xml
 
-%.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html
+%.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html $(bibfile)
 	proselint $<;                                                                                 \
 	sed -i 's/\$$DATE\$$/$(now)/' $<;                                                             \
 	pubdate=$$(pandoc -t plain --template=templates/date.plain $<);                               \
