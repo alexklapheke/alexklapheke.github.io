@@ -1,150 +1,48 @@
 		</item>
 	</description>
-&lt;/section&gt;
-&lt;/ol&gt;
-&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;This is a longer footnote: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;a href=&quot;#fnref2&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;This is a footnote.&lt;a href=&quot;#fnref1&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;ol&gt;
-&lt;hr /&gt;
-&lt;section class=&quot;footnotes&quot;&gt;
-&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
-&lt;/table&gt;
-&lt;/tbody&gt;
-&lt;/tr&gt;
-&lt;td&gt;9949&lt;/td&gt;
-&lt;td&gt;9087&lt;/td&gt;
-&lt;td&gt;17733&lt;/td&gt;
-&lt;td&gt;25948&lt;/td&gt;
-&lt;tr class=&quot;odd&quot;&gt;
-&lt;/tr&gt;
-&lt;td&gt;2848&lt;/td&gt;
-&lt;td&gt;24432&lt;/td&gt;
-&lt;td&gt;13874&lt;/td&gt;
-&lt;td&gt;7487&lt;/td&gt;
-&lt;tr class=&quot;even&quot;&gt;
-&lt;/tr&gt;
-&lt;td&gt;18982&lt;/td&gt;
-&lt;td&gt;14798&lt;/td&gt;
-&lt;td&gt;16705&lt;/td&gt;
-&lt;td&gt;20418&lt;/td&gt;
-&lt;tr class=&quot;odd&quot;&gt;
-&lt;/tr&gt;
-&lt;td&gt;7833&lt;/td&gt;
-&lt;td&gt;11312&lt;/td&gt;
-&lt;td&gt;19874&lt;/td&gt;
-&lt;td&gt;13865&lt;/td&gt;
-&lt;tr class=&quot;even&quot;&gt;
-&lt;/tr&gt;
-&lt;td&gt;25142&lt;/td&gt;
-&lt;td&gt;31850&lt;/td&gt;
-&lt;td&gt;11018&lt;/td&gt;
-&lt;td&gt;4829&lt;/td&gt;
-&lt;tr class=&quot;odd&quot;&gt;
-&lt;tbody&gt;
-&lt;/thead&gt;
-&lt;/tr&gt;
-&lt;th&gt;Four&lt;/th&gt;
-&lt;th&gt;Three&lt;/th&gt;
-&lt;th&gt;Two&lt;/th&gt;
-&lt;th&gt;One&lt;/th&gt;
-&lt;tr class=&quot;header&quot;&gt;
-&lt;thead&gt;
-&lt;table&gt;
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. &lt;br /&gt;&lt;span class=&quot;math display&quot;&gt;&lt;em&gt;S&lt;/em&gt;&#8196;=&#8196;&lt;em&gt;k&lt;/em&gt;&lt;sub&gt;&lt;em&gt;B&lt;/em&gt;&lt;/sub&gt;log&#8198;(&lt;em&gt;&#937;&lt;/em&gt;)&lt;/span&gt;&lt;br /&gt; Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua (&lt;span class=&quot;citation&quot; data-cites=&quot;chomsky1957syntactic&quot;&gt;@chomsky1957syntactic&lt;/span&gt;):&lt;/p&gt;
-&lt;h1 id=&quot;part-ii.&quot;&gt;Part II.&lt;/h1&gt;
-&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-3&quot; data-line-number=&quot;3&quot;&gt;}&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-2&quot; data-line-number=&quot;2&quot;&gt;    printf(&lt;span class=&quot;st&quot;&gt;&amp;quot;Hello, world!&amp;quot;&lt;/span&gt;);&lt;/a&gt;
-&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode numberSource c number&quot;&gt;&lt;code class=&quot;sourceCode c&quot;&gt;&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-1&quot; data-line-number=&quot;1&quot;&gt;&lt;span class=&quot;dt&quot;&gt;int&lt;/span&gt; main(&lt;span class=&quot;dt&quot;&gt;void&lt;/span&gt;) {&lt;/a&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, &lt;a href=&quot;https://en.wikipedia.org/&quot;&gt;consectetur adipisicing elit&lt;/a&gt;, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;a href=&quot;#fn2&quot; class=&quot;footnote-ref&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;part-i.&quot;&gt;Part I.&lt;/h1&gt;
+--&gt;
+    ```
+        )
+            y = &quot;New cases&quot;
+            x = &quot;Date&quot;,
+                                    &quot;. Updated &quot;, .(format(Sys.time(), &quot;%b %-d, %Y&quot;)))),
+            subtitle = bquote(paste(&quot;Data courtesy of the &quot;, italic(&quot;New York Times&quot;),
+            title = paste0(&quot;New cases in &quot;, us_state, &quot; (&quot;, days, &quot;-day moving average)&quot;),
+    labs(
+        ) +
+            panel.grid.major.y = element_line(colour = &quot;gray90&quot;)
+            axis.line = element_blank(),
+            text = element_text(family = &quot;Linux Libertine O&quot;),
+    theme(
+    theme_classic() +
+    geom_point() +
+    ggplot(aes(x = date, y = newcases_moving)) +
+    mutate(newcases_moving = stats::filter(newcases, rep(1 / days, days))) %&gt;%
+    mutate(newcases = cases - c(0, head(cases, -1))) %&gt;%
+    mutate(date = as.POSIXct(date, format = &quot;%F&quot;)) %&gt;%
+    filter(state == us_state) %&gt;%
+    read.csv(&quot;https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv&quot;) %&gt;%
+
+    days &lt;- 14
+    us_state &lt;- &quot;Massachusetts&quot;
+
+    svg(&quot;covid-mass.svg&quot;, width = 5, height = 5)
+    library(tidyverse)
+    ```r
+
+[^rcode]: The full R code to generate this graph is below:
+
+![New COVID-19 cases in Massachusetts (14-day moving average)](covid-mass.svg)\
+
+&lt;!-- The good news now is that, as the graph below shows, the curve seems to have peaked,[^rcode] and while it would be remiss to hazard that we&apos;re in the clear, or comment on the efficacy of this or that public health policy, I will say that I look forward to writing about my data investigations, and 
+&lt;p&gt;This blog will mainly comprise overviews of the data projects I&#8217;m working on, essays on how I approach data, particularly language data, and posts about how I use various tools&#8212;not just programming languages and text editors, but also models and theorems. I hope not only to showcase what insights can be loosed from a dataset (and what illusory insights come of unsound analyses), but also serve as an aid and reference to other data scientists&#8212;not least among whom, my future self. A full portfolio of my work can be found on &lt;a href=&quot;https://alexklaphe.github.io/&quot;&gt;my homepage&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I entered data science after leaving academia, but the transition wasn&#8217;t abrupt. I&#8217;d learned to code some years prior, and ran experiments as a graduate student, punctiliously collecting small data sets, modeling them in R, and encapsulating the results in manuscripts and slides. The tools I use have changed (Python largely displacing R), and the data sets are some orders of magnitude larger, but my work in graduate school laid the flagstones for a data science career.&lt;/p&gt;
+&lt;p&gt;As a preface to this blog, let me introduce myself: I&#8217;m a linguist turned data scientist living in the Boston area. While a lot of my work deals with natural language, I&#8217;m interested in the gamut of data and what knowledge can be gleaned from it. &lt;!-- Typifying this is the current COVID-19 crisis---Massachusetts is now in the thirteenth week of a state of emergency---during which uncertainty, epidemiological data (&quot;[The Curve](https://en.wikipedia.org/wiki/Epidemic_curve)&quot;) has been exalted almost to a kind of augury. --&gt; I won&#8217;t comment much on pop data science or world events, but I hope that through reasoned analysis I can provide clarity about what data I can get hold of.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&#8220;Better say nothing at all. Language is worth a thousand pounds a word!&#8221; &#8212;Alice, in &lt;em&gt;Through the Looking-Glass&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I should not talk so much about myself if there were anybody else whom I knew as well.&lt;/p&gt;
 &lt;div class=&quot;epigraph&quot;&gt;
 	<description>
-			<pubDate>2020-05-15T12:45:02-04:00</pubDate>
-			<link>https://alexklapheke.github.io/blog/publish/firstpost.md</link>
-			<title>First Blog Post</title>
-		<item>
-		</item>
-	</description>
-&lt;/section&gt;
-&lt;/ol&gt;
-&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;This is a longer footnote: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;a href=&quot;#fnref2&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;This is a footnote.&lt;a href=&quot;#fnref1&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;ol&gt;
-&lt;hr /&gt;
-&lt;section class=&quot;footnotes&quot;&gt;
-&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
-&lt;p&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
-&lt;/table&gt;
-&lt;/tbody&gt;
-&lt;/tr&gt;
-&lt;td&gt;9949&lt;/td&gt;
-&lt;td&gt;9087&lt;/td&gt;
-&lt;td&gt;17733&lt;/td&gt;
-&lt;td&gt;25948&lt;/td&gt;
-&lt;tr class=&quot;odd&quot;&gt;
-&lt;/tr&gt;
-&lt;td&gt;2848&lt;/td&gt;
-&lt;td&gt;24432&lt;/td&gt;
-&lt;td&gt;13874&lt;/td&gt;
-&lt;td&gt;7487&lt;/td&gt;
-&lt;tr class=&quot;even&quot;&gt;
-&lt;/tr&gt;
-&lt;td&gt;18982&lt;/td&gt;
-&lt;td&gt;14798&lt;/td&gt;
-&lt;td&gt;16705&lt;/td&gt;
-&lt;td&gt;20418&lt;/td&gt;
-&lt;tr class=&quot;odd&quot;&gt;
-&lt;/tr&gt;
-&lt;td&gt;7833&lt;/td&gt;
-&lt;td&gt;11312&lt;/td&gt;
-&lt;td&gt;19874&lt;/td&gt;
-&lt;td&gt;13865&lt;/td&gt;
-&lt;tr class=&quot;even&quot;&gt;
-&lt;/tr&gt;
-&lt;td&gt;25142&lt;/td&gt;
-&lt;td&gt;31850&lt;/td&gt;
-&lt;td&gt;11018&lt;/td&gt;
-&lt;td&gt;4829&lt;/td&gt;
-&lt;tr class=&quot;odd&quot;&gt;
-&lt;tbody&gt;
-&lt;/thead&gt;
-&lt;/tr&gt;
-&lt;th&gt;Four&lt;/th&gt;
-&lt;th&gt;Three&lt;/th&gt;
-&lt;th&gt;Two&lt;/th&gt;
-&lt;th&gt;One&lt;/th&gt;
-&lt;tr class=&quot;header&quot;&gt;
-&lt;thead&gt;
-&lt;table&gt;
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. &lt;br /&gt;&lt;span class=&quot;math display&quot;&gt;&lt;em&gt;S&lt;/em&gt;&#8196;=&#8196;&lt;em&gt;k&lt;/em&gt;&lt;sub&gt;&lt;em&gt;B&lt;/em&gt;&lt;/sub&gt;log&#8198;(&lt;em&gt;&#937;&lt;/em&gt;)&lt;/span&gt;&lt;br /&gt; Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;h2 id=&quot;section-2&quot;&gt;Section 2&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;a href=&quot;https://example.com/document.pdf&quot;&gt;This is a link to a PDF.&lt;/a&gt; Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua &lt;span class=&quot;citation&quot; data-cites=&quot;chomsky1957syntactic&quot;&gt;[@chomsky1957syntactic]&lt;/span&gt;:&lt;/p&gt;
-&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
-&lt;h1 id=&quot;part-ii.&quot;&gt;Part II.&lt;/h1&gt;
-&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-3&quot; title=&quot;3&quot;&gt;}&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-2&quot; title=&quot;2&quot;&gt;    printf(&lt;span class=&quot;st&quot;&gt;&amp;quot;Hello, world!&amp;quot;&lt;/span&gt;);&lt;/a&gt;
-&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode numberSource c number&quot;&gt;&lt;code class=&quot;sourceCode c&quot;&gt;&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-1&quot; title=&quot;1&quot;&gt;&lt;span class=&quot;dt&quot;&gt;int&lt;/span&gt; main(&lt;span class=&quot;dt&quot;&gt;void&lt;/span&gt;) {&lt;/a&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, &lt;a href=&quot;https://en.wikipedia.org/&quot;&gt;consectetur adipisicing elit&lt;/a&gt;, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. John is very unique. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;a href=&quot;#fn2&quot; class=&quot;footnote-ref&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;part-i.&quot;&gt;Part I.&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;creedthoughts.gov.jpg&quot; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&#8220;Better say nothing at all. Language is worth a thousand pounds a word!&#8221; &#8212;Alice, in &lt;em&gt;Through the Looking-Glass&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;epigraph&quot;&gt;
-	<description>
-			<pubDate>2020-05-15T12:45:02-04:00</pubDate>
-			<link>https://alexklapheke.github.io/blog/publish/firstpost.md</link>
-			<title>First Blog Post</title>
+			<pubDate>2020-06-22T06:10:59-04:00</pubDate>
+			<link>https://alexklapheke.github.io/blog/publish/foreword.md</link>
+			<title>Foreword</title>
 		<item>

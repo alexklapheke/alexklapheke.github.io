@@ -48,7 +48,7 @@ clean :
 			rm index-item.html;                                                                   \
 		echo "		</item>" >> rss-items.xml;                                                    \
 		echo "	</description>" >> rss-items.xml;                                                 \
-		pandoc publish/firstpost.md -t html | recode utf8..XML-standalone | tac >> rss-items.xml; \
+		pandoc $< -t html | recode utf8..XML-standalone | tac >> rss-items.xml;                   \
 		echo "	<description>" >> rss-items.xml;                                                  \
 		pandoc -t html5+smart                                                                     \
 			--strip-comments                                                                      \
