@@ -12,6 +12,8 @@ html = $(patsubst publish/%.md,%.html,$(source))
 
 bibfile = $(HOME)/texmf/bibtex/bib/references.bib
 
+ghraw = https://raw.githubusercontent.com/alexklapheke/alexklapheke.github.io/master/blog
+
 now = $(shell date -Iseconds)
 
 define pandoc_body_options
@@ -71,7 +73,7 @@ clean :
 		-V date=$$pubdate                                                                         \
 		-V date_pretty="$$pubdate_pretty"                                                         \
 		-V wordcount=$(shell mwc.py $<)                                                           \
-		-V markdown=$(patsubst publish/%.md,%.md,$<)                                              \
+		-V markdown=$(patsubst publish/%.md,$(ghraw)/%.md,$<)                                     \
 		--template=templates/blogpost.html                                                        \
 		--resource-path=publish                                                                   \
 		--extract-media=images                                                                    \
