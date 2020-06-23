@@ -38,7 +38,7 @@ table {
 }
 
 div[id^="tbl:"] {
-	overflow-x: scroll;
+	overflow-x: auto;
 }
 
 table.sortable th {
@@ -291,7 +291,6 @@ img.outline {
 
 figure {
 	margin: 0px;
-	overflow-x: scroll;
 }
 
 a.footnote-back, span.header-section-number, span.header-section-number::after {
@@ -365,6 +364,10 @@ a.footnote-back, span.header-section-number, span.header-section-number::after {
 	article {
 		margin-left: 0px;
     display: block;
+	}
+
+	figure {
+		overflow-x: auto;
 	}
 }
 
