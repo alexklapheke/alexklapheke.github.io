@@ -37,6 +37,10 @@ table {
 	border-collapse: collapse;
 }
 
+div[id^="tbl:"] {
+	overflow-x: scroll;
+}
+
 table.sortable th {
 	cursor: pointer;
 }
@@ -287,6 +291,7 @@ img.outline {
 
 figure {
 	margin: 0px;
+	overflow-x: scroll;
 }
 
 a.footnote-back, span.header-section-number, span.header-section-number::after {
