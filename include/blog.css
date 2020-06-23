@@ -41,6 +41,10 @@ table.sortable th {
 	cursor: pointer;
 }
 
+/* table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    content: " \25B4\25BE";
+} */
+
 th, td {
 	border-width: 1px;
 	border-style: solid;

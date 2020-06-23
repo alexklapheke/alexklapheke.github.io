@@ -31,9 +31,10 @@ function placeSidenotes() {
 		// put note flush with reference, but don't overlap previous notes
 		fn.style.top = (Math.max(prevbot, reftop)) + "px";
 
-		// so we can highlight notes when the mouse is over the note reference
-		fnref.onmouseover = function(e) { fn.classList.add("hovered"); };
-		fnref.onmouseout  = function(e) { fn.classList.remove("hovered"); };
+		// so we can highlight notes when the mouse is over the note reference;
+		// this is disabled until I can get it working right & styled more subtly
+		// fnref.onmouseover = function(e) { fn.classList.add("hovered"); };
+		// fnref.onmouseout  = function(e) { fn.classList.remove("hovered"); };
 
 		if (is_caption) {
 			fn.classList.add("sidenote")

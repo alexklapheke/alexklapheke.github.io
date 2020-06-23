@@ -11,6 +11,7 @@ markdown = $(patsubst publish/%.md,%.md,$(source))
 html = $(patsubst publish/%.md,%.html,$(source))
 
 bibfile = $(HOME)/texmf/bibtex/bib/references.bib
+cslfile = $(HOME)/.pandoc/chicago-footnotes.csl
 
 ghraw = https://raw.githubusercontent.com/alexklapheke/alexklapheke.github.io/master/blog
 
@@ -25,6 +26,7 @@ define pandoc_body_options
 --highlight-style=kate \
 --syntax-definition=$(HOME)/.pandoc/org-mode.xml \
 --bibliography=$(bibfile)
+--csl=$(cslfile)
 endef
 
 .PHONY : clean blog
@@ -72,7 +74,7 @@ clean :
 		-V 'lang=en-US'                                                                           \
 		-V date=$$pubdate                                                                         \
 		-V date_pretty="$$pubdate_pretty"                                                         \
-		-V wordcount=$(shell mwc.py $<)                                                           \
+		-V wordcount=$(shell pandoc --quiet --lua-filter ../filters/wordcount.lua $<)             \
 		-V markdown=$(patsubst publish/%.md,$(ghraw)/%.md,$<)                                     \
 		--template=templates/blogpost.html                                                        \
 		--resource-path=publish                                                                   \
@@ -89,6 +91,7 @@ clean :
 		-o $(patsubst publish/%.md,%.md,$<) $<;                                                   \
 	sed -i 's/<table>/<table class="sortable">/' $@;                                              \
 	sed -i 's/<thead>/<thead title="Click to sort">/' $@;                                         \
+	sed -i 's/<img\([^>]\+\)src="\([^"]\+.svg\)"\([^>]\+\)\/>/<object\1data="\2"\3>&<\/object>/' $@; \
 	echo "Post $@ content updated."
 
 index.html : $(html)
