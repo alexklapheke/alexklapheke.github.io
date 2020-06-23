@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="216pt" version="1.1" viewBox="0 0 504 216" width="504pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 216 
+L 504 216 
+L 504 0 
+L 0 0 
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 29.05 190.7 
+L 477.65 190.7 
+L 477.65 10.8 
+L 29.05 10.8 
+z
+" style="fill:none;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 68.3967, 201.179688)" x="68.3967" y="201.179688">Feb</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 184.552057, 201.179688)" x="184.552057" y="201.179688">Mar</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 308.718129, 201.179688)" x="308.718129" y="201.179688">Apr</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 428.878843, 201.179688)" x="428.878843" y="201.179688">May</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 25.55, 176.199844)" x="25.55" y="176.199844">−40</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 25.55, 140.219844)" x="25.55" y="140.219844">−20</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 25.55, 104.239844)" x="25.55" y="104.239844">0</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 25.55, 68.259844)" x="25.55" y="68.259844">20</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_9"/>
+     <g id="text_9">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 25.55, 32.279844)" x="25.55" y="32.279844">40</text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_1">
+    <path clip-path="url(#pd7e5318aec)" d="M 241.333929 133.132 
+L 241.333929 100.75 
+" style="fill:none;stroke:#909090;stroke-dasharray:1,1.65;stroke-dashoffset:0;"/>
+   </g>
+   <g id="LineCollection_2">
+    <path clip-path="url(#pd7e5318aec)" d="M 309.425 178.107 
+L 309.425 100.75 
+" style="fill:none;stroke:#909090;stroke-dasharray:1,1.65;stroke-dashoffset:0;"/>
+   </g>
+   <g id="LineCollection_3">
+    <path clip-path="url(#pd7e5318aec)" d="M 369.505357 160.117 
+L 369.505357 100.75 
+" style="fill:none;stroke:#909090;stroke-dasharray:1,1.65;stroke-dashoffset:0;"/>
+   </g>
+   <g id="LineCollection_4">
+    <path clip-path="url(#pd7e5318aec)" d="M 421.575 46.78 
+L 421.575 100.75 
+" style="fill:none;stroke:#909090;stroke-dasharray:1,1.65;stroke-dashoffset:0;"/>
+   </g>
+   <g id="LineCollection_5">
+    <path clip-path="url(#pd7e5318aec)" d="M 181.253571 82.76 
+L 181.253571 100.75 
+" style="fill:none;stroke:#909090;stroke-dasharray:1,1.65;stroke-dashoffset:0;"/>
+   </g>
+   <g id="LineCollection_6">
+    <path clip-path="url(#pd7e5318aec)" d="M 237.328571 28.79 
+L 237.328571 100.75 
+" style="fill:none;stroke:#909090;stroke-dasharray:1,1.65;stroke-dashoffset:0;"/>
+   </g>
+   <g id="LineCollection_7">
+    <path clip-path="url(#pd7e5318aec)" d="M 257.355357 55.775 
+L 257.355357 100.75 
+" style="fill:none;stroke:#909090;stroke-dasharray:1,1.65;stroke-dashoffset:0;"/>
+   </g>
+   <g id="line2d_10">
+    <path clip-path="url(#pd7e5318aec)" d="M 29.05 100.75 
+L 477.65 100.75 
+" style="fill:none;stroke:#808080;stroke-linecap:square;stroke-width:1.5;"/>
+   </g>
+   <g id="line2d_11">
+    <path clip-path="url(#pd7e5318aec)" d="M 245.339286 110.756038 
+L 249.344643 119.106996 
+L 253.35 113.846206 
+L 257.355357 94.610099 
+L 261.360714 92.498073 
+L 265.366071 108.710661 
+L 269.371429 100.286843 
+L 273.376786 128.787115 
+L 277.382143 126.942541 
+L 281.3875 117.592778 
+L 285.392857 121.435442 
+L 289.398214 132.963134 
+L 301.414286 92.20499 
+L 309.425 103.632238 
+L 313.430357 135.084515 
+L 329.451786 152.988163 
+L 337.4625 163.294034 
+L 341.467857 171.459695 
+L 345.473214 172.265647 
+L 349.478571 141.085379 
+L 353.483929 148.713139 
+L 365.5 126.464906 
+L 369.505357 121.000743 
+L 373.510714 109.546151 
+L 377.516071 125.357562 
+L 381.521429 105.170083 
+L 385.526786 93.846577 
+L 389.532143 86.212221 
+L 397.542857 62.949712 
+L 401.548214 47.613237 
+L 409.558929 43.420025 
+L 413.564286 42.301389 
+L 417.569643 62.378229 
+L 421.575 102.632654 
+L 425.580357 110.771329 
+L 437.596429 113.166184 
+L 441.601786 117.860032 
+L 445.607143 110.93703 
+L 449.6125 88.308808 
+" style="fill:none;stroke:#0658cf;stroke-linecap:square;stroke-width:2;"/>
+   </g>
+   <g id="line2d_12">
+    <path clip-path="url(#pd7e5318aec)" d="M 197.275 133.232744 
+L 201.280357 181.861513 
+L 205.285714 141.49735 
+L 209.291071 167.789735 
+L 221.307143 130.924627 
+L 225.3125 126.952435 
+L 229.317857 69.234758 
+L 233.323214 84.081905 
+L 237.328571 49.944981 
+L 241.333929 44.919603 
+L 245.339286 47.04353 
+L 249.344643 74.912918 
+L 253.35 73.669359 
+L 257.355357 95.27385 
+L 261.360714 96.580205 
+L 265.366071 108.134524 
+L 269.371429 100.539081 
+L 273.376786 94.790869 
+L 277.382143 80.093339 
+L 281.3875 94.227544 
+L 285.392857 87.458357 
+L 289.398214 94.205916 
+L 293.403571 87.881938 
+L 297.408929 93.632292 
+L 301.414286 87.585801 
+L 305.419643 83.748534 
+L 309.425 76.326359 
+L 313.430357 85.308317 
+L 317.435714 100.311527 
+L 321.441071 97.947821 
+L 325.446429 107.564375 
+L 329.451786 112.500618 
+L 333.457143 118.460405 
+L 337.4625 89.255439 
+L 341.467857 84.81101 
+L 345.473214 83.954236 
+L 349.478571 72.781996 
+L 353.483929 69.097391 
+L 357.489286 93.603369 
+L 361.494643 92.761836 
+L 365.5 87.225864 
+L 369.505357 103.636702 
+L 373.510714 84.268022 
+L 377.516071 80.427157 
+L 381.521429 82.730676 
+L 385.526786 88.911141 
+L 389.532143 89.413972 
+L 393.5375 116.172298 
+L 397.542857 101.374495 
+L 401.548214 105.46525 
+L 405.553571 99.502464 
+L 409.558929 89.324371 
+L 413.564286 83.714849 
+L 417.569643 94.832978 
+L 421.575 88.014189 
+L 425.580357 89.581298 
+L 429.585714 123.504921 
+L 433.591071 122.691157 
+L 437.596429 119.594311 
+L 441.601786 134.155687 
+L 445.607143 141.883111 
+L 449.6125 107.442502 
+L 453.617857 104.683453 
+L 457.623214 108.136932 
+L 461.628571 101.288961 
+L 465.633929 95.131729 
+L 469.639286 102.542723 
+L 473.644643 116.327343 
+" style="fill:none;stroke:#ff5500;stroke-linecap:square;stroke-width:2;"/>
+   </g>
+   <g id="text_10">
+    <text style="fill:#0658cf;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(241.333929 137.152)">First reported</text>
+    <text style="fill:#0658cf;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(241.333929 145.725)">death in Texas</text>
+   </g>
+   <g id="text_11">
+    <text style="fill:#0658cf;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(309.425 182.127)">Texas stay-at-home</text>
+    <text style="fill:#0658cf;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(309.425 190.7)">order begins</text>
+   </g>
+   <g id="text_12">
+    <text style="fill:#0658cf;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(369.505357 164.137)">Abbott announces end</text>
+    <text style="fill:#0658cf;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(369.505357 172.71)">of stay-at-home order</text>
+   </g>
+   <g id="text_13">
+    <text style="fill:#0658cf;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(421.575 38.207)">Texas stay-at-home</text>
+    <text style="fill:#0658cf;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(421.575 46.78)">order ends</text>
+   </g>
+   <g id="text_14">
+    <text style="fill:#ff5500;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(181.253571 74.187)">First reported</text>
+    <text style="fill:#ff5500;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(181.253571 82.76)">case in NYS</text>
+   </g>
+   <g id="text_15">
+    <text style="fill:#ff5500;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(237.328571 20.217)">NYC public schools</text>
+    <text style="fill:#ff5500;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(237.328571 28.79)">ordered to close</text>
+   </g>
+   <g id="text_16">
+    <text style="fill:#ff5500;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(257.355357 47.202)">Cuomo issues</text>
+    <text style="fill:#ff5500;font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(257.355357 55.775)">stay-at-home order</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd7e5318aec">
+   <rect height="179.9" width="448.6" x="29.05" y="10.8"/>
+  </clipPath>
+ </defs>
+</svg>

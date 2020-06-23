@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="216pt" version="1.1" viewBox="0 0 504 216" width="504pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 216 
+L 504 216 
+L 504 0 
+L 0 0 
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 29.05 190.7 
+L 493.2 190.7 
+L 493.2 10.8 
+L 29.05 10.8 
+z
+" style="fill:none;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 69.76059, 201.179688)" x="69.76059" y="201.179688">Feb</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 189.942287, 201.179688)" x="189.942287" y="201.179688">Mar</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 318.412376, 201.179688)" x="318.412376" y="201.179688">Apr</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 442.738269, 201.179688)" x="442.738269" y="201.179688">May</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 25.55, 176.199844)" x="25.55" y="176.199844">−40</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 25.55, 140.219844)" x="25.55" y="140.219844">−20</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 25.55, 104.239844)" x="25.55" y="104.239844">0</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 25.55, 68.259844)" x="25.55" y="68.259844">20</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_9"/>
+     <g id="text_9">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 25.55, 32.279844)" x="25.55" y="32.279844">40</text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_1">
+    <path clip-path="url(#pc1345b5c9f)" d="M 290.134375 46.78 
+L 290.134375 100.75 
+" style="fill:none;stroke:#909090;stroke-dasharray:1,1.65;stroke-dashoffset:0;"/>
+   </g>
+   <g id="LineCollection_2">
+    <path clip-path="url(#pc1345b5c9f)" d="M 294.278571 169.112 
+L 294.278571 100.75 
+" style="fill:none;stroke:#909090;stroke-dasharray:1,1.65;stroke-dashoffset:0;"/>
+   </g>
+   <g id="LineCollection_3">
+    <path clip-path="url(#pc1345b5c9f)" d="M 368.874107 64.77 
+L 368.874107 100.75 
+" style="fill:none;stroke:#909090;stroke-dasharray:1,1.65;stroke-dashoffset:0;"/>
+   </g>
+   <g id="line2d_10">
+    <path clip-path="url(#pc1345b5c9f)" d="M 29.05 100.75 
+L 493.2 100.75 
+" style="fill:none;stroke:#808080;stroke-linecap:square;stroke-width:1.5;"/>
+   </g>
+   <g id="line2d_11">
+    <path clip-path="url(#pc1345b5c9f)" d="M 215.538839 119.309255 
+L 219.683036 120.69514 
+L 227.971429 130.830162 
+L 232.115625 142.890546 
+L 236.259821 154.668179 
+L 240.404018 162.397251 
+L 248.692411 163.533863 
+L 256.980804 167.087671 
+L 261.125 166.039493 
+L 265.269196 164.322601 
+L 273.557589 159.264846 
+L 277.701786 159.535318 
+L 281.845982 150.54181 
+L 285.990179 150.598628 
+L 290.134375 147.041975 
+L 294.278571 145.736351 
+L 298.422768 145.653173 
+L 302.566964 145.341882 
+L 306.711161 144.460975 
+L 310.855357 146.876197 
+L 314.999554 150.000465 
+L 319.14375 147.669205 
+L 327.432143 154.217719 
+L 335.720536 153.054726 
+L 339.864732 153.393332 
+L 344.008929 158.162515 
+L 348.153125 168.480654 
+L 352.297321 166.045322 
+L 356.441518 166.237129 
+L 360.585714 160.955171 
+L 364.729911 144.65014 
+L 373.018304 125.578008 
+L 377.1625 120.219652 
+L 381.306696 113.150327 
+L 385.450893 113.631919 
+L 393.739286 131.467385 
+L 397.883482 155.482776 
+L 402.027679 170.851813 
+L 406.171875 189.357706 
+L 410.316071 202.269609 
+L 414.460268 194.403062 
+L 422.748661 173.522069 
+L 426.892857 154.242186 
+L 431.037054 134.12085 
+L 439.325446 111.703811 
+L 447.613839 106.778629 
+L 451.758036 111.924249 
+L 455.902232 115.100683 
+L 460.046429 118.649055 
+L 464.190625 126.190271 
+L 472.479018 127.241055 
+L 476.623214 122.612036 
+L 480.767411 126.287201 
+L 489.055804 138.169116 
+" style="fill:none;stroke:#0658cf;stroke-linecap:square;stroke-width:2;"/>
+   </g>
+   <g id="line2d_12">
+    <path clip-path="url(#pc1345b5c9f)" d="M 232.115625 157.914187 
+L 236.259821 147.953897 
+L 240.404018 141.171648 
+L 244.548214 136.284586 
+L 248.692411 129.978326 
+L 252.836607 130.637433 
+L 256.980804 138.771865 
+L 261.125 145.514015 
+L 265.269196 152.965571 
+L 269.413393 159.867412 
+L 273.557589 158.992279 
+L 277.701786 147.97418 
+L 281.845982 136.495745 
+L 285.990179 123.087439 
+L 290.134375 106.193305 
+L 294.278571 92.943276 
+L 298.422768 84.795934 
+L 302.566964 79.318648 
+L 306.711161 75.770418 
+L 310.855357 75.913967 
+L 314.999554 75.909926 
+L 319.14375 75.81606 
+L 323.287946 78.157889 
+L 327.432143 76.4234 
+L 331.576339 81.904135 
+L 335.720536 89.582791 
+L 339.864732 101.376076 
+L 344.008929 108.133924 
+L 348.153125 121.120809 
+L 352.297321 121.362378 
+L 356.441518 122.949108 
+L 360.585714 116.762179 
+L 364.729911 115.153993 
+L 368.874107 108.72029 
+L 373.018304 107.834582 
+L 377.1625 100.801631 
+L 381.306696 99.236321 
+L 385.450893 97.388568 
+L 389.595089 95.959563 
+L 393.739286 96.961966 
+L 397.883482 104.22514 
+L 402.027679 108.550188 
+L 406.171875 111.342608 
+L 410.316071 120.26638 
+L 414.460268 132.525857 
+L 418.604464 137.011891 
+L 422.748661 143.246194 
+L 426.892857 146.839504 
+L 435.18125 142.237051 
+L 439.325446 131.167192 
+L 443.469643 131.317871 
+L 447.613839 127.65599 
+L 451.758036 124.360145 
+L 455.902232 128.737874 
+L 460.046429 133.374557 
+L 464.190625 127.093622 
+L 468.334821 128.632173 
+L 472.479018 131.345913 
+L 476.623214 129.034729 
+L 480.767411 129.112104 
+L 484.911607 134.591378 
+L 489.055804 130.208271 
+" style="fill:none;stroke:#ff5500;stroke-linecap:square;stroke-width:2;"/>
+   </g>
+   <g id="text_10">
+    <text style="font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(290.134375 38.207)">Trump announces hospital</text>
+    <text style="font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;" transform="translate(290.134375 46.78)">ship deployed to NYC</text>
+   </g>
+   <g id="text_11">
+    <text style="font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 294.278571, 181.705)" x="294.278571" y="181.705">Trump signs CARES Act</text>
+   </g>
+   <g id="text_12">
+    <text style="font-family:Linux Libertine O;font-size:8px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 368.874107, 64.77)" x="368.874107" y="64.77">Trump cuts WHO funding</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc1345b5c9f">
+   <rect height="179.9" width="464.15" x="29.05" y="10.8"/>
+  </clipPath>
+ </defs>
+</svg>

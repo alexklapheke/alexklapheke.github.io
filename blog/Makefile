@@ -25,7 +25,7 @@ define pandoc_body_options
 --filter=pandoc-citeproc \
 --highlight-style=kate \
 --syntax-definition=$(HOME)/.pandoc/org-mode.xml \
---bibliography=$(bibfile)
+--bibliography=$(bibfile) \
 --csl=$(cslfile)
 endef
 
@@ -74,7 +74,7 @@ clean :
 		-V 'lang=en-US'                                                                           \
 		-V date=$$pubdate                                                                         \
 		-V date_pretty="$$pubdate_pretty"                                                         \
-		-V wordcount=$(shell pandoc --quiet --lua-filter ../filters/wordcount.lua $<)             \
+		-V wordcount=$(shell pandoc --quiet --lua-filter filters/wordcount.lua $<)                \
 		-V markdown=$(patsubst publish/%.md,$(ghraw)/%.md,$<)                                     \
 		--template=templates/blogpost.html                                                        \
 		--resource-path=publish                                                                   \
