@@ -1,4 +1,4 @@
--- <https://superuser.com/a/1303683>
+-- <https://pandoc.org/lua-filters.html#counting-words-in-a-document>
 -- counts words in a document
 
 words = 0
@@ -30,7 +30,15 @@ end
 function Pandoc(el)
     -- skip metadata, just count body:
     pandoc.walk_block(pandoc.Div(el.blocks), wordcount)
-    print(comma_value(words))
-    os.exit(0)
+    -- os.exit(0)
 end
 
+function Meta(m)
+    m.wordcount = comma_value(words)
+    return m
+end
+
+return {
+  { Pandoc = Pandoc },
+  { Meta = Meta }
+}

@@ -4,7 +4,7 @@ addenda:
 - |
     [slide
     deck](https://github.com/alexklapheke/Social-Media-Sentiment-Analysis/blob/master/presentation/Covid%2019%20Sentiment%20Analysis.pdf)
-date: '2020-06-23T15:58:12-04:00'
+date: 1592942292
 title: 'COVID-19 Sentiment Analysis'
 ---
 

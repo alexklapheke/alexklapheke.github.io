@@ -6,6 +6,8 @@
 
 # Markdown word counter from <https://github.com/gandreadis/markdown-word-count>
 
+# TODO: change <span lang=""> to <bdi lang="">
+
 source = $(wildcard publish/*.md)
 markdown = $(patsubst publish/%.md,%.md,$(source))
 html = $(patsubst publish/%.md,%.html,$(source))
@@ -15,7 +17,8 @@ cslfile = $(HOME)/.pandoc/chicago-footnotes.csl
 
 ghraw = https://raw.githubusercontent.com/alexklapheke/alexklapheke.github.io/master/blog
 
-now = $(shell date -Iseconds)
+# now = $(shell date -Iseconds)
+now = $(shell date +%s)
 
 define pandoc_body_options
 --ascii \
@@ -26,7 +29,8 @@ define pandoc_body_options
 --highlight-style=kate \
 --syntax-definition=$(HOME)/.pandoc/org-mode.xml \
 --bibliography=$(bibfile) \
---csl=$(cslfile)
+--csl=$(cslfile) \
+--lua-filter=filters/date.lua
 endef
 
 .PHONY : clean blog
@@ -39,14 +43,9 @@ clean :
 %.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html $(bibfile)
 	proselint $<;                                                                                 \
 	sed -i 's/\$$DATE\$$/$(now)/' $<;                                                             \
-	pubdate=$$(pandoc -t plain --template=templates/date.plain $<);                               \
-	pubdate_pretty=$$(date -d $$pubdate +"%A, %B %e, %Y");                                        \
-	pubdate_terse=$$(date -d $$pubdate +%F);                                                      \
 	if [ ! -e $@ ]; then                                                                          \
 		pandoc -t html5+smart                                                                     \
 			--template=templates/index-item.html                                                  \
-			-V date=$$pubdate                                                                     \
-			-V date_terse=$$pubdate_terse                                                         \
 			-V target=$@                                                                          \
 			$(pandoc_body_options)                                                                \
 			$< -o index-item.html;                                                                \
@@ -59,8 +58,6 @@ clean :
 		pandoc -t html5+smart                                                                     \
 			--strip-comments                                                                      \
 			--template=templates/rss.xml                                                          \
-			-V date=$$pubdate                                                                     \
-			-V date_terse=$$pubdate_terse                                                         \
 			$(pandoc_body_options)                                                                \
 			$< | tac >> rss-items.xml;                                                            \
 		echo "		<item>" >> rss-items.xml;                                                     \
@@ -72,14 +69,12 @@ clean :
 		--css=../include/blog.css                                                                 \
 		--standalone                                                                              \
 		-V 'lang=en-US'                                                                           \
-		-V date=$$pubdate                                                                         \
-		-V date_pretty="$$pubdate_pretty"                                                         \
-		-V wordcount=$(shell pandoc --quiet --lua-filter filters/wordcount.lua $<)                \
 		-V markdown=$(patsubst publish/%.md,$(ghraw)/%.md,$<)                                     \
 		--template=templates/blogpost.html                                                        \
 		--resource-path=publish                                                                   \
 		--extract-media=images                                                                    \
 		--toc                                                                                     \
+		--lua-filter filters/wordcount.lua                                                        \
 		$(pandoc_body_options)                                                                    \
 		-o $@ $<;                                                                                 \
 	pandoc -t markdown                                                                            \
