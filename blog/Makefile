@@ -19,11 +19,13 @@ ghraw = https://raw.githubusercontent.com/alexklapheke/alexklapheke.github.io/ma
 
 # now = $(shell date -Iseconds)
 now = $(shell date +%s)
+now_full = $(shell date -Iseconds -d @$(now))
 
 define pandoc_body_options
 --ascii \
 --mathml \
 --section-divs \
+--number-sections \
 --filter=pandoc-crossref \
 --filter=pandoc-citeproc \
 --highlight-style=kate \
@@ -102,7 +104,7 @@ rss.xml : $(html)
 	echo "		<link>https://alexklapheke.github.io/</link>"     >> rss.xml
 	echo "		<description></description>"                      >> rss.xml
 	echo "		<language>en-US</language>"                       >> rss.xml
-	echo "		<lastBuildDate>$(now)</lastBuildDate>"            >> rss.xml
+	echo "		<lastBuildDate>$(now_full)</lastBuildDate>"       >> rss.xml
 	tac rss-items.xml                                             >> rss.xml
 	echo "	</channel>"                                           >> rss.xml
 	echo "</rss>"                                                 >> rss.xml

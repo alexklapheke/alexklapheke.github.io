@@ -141,10 +141,10 @@ code span.wa { color: #bf0303; } /* Warning */
 		</div>
 		<nav id="TOC">
 <ul>
-<li><a href="#background-problem-statement">Background &amp; problem statement</a></li>
-<li><a href="#data-collection">Data collection</a></li>
-<li><a href="#sentiment-analysis">Sentiment analysis</a></li>
-<li><a href="#conclusions">Conclusions</a></li>
+<li><a href="#background-problem-statement"><span class="toc-section-number">1</span> Background &amp; problem statement</a></li>
+<li><a href="#data-collection"><span class="toc-section-number">2</span> Data collection</a></li>
+<li><a href="#sentiment-analysis"><span class="toc-section-number">3</span> Sentiment analysis</a></li>
+<li><a href="#conclusions"><span class="toc-section-number">4</span> Conclusions</a></li>
 </ul>
 		</nav>
 			<div class="entry-content">
@@ -153,7 +153,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <p>The Master said, &#8220;When the multitude hate a man, it is necessary to examine into the case. When the multitude like a man, it is necessary to examine into the case.&#8221;</p>
 </div>
 <section id="background-problem-statement" class="level1">
-<h1>Background &amp; problem statement</h1>
+<h1><span class="header-section-number">1</span> Background &amp; problem statement</h1>
 <p>The COVID-19 crisis officially began in the US on January 20, when an infected traveler in Wuhan flew home to Washington State.<span class="citation" data-cites="holshue2020first"><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></span> For the several months thence, in the absence of a unified national policy, states have engaged in a complicated fandango of business closures, mask orders, and quarantines for visitors. While it would take a much more sophisticated data analysis to gauge their effectiveness, we can look at how these policies were popularly received using social media sentiment as a proxy.</p>
 <p>We chose to compare sentiment between two cities in which the saga took quite different turns: New York, which suffered both an alarming outbreak and an austere lockdown (ongoing at time of writing), and Houston, which had a much easier time, with fewer infections than New York City had deaths, and a lockdown lasting barely a month (fig.&#160;1).</p>
 <figure>
@@ -162,7 +162,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <p>A na&#239;ve hypothesis would be that Houstonians, faring better overall, would speak with more positive affect. Complicating this, of course, is the profusion of topics on which people might converse, including: China, Donald Trump, Anthony Fauci, the CDC and WHO, governors Andrew Cuomo<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> and Greg Abbott<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>, cruise ships, quarantines, face masks, and the cancellations of events, not to mention the pathogen itself and its physiological effects. Our goal, therefore, was to isolate topics of conversation, and examine the sentiment surrounding particular public figures.</p>
 </section>
 <section id="data-collection" class="level1">
-<h1>Data collection</h1>
+<h1><span class="header-section-number">2</span> Data collection</h1>
 <p>Our preferred data source was Twitter, which, with a third of a billion users, captures an enormous fraction of the public discourse. In addition, there is an up-to-date, curated <a href="https://github.com/thepanacealab/covid19_twitter">dataset</a> of COVID-19 related tweets.<span class="citation" data-cites="banda2020a"><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></span> However, time and budget allowed few tweets to be captured&#8212;either on the order of 10<sup>3</sup> total, or stretching back only seven days. In addition, the paucity of geotags&#8212;by <a href="https://www.forbes.com/sites/kalevleetaru/2019/03/04/visualizing-seven-years-of-twitters-evolution-2012-2018/">some estimates</a>, on the order of 1%&#8212;would make filtering by city nearly impossible.</p>
 <p>Reddit turned out to be somewhat more hospitable, as <a href="https://github.com/pushshift/api">pushshift</a> provides free access to the Reddit API, as well as a <a href="http://files.pushshift.io/reddit/comments/">full dataset</a> of Reddit comments stretching back to the site&#8217;s founding,<span class="citation" data-cites="baumgartner2020pushshift"><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></span> although the latter source was not updated frequently enough for our purpose. Reddit users subscribe to interest communities called &#8220;subreddits&#8221;, prefixed with &#8220;/r/&#8221;, some of which are for cities and other locales. While it can&#8217;t be verified that a particular subscriber is a resident, we assume that a large proportion of them are. One downside of this structure is that subreddits can become <a href="https://en.wikipedia.org/wiki/Echo_chamber_(media)">echo chambers</a> which do not represent the larger population.</p>
 <p>Another difficulty is that although Reddit ranks in the <a href="https://www.alexa.com/siteinfo/reddit.com">top 20 websites</a> by traffic, the volume of posts pales next to Twitter. Although each metropolitan subreddit records hundreds of thousands of subscribers, by the <a href="https://en.wikipedia.org/wiki/1%25_rule_(Internet_culture)">90&#8211;9&#8211;1 rule of thumb</a>, we guessed that in a subreddit with on the order of 10<sup>5</sup> subscribers, only about 10<sup>3</sup> would be active commenters, as shown in tbl.&#160;1.</p>
@@ -231,7 +231,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <p>In toto, we collected 150,000 comments from /r/nyc, and 85,000 from /r/houston, and randomly sampled 85,000 New York comments for the analysis to avoid variance issues.</p>
 </section>
 <section id="sentiment-analysis" class="level1">
-<h1>Sentiment analysis</h1>
+<h1><span class="header-section-number">3</span> Sentiment analysis</h1>
 <p>The sentiment analysis itself was done with the VADER sentiment parser,<span class="citation" data-cites="vader"><a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></span> a sophisticated rule-based parser that incorporates contextual information such as negations (&#8220;not&#8221;), intensifiers (&#8220;very&#8221;), hedges (&#8220;somewhat&#8221;), and even emoticons (&#8220;:)&#8221;).<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> For these reasons, it works best on unprocessed text:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="im">from</span> nltk.sentiment.vader <span class="im">import</span> SentimentIntensityAnalyzer</a>
 <a class="sourceLine" id="cb2-2" title="2"></a>
@@ -273,7 +273,7 @@ code span.wa { color: #bf0303; } /* Warning */
 </figure>
 </section>
 <section id="conclusions" class="level1">
-<h1>Conclusions</h1>
+<h1><span class="header-section-number">4</span> Conclusions</h1>
 <p>We have shown that public attitudes as expressed on social media can be tied to world events, and analyzed attitudes toward events during the COVID-19 crisis. This analysis could be expanded with, e.g., a more sophisticated weighting scheme, more precise filtering, or a larger dataset.</p>
 </section>
 <section class="footnotes">
