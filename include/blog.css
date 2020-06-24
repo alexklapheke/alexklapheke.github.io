@@ -1,32 +1,3 @@
-header {
-	background: #DFE8F7;
-	padding: 30px;
-	position: fixed;
-	width: 220px;
-	height: 100%;
-}
-
-header h1 {
-	font-family: 'Lora', serif;
-	display: inline-block;
-	font-size: 44px;
-	margin-bottom: 26px;
-}
-
-header a {
-	display: inline-block;
-	color: #0658CF;
-	font-size: 14px;
-}
-
-header h1 a {
-	font-size: 44px;
-}
-
-header h1 a:hover, header h1 a:active, header h1 a:focus {
-	text-shadow: 1px 1px 4px #FFCCCC;
-}
-
 article {
 	max-width: 660px;
 	padding: 30px;
@@ -88,7 +59,20 @@ article a {
 	text-decoration-skip-ink: auto
 }
 
-article h1, article h2, article h3, article h4, article h5, article h6 {
+#titleblock h1 {
+	font-family: "Lora";
+	font-variant: none;
+	text-transform: none;
+	color: #081220;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	/* color: #090A0C; */
+	color: #CE2A07;
+	text-decoration: none;
+}
+
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
 	font-family: "Linux Libertine O", serif;
 	font-style: normal;
 	font-variant: small-caps;
@@ -98,42 +82,36 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
 	color: #C34540;
 }
 
-#titleblock h1 {
-	font-family: "Lora";
-	font-variant: none;
-	text-transform: none;
-	color: #081220;
+.entry-content h1 {
+	font-size: 16pt;
+	line-height: 16pt;
+}
+.entry-content h2 {
+	font-size: 14pt;
+	line-height: 14pt;
+}
+.entry-content h3 {
+	font-size: 13pt;
+	line-height: 13pt;
+}
+.entry-content h4 {
+	font-size: 12pt;
+	line-height: 12pt;
+}
+.entry-content h5 {
+	font-size: 11pt;
+	line-height: 11pt;
+}
+.entry-content h6 {
+	font-size: 10pt;
+	line-height: 10pt;
 }
 
 h1.entry-title {
+	font-size: 18pt;
 	font-family: 'Lora', serif;
 	font-style: italic;
 	margin-top: 0px;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	/* color: #090A0C; */
-	color: #CE2A07;
-	text-decoration: none;
-}
-
-h1 {
-	font-size: 16pt;
-}
-h2 {
-	font-size: 14pt;
-}
-h3 {
-	font-size: 13pt;
-}
-h4 {
-	font-size: 12pt;
-}
-h5 {
-	font-size: 11pt;
-}
-h6 {
-	font-size: 10pt;
 }
 
 .checkmark {

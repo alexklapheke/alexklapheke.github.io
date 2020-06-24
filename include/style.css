@@ -72,6 +72,36 @@ body {
 	padding: 0px;
 }
 
+header {
+	background: #DFE8F7;
+	padding: 30px;
+	position: fixed;
+	width: 220px;
+	height: 100%;
+}
+
+header h1 {
+	font-family: 'Lora', serif;
+	display: inline-block;
+	font-size: 44px;
+	margin-bottom: 26px;
+}
+
+header a {
+	display: inline-block;
+	color: #0658CF;
+	font-size: 14px;
+}
+
+header h1 a {
+	font-size: 44px;
+}
+
+header h1 a:hover, header h1 a:active, header h1 a:focus {
+	text-shadow: 1px 1px 4px #FFCCCC;
+}
+
+
 hr {
 	border: 1px solid #9BA0A9;
 }
