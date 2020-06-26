@@ -38,7 +38,8 @@ York City had deaths, and a lockdown lasting barely a month
 ![Case and death counts in New York City (all five boroughs) and in
 Harris County, Texas (which contains Houston) as of June 22. Data
 courtesy of the [*New York
-Times*](https://github.com/nytimes/covid-19-data).<br><br>
+Times*](https://github.com/nytimes/covid-19-data). [Source
+code](https://gist.github.com/alexklapheke/5077fe330ca6a307b8700d0af4c4adf9)<br><br>
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#081220" /></svg> Cases<br>
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#CE2A07" /></svg> Deaths<br>
 <svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#E0E0E0" stroke="none" /></svg> Lockdown
