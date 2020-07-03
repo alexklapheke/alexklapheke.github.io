@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="123.12pt" version="1.1" viewBox="0 0 398.465536 123.12" width="398.465536pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 123.12 
+L 398.465536 123.12 
+L 398.465536 0 
+L 0 0 
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 45.23125 115.92 
+L 380.03125 115.92 
+L 380.03125 7.2 
+L 45.23125 7.2 
+z
+" style="fill:none;"/>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#p2b01da9945)" d="M 45.23125 113.331429 
+L 214.834409 113.331429 
+L 214.834409 102.977143 
+L 45.23125 102.977143 
+z
+" style="fill:#a6761d;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#p2b01da9945)" d="M 45.23125 102.977143 
+L 219.6413 102.977143 
+L 219.6413 92.622857 
+L 45.23125 92.622857 
+z
+" style="fill:#a6761d;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_5">
+    <path clip-path="url(#p2b01da9945)" d="M 45.23125 92.622857 
+L 254.25092 92.622857 
+L 254.25092 82.268571 
+L 45.23125 82.268571 
+z
+" style="fill:#a6761d;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_6">
+    <path clip-path="url(#p2b01da9945)" d="M 45.23125 82.268571 
+L 255.773102 82.268571 
+L 255.773102 71.914286 
+L 45.23125 71.914286 
+z
+" style="fill:#a6761d;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_7">
+    <path clip-path="url(#p2b01da9945)" d="M 45.23125 71.914286 
+L 256.814595 71.914286 
+L 256.814595 61.56 
+L 45.23125 61.56 
+z
+" style="fill:#a6761d;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_8">
+    <path clip-path="url(#p2b01da9945)" d="M 45.23125 61.56 
+L 259.939075 61.56 
+L 259.939075 51.205714 
+L 45.23125 51.205714 
+z
+" style="fill:#a6761d;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_9">
+    <path clip-path="url(#p2b01da9945)" d="M 45.23125 51.205714 
+L 280.929168 51.205714 
+L 280.929168 40.851429 
+L 45.23125 40.851429 
+z
+" style="fill:#a6761d;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_10">
+    <path clip-path="url(#p2b01da9945)" d="M 45.23125 40.851429 
+L 308.32845 40.851429 
+L 308.32845 30.497143 
+L 45.23125 30.497143 
+z
+" style="fill:#a6761d;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_11">
+    <path clip-path="url(#p2b01da9945)" d="M 45.23125 30.497143 
+L 308.64891 30.497143 
+L 308.64891 20.142857 
+L 45.23125 20.142857 
+z
+" style="fill:#a6761d;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_12">
+    <path clip-path="url(#p2b01da9945)" d="M 45.23125 20.142857 
+L 364.088393 20.142857 
+L 364.088393 9.788571 
+L 45.23125 9.788571 
+z
+" style="fill:#a6761d;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="text_1">
+      <text style="fill:#090a0c;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 41.73125, 111.644129)" x="41.73125" y="111.644129">fried</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="text_2">
+      <text style="fill:#090a0c;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 41.73125, 101.289844)" x="41.73125" y="101.289844">chicken</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="text_3">
+      <text style="fill:#090a0c;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 41.73125, 90.935558)" x="41.73125" y="90.935558">sauce</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="text_4">
+      <text style="fill:#090a0c;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 41.73125, 80.581272)" x="41.73125" y="80.581272">de</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="text_5">
+      <text style="fill:#090a0c;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 41.73125, 70.226987)" x="41.73125" y="70.226987">fresh</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="text_6">
+      <text style="fill:#090a0c;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 41.73125, 59.872701)" x="41.73125" y="59.872701">cheese</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="text_7">
+      <text style="fill:#090a0c;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 41.73125, 49.518415)" x="41.73125" y="49.518415">potatoes</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="text_8">
+      <text style="fill:#090a0c;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 41.73125, 39.164129)" x="41.73125" y="39.164129">mit</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="text_9">
+      <text style="fill:#090a0c;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 41.73125, 28.809844)" x="41.73125" y="28.809844">cream</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="text_10">
+      <text style="fill:#090a0c;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 41.73125, 18.455558)" x="41.73125" y="18.455558">salad</text>
+     </g>
+    </g>
+   </g>
+   <g id="text_11">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 221.211552, 112.296)" x="221.211552" y="112.296">2,117</text>
+   </g>
+   <g id="text_12">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 226.018443, 101.941714)" x="226.018443" y="101.941714">2,177</text>
+   </g>
+   <g id="text_13">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 260.628063, 91.587429)" x="260.628063" y="91.587429">2,609</text>
+   </g>
+   <g id="text_14">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 262.150245, 81.233143)" x="262.150245" y="81.233143">2,628</text>
+   </g>
+   <g id="text_15">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 263.191738, 70.878857)" x="263.191738" y="70.878857">2,641</text>
+   </g>
+   <g id="text_16">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 266.316218, 60.524571)" x="266.316218" y="60.524571">2,680</text>
+   </g>
+   <g id="text_17">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 287.306311, 50.170286)" x="287.306311" y="50.170286">2,942</text>
+   </g>
+   <g id="text_18">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 314.705593, 39.816)" x="314.705593" y="39.816">3,284</text>
+   </g>
+   <g id="text_19">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 315.026053, 29.461714)" x="315.026053" y="29.461714">3,288</text>
+   </g>
+   <g id="text_20">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 370.465536, 19.107429)" x="370.465536" y="19.107429">3,980</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2b01da9945">
+   <rect height="108.72" width="334.8" x="45.23125" y="7.2"/>
+  </clipPath>
+ </defs>
+</svg>
