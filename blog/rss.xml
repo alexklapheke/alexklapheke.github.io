@@ -5,7 +5,196 @@
 		<link>https://alexklapheke.github.io/</link>
 		<description></description>
 		<language>en-US</language>
-		<lastBuildDate>2020-07-03T18:12:09-04:00</lastBuildDate>
+		<lastBuildDate>2020-07-05T14:28:37-04:00</lastBuildDate>
+		<item>
+			<title>How I use org-mode to organize my recipes</title>
+			<link>https://alexklapheke.github.io/blog/publish/recipes.md</link>
+			<pubDate>2020-07-05T14:28:24-0400</pubDate>
+	<description>
+&lt;div class=&quot;epigraph&quot;&gt;
+&lt;p&gt;Here the Red Queen began again. &#8220;Can you answer useful questions?&#8221; she said. &#8220;How is bread made?&#8221;&lt;/p&gt;
+&lt;p&gt;&#8220;I know &lt;em&gt;that&lt;/em&gt;!&#8221; Alice cried eagerly. &#8220;You take some flour&#8212;&#8221;&lt;/p&gt;
+&lt;p&gt;&#8220;Where do you pick the flower?&#8221; the White Queen asked. &#8220;In a garden, or in the hedges?&#8221;&lt;/p&gt;
+&lt;p&gt;&#8220;Well, it isn&#8217;t &lt;em&gt;picked&lt;/em&gt; at all,&#8221; Alice explained: &#8220;it&#8217;s &lt;em&gt;ground&lt;/em&gt;&#8212;&#8221;&lt;/p&gt;
+&lt;p&gt;&#8220;How many acres of ground?&#8221; said the White Queen. &#8220;You mustn&#8217;t leave out so many things.&#8221;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Cooking is a major hobby of mine, and for a long time, I kept recipes either in text files or printed PDFs in a poorly organized folder on my hard drive. It was hard to find specific recipes (did I file &lt;a href=&quot;https://www.tastemade.com/shows/thirsty-for/mexican-horchata&quot;&gt;horchata&lt;/a&gt; under &#8220;Drinks&#8221; or &#8220;Mexican&#8221;?), hard to remember whether I had made a recipe before (and whether it was any good), and pretty much impossible to search for complicated things like &#8220;recipes without seafood&#8221; or &#8220;recipes that take less than an hour&#8221;. To make things worse, the whole folder was cluttered with useless infographics and spreadsheets.&lt;/p&gt;
+&lt;p&gt;I recently discovered &lt;a href=&quot;https://orgmode.org/&quot;&gt;org-mode&lt;/a&gt;, an organization system for the &lt;a href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;Emacs&lt;/a&gt; text editor, and while there is a bit of a learning curve, it is the best organization tool I&#8217;ve ever used. I took a few days last winter to wrangle my recipe collection into something manageable. I had the following criteria for my setup:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recipes can easily be copied from websites without adding a lot of formatting/structure.&lt;/li&gt;
+&lt;li&gt;Recipes can be searched or filtered based on common metadata, such as yield or cooking time.&lt;/li&gt;
+&lt;li&gt;There is a space to add &#8220;cooking notes&#8221;, so the next time I make the recipe I&#8217;ll remember what happened the first time (say, substitutions I made or steps that were unclear).&lt;/li&gt;
+&lt;li&gt;It is obvious where any particular recipe should be placed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After playing with some possible schemes, I settled on the one below.&lt;/p&gt;
+&lt;h1 id=&quot;file-structure&quot;&gt;File structure&lt;/h1&gt;
+&lt;p&gt;All my recipes are in the single file &lt;code&gt;Cooking.org&lt;/code&gt;, the basic structure of which is below.&lt;/p&gt;
+&lt;pre class=&quot;org-mode&quot;&gt;&lt;code&gt;#+TITLE: Recipes
+#+STARTUP: indent align overview
+#+TODO: NEVERMADE(n) | HAVEMADE(h@)
+#+TAGS: { weekday weekend } { vegetarian seafood } glutenfree breakfast instantpot slowcooker
+#+TAGS: { { asian : chinese(c) japanese(j) korean(k) vietnamese(v) } lebanese(l) indian(i) }
+
+* Meals:
+** Meats:
+** Vegetables, stir-fries, &amp;amp; curries:
+** Rice/orzo &amp;amp; grains:
+** Pasta &amp;amp; noodles:
+** Soups, stews, &amp;amp; casseroles:
+** Salads:
+** Sandwiches:
+** Breakfast eggs &amp;amp; grains:
+* Condiments &amp;amp; snacks:
+** Pickles &amp;amp; preserves:
+** Sauces &amp;amp; toppings:
+** Snacks &amp;amp; dips:
+* Baked goods:
+** Savory breads/rolls:
+** Sweet breads/rolls:
+** Batters:
+** Cakes &amp;amp; tortes:
+** Pies, tarts, &amp;amp; cobblers:
+** Pastries, custards/curds, &amp;amp; ice cream:
+** Cookies:
+* Drinks:
+** Hot drinks:
+** Cold drinks:
+* Projects:
+** Brewing:
+** Dairy:
+** Bread &amp;amp; noodles:
+** Candy:
+* Notes:
+** Price book:
+** Unsorted recipes:
+** Settings:&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first few lines, starting with &lt;code&gt;#+&lt;/code&gt;, make up the file header. The &lt;code&gt;#+STARTUP&lt;/code&gt; line defines some &lt;a href=&quot;https://orgmode.org/manual/In_002dbuffer-settings.html#index-_0023_002bSTARTUP&quot;&gt;settings&lt;/a&gt; for when I open the file. The most important is &lt;code&gt;overview&lt;/code&gt;, which makes sure only the headings are shown, and not all ~30,000 lines of text. Unfortunately, this only shows top-level headings. I can use &lt;kbd&gt;M-2 S-Tab&lt;/kbd&gt;&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; to see the second-level headings as well, or &lt;kbd&gt;M-3 S-Tab&lt;/kbd&gt; to see all recipes, although at this point, I have far too many for the latter to be useful.&lt;/p&gt;
+&lt;p&gt;I also define &lt;a href=&quot;https://orgmode.org/manual/Tags.html&quot;&gt;tags&lt;/a&gt; and &lt;a href=&quot;https://orgmode.org/manual/TODO-Items.html&quot;&gt;TODO states&lt;/a&gt;, the latter of which let you mark an item as being in any of various states of completion. The &lt;code&gt;@&lt;/code&gt; after the &lt;code&gt;HAVEMADE&lt;/code&gt; state means that when I mark a recipe as &lt;code&gt;HAVEMADE&lt;/code&gt;, org should prompt me to &lt;a href=&quot;https://orgmode.org/manual/Tracking-TODO-state-changes.html&quot;&gt;leave a note&lt;/a&gt;. Thus, after I make a recipe, I can jot down what went well and what I should change next time. The tags define ancillary properties of the recipe&#8212;whether it is gluten-free, what part of the world it comes from&#8212;and tags surrounded with curly braces are mutually exclusive, such as &lt;code&gt;{ vegetarian seafood }&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In the body of the file, the recipes are organized into first- and second-level &lt;a href=&quot;https://orgmode.org/manual/Headlines.html&quot;&gt;headings&lt;/a&gt;, starting with &lt;code&gt;*&lt;/code&gt; and &lt;code&gt;**&lt;/code&gt;, respectively. The tacit rule is that recipes within a category should substitute for each other&#8212;thus, &lt;code&gt;Cakes &amp;amp; tortes&lt;/code&gt; is a valid category because &lt;a href=&quot;https://smittenkitchen.com/2015/12/tres-leches-cake-a-taco-party/&quot;&gt;tres leches cake&lt;/a&gt; could substitute for &lt;a href=&quot;https://www.americastestkitchen.com/recipes/9648-olive-oil-cake&quot;&gt;olive oil cake&lt;/a&gt;; but it couldn&#8217;t substitute for &lt;a href=&quot;https://www.budgetbytes.com/pickled-red-onions/&quot;&gt;pickled red onions&lt;/a&gt;, so it wouldn&#8217;t make sense to group them under a &lt;code&gt;Mexican&lt;/code&gt; heading.&lt;/p&gt;
+&lt;!-- This removes nearly all ambiguity from the sorting/searching process and makes it extremely easy to search recipes. --&gt;
+&lt;!-- For example, I can find meatless recipes for my vegetarian friends, or if I&apos;m making a [Japanese entr&#233;e](https://www.seriouseats.com/recipes/2018/01/japanese-curry-kare.html), I can easily find a [Japanese side dish](https://cooking.nytimes.com/recipes/1015648-simple-seaweed-salad) to complement it. --&gt;
+&lt;p&gt;The final top-level heading is &lt;code&gt;Notes&lt;/code&gt;. The first thing here is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Price_book&quot;&gt;price book&lt;/a&gt;&#8212;a simple table of ingredients I buy often, and at which nearby grocery stores they are cheapest, with the cheapest price in bold.&lt;a href=&quot;#fn2&quot; class=&quot;footnote-ref&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; I also rounded up to the nearest dime to make mental math easier, and combat stores&#8217; &lt;a href=&quot;https://en.wikipedia.org/wiki/Psychological_pricing&quot;&gt;psychological tricks&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&quot;org-mode&quot;&gt;&lt;code&gt;** Price book:
+- Rules of thumb:
+  - Apple/peach/onion :: 1/2lb ($1/ @ $2/lb, $1.50/ @ $3/lb)
+  - Banana :: 1/3lb (15&#162;/ @ 50&#162;/lb)
+  - Head of garlic :: 1/8lb
+  - Chicken drumstick :: 7oz
+| Food               | Trader Joe&amp;#39;s | Whole Foods |
+|--------------------+--------------+-------------|
+| Milk (1/2gal)      | *$1.70*      | $2.20       |
+| Eggs (dozen large) | *$2*         | $3          |
+| Butter (4 sticks)  | *$3*         | $3.50       |
+| Coffee (12oz)      | $4           | $4          |
+| Garlic (head)      | 70&#162;          | *~50&#162;*      |
+| Lemon              | 50&#162;          | 50&#162;         |&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The second subheading under &lt;code&gt;Notes&lt;/code&gt; is &lt;code&gt;Unsorted Recipes&lt;/code&gt;, where recipes are automatically placed when added (see &lt;a href=&quot;#adding-recipes&quot;&gt;below&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Finally, a &lt;code&gt;Settings&lt;/code&gt; subheading contains the &lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/emacs/Specifying-File-Variables.html&quot;&gt;in-file settings&lt;/a&gt;&#8212;this must be the last thing in the file. The first line sets the &lt;a href=&quot;https://orgmode.org/manual/Refile-and-Copy.html&quot;&gt;refile&lt;/a&gt; targets to the second-level headings, so recipes can easily be moved between categories while keeping them at the third heading level. The second line sets &lt;a href=&quot;https://orgmode.org/manual/Setting-tags.html&quot;&gt;&lt;code&gt;org-tags-column&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;-105&lt;/code&gt; from the default value of &lt;code&gt;-77&lt;/code&gt;. I have a lot of tags on recipes, and this reduces visual clutter by moving them farther to the right.&lt;/p&gt;
+&lt;pre class=&quot;org-mode&quot;&gt;&lt;code&gt;** Settings:
+# Local variables:
+# org-refile-targets: ((&amp;quot;~/org/Cooking.org&amp;quot; :level . 2))
+# org-tags-column: -105
+# End:&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As a final bonus, this structure makes it easy to see how many recipes I have: hit &lt;kbd&gt;M-!&lt;/kbd&gt; to get a shell prompt, then run &lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span class=&quot;fu&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;#39;^\*\*\*&amp;#39;&lt;/span&gt; Cooking.org &lt;span class=&quot;kw&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;fu&quot;&gt;wc&lt;/span&gt; -l&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id=&quot;recipe-structure&quot;&gt;Recipe structure&lt;/h1&gt;
+&lt;p&gt;The third level is for the recipes themselves. These basically consist of a &lt;a href=&quot;https://orgmode.org/manual/Property-syntax.html&quot;&gt;properties drawer&lt;/a&gt; for the metadata, a &lt;a href=&quot;https://orgmode.org/manual/Checkboxes.html&quot;&gt;checklist&lt;/a&gt; for the ingredients, and a &lt;a href=&quot;https://orgmode.org/manual/Plain-lists.html&quot;&gt;numbered list&lt;/a&gt; for the directions.&lt;/p&gt;
+&lt;p&gt;For example, here is a recipe for marinated eggs: the properties drawer runs from &lt;code&gt;:PROPERTIES:&lt;/code&gt; to &lt;code&gt;:END:&lt;/code&gt;, followed by the ingredients prepended with &lt;code&gt;- [ ]&lt;/code&gt;, then the directions and an endnote.&lt;/p&gt;
+&lt;pre class=&quot;org-mode&quot;&gt;&lt;code&gt;*** HAVEMADE Japanese Marinated Soft Boiled Egg for Ramen (Ajitsuke Tamago)          :weekend:japanese:
+:PROPERTIES:
+:Author: J. Kenji L&#243;pez-Alt
+:Source:
+:Sent_by:
+:Yield: 6 eggs
+:Prep_Time: 0:10
+:Cook_Time: 4:00
+:Total_Time: 4:10
+:Cost:
+:Description: Perfectly seasoned soft-boiled eggs for the best homemade ramen.
+:URL: https://www.seriouseats.com/recipes/2012/03/ajitsuke-tamago-japanese-marinated-soft-boiled-egg-recipe.html
+:Added: [2019-01-03 Thu]
+:END:
+- [ ] 1 cup water
+- [ ] 1 cup sake
+- [ ] 1/2 cup soy sauce
+- [ ] 1/2 cup mirin
+- [ ] 1/2 cup sugar
+- [ ] 6 eggs
+
+
+1. Combine water, sake, soy, mirin, and sugar in a medium bowl and
+   whisk until sugar is dissolved. Set aside.
+
+2. Bring 2 quarts of water to a boil in a medium saucepan over high
+   heat. Pierce fat end of each egg with a thumbtack to make a tiny
+   hole (this prevents them from cracking and eliminates the air
+   bubble at the end). Carefully lower eggs into water with a wire
+   mesh spider or slotted spoon. Reduce heat to maintain a bare
+   simmer. Cook for exactly 6 minutes. Drain hot water and carefully
+   peel eggs under cold running water (the whites will be quite
+   delicate).
+
+3. Transfer eggs to a bowl that just barely fits them all. Pour
+   marinade on top until eggs are covered or just floating. Place a
+   double-layer of paper towels on top and press down until completely
+   saturated in liquid to help keep eggs submerged and marinating
+   evenly. Refrigerate and marinate at least four hours and up to 12.
+   Discard marinade after 12 hours. Store eggs in a sealed container
+   in the fridge for up to 3 days. Reheat in ramen soup to serve.
+
+Note: This recipe can be made using leftover broth from chashu pork.
+If you have this broth, replace all the ingredients in the marinade
+with the broth.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The ingredients list is interactive: with the cursor on one of the list items, I can use &lt;code&gt;C-c C-c&lt;/code&gt; to check or uncheck it. This is extremely useful for making shopping lists. The directions list has to be separated by &lt;em&gt;two&lt;/em&gt; blank lines from the ingredients list, or org-mode will parse them as being part of the same list, and insist they both be bullets or both be numbers.&lt;/p&gt;
+&lt;p&gt;The properties drawer has slots for most of the metadata that comes with a recipe: author, yield, estimated time, etc., as well as one for the URL, and the date it was added to &lt;code&gt;Cooking.org&lt;/code&gt;. Combined with the tag structure, it is a breeze to search for recipes by hitting &lt;kbd&gt;C-c / m&lt;/kbd&gt; and typing in a &lt;a href=&quot;https://orgmode.org/manual/Matching-tags-and-properties.html&quot;&gt;match pattern&lt;/a&gt;. This creates a &lt;a href=&quot;https://orgmode.org/manual/Sparse-Trees.html&quot;&gt;sparse tree&lt;/a&gt;, which shows the titles of all matching recipes. For example, I can search for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chinese recipes with the pattern &lt;code&gt;chinese&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;Chinese recipes that are &lt;em&gt;also&lt;/em&gt; vegetarian with &lt;code&gt;chinese+vegetarian&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;Vegetarian Chinese recipes I&#8217;ve never made before with &lt;code&gt;chinese+vegetarian/NEVERMADE&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;Recipes I&#8217;ve added in the past month with &lt;code&gt;Added&amp;gt;=&amp;quot;&amp;lt;-1m&amp;gt;&amp;quot;&lt;/code&gt;, or since May with &lt;code&gt;Added&amp;gt;=&amp;quot;&amp;lt;2020-05-01&amp;gt;&amp;quot;&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;Recipes that come together in less than 90 minutes with &lt;code&gt;Total_time&amp;lt;&amp;quot;1:30&amp;quot;&lt;/code&gt;;&lt;a href=&quot;#fn3&quot; class=&quot;footnote-ref&quot; id=&quot;fnref3&quot;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Recipes from the New York Times with &lt;code&gt;URL={cooking.nytimes.com}&lt;/code&gt;. The braces indicate a regular expression.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is also the &lt;kbd&gt;C-c / p&lt;/kbd&gt; command for simple equality matches&#8212;for example, if I wanted to find all recipes by &lt;a href=&quot;https://en.wikipedia.org/wiki/Amanda_Hesser&quot;&gt;Amanda Hesser&lt;/a&gt;&#8212;which supports tab completion.&lt;/p&gt;
+&lt;h1 id=&quot;adding-recipes&quot;&gt;Adding recipes&lt;/h1&gt;
+&lt;p&gt;Although adding a new recipe is as easy as creating a new heading, it would be tedious to copy the properties drawer each time. A much easier way is to use &lt;a href=&quot;https://orgmode.org/manual/Capture.html&quot;&gt;capture&lt;/a&gt;, which allows the quick &#8220;capturing&#8221; and filing of data from any open file. I keep the following &lt;a href=&quot;https://orgmode.org/manual/Capture-templates.html&quot;&gt;capture template&lt;/a&gt; in my &lt;code&gt;~/.emacs&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&quot;sourceCode&quot; id=&quot;cb5&quot;&gt;&lt;pre class=&quot;sourceCode lisp&quot;&gt;&lt;code class=&quot;sourceCode commonlisp&quot;&gt;&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-1&quot; title=&quot;1&quot;&gt;(custom-set-variables&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-2&quot; title=&quot;2&quot;&gt; &amp;#39;(org-capture-templates&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-3&quot; title=&quot;3&quot;&gt;    &amp;#39;((&lt;span class=&quot;st&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Recipe&amp;quot;&lt;/span&gt; entry&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-4&quot; title=&quot;4&quot;&gt;      (file+headline &lt;span class=&quot;st&quot;&gt;&amp;quot;~/org/Cooking.org&amp;quot;&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Unsorted recipes:&amp;quot;&lt;/span&gt;)&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-5&quot; title=&quot;5&quot;&gt;      &lt;span class=&quot;st&quot;&gt;&amp;quot;* NEVERMADE %? :weekday:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-6&quot; title=&quot;6&quot;&gt;&lt;span class=&quot;st&quot;&gt;:PROPERTIES:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-7&quot; title=&quot;7&quot;&gt;&lt;span class=&quot;st&quot;&gt;:Author:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-8&quot; title=&quot;8&quot;&gt;&lt;span class=&quot;st&quot;&gt;:Source:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-9&quot; title=&quot;9&quot;&gt;&lt;span class=&quot;st&quot;&gt;:Sent_by:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-10&quot; title=&quot;10&quot;&gt;&lt;span class=&quot;st&quot;&gt;:Yield:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-11&quot; title=&quot;11&quot;&gt;&lt;span class=&quot;st&quot;&gt;:Prep_Time:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-12&quot; title=&quot;12&quot;&gt;&lt;span class=&quot;st&quot;&gt;:Cook_Time:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-13&quot; title=&quot;13&quot;&gt;&lt;span class=&quot;st&quot;&gt;:Total_Time:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-14&quot; title=&quot;14&quot;&gt;&lt;span class=&quot;st&quot;&gt;:Cost:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-15&quot; title=&quot;15&quot;&gt;&lt;span class=&quot;st&quot;&gt;:Description:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-16&quot; title=&quot;16&quot;&gt;&lt;span class=&quot;st&quot;&gt;:URL:&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-17&quot; title=&quot;17&quot;&gt;&lt;span class=&quot;st&quot;&gt;:Added: %u&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb5-18&quot; title=&quot;18&quot;&gt;&lt;span class=&quot;st&quot;&gt;:END:&amp;quot;&lt;/span&gt;))))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I can add a recipe from any file by hitting &lt;kbd&gt;C-c c r&lt;/kbd&gt;; org-mode will create a new recipe under &lt;code&gt;Unsorted Recipes&lt;/code&gt; with the template above, and I just have to fill in the details. The &lt;code&gt;%u&lt;/code&gt; is &lt;a href=&quot;https://orgmode.org/manual/Template-expansion.html&quot;&gt;automatically replaced&lt;/a&gt; with the current date, and the &lt;code&gt;%?&lt;/code&gt; tells org-mode where to put the cursor. Since most recipes follow the same basic pattern (paragraph of metadata, unnumbered list of ingredients, numbered list of directions), formatting the recipes as described above is very quick, with a few caveats: times have to be formatted as &lt;code&gt;HH:MM&lt;/code&gt;, and the description can&#8217;t run into multiple paragraphs (I use &lt;code&gt;//&lt;/code&gt; as a paragraph separator, but I&#8217;m not thrilled with this solution).&lt;/p&gt;
+&lt;p&gt;Finally, the new recipe can be easily refiled with &lt;kbd&gt;C-c C-w&lt;/kbd&gt;.&lt;/p&gt;
+&lt;h1 id=&quot;final-thoughts&quot;&gt;Final thoughts&lt;/h1&gt;
+&lt;p&gt;The main downside to this system is that there is no easy way to store images. Many recipes have &lt;a href=&quot;https://smittenkitchen.com/2012/03/potato-knish-two-ways/&quot;&gt;complicated assemblies&lt;/a&gt; that are best explained in pictures. The best I can do is store a note that says something like &#8220;see pictures in original recipe&#8221;, which has been good enough so far.&lt;/p&gt;
+&lt;!--
+I&apos;ll end with another upside though; namely, that I still have those charts that were cluttering up the folder, but now they&apos;re actually useful since they&apos;re the only things in there.
+Here&apos;s one I made for the [mother sauces](https://en.wikipedia.org/wiki/Sauce#French_cuisine) (click to download PDF):
+
+[![](MotherSauces.png)](MotherSauces.pdf)
+--&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;In Emacs-speak, &lt;kbd&gt;C&lt;/kbd&gt; is the control key, &lt;kbd&gt;M&lt;/kbd&gt;, or &#8220;meta&#8221; is alt, and &lt;kbd&gt;S&lt;/kbd&gt; is shift. So &lt;kbd&gt;M-2 S-Tab&lt;/kbd&gt; means you hit alt-2, then shift-tab in sequence.&lt;a href=&quot;#fnref1&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;This is just a subset for illustration; my actual table is larger.&lt;a href=&quot;#fnref2&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn3&quot;&gt;&lt;p&gt;In this and the above example, notice the quotation marks.&lt;a href=&quot;#fnref3&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+	</description>
+		</item>
 		<item>
 			<title>Menu Categorization</title>
 			<link>https://alexklapheke.github.io/blog/publish/menu.md</link>
