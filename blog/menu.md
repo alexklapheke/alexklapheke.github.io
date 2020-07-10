@@ -2,7 +2,7 @@
 addenda:
 - '[code](https://github.com/alexklapheke/menu)'
 date: 1593814319
-title: Menu Categorization
+title: Menu categorization
 ---
 
 ::: {.epigraph}
@@ -14,6 +14,8 @@ For instance, the first phase is characterized by the question "How can
 we eat?", the second by the question "Why do we eat?" and the third by
 the question, "Where shall we have lunch?"
 :::
+
+# Introduction
 
 Since 2011, the New York Public Library has maintained ["What's on the
 menu?"](http://menus.nypl.org/), a collection of tens of thousands of
@@ -132,6 +134,7 @@ than the former.
 ``` {.python}
 # Drop malformed dates
 df["date"] = pd.to_datetime(df["date"], errors="coerce")
+df.dropna(inplace=True)
 
 # Calculate year and decade
 df["year"] = df["date"].dt.year
@@ -157,7 +160,7 @@ eras.
 
 Looking at the number of items featured on each menu, we see that
 although 22.7% of them feature fewer than a hundred items, several reach
-into the thousands, with a startling outlier:
+into the thousands, with one startling outlier:
 
 ![Number of items on menus (log~10~
 scale)](images/ac4a666eef8d26a4926f0acf2cf8ff6de67feb93.svg){#fig:items}
@@ -391,7 +394,7 @@ Since the `tokens` column has already been cleaned, we can it for
 modeling using [tf-idf](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)
 vectorization, which assigns high scores to words which are highly
 localized, occurring, say, only in the 1970s and nowhere else. This
-turns a vector of words into a vector of tf-idf scores.
+turns a vector of words into a matrix of tf-idf scores.
 
 ``` {.python}
 from sklearn.feature_extraction.text import TfidfVectorizer

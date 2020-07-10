@@ -5,7 +5,7 @@ addenda:
     [slide
     deck](https://github.com/alexklapheke/Social-Media-Sentiment-Analysis/blob/master/presentation/Covid%2019%20Sentiment%20Analysis.pdf)
 date: 1592942292
-title: 'COVID-19 Sentiment Analysis'
+title: 'COVID-19 sentiment analysis'
 ---
 
 This project is joint work with Luken Weaver, Jon Godin, and Reza

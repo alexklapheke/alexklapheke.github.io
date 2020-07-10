@@ -84,7 +84,7 @@ code span.wa { color: #bf0303; } /* Warning */
 		<script src="../include/sidenotes.js" charset="utf-8"></script>
 		<script src="../include/sorttable.js" charset="utf-8"></script>
 
-		<title>Menu Categorization</title>
+		<title>Menu categorization</title>
 	</head>
 	<body>
 		<header>
@@ -126,11 +126,11 @@ code span.wa { color: #bf0303; } /* Warning */
 		</header>
 		<article class="hentry">
 		<div id="titleblock">
-		<h1 class="entry-title">Menu Categorization</h1>
+		<h1 class="entry-title">Menu categorization</h1>
 		<p>
 			<time datetime="2020-07-03T18:11:59-0400" class="published">Friday, July 3, 2020</time>
 			<span class="bullet">&bull;</span>
-			<span class="wordcount">2,476 words</span>
+			<span class="wordcount">2,478 words</span>
 			<span class="bullet">&bull;</span>
 			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
 			<span class="bullet">&bull;</span>
@@ -141,17 +141,18 @@ code span.wa { color: #bf0303; } /* Warning */
 		</div>
 		<nav id="TOC">
 <ul>
-<li><a href="#data-structuring"><span class="toc-section-number">1</span> Data structuring</a></li>
-<li><a href="#data-cleaning"><span class="toc-section-number">2</span> Data cleaning</a><ul>
-<li><a href="#dates"><span class="toc-section-number">2.1</span> Dates</a></li>
-<li><a href="#menus"><span class="toc-section-number">2.2</span> Menus</a></li>
-<li><a href="#dishes"><span class="toc-section-number">2.3</span> Dishes</a></li>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#data-structuring"><span class="toc-section-number">2</span> Data structuring</a></li>
+<li><a href="#data-cleaning"><span class="toc-section-number">3</span> Data cleaning</a><ul>
+<li><a href="#dates"><span class="toc-section-number">3.1</span> Dates</a></li>
+<li><a href="#menus"><span class="toc-section-number">3.2</span> Menus</a></li>
+<li><a href="#dishes"><span class="toc-section-number">3.3</span> Dishes</a></li>
 </ul></li>
-<li><a href="#data-exploration"><span class="toc-section-number">3</span> Data exploration</a><ul>
-<li><a href="#cross-sectional"><span class="toc-section-number">3.1</span> Cross-sectional</a></li>
-<li><a href="#longitudinal"><span class="toc-section-number">3.2</span> Longitudinal</a></li>
+<li><a href="#data-exploration"><span class="toc-section-number">4</span> Data exploration</a><ul>
+<li><a href="#cross-sectional"><span class="toc-section-number">4.1</span> Cross-sectional</a></li>
+<li><a href="#longitudinal"><span class="toc-section-number">4.2</span> Longitudinal</a></li>
 </ul></li>
-<li><a href="#modeling"><span class="toc-section-number">4</span> Modeling</a></li>
+<li><a href="#modeling"><span class="toc-section-number">5</span> Modeling</a></li>
 </ul>
 		</nav>
 			<div class="entry-content">
@@ -159,14 +160,17 @@ code span.wa { color: #bf0303; } /* Warning */
 <p>The History of every major Galactic Civilization tends to pass through three distinct and recognizable phases, those of Survival, Inquiry and Sophistication, otherwise known as the How, Why and Where phases.</p>
 <p>For instance, the first phase is characterized by the question &#8220;How can we eat?&#8221;, the second by the question &#8220;Why do we eat?&#8221; and the third by the question, &#8220;Where shall we have lunch?&#8221;</p>
 </div>
+<section id="introduction" class="level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
 <p>Since 2011, the New York Public Library has maintained <a href="http://menus.nypl.org/">&#8220;What&#8217;s on the menu?&#8221;</a>, a collection of tens of thousands of restaurant menus going back to the mid-nineteenth century. This is an invaluable collection not just for data scientists, but for food historians, since it is well known that foods go in and out of fashion like clothing. For example, the famed <a href="https://en.wikipedia.org/wiki/Grand_Central_Oyster_Bar_%26_Restaurant">Oyster Bar</a> at Grand Central Terminal, which in 1941 <a href="https://commons.wikimedia.org/wiki/File:Grand_Central_Terminal_Restaurant_menu_1941.jpg">featured</a> &#8220;cream of chicken &#224; la reine&#8221;, &#8220;broiled sweetbreads on toast with Virginia ham&#8221;, and &#8220;farina custard pudding, Melba sauce&#8221; (not to mention oysters for a nickel apiece), today <a href="https://web.archive.org/web/20160315171449/http://www.oysterbarny.com/pdf/dailymenu.pdf">serves</a> such mouthfuls as &#8220;poached farmed Norwegian salmon over baby red oak-watercress salad with charred scallion-honey vinaigrette, avocado, and goat cheese.&#8221;</p>
 <p>These vicissitudes are due partly to economics. In 1914, avocados, then known as &#8220;alligator pears&#8221;, <a href="https://time.com/4832655/avocado-american-history/">could go for</a> $1 each&#8212;more that $25 today. But economics can be adulterated by public perception. David Foster Wallace, considering the lobster, wrote that:<span class="citation" data-cites="wallace2004consider"><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></span></p>
 <blockquote>
 <p>Up until sometime in the 1800s, though, lobster was literally low-class food, eaten only by the poor and institutionalized. Even in the harsh penal environment of early America, some colonies had laws against feeding lobsters to inmates more than once a week because it was thought to be cruel and unusual, like making people eat rats. One reason for their low status was how plentiful lobsters were in old New England. &#8220;Unbelievable abundance&#8221; is how one source describes the situation, including accounts of Plymouth pilgrims wading out and capturing all they wanted by hand, and of early Boston&#8217;s seashore being littered with lobsters after hard storms&#8212;these latter were treated as a smelly nuisance and ground up for fertilizer. There is also the fact that premodern lobster was often cooked dead and then preserved, usually packed in salt or crude hermetic containers. Maine&#8217;s earliest lobster industry was based around a dozen such seaside canneries in the 1840s, from which lobster was shipped as far away as California, in demand only because it was cheap and high in protein, basically chewable fuel.</p>
 </blockquote>
 <p>By 1941, of course, the Oyster Bar&#8217;s menu lists &#8220;alligator pear salad&#8221; for 45&#162; and &#8220;lobster pan roast&#8221;&#8212;one of the priciest items named&#8212;for $1.45.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> In this project I wanted to see if, using this data,<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> I could predict the year a menu was served based on the dishes listed.</p>
+</section>
 <section id="data-structuring" class="level1">
-<h1><span class="header-section-number">1</span> Data structuring</h1>
+<h1><span class="header-section-number">2</span> Data structuring</h1>
 <p>The NYPL provides the data in the very simple <a href="https://en.wikipedia.org/wiki/Snowflake_schema">snowflake schema</a> shown in fig.&#160;1. The central table is <code>MenuItem.csv</code>, in which each of the 1,334,417 rows represents an item on a menu. Each references a particular dish, which are named in <code>Dish.csv</code> (426,959 comestibles in total), and each is also referenced to a page in <code>MenuPage.csv</code>, which are in turn referenced in <code>Menu.csv</code> to the particular bills of fare on which they appear.</p>
 <figure>
 <object data="images/e21ef90bc35863a4987861c018579662522e923c.svg" alt="Figure 1: Menu dataset table schema (some columns omitted). Source code" id="fig:schema" ><img src="images/e21ef90bc35863a4987861c018579662522e923c.svg" alt="Figure 1: Menu dataset table schema (some columns omitted). Source code" id="fig:schema" /></object><figcaption>Figure 1: Menu dataset table schema (some columns omitted). <a href="https://gist.github.com/alexklapheke/a197eed2a9ba742aa0080c1bdbfa579c">Source code</a></figcaption>
@@ -204,16 +208,17 @@ code span.wa { color: #bf0303; } /* Warning */
 <p>This left me with a single data frame of menu items to clean and parse.</p>
 </section>
 <section id="data-cleaning" class="level1">
-<h1><span class="header-section-number">2</span> Data cleaning</h1>
+<h1><span class="header-section-number">3</span> Data cleaning</h1>
 <section id="dates" class="level2">
-<h2><span class="header-section-number">2.1</span> Dates</h2>
+<h2><span class="header-section-number">3.1</span> Dates</h2>
 <p>The first work to be done was on the dates. For example, 638 dates turned out to be incorrect or malformed. In some, like <code>1091-01-27</code>, the error was transparent, but with less than 0.05% of the data so corrupted, I decided to just drop them. However, another 68,438 items&#8212;5% of the data&#8212;were missing dates altogether. Since they were useless to the analysis, and I couldn&#8217;t know if there was a pattern to the missingness, I was forced to drop these as well. Then, from the 1.27 million well-formed dates remaining, I extracted the year and decade, the latter of which would prove a more reasonable target for modeling than the former.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="co"># Drop malformed dates</span></a>
 <a class="sourceLine" id="cb2-2" title="2">df[<span class="st">&quot;date&quot;</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">&quot;date&quot;</span>], errors<span class="op">=</span><span class="st">&quot;coerce&quot;</span>)</a>
-<a class="sourceLine" id="cb2-3" title="3"></a>
-<a class="sourceLine" id="cb2-4" title="4"><span class="co"># Calculate year and decade</span></a>
-<a class="sourceLine" id="cb2-5" title="5">df[<span class="st">&quot;year&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;date&quot;</span>].dt.year</a>
-<a class="sourceLine" id="cb2-6" title="6">df[<span class="st">&quot;decade&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;year&quot;</span>] <span class="op">//</span> <span class="dv">10</span> <span class="op">*</span> <span class="dv">10</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-3" title="3">df.dropna(inplace<span class="op">=</span><span class="va">True</span>)</a>
+<a class="sourceLine" id="cb2-4" title="4"></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="co"># Calculate year and decade</span></a>
+<a class="sourceLine" id="cb2-6" title="6">df[<span class="st">&quot;year&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;date&quot;</span>].dt.year</a>
+<a class="sourceLine" id="cb2-7" title="7">df[<span class="st">&quot;decade&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;year&quot;</span>] <span class="op">//</span> <span class="dv">10</span> <span class="op">*</span> <span class="dv">10</span></a></code></pre></div>
 <p>A further problem is that our dataset&#8217;s classes are heavily unbalanced. Looking at fig.&#160;2, we see that the great preponderance of them&#8212;a full 63% of menus and 62% of items&#8212;are from the initial two decades of the twentieth century.</p>
 <figure>
 <object data="images/1dd20f58075aee57f212300ff5e6b2ffe63a6034.svg" alt="Figure 2: Number of menus (left) and menu items (right) by decade" id="fig:decade" ><img src="images/1dd20f58075aee57f212300ff5e6b2ffe63a6034.svg" alt="Figure 2: Number of menus (left) and menu items (right) by decade" id="fig:decade" /></object><figcaption>Figure 2: Number of menus (left) and menu items (right) by decade</figcaption>
@@ -221,15 +226,15 @@ code span.wa { color: #bf0303; } /* Warning */
 <p>This could cause problems during modeling, not only because a na&#239;ve model could latch onto the majority class and return it without considering the inputs, but because the meagerness of data&#8212;particularly before 1880 and after 1990&#8212;will leave the model with inadequate information to categorize <em>any</em> menu as being from these eras.</p>
 </section>
 <section id="menus" class="level2">
-<h2><span class="header-section-number">2.2</span> Menus</h2>
-<p>Looking at the number of items featured on each menu, we see that although 22.7% of them feature fewer than a hundred items, several reach into the thousands, with a startling outlier:</p>
+<h2><span class="header-section-number">3.2</span> Menus</h2>
+<p>Looking at the number of items featured on each menu, we see that although 22.7% of them feature fewer than a hundred items, several reach into the thousands, with one startling outlier:</p>
 <figure>
 <object data="images/ac4a666eef8d26a4926f0acf2cf8ff6de67feb93.svg" alt="Figure 3: Number of items on menus (log10 scale)" id="fig:items" ><img src="images/ac4a666eef8d26a4926f0acf2cf8ff6de67feb93.svg" alt="Figure 3: Number of items on menus (log10 scale)" id="fig:items" /></object><figcaption>Figure 3: Number of items on menus (log<sub>10</sub> scale)</figcaption>
 </figure>
 <p>That last menu, a <a href="http://menus.nypl.org/menus/31054">1933 Plaza Hotel menu</a>, is actually 62 menus bound together, totalling 4,060 dishes. However, even the runner-up, a <a href="http://menus.nypl.org/menus/34201">1914 Waldorf Astoria menu</a>, packs 1,360 dishes into ten octavo-sized pages. (For reference, the famously voluminous Cheesecake Factory menu has <a href="https://www.mentalfloss.com/article/566482/why-the-cheesecake-factorys-menu-is-so-big">&#8220;only&#8221;</a> 250 items.) This shouldn&#8217;t matter to the model, of course, since it will be trained only on individual dish names.</p>
 </section>
 <section id="dishes" class="level2">
-<h2><span class="header-section-number">2.3</span> Dishes</h2>
+<h2><span class="header-section-number">3.3</span> Dishes</h2>
 <p>The dish names themselves were somewhat less tractable. The menus are transcribed by hand, eliminating the need to deal with OCR errors, but many items were unreasonably long.</p>
 <figure>
 <object data="images/a47dd4bf94ca107a2ea087828d7ec1885d4141b9.svg" alt="Figure 4: Character length of menu items (log10 scale)" id="fig:length" ><img src="images/a47dd4bf94ca107a2ea087828d7ec1885d4141b9.svg" alt="Figure 4: Character length of menu items (log10 scale)" id="fig:length" /></object><figcaption>Figure 4: Character length of menu items (log<sub>10</sub> scale)</figcaption>
@@ -264,9 +269,9 @@ code span.wa { color: #bf0303; } /* Warning */
 </section>
 </section>
 <section id="data-exploration" class="level1">
-<h1><span class="header-section-number">3</span> Data exploration</h1>
+<h1><span class="header-section-number">4</span> Data exploration</h1>
 <section id="cross-sectional" class="level2">
-<h2><span class="header-section-number">3.1</span> Cross-sectional</h2>
+<h2><span class="header-section-number">4.1</span> Cross-sectional</h2>
 <p>I first examined the top words from each decade, excerpted in fig.&#160;5&#8211;fig.&#160;8.</p>
 <figure>
 <object data="images/3a04acfdc390f9309b3cf78806d685e9b02434ea.svg" alt="Figure 5: Most common words on menus from the 1850s" id="fig:1850" ><img src="images/3a04acfdc390f9309b3cf78806d685e9b02434ea.svg" alt="Figure 5: Most common words on menus from the 1850s" id="fig:1850" /></object><figcaption>Figure 5: Most common words on menus from the 1850s</figcaption>
@@ -286,7 +291,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <p>In the 1990s, &#8220;fried&#8221; has been replaced by &#8220;grilled&#8221;, and a renewed interest in French cuisine seems to be the <em>dernier cri</em>, as five of the ten are French grammatical words not filtered by the English stopword list (and <em>de</em> outpacing the next-highest word by almost 2 to 1).</p>
 </section>
 <section id="longitudinal" class="level2">
-<h2><span class="header-section-number">3.2</span> Longitudinal</h2>
+<h2><span class="header-section-number">4.2</span> Longitudinal</h2>
 <p>Equally illuminating is to look at the waxing and waning of particular foods across time, in the style of <a href="https://books.google.com/ngrams">Google Ngrams</a>.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" title="1">words <span class="op">=</span> [<span class="st">&quot;lobster&quot;</span>, <span class="st">&quot;oyster&quot;</span>]</a>
 <a class="sourceLine" id="cb5-2" title="2"></a>
@@ -329,7 +334,7 @@ code span.wa { color: #bf0303; } /* Warning */
 </section>
 </section>
 <section id="modeling" class="level1">
-<h1><span class="header-section-number">4</span> Modeling</h1>
+<h1><span class="header-section-number">5</span> Modeling</h1>
 <p>The first step is to sample from the data, firstly to correct the class imbalance seen in fig.&#160;2 above, but more importantly, to curtail the incredibly large matrix we would get if we vectorized the entire data frame.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" title="1"><span class="co"># We want each class to have only as many as the smallest class</span></a>
 <a class="sourceLine" id="cb6-2" title="2">sample_size <span class="op">=</span> df.groupby(<span class="st">&quot;decade&quot;</span>)[<span class="st">&quot;name&quot;</span>].count().<span class="bu">min</span>()</a>
@@ -343,7 +348,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <a class="sourceLine" id="cb7-4" title="4">y <span class="op">=</span> sample[<span class="st">&quot;decade&quot;</span>]</a>
 <a class="sourceLine" id="cb7-5" title="5"></a>
 <a class="sourceLine" id="cb7-6" title="6">X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, stratify<span class="op">=</span>y)</a></code></pre></div>
-<p>Since the <code>tokens</code> column has already been cleaned, we can it for modeling using <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">tf-idf</a> vectorization, which assigns high scores to words which are highly localized, occurring, say, only in the 1970s and nowhere else. This turns a vector of words into a vector of tf-idf scores.</p>
+<p>Since the <code>tokens</code> column has already been cleaned, we can it for modeling using <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">tf-idf</a> vectorization, which assigns high scores to words which are highly localized, occurring, say, only in the 1970s and nowhere else. This turns a vector of words into a matrix of tf-idf scores.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" title="1"><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> TfidfVectorizer</a>
 <a class="sourceLine" id="cb8-2" title="2"></a>
 <a class="sourceLine" id="cb8-3" title="3">tfidf <span class="op">=</span> TfidfVectorizer()</a>
