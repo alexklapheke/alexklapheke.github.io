@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="generator" content="pandoc" />
+		<meta name="author" content="Alexander Klapheke">
+		<meta name="robots" content="index,follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="last-modified" content="">
+
+		<link rel="canonical" href="https://alexklapheke.github.io/blog/essay.html">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+		</style>
+		<link rel="stylesheet" href="../include/style.css" />
+		<link rel="stylesheet" href="../include/blog.css" />
+		<!--[if lt IE 9]>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+		<![endif]-->
+		<script src="../include/sidenotes.js" charset="utf-8"></script>
+		<script src="../include/sorttable.js" charset="utf-8"></script>
+
+		<title>Automated essay scoring</title>
+	</head>
+	<body>
+		<header>
+			<!-- http://microformats.org/wiki/hcard -->
+			<div class="author vcard">
+			<h1>
+				<a href="https://alexklapheke.github.io">
+				<span class="given-name">Alexander</span>
+				<span class="family-name"><abbr class="ipa" lang="x-ipa" title="[kl&#601;&#39;pik]">Klapheke</abbr></span>
+				</a>
+			</h1>
+
+				<div id="contact">
+					<!-- http://hcard.geekhood.net/encode/ -->
+					<a
+					class='email
+					href="mailto:x@y"
+					'
+					href
+					=	'
+					&#x20;&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;%20&#x61;&#x6c;&#x25;6&#x35;%7&#x38;&#x25;&#54;&#98;la&#x25;7&#x30;h&#37;6&#x35;&#x25;&#x36;&#x62;&#37;&#x36;&#x35;&#37;&#x34;0&#x67;&#109;&#97;%&#x36;9l&#x25;&#50;&#101;%&#x36;&#51;&#111;&#x6d;&#x3f;
+					'>&#97;&#x6c;&#x65;&#120;&#x6B;lap&#x68;&#x65;k<!--
+					mailto:abuse@hotmail.com
+					</a>
+					-->&shy;&#x65;&#64;&#103;&#109;&#x61;i&#108;&#x2E;&#99;&#x6f;&#109;</a>
+					<br>
+					<a href="../0xBCB7A837.asc">Public key</a> <span class="grayed">(<abbr title="F1BD E18B 7525 95A9 7BC4 FB04 A349 9FF5 2DF0 94AB">fingerprint</abbr>)</span>
+
+					<br><br>
+
+					<a class="social" href="https://github.com/alexklapheke">GitHub</a> <span class="bullet">&bull;</span>
+					<a class="social" href="https://linkedin.com/in/alexander-klapheke">LinkedIn</a> <span class="bullet">&bull;</span>
+					<a class="social" href="../AlexanderKlapheke-Resume.pdf">R&eacute;sum&eacute;</a>
+				</div>
+			</div>
+
+			<p id="blurb">I&rsquo;m a data scientist and self-taught coder (Python, R, Haskell) with a background in linguistics and math and over 10 years&rsquo; experience explaining technical concepts to laypeople.</p>
+
+		</header>
+		<article class="hentry">
+		<div id="titleblock">
+		<h1 class="entry-title">Automated essay scoring</h1>
+		<p>
+			<time datetime="2020-07-12T18:20:44-0400" class="published">Sunday, July 12, 2020</time>
+			<span class="bullet">&bull;</span>
+			<span class="wordcount">4,071 words</span>
+			<span class="bullet">&bull;</span>
+			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
+			<span class="bullet">&bull;</span>
+			<span class="addenda">&#128206;&nbsp;<a href="https://github.com/alexklapheke/essay">code</a>, <a href="https://github.com/alexklapheke/essay/blob/master/presentation/presentation.pdf">slide deck</a></span>
+			<span class="bullet">&bull;</span>
+			<a class="source" href="https://raw.githubusercontent.com/alexklapheke/alexklapheke.github.io/master/blog/essay.md">View source</a>
+		</p>
+		</div>
+		<nav id="TOC">
+<ul>
+<li><a href="#prolegomenon"><span class="toc-section-number">1</span> Prolegomenon</a></li>
+<li><a href="#sec:dataexp"><span class="toc-section-number">2</span> Data exploration &amp; cleaning</a><ul>
+<li><a href="#essay-set-selection"><span class="toc-section-number">2.1</span> Essay set selection</a></li>
+<li><a href="#data-cleaning"><span class="toc-section-number">2.2</span> Data cleaning</a></li>
+<li><a href="#data-exploration"><span class="toc-section-number">2.3</span> Data exploration</a></li>
+</ul></li>
+<li><a href="#modeling"><span class="toc-section-number">3</span> Modeling</a><ul>
+<li><a href="#sec:class"><span class="toc-section-number">3.1</span> Classical models</a></li>
+<li><a href="#recurrent-neural-network"><span class="toc-section-number">3.2</span> Recurrent Neural Network</a></li>
+</ul></li>
+<li><a href="#appendix-a-perelmans-2012-essay">Appendix A: Perelman&#8217;s (2012) essay</a></li>
+<li><a href="#appendix-b-anc-wordlist">Appendix B: ANC wordlist</a></li>
+</ul>
+		</nav>
+			<div class="entry-content">
+<div class="epigraph">
+<p>&#8217;Tis hard to say, if greater Want of Skill<br />
+Appear in Writing or in Judging ill</p>
+</div>
+<section id="prolegomenon" class="level1">
+<h1><span class="header-section-number">1</span> Prolegomenon</h1>
+<p><a href="https://en.wikipedia.org/wiki/Automated_essay_scoring">Automated Essay Scoring</a> has been contemplated as an application of machine learning since its earliest days. The ETS began using its proprietary <a href="https://www.ets.org/erater/about">e-rater</a> in 1999, which, with a human cohort, now grades the SAT essay. In 2012, the Hewlitt Foundation sponsored the <a href="https://www.kaggle.com/c/asap-aes">Automated Student Assessment Prize</a> (ASAP), offering a $100,000 reward for the best scoring system. Not long after, <span class="citation" data-cites="shermis2013contrasting">Mark D. Shermis and Ben Hamner<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></span> found that automated scoring systems performed similarly to human graders, a claim met with both <a href="https://www.insidehighered.com/news/2012/04/13/large-study-shows-little-difference-between-human-and-robot-essay-graders">praise</a> and <a href="https://www.nytimes.com/2012/04/23/education/robo-readers-used-to-grade-test-essays.html">skepticism</a>. Les Perelman, for example, inveighed that e-rater looked for particular stylistic cues without considering their rhetorical effect:</p>
+<blockquote>
+<p>E-Rater, [Perelman] said, does not like short sentences.</p>
+<p>Or short paragraphs.</p>
+<p>Or sentences that begin with &#8220;or.&#8221; And sentences that start with &#8220;and.&#8221; Nor sentence fragments.</p>
+<p>However, he said, e-Rater likes connectors, like &#8220;however,&#8221; which serve as programming proxies for complex thinking. Moreover, &#8220;moreover&#8221; is good, too.</p>
+<p>Gargantuan words are indemnified because e-Rater interprets them as a sign of lexical complexity. &#8220;Whenever possible,&#8221; Mr.&#160;Perelman advises, &#8220;use a big word. &#8216;Egregious&#8217; is better than &#8216;bad.&#8217;&#8221;</p>
+</blockquote>
+<p>And in a more thorough rejoinder,<span class="citation" data-cites="perelman2013critique"><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></span> Perelman contests the statistical results as cherry-picked:</p>
+<blockquote>
+<p>The clearest omission is the failure of the authors to report the fairly large percentage of machine values for the Pearson <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math> and the Quadratic Weighted Kappa that fell below the minimum standard of 0.7. [&#8230;] Any value below 0.7 will be predicting significantly less than half the population and, because this is an exponential function, small decreases in value produce large decreases in the percentage accurately predicted. [&#8230;] Yet for the Quadratic Weighted Kappa, 28 of the 81 machine scores, 35.6%, are below the minimally acceptable level of 0.7, even though the machines had the advantage in half of the essay sets of matching an inflated Resolved Score. In contrast, the human readers, who had to match each other with no artificial advantage, had only one Quadratic Weighted Kappa below 0.7, for the composite score on essay set #8 or only 1 out of 9 or 11.1%.</p>
+</blockquote>
+<p>Besides these issues, and the ethics of eschewing a human reader&#8217;s eye, criticism of these systems has focused on the ease of gaming them, such as <span class="citation" data-cites="powers2002stumping">Donald E. Powers et al.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></span> who managed to finagle higher scores from e-rater than humans were willing to grant (though not lower scores). Perelman himself, in response to a prompt about whether &#8220;the rising cost of a college education is the fault of students who demand [&#8230;] luxuries&#8221;, wrote an essay, excerpted below, which despite earning e-rater&#8217;s highest possible score of 6, is laden with solecisms, factual errors, and non sequiturs, including a full line of Allen Ginsberg&#8217;s &#8220;Howl&#8221; (the full essay is reproduced in <a href="#appendix-a-perelmans-2012-essay">Appendix A</a>):</p>
+<blockquote>
+<p>I live in a luxury dorm. In reality, it costs no more than rat infested rooms at a Motel Six. The best minds of my generation were destroyed by madness, starving hysterical naked, and publishing obscene odes on the windows of the skull. Luxury dorms pay for themselves because they generate thousand and thousands of dollars of revenue. In the Middle Ages, the University of Paris grew because it provided comfortable accommodations for each of its students, large rooms with servants and legs of mutton. Although they are expensive, these rooms are necessary to learning. The second reason for the five-paragraph theme is that it makes you focus on a single topic. Some people start writing on the usual topic, like TV commercials, and they wind up all over the place, talking about where TV came from or capitalism or health foods or whatever. But with only five paragraphs and one topic you&#8217;re not tempted to get beyond your original idea, like commercials are a good source of information about products. You give your three examples, and zap! you&#8217;re done. This is another way the five-paragraph theme keeps you from thinking too much.</p>
+</blockquote>
+<p>With the above criticisms leveled, I should disclaim that I am training a model to <em>predict essay scores</em>, not to <em>score essays</em>, which is a much harder task (and should be held to a much higher standard) and not an obviously meaningful thing to ask of a mathematical model to begin with. However, the results show that much&#8212;even if not all&#8212;of what constitutes an essay grade is not the <em>je ne sais quoi</em> only a human evaluator can glimpse, but rather mechanical issues that can be straightforwardly calculated and modeled.</p>
+</section>
+<section id="sec:dataexp" class="level1">
+<h1><span class="header-section-number">2</span> Data exploration &amp; cleaning<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></h1>
+<section id="essay-set-selection" class="level2">
+<h2><span class="header-section-number">2.1</span> Essay set selection</h2>
+<p>The corpus is in the form of 13,000 essays, totaling 2.9 million words&#8212;more than twice the length of Proust&#8217;s <em>In Search of Lost Time</em>. The length, however, was not as immediate an obstacle as the composition, shown in tbl.&#160;1. The eight essay sets were not only responding to different prompts, but were of different lengths and genres, written by students of different grade levels, and, most importantly, scored using incommensurate rubrics and scoring protocols.</p>
+<div id="tbl:sets">
+<table class="sortable">
+<caption>Table 1: Summary of the essay sets in the ASAP corpus. &#8220;Rubric range&#8221; and &#8220;resolved range&#8221; are scores before and after adjudication, respectively. Adjudication rules have been simplified</caption>
+<thead title="Click to sort">
+<tr class="header">
+<th style="text-align: left;">Essay set</th>
+<th style="text-align: left;">Grade level</th>
+<th style="text-align: left;">Genre</th>
+<th style="text-align: left;">Train size</th>
+<th style="text-align: left;">Test size</th>
+<th style="text-align: left;">Avg. length</th>
+<th style="text-align: left;">Rubric range</th>
+<th style="text-align: left;">Resolved score range</th>
+<th style="text-align: left;">Adjudication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Persuasion</td>
+<td style="text-align: left;">1,785</td>
+<td style="text-align: left;">592</td>
+<td style="text-align: left;">350</td>
+<td style="text-align: left;">1&#8211;6</td>
+<td style="text-align: left;">2&#8211;12</td>
+<td style="text-align: left;">Sum if adjacent, else third scorer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Persuasion</td>
+<td style="text-align: left;">1,800</td>
+<td style="text-align: left;">600</td>
+<td style="text-align: left;">350</td>
+<td style="text-align: left;">1&#8211;6, 1&#8211;4</td>
+<td style="text-align: left;">1&#8211;6, 1&#8211;4</td>
+<td style="text-align: left;">First</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Exposition</td>
+<td style="text-align: left;">1,726</td>
+<td style="text-align: left;">575</td>
+<td style="text-align: left;">150</td>
+<td style="text-align: left;">0&#8211;3</td>
+<td style="text-align: left;">0&#8211;3</td>
+<td style="text-align: left;">Higher if adjacent, else third scorer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Exposition</td>
+<td style="text-align: left;">1,772</td>
+<td style="text-align: left;">589</td>
+<td style="text-align: left;">150</td>
+<td style="text-align: left;">0&#8211;3</td>
+<td style="text-align: left;">0&#8211;3</td>
+<td style="text-align: left;">Higher if adjacent, else third scorer</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Exposition</td>
+<td style="text-align: left;">1,805</td>
+<td style="text-align: left;">601</td>
+<td style="text-align: left;">150</td>
+<td style="text-align: left;">0&#8211;4</td>
+<td style="text-align: left;">0&#8211;4</td>
+<td style="text-align: left;">Higher</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Exposition</td>
+<td style="text-align: left;">1,800</td>
+<td style="text-align: left;">600</td>
+<td style="text-align: left;">150</td>
+<td style="text-align: left;">0&#8211;4</td>
+<td style="text-align: left;">0&#8211;4</td>
+<td style="text-align: left;">Higher</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Narrative</td>
+<td style="text-align: left;">1,730</td>
+<td style="text-align: left;">576</td>
+<td style="text-align: left;">250</td>
+<td style="text-align: left;">0&#8211;15</td>
+<td style="text-align: left;">0&#8211;30</td>
+<td style="text-align: left;">Sum</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Narrative</td>
+<td style="text-align: left;">918</td>
+<td style="text-align: left;">305</td>
+<td style="text-align: left;">650</td>
+<td style="text-align: left;">0&#8211;30, 0&#8211;30</td>
+<td style="text-align: left;">0&#8211;60</td>
+<td style="text-align: left;">Sum if adjacent, else third scorer</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Limiting myself to a single essay set would have produced a somewhat feeble model, as words idiosyncratic to the topic in question became artificially elevated in importance. In the end, I combined sets 3 and 4, which both consisted of expository essays written by tenth graders, graded on a scale from 0 (worst) to 3 (best). These scores are holistic, i.e., not broken down into categories representing grammar and mechanics, relevance, organization, etc., which makes them easier for a model to predict.</p>
+</section>
+<section id="data-cleaning" class="level2">
+<h2><span class="header-section-number">2.2</span> Data cleaning</h2>
+<p>The scores are broken down, for each essay set, into &#8220;domain scores&#8221; representing the valuations of the individual scorers. In the interest of having a single number to try to predict, I combined these scores by taking the mean:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># If only one score exists, use that. Otherwise, take the mean of both scores.</span></a>
+<a class="sourceLine" id="cb1-2" title="2">essays[<span class="st">&quot;score&quot;</span>] <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(np.nanmean, <span class="bu">zip</span>(essays[<span class="st">&quot;domain1_score&quot;</span>], essays[<span class="st">&quot;domain2_score&quot;</span>])))</a></code></pre></div>
+<p>We can then look at the way scores are distributed among the essays in our chosen subset.</p>
+<figure>
+<object data="images/8e503ead0daf85d31b1e8b56c98b2100c920af67.svg" alt="Figure 1: Number of essays given each score" id="fig:score" ><img src="images/8e503ead0daf85d31b1e8b56c98b2100c920af67.svg" alt="Figure 1: Number of essays given each score" id="fig:score" /></object><figcaption>Figure 1: Number of essays given each score</figcaption>
+</figure>
+<p>In fig.&#160;1, we see that the scorers of the fourth essay set were somewhat less lenient than those grading the third, the latter of whom awarded the highest score to a full quarter of the papers, and the lowest score of 0 to only 39 unhappy test-takers. Putting these together, we have a roughly normal-looking distribution, with many ones and twos, and fewer zeroes and threes. This gives us a baseline to use for the modeling below: a dumb model, which assigned every essay to the plurality score class, giving every essay a score 1, would have an accuracy of 35%. This is the number our models must beat.</p>
+<p>The essays themselves are in little need of cleaning: they are hand-transcribed from the originals, and have been anonymized by replacing named entities, including names, dates, addresses, and numbers, with enumerated placeholders.</p>
+</section>
+<section id="data-exploration" class="level2">
+<h2><span class="header-section-number">2.3</span> Data exploration<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></h2>
+<p>A basic exploration of the essays shows some striking patters. For example, as fig.&#160;2 illustrates, score is highly correlated with length at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mn>0.51</mn></mrow><annotation encoding="application/x-tex">R^2 = 0.51</annotation></semantics></math>, meaning that over half the variation in score can be explained by variation in length. In other words, all else held equal, adding 82 words corresponds with a point increase in score.</p>
+<figure>
+<object data="images/5915a4d1521553a23cc9eea3951100155f51975d.svg" alt="Figure 2: Length of essays (number of word tokens) by score. Box shows IQR. Whiskers show full range of data." id="fig:length" ><img src="images/5915a4d1521553a23cc9eea3951100155f51975d.svg" alt="Figure 2: Length of essays (number of word tokens) by score. Box shows IQR. Whiskers show full range of data." id="fig:length" /></object><figcaption>Figure 2: Length of essays (number of word tokens) by score. Box shows IQR. Whiskers show full range of data.</figcaption>
+</figure>
+<p>One interesting thing we see is that, despite the correlation, there are many essays earning top marks that are almost impossibly short. The following are recorded in the dataset as having earned a top score (both prompts instructed students to use examples from the texts):</p>
+<blockquote>
+<p>The features of the setting affect the cyclist in many ways. It made him tired thirsty and he was near exaustion [sic].<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+</blockquote>
+<blockquote>
+<p>Because she saying when the @CAPS1 grow back she will be @CAPS2 to take the test again.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+</blockquote>
+<blockquote>
+<p>Reserved need to check keenly<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
+</blockquote>
+<p>That that gnomic last &#8220;essay&#8221; (yes, that&#8217;s the whole text!) earned a coveted score of 3 is almost certainly an error, though the source of the error (the recording of the scores, the compilation of the dataset, or the scoring process itself) is as mysterious as the cryptic phrase&#8217;s meaning. However, there doesn&#8217;t seem to be an objective way of pruning these aberrant rows from the dataset, necessitating my leaving them in.</p>
+<p>Other measures are telling as well. For instance, we can look at the rate of misspelled words, by tokenizing with spaCy, and counting each token that is not in a given wordlist.<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="im">import</span> spacy</a>
+<a class="sourceLine" id="cb2-2" title="2">nlp <span class="op">=</span> spacy.load(<span class="st">&quot;en&quot;</span>)</a>
+<a class="sourceLine" id="cb2-3" title="3"></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co"># Generate wordlist</span></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;/usr/share/dict/words&quot;</span> , <span class="st">&quot;r&quot;</span>) <span class="im">as</span> infile:</a>
+<a class="sourceLine" id="cb2-6" title="6">    wordlist <span class="op">=</span> <span class="bu">set</span>(infile.read().lower().strip().split(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>))</a>
+<a class="sourceLine" id="cb2-7" title="7"></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="co"># Number of words that are misspelled</span></a>
+<a class="sourceLine" id="cb2-9" title="9">essays[<span class="st">&quot;misspellings&quot;</span>] <span class="op">=</span> <span class="bu">len</span>([word <span class="cf">for</span> word <span class="kw">in</span> nlp(essays[<span class="st">&quot;essay&quot;</span>])</a>
+<a class="sourceLine" id="cb2-10" title="10">     <span class="cf">if</span> <span class="kw">not</span> word.is_space</a>
+<a class="sourceLine" id="cb2-11" title="11">     <span class="kw">and</span> <span class="kw">not</span> word.is_punct</a>
+<a class="sourceLine" id="cb2-12" title="12">     <span class="kw">and</span> <span class="kw">not</span> word.text.startswith(<span class="st">&quot;@&quot;</span>) <span class="co"># named entities</span></a>
+<a class="sourceLine" id="cb2-13" title="13">     <span class="kw">and</span> <span class="kw">not</span> word.text.startswith(<span class="st">&quot;&#39;&quot;</span>) <span class="co"># contractions</span></a>
+<a class="sourceLine" id="cb2-14" title="14">     <span class="kw">and</span> word.text.lower() <span class="kw">not</span> <span class="kw">in</span> wordlist])</a>
+<a class="sourceLine" id="cb2-15" title="15"></a>
+<a class="sourceLine" id="cb2-16" title="16"><span class="co"># Percentage of words misspelled</span></a>
+<a class="sourceLine" id="cb2-17" title="17">essays[<span class="st">&quot;misspellings&quot;</span>] <span class="op">/=</span> essays[<span class="st">&quot;tokens&quot;</span>]</a></code></pre></div>
+<p>The results, in fig.&#160;3, are curiously complementary to those in fig.&#160;2: the rate of misspellings is practically the same across score classes (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mn>0.002</mn></mrow><annotation encoding="application/x-tex">R^2 = 0.002</annotation></semantics></math>), but those at the extremes, with 10% or more of their words misspelled, are overwhelmingly likely to be low scorers.</p>
+<figure>
+<object data="images/076017236c51b117019e69cc4114e8efc6da9824.svg" alt="Figure 3: Percent of words misspelled by score. Box shows IQR. Whiskers show full range of data." id="fig:missp" ><img src="images/076017236c51b117019e69cc4114e8efc6da9824.svg" alt="Figure 3: Percent of words misspelled by score. Box shows IQR. Whiskers show full range of data." id="fig:missp" /></object><figcaption>Figure 3: Percent of words misspelled by score. Box shows IQR. Whiskers show full range of data.</figcaption>
+</figure>
+<p>The question of assessing prompt-relevance is trickier. One way of tackling it is to calculate the document vector of the story to which the students are responding, and calculate its <a href="https://en.wikipedia.org/wiki/Cosine_similarity">cosine similarity</a> with the document vector of each essay. We can see the results in fig.&#160;4.</p>
+<figure>
+<object data="images/bfecc4a9e215d44e1c24d44a89c8791aad191963.svg" alt="Figure 4: Vector similarity to prompt, calculated as the cosine similarity of the mean of the word vectors in each text. Box shows IQR. Whiskers show full range of data." id="fig:prompt" ><img src="images/bfecc4a9e215d44e1c24d44a89c8791aad191963.svg" alt="Figure 4: Vector similarity to prompt, calculated as the cosine similarity of the mean of the word vectors in each text. Box shows IQR. Whiskers show full range of data." id="fig:prompt" /></object><figcaption>Figure 4: Vector similarity to prompt, calculated as the cosine similarity of the mean of the word vectors in each text. Box shows IQR. Whiskers show full range of data.</figcaption>
+</figure>
+<p>The results aren&#8217;t bad (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mn>0.28</mn></mrow><annotation encoding="application/x-tex">R^2 = 0.28</annotation></semantics></math>), especially considering the outliers for score 3 are the same bizarrely short essays we saw above, including our Delphic &#8220;reserved need to check keenly&#8221;.</p>
+<p>At this point, we must ask what the value of this metadata is. The ETS <a href="https://www.ets.org/research/topics/as_nlp/writing_quality/">claims</a> that its e-rater accounts for prompt-relevance, as well as:</p>
+<blockquote>
+<ul>
+<li>errors in grammar (e.g., subject&#8211;verb agreement)</li>
+<li>usage (e.g., preposition selection)</li>
+<li>mechanics (e.g., capitalization)</li>
+<li>style (e.g., repetitious word use)</li>
+<li>discourse structure (e.g., presence of a thesis statement, main points)</li>
+<li>vocabulary usage (e.g., relative sophistication of vocabulary)</li>
+<li>sentence variety</li>
+<li>source use</li>
+<li>discourse coherence quality</li>
+</ul>
+</blockquote>
+<p>While it would take a sophisticated natural language parser to incorporate these details into our model, we may be able to approximate these things using metadata as proxies. Type&#8211;token ratio, for instance, could stand in for &#8220;repetitious word use&#8221;, and vector similarity to the prompt for relevance. As an alternative to parsing for narrative structure, I included a count of &#8220;linking words&#8221; that would likely signal a transition between paragraphs,<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a> but this bore little relationship to the human scorers&#8217; judgments (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mn>0.0004</mn></mrow><annotation encoding="application/x-tex">R^2 = 0.0004</annotation></semantics></math>). Finally, as a proxy for sentence complexity, I used spaCy to parse the syntactic trees of each sentence, and took the longest branch, thus rewarding complex sentences with prepositional phrases and dependent clauses.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" title="1"><span class="co"># Depth of longest branch in dependency tree</span></a>
+<a class="sourceLine" id="cb3-2" title="2">essays[<span class="st">&quot;max_depth&quot;</span>] <span class="op">=</span> [<span class="bu">max</span>([<span class="bu">len</span>(<span class="bu">list</span>(token.children))</a>
+<a class="sourceLine" id="cb3-3" title="3">                       <span class="cf">for</span> token <span class="kw">in</span> nlp(essay)])</a>
+<a class="sourceLine" id="cb3-4" title="4">                       <span class="cf">for</span> essay <span class="kw">in</span> essays[<span class="st">&quot;essay&quot;</span>]]</a></code></pre></div>
+<p>This fared somewhat better as a metric: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mn>0.13</mn></mrow><annotation encoding="application/x-tex">R^2 = 0.13</annotation></semantics></math>. Finally, I tried to measure &#8220;relative sophistication of vocabulary&#8221; by quantifying the uncommonness of the words used. I did this by building a word frequency list from the 14-million-word <a href="http://www.anc.org/">American National Corpus</a>, the details of which are in <a href="#appendix-b-anc-wordlist">Appendix B</a>. This correlated well with score (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mn>0.40</mn></mrow><annotation encoding="application/x-tex">R^2 = 0.40</annotation></semantics></math>), although it was no doubt standing in somewhat for length.</p>
+</section>
+</section>
+<section id="modeling" class="level1">
+<h1><span class="header-section-number">3</span> Modeling</h1>
+<section id="sec:class" class="level2">
+<h2><span class="header-section-number">3.1</span> Classical models<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></h2>
+<p>As hinted at by the high <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>R</mi><mn>2</mn></msup><annotation encoding="application/x-tex">R^2</annotation></semantics></math> scores above, we can get fair prediction scores by modeling on metadata alone. The first step, after splitting our essays into train and test sets, is to standardize the data by scaling to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-score. I then ran principal component analysis (PCA) on the data, because many of the columns (e.g., type count and token count) encoded essentially the same information in parallel. The PCA transformation extracts those components which encode the greatest variance; together, the ten components extracted accounted for 98% of the variance within the metadata.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1"><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</a>
+<a class="sourceLine" id="cb4-4" title="4"></a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="co"># Split into train and test sets</span></a>
+<a class="sourceLine" id="cb4-6" title="6">X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y)</a>
+<a class="sourceLine" id="cb4-7" title="7"></a>
+<a class="sourceLine" id="cb4-8" title="8"><span class="co"># Standardize to z-score</span></a>
+<a class="sourceLine" id="cb4-9" title="9">ss <span class="op">=</span> StandardScaler()</a>
+<a class="sourceLine" id="cb4-10" title="10">X_train_sc <span class="op">=</span> ss.fit_transform(X_train))</a>
+<a class="sourceLine" id="cb4-11" title="11">X_test_sc <span class="op">=</span> ss.transform(X_test))</a>
+<a class="sourceLine" id="cb4-12" title="12"></a>
+<a class="sourceLine" id="cb4-13" title="13"><span class="co"># PCA-transform</span></a>
+<a class="sourceLine" id="cb4-14" title="14">pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb4-15" title="15">Z_train <span class="op">=</span> pca.fit_transform(X_train_sc)</a>
+<a class="sourceLine" id="cb4-16" title="16">Z_test <span class="op">=</span> pca.transform(X_test_sc)</a></code></pre></div>
+<p>The modeling itself is fairly straightforward. I modeled the data both with and without the PCA transform, and found the latter to have a slight edge, although all models achieved similar test scores (tbl.&#160;2).</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" title="1"><span class="im">from</span> sklearn.naive_bayes <span class="im">import</span> GaussianNB</a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="im">from</span> sklearn.svm <span class="im">import</span> SVC</a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="im">from</span> sklearn.ensemble <span class="im">import</span> AdaBoostClassifier, ExtraTreesClassifier</a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="im">from</span> sklearn.metrics <span class="im">import</span> cohen_kappa_score</a>
+<a class="sourceLine" id="cb5-5" title="5"></a>
+<a class="sourceLine" id="cb5-6" title="6">gnb <span class="op">=</span> GaussianNB().fit(Z_train, y_train)</a>
+<a class="sourceLine" id="cb5-7" title="7">svm <span class="op">=</span> SVC(kernel<span class="op">=</span><span class="st">&quot;rbf&quot;</span>, C<span class="op">=</span><span class="dv">1</span>).fit(Z_train, y_train)</a>
+<a class="sourceLine" id="cb5-8" title="8">ext <span class="op">=</span> ExtraTreesClassifier().fit(Z_train, y_train)</a>
+<a class="sourceLine" id="cb5-9" title="9">ada <span class="op">=</span> AdaBoostClassifier().fit(Z_train, y_train)</a>
+<a class="sourceLine" id="cb5-10" title="10"></a>
+<a class="sourceLine" id="cb5-11" title="11"><span class="cf">for</span> model <span class="kw">in</span> [gnb, svm, ext, ada]:</a>
+<a class="sourceLine" id="cb5-12" title="12">    <span class="bu">print</span>(<span class="st">&quot;Test score:&quot;</span>, model.score(X_test_sc, y_test))</a>
+<a class="sourceLine" id="cb5-13" title="13">    <span class="bu">print</span>(<span class="st">&quot;Test kappa:&quot;</span>, cohen_kappa_score(model.predict(X_test_sc), y_test),</a>
+<a class="sourceLine" id="cb5-14" title="14">                                           weighting<span class="op">=</span><span class="st">&quot;quadratic&quot;</span>)</a></code></pre></div>
+<p>I also included the weighted Cohen&#8217;s kappa, which was the metric used for the original competition, although Cohen&#8217;s kappa is typically used to compare model results to each other, not to a gold standard.</p>
+<div id="tbl:models">
+<table class="sortable">
+<caption>Table 2: Results of some classical models vs.&#160;35% baseline accuracy</caption>
+<thead title="Click to sort">
+<tr class="header">
+<th>Model</th>
+<th>Test acc.</th>
+<th>PCA test acc.</th>
+<th>Test <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>&#954;</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math></th>
+<th>PCA Test <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>&#954;</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Na&#239;ve Bayes</td>
+<td>59.8%</td>
+<td>59.3%</td>
+<td>0.710</td>
+<td>0.613</td>
+</tr>
+<tr class="even">
+<td>Support vector machine</td>
+<td>65.1%</td>
+<td>63.6%</td>
+<td>0.690</td>
+<td>0.674</td>
+</tr>
+<tr class="odd">
+<td>ExtraTrees</td>
+<td>63.7%</td>
+<td>62.4%</td>
+<td>0.695</td>
+<td>0.679</td>
+</tr>
+<tr class="even">
+<td>AdaBoost</td>
+<td>60.0%</td>
+<td>56.8%</td>
+<td>0.664</td>
+<td>0.670</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The support vector machine and ExtraTrees models performed slightly better than their rivals, and in fact made similar predictions to each other (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&#954;</mi><mo>=</mo><mn>0.81</mn></mrow><annotation encoding="application/x-tex">\kappa = 0.81</annotation></semantics></math>). We should also take into account that on essay sets 3 and 4, human graders agreed only about 75% of the time, with a weighted Cohen&#8217;s kappa of 0.77 and 0.85, respectively.<span class="citation" data-cites="shermis2013contrasting"><a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></span></p>
+</section>
+<section id="recurrent-neural-network" class="level2">
+<h2><span class="header-section-number">3.2</span> Recurrent Neural Network<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></h2>
+<p>One of the state of the art tools in text processing is the recurrent neural network, into which ordered data is fed in series, and the model is retrained on prior data, in order to learn things about the sequence. The first step to doing this with word data is to convert the words to numerical indices (so &#8220;a&#8221; becomes 1, &#8220;aardvark&#8221; becomes 2, &#8220;Aaron&#8221; becomes 3, etc.), then padding them to be of equal length.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" title="1"><span class="im">from</span> tensorflow.keras.preprocessing.sequence <span class="im">import</span> pad_sequences</a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="co"># Define vocabulary</span></a>
+<a class="sourceLine" id="cb6-4" title="4">vocab <span class="op">=</span> <span class="bu">set</span>(token.text <span class="cf">for</span> essay <span class="kw">in</span> essays[<span class="st">&quot;essay&quot;</span>] <span class="cf">for</span> token <span class="kw">in</span> nlp.tokenizer(essay))</a>
+<a class="sourceLine" id="cb6-5" title="5"></a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="co"># Convert words to numerical indices &lt;https://www.tensorflow.org/tutorials/text/text_generation&gt;</span></a>
+<a class="sourceLine" id="cb6-7" title="7">word2idx <span class="op">=</span> {u: i <span class="cf">for</span> i, u <span class="kw">in</span> <span class="bu">enumerate</span>(vocab)}</a>
+<a class="sourceLine" id="cb6-8" title="8"></a>
+<a class="sourceLine" id="cb6-9" title="9"><span class="co"># Convert essays to vectors of indices</span></a>
+<a class="sourceLine" id="cb6-10" title="10">X_vector <span class="op">=</span> [[word2idx[token.text]</a>
+<a class="sourceLine" id="cb6-11" title="11">            <span class="cf">for</span> token <span class="kw">in</span> nlp.tokenizer(essay)]</a>
+<a class="sourceLine" id="cb6-12" title="12">            <span class="cf">for</span> essay <span class="kw">in</span> essays[<span class="st">&quot;essay&quot;</span>]]</a>
+<a class="sourceLine" id="cb6-13" title="13"></a>
+<a class="sourceLine" id="cb6-14" title="14"><span class="co"># Create padded sequences</span></a>
+<a class="sourceLine" id="cb6-15" title="15">X_vector <span class="op">=</span> pad_sequences(X_vector)</a>
+<a class="sourceLine" id="cb6-16" title="16"></a>
+<a class="sourceLine" id="cb6-17" title="17"><span class="co"># Split into train and test sets</span></a>
+<a class="sourceLine" id="cb6-18" title="18">X_vector_train, X_vector_test <span class="op">=</span> train_test_split(X_vector)<span class="op">;</span></a></code></pre></div>
+<p>This then goes into an embedding layer, which condenses it into a dense vector.</p>
+<p>With neural networks, it is possible to include both the vectorized document and the metadata, by processing the former in a <a href="https://en.wikipedia.org/wiki/Gated_recurrent_unit">GRU</a> or <a href="https://en.wikipedia.org/wiki/Long_short-term_memory">LSTM</a> layer, concatenating the latter to its output neurons, and processing both in a regular perceptron structure.<span class="citation" data-cites="xing2017incorporating"><a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></span> Following the example in <a href="https://www.digital-thinking.de/deep-learning-combining-numerical-and-text-features-in-deep-neural-networks/">this blog post</a>, I implemented the code below:<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" title="1"><span class="im">from</span> tensorflow.keras.layers <span class="im">import</span> Dense, GRU, Embedding, Input, Bidirectional, Concatenate</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="im">from</span> tensorflow.keras.models <span class="im">import</span> Model</a>
+<a class="sourceLine" id="cb7-3" title="3"></a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="co"># Define inputs</span></a>
+<a class="sourceLine" id="cb7-5" title="5">vector_input <span class="op">=</span> Input(shape<span class="op">=</span>(X_vector.shape[<span class="dv">1</span>],)) <span class="co"># Text vectors, in series of length 1,000</span></a>
+<a class="sourceLine" id="cb7-6" title="6">meta_input <span class="op">=</span> Input(shape<span class="op">=</span>(X_meta.shape[<span class="dv">1</span>],)) <span class="co"># Scaled metadata (types, tokens, etc.)</span></a>
+<a class="sourceLine" id="cb7-7" title="7"></a>
+<a class="sourceLine" id="cb7-8" title="8"><span class="co"># Embedding layer turns lists of word indices into dense vectors</span></a>
+<a class="sourceLine" id="cb7-9" title="9">rnn <span class="op">=</span> Embedding(</a>
+<a class="sourceLine" id="cb7-10" title="10">        input_dim <span class="op">=</span> <span class="bu">len</span>(vocab),</a>
+<a class="sourceLine" id="cb7-11" title="11">        output_dim <span class="op">=</span> <span class="dv">128</span>,</a>
+<a class="sourceLine" id="cb7-12" title="12">        input_length <span class="op">=</span> X_vector.shape[<span class="dv">1</span>],</a>
+<a class="sourceLine" id="cb7-13" title="13">    )(vector_input)</a>
+<a class="sourceLine" id="cb7-14" title="14"></a>
+<a class="sourceLine" id="cb7-15" title="15"><span class="co"># GRU layers for RNN</span></a>
+<a class="sourceLine" id="cb7-16" title="16">rnn <span class="op">=</span> Bidirectional(GRU(<span class="dv">128</span>, return_sequences<span class="op">=</span><span class="va">True</span>, kernel_regularizer<span class="op">=</span>l2(<span class="fl">0.01</span>)))(rnn)</a>
+<a class="sourceLine" id="cb7-17" title="17">rnn <span class="op">=</span> Bidirectional(GRU(<span class="dv">128</span>, return_sequences<span class="op">=</span><span class="va">False</span>, kernel_regularizer<span class="op">=</span>l2(<span class="fl">0.01</span>)))(rnn)</a>
+<a class="sourceLine" id="cb7-18" title="18"></a>
+<a class="sourceLine" id="cb7-19" title="19"><span class="co"># Incorporate metadata</span></a>
+<a class="sourceLine" id="cb7-20" title="20">rnn <span class="op">=</span> Concatenate()([rnn, meta_input])</a>
+<a class="sourceLine" id="cb7-21" title="21"></a>
+<a class="sourceLine" id="cb7-22" title="22"><span class="co"># Define hidden and output layers</span></a>
+<a class="sourceLine" id="cb7-23" title="23">rnn <span class="op">=</span> Dense(<span class="dv">128</span>, activation<span class="op">=</span><span class="st">&quot;relu&quot;</span>, kernel_regularizer<span class="op">=</span>l2(<span class="fl">0.01</span>))(rnn)</a>
+<a class="sourceLine" id="cb7-24" title="24">rnn <span class="op">=</span> Dense(<span class="dv">128</span>, activation<span class="op">=</span><span class="st">&quot;relu&quot;</span>, kernel_regularizer<span class="op">=</span>l2(<span class="fl">0.01</span>))(rnn)</a>
+<a class="sourceLine" id="cb7-25" title="25">rnn <span class="op">=</span> Dense(<span class="dv">4</span>, activation<span class="op">=</span><span class="st">&quot;softmax&quot;</span>)(rnn)</a>
+<a class="sourceLine" id="cb7-26" title="26"></a>
+<a class="sourceLine" id="cb7-27" title="27"><span class="co"># Define model</span></a>
+<a class="sourceLine" id="cb7-28" title="28">model <span class="op">=</span> Model(inputs<span class="op">=</span>[vector_input, meta_input], outputs<span class="op">=</span>[rnn])</a>
+<a class="sourceLine" id="cb7-29" title="29"></a>
+<a class="sourceLine" id="cb7-30" title="30"><span class="co"># Fit model</span></a>
+<a class="sourceLine" id="cb7-31" title="31">model.fit([X_vector_train, X_meta_train_sc], y_train,</a>
+<a class="sourceLine" id="cb7-32" title="32">          validation_data<span class="op">=</span>([X_vector_test, X_meta_test_sc], y_test))</a></code></pre></div>
+<p>The results are surprisingly close to the models in sec.&#160;3.1 above. Amending our previous table:</p>
+<div id="tbl:rnn">
+<table class="sortable">
+<caption>Table 3: Comparison of all models vs.&#160;35% baseline accuracy</caption>
+<thead title="Click to sort">
+<tr class="header">
+<th>Model</th>
+<th>Test acc.</th>
+<th>Test <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>&#954;</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Na&#239;ve Bayes</td>
+<td>59.8%</td>
+<td>0.710</td>
+</tr>
+<tr class="even">
+<td>Support vector machine</td>
+<td>65.1%</td>
+<td>0.690</td>
+</tr>
+<tr class="odd">
+<td>ExtraTrees</td>
+<td>63.7%</td>
+<td>0.695</td>
+</tr>
+<tr class="even">
+<td>AdaBoost</td>
+<td>60.0%</td>
+<td>0.664</td>
+</tr>
+<tr class="odd">
+<td>RNN</td>
+<td>63.6%</td>
+<td>0.704</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>It seems that the metadata was more valuable in predicting test scores than the vectorized documents&#8212;or else, that the RNN couldn&#8217;t make better use of the two than a support vector machine could of the one. Nevertheless, I have shown that using a few key linguistic metrics, we can train a simple model to predict essay scores in fairly good agreement with human scorers.</p>
+</section>
+</section>
+<section id="appendix-a-perelmans-2012-essay" class="level1 unnumbered">
+<h1>Appendix A: Perelman&#8217;s (2012) essay</h1>
+<p>Prompt:</p>
+<blockquote>
+<p>Question: &#8220;The rising cost of a college education is the fault of students who demand that colleges offer students luxuries unheard of by earlier generations of college students&#8212;single dorm rooms, private bathrooms, gourmet meals, etc.&#8221;</p>
+<p>Discuss the extent to which you agree or disagree with this opinion. Support your views with specific reasons and examples from your own experience, observations, or reading.</p>
+</blockquote>
+<p>Response:</p>
+<blockquote>
+<p>In today&#8217;s society, college is ambiguous. We need it to live, but we also need it to love. Moreover, without college most of the world&#8217;s learning would be egregious. College, however, has myriad costs. One of the most important issues facing the world is how to reduce college costs. Some have argued that college costs are due to the luxuries students now expect. Others have argued that the costs are a result of athletics. In reality, high college costs are the result of excessive pay for teaching assistants.</p>
+<p>I live in a luxury dorm. In reality, it costs no more than rat infested rooms at a Motel Six. The best minds of my generation were destroyed by madness, starving hysterical naked, and publishing obscene odes on the windows of the skull. Luxury dorms pay for themselves because they generate thousand and thousands of dollars of revenue. In the Middle Ages, the University of Paris grew because it provided comfortable accommodations for each of its students, large rooms with servants and legs of mutton. Although they are expensive, these rooms are necessary to learning. The second reason for the five-paragraph theme is that it makes you focus on a single topic. Some people start writing on the usual topic, like TV commercials, and they wind up all over the place, talking about where TV came from or capitalism or health foods or whatever. But with only five paragraphs and one topic you&#8217;re not tempted to get beyond your original idea, like commercials are a good source of information about products. You give your three examples, and zap! you&#8217;re done. This is another way the five-paragraph theme keeps you from thinking too much.</p>
+<p>Teaching assistants are paid an excessive amount of money. The average teaching assistant makes six times as much money as college presidents. In addition, they often receive a plethora of extra benefits such as private jets, vacations in the south seas, a staring roles in motion pictures. Moreover, in the Dickens novel Great Expectation, Pip makes his fortune by being a teaching assistant. It doesn&#8217;t matter what the subject is, since there are three parts to everything you can think of. If you can&#8217;t think of more than two, you just have to think harder or come up with something that might fit. An example will often work, like the three causes of the Civil War or abortion or reasons why the ridiculous twenty-one-year-old limit for drinking alcohol should be abolished. A worse problem is when you wind up with more than three subtopics, since sometimes you want to talk about all of them.</p>
+<p>There are three main reasons while Teaching Assistants receive such high remuneration. First, they have the most powerful union in the United States. Their union is greater than the Teamsters or Freemasons, although it is slightly smaller than the international secret society of the Jedi Knights. Second, most teaching assistants have political connections, from being children of judges and governors to being the brothers and sisters of kings and princes. In Heart of Darkness, Mr.&#160;Kurtz is a teaching assistant because of his connections, and he ruins all the universities that employ him. Finally, teaching assistants are able to exercise mind control over the rest of the university community. The last reason to write this way is the most important. Once you have it down, you can use it for practically anything. Does God exist? Well, you can say yes and give three reasons, or no and give three different reasons. It doesn&#8217;t really matter. You&#8217;re sure to get a good grade whatever you pick to put into the formula. And that&#8217;s the real reason for education, to get those good grades without thinking too much and using up too much time.</p>
+<p>In conclusion, as Oscar Wilde said, &#8220;I can resist everything except temptation.&#8221; Luxury dorms are not the problem. The problem is greedy teaching assistants. It gives me an organizational scheme that looks like an essay, it limits my focus to one topic and three subtopics so I don&#8217;t wander about thinking irrelevant thoughts, and it will be useful for whatever writing I do in any subject.1 I don&#8217;t know why some teachers seem to dislike it so much. They must have a different idea about education than I do. By Les Perelman</p>
+</blockquote>
+</section>
+<section id="appendix-b-anc-wordlist" class="level1 unnumbered">
+<h1>Appendix B: ANC wordlist</h1>
+<p>The following code generates the <a href="https://github.com/alexklapheke/essay/blob/master/data/anc_frequency_list.csv">wordlist</a> I used (see sec.&#160;2). It took about 15 minutes to run. The ANC data is available from <a href="https://www.anc.org">anc.org</a>, and is, per that website, &#8220;fully open and unrestricted for any use&#8221;. The resulting wordlist obeys <a href="https://en.wikipedia.org/wiki/Zipf%27s_law">Zipf&#8217;s law</a>, as shown in fig.&#160;5, and is part-of-speech tagged, so homographs of different frequencies (e.g., saw<sub>V</sub> vs.&#160;saw<sub>N</sub>) can be distinguished.</p>
+<figure>
+<object data="images/08b2a0e5b56aa76027b293e3c5e414ba34d0479a.svg" alt="Figure 5: Demonstration of Zipf&#8217;s Law on ANC" id="fig:zipf" ><img src="images/08b2a0e5b56aa76027b293e3c5e414ba34d0479a.svg" alt="Figure 5: Demonstration of Zipf&#8217;s Law on ANC" id="fig:zipf" /></object><figcaption>Figure 5: Demonstration of Zipf&#8217;s Law on ANC</figcaption>
+</figure>
+<p>The actual frequency measure used was the sum of word token ranks. While this gave higher results for longer sentences, and was therefore intercorrelated with token length, a very uncommon word could give the score an order-of-magnitude boost.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" title="1"><span class="co">#!/usr/bin/env python3</span></a>
+<a class="sourceLine" id="cb8-2" title="2"></a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="co"># Libraries</span></a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="im">import</span> glob</a>
+<a class="sourceLine" id="cb8-5" title="5"><span class="im">import</span> spacy</a>
+<a class="sourceLine" id="cb8-6" title="6"><span class="im">from</span> unidecode <span class="im">import</span> unidecode</a>
+<a class="sourceLine" id="cb8-7" title="7"></a>
+<a class="sourceLine" id="cb8-8" title="8"><span class="co"># Options</span></a>
+<a class="sourceLine" id="cb8-9" title="9">anc_path <span class="op">=</span> <span class="st">&quot;/home/alex/Data/ANC/&quot;</span>  <span class="co"># freely downloadable from anc.org</span></a>
+<a class="sourceLine" id="cb8-10" title="10">dict_path <span class="op">=</span> <span class="st">&quot;/usr/share/dict/words&quot;</span>  <span class="co"># wamerican-insane v2017.08.24-1</span></a>
+<a class="sourceLine" id="cb8-11" title="11">freq_per <span class="op">=</span><span class="dv"> 100_000</span>  <span class="co"># scaling factor (i.e., compute freq. per this many words)</span></a>
+<a class="sourceLine" id="cb8-12" title="12">include_hapaxes <span class="op">=</span> <span class="va">True</span></a>
+<a class="sourceLine" id="cb8-13" title="13"></a>
+<a class="sourceLine" id="cb8-14" title="14"><span class="co"># Initialize spaCy</span></a>
+<a class="sourceLine" id="cb8-15" title="15">nlp <span class="op">=</span> spacy.load(<span class="st">&quot;en&quot;</span>)</a>
+<a class="sourceLine" id="cb8-16" title="16"></a>
+<a class="sourceLine" id="cb8-17" title="17">freqs <span class="op">=</span> {}</a>
+<a class="sourceLine" id="cb8-18" title="18">total_tokens <span class="op">=</span> <span class="dv">0</span></a>
+<a class="sourceLine" id="cb8-19" title="19"></a>
+<a class="sourceLine" id="cb8-20" title="20"><span class="cf">with</span> <span class="bu">open</span>(dict_path, <span class="st">&quot;r&quot;</span>) <span class="im">as</span> <span class="bu">file</span>:</a>
+<a class="sourceLine" id="cb8-21" title="21">    dictionary <span class="op">=</span> <span class="bu">set</span>(<span class="bu">file</span>.read().split(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>))</a>
+<a class="sourceLine" id="cb8-22" title="22"></a>
+<a class="sourceLine" id="cb8-23" title="23"><span class="co"># Get all text files recursively &lt;https://stackoverflow.com/a/45172387&gt;</span></a>
+<a class="sourceLine" id="cb8-24" title="24"><span class="cf">for</span> filename <span class="kw">in</span> glob.iglob(anc_path <span class="op">+</span> <span class="st">&quot;**/*.txt&quot;</span>, recursive<span class="op">=</span><span class="va">True</span>):</a>
+<a class="sourceLine" id="cb8-25" title="25"></a>
+<a class="sourceLine" id="cb8-26" title="26">    <span class="co"># Open each file in the corpus</span></a>
+<a class="sourceLine" id="cb8-27" title="27">    <span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">&quot;r&quot;</span>) <span class="im">as</span> <span class="bu">file</span>:</a>
+<a class="sourceLine" id="cb8-28" title="28"></a>
+<a class="sourceLine" id="cb8-29" title="29">        <span class="co"># Remove diacritics, parse, &amp; tokenize</span></a>
+<a class="sourceLine" id="cb8-30" title="30">        <span class="cf">for</span> token <span class="kw">in</span> nlp(unidecode(<span class="bu">file</span>.read())):</a>
+<a class="sourceLine" id="cb8-31" title="31"></a>
+<a class="sourceLine" id="cb8-32" title="32">            <span class="co"># Eliminate non-words</span></a>
+<a class="sourceLine" id="cb8-33" title="33">            <span class="cf">if</span> <span class="kw">not</span> token.is_punct <span class="kw">and</span> <span class="kw">not</span> token.is_space:</a>
+<a class="sourceLine" id="cb8-34" title="34"></a>
+<a class="sourceLine" id="cb8-35" title="35">                <span class="co"># Lemmatize and remove diacritics/ligatures</span></a>
+<a class="sourceLine" id="cb8-36" title="36">                lemma <span class="op">=</span> token.lemma_.lower().strip(<span class="st">&quot;-&quot;</span>)</a>
+<a class="sourceLine" id="cb8-37" title="37"></a>
+<a class="sourceLine" id="cb8-38" title="38">                <span class="co"># Only use dictionary words</span></a>
+<a class="sourceLine" id="cb8-39" title="39">                <span class="cf">if</span> lemma <span class="kw">in</span> dictionary:</a>
+<a class="sourceLine" id="cb8-40" title="40"></a>
+<a class="sourceLine" id="cb8-41" title="41">                    <span class="co"># Add lemma/part-of-speech tag</span></a>
+<a class="sourceLine" id="cb8-42" title="42">                    type_pos <span class="op">=</span> <span class="st">&quot;,&quot;</span>.join([lemma, token.pos_])</a>
+<a class="sourceLine" id="cb8-43" title="43"></a>
+<a class="sourceLine" id="cb8-44" title="44">                    <span class="co"># Update our dictionary</span></a>
+<a class="sourceLine" id="cb8-45" title="45">                    freqs[type_pos] <span class="op">=</span> freqs.setdefault(type_pos, <span class="dv">0</span>) <span class="op">+</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb8-46" title="46"></a>
+<a class="sourceLine" id="cb8-47" title="47">                    <span class="co"># Update our running total</span></a>
+<a class="sourceLine" id="cb8-48" title="48">                    total_tokens <span class="op">+=</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb8-49" title="49"></a>
+<a class="sourceLine" id="cb8-50" title="50"><span class="bu">print</span>(<span class="st">&quot;{:,} tokens,&quot;</span>.<span class="bu">format</span>(total_tokens),</a>
+<a class="sourceLine" id="cb8-51" title="51">      <span class="st">&quot;{:,} types&quot;</span>.<span class="bu">format</span>(<span class="bu">len</span>(freqs.keys())))</a>
+<a class="sourceLine" id="cb8-52" title="52"></a>
+<a class="sourceLine" id="cb8-53" title="53"><span class="co"># &lt;https://stackoverflow.com/a/9001529&gt;</span></a>
+<a class="sourceLine" id="cb8-54" title="54">freqs_sorted <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">sorted</span>(freqs.items()))</a>
+<a class="sourceLine" id="cb8-55" title="55"></a>
+<a class="sourceLine" id="cb8-56" title="56"><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;anc_frequency_list.csv&quot;</span>, <span class="st">&quot;w&quot;</span>) <span class="im">as</span> <span class="bu">file</span>:</a>
+<a class="sourceLine" id="cb8-57" title="57"></a>
+<a class="sourceLine" id="cb8-58" title="58">    <span class="co"># CSV header</span></a>
+<a class="sourceLine" id="cb8-59" title="59">    <span class="bu">file</span>.write(<span class="ss">f&quot;lemma,pos,count,freq_per_</span><span class="sc">{</span>freq_per<span class="sc">}</span><span class="ch">\n</span><span class="ss">&quot;</span>)</a>
+<a class="sourceLine" id="cb8-60" title="60"></a>
+<a class="sourceLine" id="cb8-61" title="61">    <span class="co"># CSV rows</span></a>
+<a class="sourceLine" id="cb8-62" title="62">    <span class="cf">for</span> word, freq <span class="kw">in</span> freqs_sorted.items():</a>
+<a class="sourceLine" id="cb8-63" title="63">        <span class="cf">if</span> include_hapaxes <span class="kw">or</span> freq <span class="op">&gt;</span> <span class="dv">1</span>:</a>
+<a class="sourceLine" id="cb8-64" title="64">            <span class="bu">file</span>.write(<span class="ss">f&quot;</span><span class="sc">{</span>word<span class="sc">}</span><span class="ss">,</span><span class="sc">{</span>freq<span class="sc">}</span><span class="ss">,</span><span class="sc">{</span>freq_per<span class="op">*</span>freq<span class="op">/</span>total_tokens<span class="sc">}</span><span class="ch">\n</span><span class="ss">&quot;</span>)</a></code></pre></div>
+</section>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>&#8220;Contrasting State-of-the-Art Automated Scoring of Essays: Analysis,&#8221; in <em>Handbook of Automated Essay Evaluation: Current Applications and New Directions</em>, ed. Mark D. Shermis and Jill Burstein (New York: Routledge, 2013), 313&#8211;46, doi:<a href="https://doi.org/10.4324/9780203122761.ch19">10.4324/9780203122761.ch19</a>.<a href="#fnref1" class="footnote-back">&#8617;</a></p></li>
+<li id="fn2"><p>&#8220;Critique of Mark D.&#160;Shermis &amp; Ben Hamner, &#8216;Contrasting State-of-the-Art Automated Scoring of Essays: Analysis&#8217;,&#8221; <em>Journal of Writing Assessment</em> 6, no. 1 (2013), <a href="http://www.journalofwritingassessment.org/article.php?article=69" class="uri">http://www.journalofwritingassessment.org/article.php?article=69</a>.<a href="#fnref2" class="footnote-back">&#8617;</a></p></li>
+<li id="fn3"><p>&#8220;Stumping <em>E-Rater</em>: Challenging the Validity of Automated Essay Scoring,&#8221; <em>Computers in Human Behavior</em> 18, no. 2 (March 2002): 103&#8211;34, doi:<a href="https://doi.org/10.1016/S0747-5632(01)00052-8">10.1016/S0747-5632(01)00052-8</a>.<a href="#fnref3" class="footnote-back">&#8617;</a></p></li>
+<li id="fn4"><p><a href="https://github.com/alexklapheke/essay/blob/master/code/0-Parse_data-EDA.ipynb">Relevant notebook</a><a href="#fnref4" class="footnote-back">&#8617;</a></p></li>
+<li id="fn5"><p><a href="https://github.com/alexklapheke/essay/blob/master/code/2-Hypothesis-tests.ipynb">Relevant notebook</a><a href="#fnref5" class="footnote-back">&#8617;</a></p></li>
+<li id="fn6"><p>Essay no. 6332, set 3<a href="#fnref6" class="footnote-back">&#8617;</a></p></li>
+<li id="fn7"><p>Essay no. 10057, set 4<a href="#fnref7" class="footnote-back">&#8617;</a></p></li>
+<li id="fn8"><p>Essay no. 9870, set 4<a href="#fnref8" class="footnote-back">&#8617;</a></p></li>
+<li id="fn9"><p>I used <a href="https://packages.ubuntu.com/bionic/wamerican-insane">wamerican-insane v2017.08.24-1</a>, which contains 654,749 entries.<a href="#fnref9" class="footnote-back">&#8617;</a></p></li>
+<li id="fn10"><p>Phrases culled from Wiktionary (<a href="https://en.wiktionary.org/wiki/Category:English_conjunctive_adverbs">1</a>, <a href="https://en.wiktionary.org/wiki/Category:English_sequence_adverbs">2</a>). The full list:</p>
+<blockquote>
+<p>accordingly, additionally, alphabetically, alphanumerically, also, alternatively, antepenultimately, anyway, at any rate, before, besides, by the way, chronologically, consequently, conversely, eighthly, either, eleventhly, equally, fifthly, fiftiethly, finally, first, first of all, first off, first up, firstly, for another thing, for example, for instance, for one thing, fortiethly, fourthly, further, furthermore, hence, however, hundredthly, in addition, in other words, in the first place, incidentally, indeed, lastly, likewise, moreover, neither, nevertheless, next, nextly, ninthly, nonetheless, on the contrary, on the gripping hand, on the one hand, on the other hand, otherwise, parenthetically, penultimately, rather, secondly, serially, seventhly, similarly, sixthly, sixtiethly, still, tenthly, that is, that is to say, then again, therefore, thirdly, thirteenthly, thirtiethly, though, thus, to that end, too, twelfthly, twentiethly, wherefore</p>
+</blockquote>
+<a href="#fnref10" class="footnote-back">&#8617;</a></li>
+<li id="fn11"><p><a href="https://github.com/alexklapheke/essay/blob/master/code/3-Model_data.ipynb">Relevant notebook</a><a href="#fnref11" class="footnote-back">&#8617;</a></p></li>
+<li id="fn12"><p>Shermis and Hamner, &#8220;Contrasting State-of-the-Art Automated Scoring of Essays,&#8221; 316.<a href="#fnref12" class="footnote-back">&#8617;</a></p></li>
+<li id="fn13"><p><a href="https://github.com/alexklapheke/essay/blob/master/code/4-Neural_net.ipynb">Relevant notebook</a><a href="#fnref13" class="footnote-back">&#8617;</a></p></li>
+<li id="fn14"><p>See, e.g., Linzi Xing and Michael J. Paul, &#8220;Incorporating Metadata into Content-Based User Embeddings,&#8221; in <em>Proceedings of the 3rd Workshop on Noisy User-Generated Text</em>, ed. Leon Derczynski et al. (Association for Computational Linguistics, 2017), 45&#8211;49, doi:<a href="https://doi.org/10.18653/v1/W17-4406">10.18653/v1/W17-4406</a>.<a href="#fnref14" class="footnote-back">&#8617;</a></p></li>
+<li id="fn15"><p>The schema is, roughly:<object data="images/331f1af10ac73831153a1ed141a565529edacc6c.svg" ><img src="images/331f1af10ac73831153a1ed141a565529edacc6c.svg" /></object><a href="#fnref15" class="footnote-back">&#8617;</a></p></li>
+</ol>
+</section>
+			</div>
+		</article>
+	</body>
+</html>

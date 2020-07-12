@@ -130,7 +130,7 @@ code span.wa { color: #bf0303; } /* Warning */
 		<p>
 			<time datetime="2020-07-03T18:11:59-0400" class="published">Friday, July 3, 2020</time>
 			<span class="bullet">&bull;</span>
-			<span class="wordcount">2,478 words</span>
+			<span class="wordcount">2,584 words</span>
 			<span class="bullet">&bull;</span>
 			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
 			<span class="bullet">&bull;</span>
@@ -153,6 +153,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <li><a href="#longitudinal"><span class="toc-section-number">4.2</span> Longitudinal</a></li>
 </ul></li>
 <li><a href="#modeling"><span class="toc-section-number">5</span> Modeling</a></li>
+<li><a href="#final-thoughts"><span class="toc-section-number">6</span> Final thoughts</a></li>
 </ul>
 		</nav>
 			<div class="entry-content">
@@ -370,6 +371,10 @@ code span.wa { color: #bf0303; } /* Warning */
 <a class="sourceLine" id="cb12-4" title="4">fuzzy_accuracy(y_train, bayes.predict(X_train_vec.toarray()), tolerance<span class="op">=</span><span class="dv">10</span>)</a>
 <a class="sourceLine" id="cb12-5" title="5">fuzzy_accuracy(y_test, bayes.predict(X_test_vec.toarray()), tolerance<span class="op">=</span><span class="dv">10</span>)</a></code></pre></div>
 <p>We now get 62.7% train and 40.2% test accuracy with a tolerance of one decade. With more memory available, it would be possible to feed more of the dataset into the model, and perhaps create a yet more accurate model.</p>
+</section>
+<section id="final-thoughts" class="level1">
+<h1><span class="header-section-number">6</span> Final thoughts</h1>
+<p>I&#8217;ll end with an amusing and instructive story: as I was working on this, I reimported my data, and was surprised to see there were dishes listed as missing. I verified that no rows were missing in the original dataset, and tried to figure out which dishes had been dropped. It turns out that an <a href="http://menus.nypl.org/menus/28323">Indian menu</a> from 1981 listed naan bread, but spelled it &#8220;nan&#8221;, and pandas interpreted that as <a href="https://numpy.org/doc/stable/reference/constants.html?highlight=nan#numpy.nan">not a number</a>. The solution was simply to pass <code class="sourceCode python">na_filter<span class="op">=</span><span class="va">False</span></code> to <code class="sourceCode python">pd.read_csv()</code>, but the lesson learned was always to check that the data read in is the same as the data written out.</p>
 </section>
 <section class="footnotes">
 <hr />

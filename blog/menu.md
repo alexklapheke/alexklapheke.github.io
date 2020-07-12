@@ -451,6 +451,20 @@ decade. With more memory available, it would be possible to feed more of
 the dataset into the model, and perhaps create a yet more accurate
 model.
 
+# Final thoughts
+
+I'll end with an amusing and instructive story: as I was working on
+this, I reimported my data, and was surprised to see there were dishes
+listed as missing. I verified that no rows were missing in the original
+dataset, and tried to figure out which dishes had been dropped. It turns
+out that an [Indian menu](http://menus.nypl.org/menus/28323) from 1981
+listed naan bread, but spelled it "nan", and pandas interpreted that as
+[not a
+number](https://numpy.org/doc/stable/reference/constants.html?highlight=nan#numpy.nan).
+The solution was simply to pass `na_filter=False`{.python} to
+`pd.read_csv()`{.python}, but the lesson learned was always to check
+that the data read in is the same as the data written out.
+
 [^1]: In 2020, \$7.85 and \$25.29, respectively
 
 [^2]: Retrieved April 27, 2020
