@@ -187,6 +187,14 @@ a[href$=".pdf"] {
 	padding-right: 20px;
 }
 
+/* For DOIs, we don't want to hyphenate them, because then it's
+unclear if the hyphen is part of the DOI or not. But we want to
+break them across lines since they can run extremely long. */
+a[href^="https://doi.org"] {
+	hyphens: none;
+	word-break: break-all;
+}
+
 a.social {
 	color: #C34540;
 	font-weight: bold;
