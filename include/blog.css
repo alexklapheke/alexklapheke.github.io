@@ -271,7 +271,7 @@ dd {
 	margin-bottom: 1em;
 }
 
-img {
+img, object {
 	max-width: 100%;
 	/* float: right; */
 	/* clear: both; */
@@ -291,6 +291,7 @@ figure {
 	margin-top: 14px;
 }
 
+h1 a.footnote-ref, h2 a.footnote-ref, h3 a.footnote-ref, h4 a.footnote-ref, h5 a.footnote-ref, h6 a.footnote-ref,
 a.footnote-back, span.header-section-number, span.header-section-number::after {
 	color: #9BA0A9;
 }
@@ -311,6 +312,10 @@ a.footnote-back, span.header-section-number, span.header-section-number::after {
 		width: calc(20% - 100px);
 		padding: 1px 11px;
 		margin: -1em -0.5em;
+	}
+
+	.sidenotes > ol > li p, .sidenote {
+		text-align: left;
 	}
 
 	.sidenotes > ol > li code, figcaption.sidenote code, caption.sidenote code {
