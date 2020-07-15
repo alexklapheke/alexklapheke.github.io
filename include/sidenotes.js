@@ -29,7 +29,7 @@ function placeSidenotes() {
 		}
 
 		// put note flush with reference, but don't overlap previous notes
-		fn.style.top = (Math.max(prevbot, reftop)) + "px";
+		fn.style.top = (Math.max(prevbot + 14, reftop)) + "px";
 
 		// so we can highlight notes when the mouse is over the note reference;
 		// this is disabled until I can get it working right & styled more subtly
