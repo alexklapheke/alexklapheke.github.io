@@ -351,9 +351,10 @@ for model in [gnb, svm, ext, ada]:
                                            weighting="quadratic")
 ```
 
-I also included the weighted Cohen's kappa, which was the metric used
-for the original competition, although Cohen's kappa is typically used
-to compare model results to each other, not to a gold standard.
+I also included the weighted Cohen's kappa [@cohen1960a], which was the
+metric used for the original competition, although Cohen's kappa is
+typically used to compare model results to each other, not to a gold
+standard.
 
   Model                    Test acc.   PCA test acc.   Test $\kappa$   PCA Test $\kappa$
   ------------------------ ----------- --------------- --------------- -------------------

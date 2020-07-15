@@ -130,7 +130,7 @@ code span.wa { color: #bf0303; } /* Warning */
 		<p>
 			<time datetime="2020-07-12T18:20:44-0400" class="published">Sunday, July 12, 2020</time>
 			<span class="bullet">&bull;</span>
-			<span class="wordcount">4,071 words</span>
+			<span class="wordcount">4,072 words</span>
 			<span class="bullet">&bull;</span>
 			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
 			<span class="bullet">&bull;</span>
@@ -409,7 +409,7 @@ Appear in Writing or in Judging ill</p>
 <a class="sourceLine" id="cb5-12" title="12">    <span class="bu">print</span>(<span class="st">&quot;Test score:&quot;</span>, model.score(X_test_sc, y_test))</a>
 <a class="sourceLine" id="cb5-13" title="13">    <span class="bu">print</span>(<span class="st">&quot;Test kappa:&quot;</span>, cohen_kappa_score(model.predict(X_test_sc), y_test),</a>
 <a class="sourceLine" id="cb5-14" title="14">                                           weighting<span class="op">=</span><span class="st">&quot;quadratic&quot;</span>)</a></code></pre></div>
-<p>I also included the weighted Cohen&#8217;s kappa, which was the metric used for the original competition, although Cohen&#8217;s kappa is typically used to compare model results to each other, not to a gold standard.</p>
+<p>I also included the weighted Cohen&#8217;s kappa,<span class="citation" data-cites="cohen1960a"><a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></span> which was the metric used for the original competition, although Cohen&#8217;s kappa is typically used to compare model results to each other, not to a gold standard.</p>
 <div id="tbl:models">
 <table class="sortable">
 <caption>Table 2: Results of some classical models vs.&#160;35% baseline accuracy</caption>
@@ -454,10 +454,10 @@ Appear in Writing or in Judging ill</p>
 </tbody>
 </table>
 </div>
-<p>The support vector machine and ExtraTrees models performed slightly better than their rivals, and in fact made similar predictions to each other (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&#954;</mi><mo>=</mo><mn>0.81</mn></mrow><annotation encoding="application/x-tex">\kappa = 0.81</annotation></semantics></math>). We should also take into account that on essay sets 3 and 4, human graders agreed only about 75% of the time, with a weighted Cohen&#8217;s kappa of 0.77 and 0.85, respectively.<span class="citation" data-cites="shermis2013contrasting"><a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></span></p>
+<p>The support vector machine and ExtraTrees models performed slightly better than their rivals, and in fact made similar predictions to each other (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&#954;</mi><mo>=</mo><mn>0.81</mn></mrow><annotation encoding="application/x-tex">\kappa = 0.81</annotation></semantics></math>). We should also take into account that on essay sets 3 and 4, human graders agreed only about 75% of the time, with a weighted Cohen&#8217;s kappa of 0.77 and 0.85, respectively.<span class="citation" data-cites="shermis2013contrasting"><a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></span></p>
 </section>
 <section id="recurrent-neural-network" class="level2">
-<h2><span class="header-section-number">3.2</span> Recurrent Neural Network<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></h2>
+<h2><span class="header-section-number">3.2</span> Recurrent Neural Network<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></h2>
 <p>One of the state of the art tools in text processing is the recurrent neural network, into which ordered data is fed in series, and the model is retrained on prior data, in order to learn things about the sequence. The first step to doing this with word data is to convert the words to numerical indices (so &#8220;a&#8221; becomes 1, &#8220;aardvark&#8221; becomes 2, &#8220;Aaron&#8221; becomes 3, etc.), then padding them to be of equal length.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" title="1"><span class="im">from</span> tensorflow.keras.preprocessing.sequence <span class="im">import</span> pad_sequences</a>
 <a class="sourceLine" id="cb6-2" title="2"></a>
@@ -478,7 +478,7 @@ Appear in Writing or in Judging ill</p>
 <a class="sourceLine" id="cb6-17" title="17"><span class="co"># Split into train and test sets</span></a>
 <a class="sourceLine" id="cb6-18" title="18">X_vector_train, X_vector_test <span class="op">=</span> train_test_split(X_vector)<span class="op">;</span></a></code></pre></div>
 <p>This then goes into an embedding layer, which condenses it into a dense vector.</p>
-<p>With neural networks, it is possible to include both the vectorized document and the metadata, by processing the former in a <a href="https://en.wikipedia.org/wiki/Gated_recurrent_unit">GRU</a> or <a href="https://en.wikipedia.org/wiki/Long_short-term_memory">LSTM</a> layer, concatenating the latter to its output neurons, and processing both in a regular perceptron structure.<span class="citation" data-cites="xing2017incorporating"><a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></span> Following the example in <a href="https://www.digital-thinking.de/deep-learning-combining-numerical-and-text-features-in-deep-neural-networks/">this blog post</a>, I implemented the code below:<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></p>
+<p>With neural networks, it is possible to include both the vectorized document and the metadata, by processing the former in a <a href="https://en.wikipedia.org/wiki/Gated_recurrent_unit">GRU</a> or <a href="https://en.wikipedia.org/wiki/Long_short-term_memory">LSTM</a> layer, concatenating the latter to its output neurons, and processing both in a regular perceptron structure.<span class="citation" data-cites="xing2017incorporating"><a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></span> Following the example in <a href="https://www.digital-thinking.de/deep-learning-combining-numerical-and-text-features-in-deep-neural-networks/">this blog post</a>, I implemented the code below:<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" title="1"><span class="im">from</span> tensorflow.keras.layers <span class="im">import</span> Dense, GRU, Embedding, Input, Bidirectional, Concatenate</a>
 <a class="sourceLine" id="cb7-2" title="2"><span class="im">from</span> tensorflow.keras.models <span class="im">import</span> Model</a>
 <a class="sourceLine" id="cb7-3" title="3"></a>
@@ -660,10 +660,11 @@ Appear in Writing or in Judging ill</p>
 </blockquote>
 <a href="#fnref10" class="footnote-back">&#8617;</a></li>
 <li id="fn11"><p><a href="https://github.com/alexklapheke/essay/blob/master/code/3-Model_data.ipynb">Relevant notebook</a><a href="#fnref11" class="footnote-back">&#8617;</a></p></li>
-<li id="fn12"><p>Shermis and Hamner, &#8220;Contrasting State-of-the-Art Automated Scoring of Essays,&#8221; 316.<a href="#fnref12" class="footnote-back">&#8617;</a></p></li>
-<li id="fn13"><p><a href="https://github.com/alexklapheke/essay/blob/master/code/4-Neural_net.ipynb">Relevant notebook</a><a href="#fnref13" class="footnote-back">&#8617;</a></p></li>
-<li id="fn14"><p>See, e.g., Linzi Xing and Michael J. Paul, &#8220;Incorporating Metadata into Content-Based User Embeddings,&#8221; in <em>Proceedings of the 3rd Workshop on Noisy User-Generated Text</em>, ed. Leon Derczynski et al. (Association for Computational Linguistics, 2017), 45&#8211;49, doi:<a href="https://doi.org/10.18653/v1/W17-4406">10.18653/v1/W17-4406</a>.<a href="#fnref14" class="footnote-back">&#8617;</a></p></li>
-<li id="fn15"><p>The schema is, roughly:<object data="images/331f1af10ac73831153a1ed141a565529edacc6c.svg" ><img src="images/331f1af10ac73831153a1ed141a565529edacc6c.svg" /></object><a href="#fnref15" class="footnote-back">&#8617;</a></p></li>
+<li id="fn12"><p>Jacob Cohen, &#8220;A Coefficient of Agreement for Nominal Scales,&#8221; <em>Educational and Psychological Measurement</em> 20, no. 1 (1960): 37&#8211;46, doi:<a href="https://doi.org/10.1177/001316446002000104">10.1177/001316446002000104</a>.<a href="#fnref12" class="footnote-back">&#8617;</a></p></li>
+<li id="fn13"><p>Shermis and Hamner, &#8220;Contrasting State-of-the-Art Automated Scoring of Essays,&#8221; 316.<a href="#fnref13" class="footnote-back">&#8617;</a></p></li>
+<li id="fn14"><p><a href="https://github.com/alexklapheke/essay/blob/master/code/4-Neural_net.ipynb">Relevant notebook</a><a href="#fnref14" class="footnote-back">&#8617;</a></p></li>
+<li id="fn15"><p>See, e.g., Linzi Xing and Michael J. Paul, &#8220;Incorporating Metadata into Content-Based User Embeddings,&#8221; in <em>Proceedings of the 3rd Workshop on Noisy User-Generated Text</em>, ed. Leon Derczynski et al. (Association for Computational Linguistics, 2017), 45&#8211;49, doi:<a href="https://doi.org/10.18653/v1/W17-4406">10.18653/v1/W17-4406</a>.<a href="#fnref15" class="footnote-back">&#8617;</a></p></li>
+<li id="fn16"><p>The schema is, roughly:<object data="images/331f1af10ac73831153a1ed141a565529edacc6c.svg" ><img src="images/331f1af10ac73831153a1ed141a565529edacc6c.svg" /></object><a href="#fnref16" class="footnote-back">&#8617;</a></p></li>
 </ol>
 </section>
 			</div>
