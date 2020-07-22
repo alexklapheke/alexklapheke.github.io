@@ -57,7 +57,9 @@ wires, or whether the roots are emerging through the sidewalk.
 I also included data about invasiveness, by grabbing the
 [list](https://www.mass.gov/doc/prohibited-plant-list-sorted-by-scientific-name/download){.pdf}
 of species considered invasive in Massachusetts, copying the scientific
-names to a text file, and merging.
+names to a [text
+file](https://github.com/alexklapheke/trees/blob/master/prohibited-species.txt),
+and merging.
 
 ``` {.python}
 invasive_species = pd.read_csv("prohibited-species.txt")
@@ -88,14 +90,14 @@ recorded in the dataset (their corresponding common names are in
 ![The top 20 genera of street tree in
 Cambridge](images/f02328914fb4b2e89df456f77c637e892345754a.svg){#fig:gen}
 
-However, just knowing that the streets are lined with maples (genus
-<abbr title="maple">*Acer*</abbr>) doesn't tell us if they are towering,
-stately silver maples (<abbr title="silver maple">*A.
+However, just knowing that the streets are lined with maples
+(<abbr title="maple">*Acer*</abbr> spp.) doesn't tell us if they are
+towering, stately silver maples (<abbr title="silver maple">*A.
 saccharinum*</abbr>), or splendiferous red maples
 (<abbr title="red maple">*A. rubrum*</abbr>), or invasive Norway maples
 (<abbr title="Norway maple">*A. platanoides*</abbr>), nor does knowing
-there are over 3,000 oaks (genus <abbr title="oak">*Quercus*</abbr>)
-cast light on which of the [over 600
+there are over 3,000 oaks (<abbr title="oak">*Quercus*</abbr> spp.) cast
+light on which of the [over 600
 species](https://en.wikipedia.org/wiki/List_of_Quercus_species) they
 comprise. We can break this graph down further by species (@fig:spec).
 
@@ -104,7 +106,7 @@ comprise. We can break this graph down further by species (@fig:spec).
 name)](images/2ccd09bdfb13715474f5e58d83fc10bb50409348.svg){#fig:spec}
 
 There are some interesting takeaways here. For instance, not a single
-public apple tree (genus <abbr title="apple">*Malus*</abbr>) has been
+public apple tree (<abbr title="apple">*Malus*</abbr> spp.) has been
 identified for species. This indicates that the data was not logged at
 the time of planting; possibly, the species were identified by sight in
 a later survey (ornamental apple trees are typically hard-to-identify
@@ -142,8 +144,8 @@ extinct, with a onetime population of several billion dwindling to a few
 hundred today. So I was surprised to see four trees in the genus
 <abbr title="chestnut">*Castanea*</abbr> in the dataset, but less
 surprised when three turned out to be misidentified horse chestnuts
-(<abbr title="horse chestnut">*Aesculus hippocastanum*</abbr>), and the
-fourth was... wait for it... [a Norway
+(<abbr title="horse chestnut">*Aesculus hippocastanum*</abbr>),[^3] and
+the fourth was... wait for it... [a Norway
 maple](https://goo.gl/maps/2Jar5K1Qrc5mFW5RA).
 
 # Mapping
@@ -287,9 +289,9 @@ banning invasive species in
 effect](images/43508119c9fb84d566ab739d34693e25270432b9.svg){#fig:acerdates}
 
 There are some interesting trends visible in @fig:dates---a recent fad
-for magnolias, a steady increase in serviceberry plantings (genus
-<abbr title="serviceberry">*Amelanchier*</abbr>), and spikes in pear
-tree plantings (nearly all of which are Callery pears,
+for magnolias, a steady increase in serviceberry plantings
+(<abbr title="serviceberry">*Amelanchier*</abbr> spp.), and spikes in
+pear tree plantings (nearly all of which are Callery pears,
 <abbr title="Callery pear">*Pyrus calleryana*</abbr>) in 2009 and
 2017---although given the paucity of data, it is impossible to say if
 they are real.
@@ -405,4 +407,12 @@ on my local streets.
 
 [^2]: Like so
     ([source](https://commons.wikimedia.org/wiki/File:NAS-062-c_Liquidambar_styraciflua.png))
-    ![](images/2608db5b319a4695d8ab2ff5c4c02bd12123bb34.jpg)
+    ![](images/0673b4f24fdb0df10c541165d0e50cb6e8a31635.jpg)
+
+[^3]: An unrelated tree whose toxic fruit (left) looks very similar to
+    that of a true chestnut, <abbr title="sweet chestnut">*C.
+    sativa*</abbr> (right) (sources:
+    [1](https://commons.wikimedia.org/wiki/File:Illustration_Aesculus_hippocastanum0.jpg),
+    [2](https://commons.wikimedia.org/wiki/File:Illustration_Castanea_sativa0.jpg)).
+
+    ![](images/ca21e35e6c5bc350acb32186f4e14916d5096c2e.jpg)
