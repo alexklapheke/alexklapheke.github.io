@@ -1,9 +1,9 @@
 ---
 addenda:
-- '[code](https://github.com/alexklapheke/Social-Media-Sentiment-Analysis)'
+- '[code](https://github.com/alexklapheke/covid-sentiment)'
 - |
     [slide
-    deck](https://github.com/alexklapheke/Social-Media-Sentiment-Analysis/blob/master/presentation/Covid%2019%20Sentiment%20Analysis.pdf)
+    deck](https://github.com/alexklapheke/covid-sentiment/blob/master/presentation/Covid%2019%20Sentiment%20Analysis.pdf)
 date: 1592942292
 title: 'COVID-19 sentiment analysis'
 ---
@@ -73,7 +73,7 @@ Reddit turned out to be somewhat more hospitable, as
 the Reddit API, as well as a [full
 dataset](http://files.pushshift.io/reddit/comments/) of Reddit comments
 stretching back to the site's founding [@baumgartner2020pushshift],
-although the latter source was not updated frequently enough for our
+although the latter source had not been updated recently enough for our
 purpose. Reddit users subscribe to interest communities called
 "subreddits", prefixed with "/r/", some of which are for cities and
 other locales. While it can't be verified that a particular subscriber

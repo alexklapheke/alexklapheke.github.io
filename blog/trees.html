@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="generator" content="pandoc" />
+		<meta name="author" content="Alexander Klapheke">
+		<meta name="robots" content="index,follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="last-modified" content="">
+
+		<link rel="canonical" href="https://alexklapheke.github.io/blog/trees.html">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+		</style>
+		<link rel="stylesheet" href="../include/style.css" />
+		<link rel="stylesheet" href="../include/blog.css" />
+		<!--[if lt IE 9]>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+		<![endif]-->
+		<script src="../include/sidenotes.js" charset="utf-8"></script>
+		<script src="../include/sorttable.js" charset="utf-8"></script>
+
+		<title>Cambridge street trees</title>
+	</head>
+	<body>
+		<header>
+			<!-- http://microformats.org/wiki/hcard -->
+			<div class="author vcard">
+			<h1>
+				<a href="https://alexklapheke.github.io">
+				<span class="given-name">Alexander</span>
+				<span class="family-name"><abbr class="ipa" lang="x-ipa" title="[kl&#601;&#39;pik]">Klapheke</abbr></span>
+				</a>
+			</h1>
+
+				<div id="contact">
+					<!-- http://hcard.geekhood.net/encode/ -->
+					<a
+					class='email
+					href="mailto:x@y"
+					'
+					href
+					=	'
+					&#x20;&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;%20&#x61;&#x6c;&#x25;6&#x35;%7&#x38;&#x25;&#54;&#98;la&#x25;7&#x30;h&#37;6&#x35;&#x25;&#x36;&#x62;&#37;&#x36;&#x35;&#37;&#x34;0&#x67;&#109;&#97;%&#x36;9l&#x25;&#50;&#101;%&#x36;&#51;&#111;&#x6d;&#x3f;
+					'>&#97;&#x6c;&#x65;&#120;&#x6B;lap&#x68;&#x65;k<!--
+					mailto:abuse@hotmail.com
+					</a>
+					-->&shy;&#x65;&#64;&#103;&#109;&#x61;i&#108;&#x2E;&#99;&#x6f;&#109;</a>
+					<br>
+					<a href="../0xBCB7A837.asc">Public key</a> <span class="grayed">(<abbr title="F1BD E18B 7525 95A9 7BC4 FB04 A349 9FF5 2DF0 94AB">fingerprint</abbr>)</span>
+
+					<br><br>
+
+					<a class="social" href="https://github.com/alexklapheke">GitHub</a> <span class="bullet">&bull;</span>
+					<a class="social" href="https://linkedin.com/in/alexander-klapheke">LinkedIn</a> <span class="bullet">&bull;</span>
+					<a class="social" href="../AlexanderKlapheke-Resume.pdf">R&eacute;sum&eacute;</a>
+				</div>
+			</div>
+
+			<p id="blurb">I&rsquo;m a data scientist and self-taught coder (Python, R, Haskell) with a background in linguistics and math and over 10 years&rsquo; experience explaining technical concepts to laypeople.</p>
+
+		</header>
+		<article class="hentry">
+		<div id="titleblock">
+		<h1 class="entry-title">Cambridge street trees</h1>
+		<p>
+			<time datetime="2020-07-21T20:49:29-0400" class="published">Tuesday, July 21, 2020</time>
+			<span class="bullet">&bull;</span>
+			<span class="wordcount">2,054 words</span>
+			<span class="bullet">&bull;</span>
+			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
+			<span class="bullet">&bull;</span>
+			<span class="addenda">&#128206;&nbsp;<a href="https://github.com/alexklapheke/trees">code</a></span>
+			<span class="bullet">&bull;</span>
+			<a class="source" href="https://raw.githubusercontent.com/alexklapheke/alexklapheke.github.io/master/blog/trees.md">View source</a>
+		</p>
+		</div>
+		<nav id="TOC">
+<ul>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#cleaning"><span class="toc-section-number">2</span> Cleaning</a></li>
+<li><a href="#sec:var"><span class="toc-section-number">3</span> Varieties</a></li>
+<li><a href="#mapping"><span class="toc-section-number">4</span> Mapping</a></li>
+<li><a href="#planting-dates"><span class="toc-section-number">5</span> Planting dates</a></li>
+<li><a href="#appendix-a-common-names-of-trees">Appendix A: Common names of trees</a></li>
+</ul>
+		</nav>
+			<div class="entry-content">
+<div class="epigraph">
+<p>I think that I shall never see<br />
+A billboard lovely as a tree.<br />
+Indeed, unless the billboards fall<br />
+I&#8217;ll never see a tree at all.</p>
+</div>
+<section id="introduction" class="level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>Every spring, the Callery pear down the street from me displays a magnificent panoply of white blossoms, and releases&#8230; let&#8217;s say a <em>distinct</em> odor. A few months later, the tree of heaven in my backyard drops an incredible torrent of flowers onto my porch, and within a few months, another torrent of seed pods (this tree has it&#8217;s own smell which is marginally less unpleasant). It&#8217;s a subtle difference between a street lined with, say, honeylocusts and one lined with sycamores, but trees really do go a long way in defining the character of a place, making them a crucial consideration in urban planning.</p>
+<p>Like many cities, Cambridge has long maintained a <a href="https://data.cambridgema.gov/Public-Works/Street-Trees/ni4i-5bnn">dataset of all municipal trees</a>, including the species, location, date planted, and <a href="https://en.wikipedia.org/wiki/Diameter_at_breast_height">diameter</a>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> By exploring this data, we can see what trends and patterns emerge, and learn something about the arboreal life of our cities.</p>
+</section>
+<section id="cleaning" class="level1">
+<h1><span class="header-section-number">2</span> Cleaning</h1>
+<p>Although the dataset does seem to cover every public tree, much of the data is missing. For example, 83% of trees are missing the date they were planted, presumably at least in part because they predate the record system (a few of those that do list dates are from the 1970s).</p>
+<p>There are many spurious values as well. Besides misaligned species names (to be discussed in sec.&#160;3), there are several misspelled genera (e.g., &#8220;Planatus&#8221; for <abbr title="sycamore"><em>Platanus</em></abbr>). The diameter of each tree is listed, but the highest values are 154, 715, 745, 915, and 945 inches, corresponding respectively to about 13, 60, 62, 76, and 79 feet (the <a href="https://en.wikipedia.org/wiki/%C3%81rbol_del_Tule">stoutest tree in the world</a> is only 46 feet in diameter), casting all values into some suspicion. The dataset also lists properties such as number of trunks&#8212;one <a href="https://goo.gl/maps/fzSmAtdHHqaXnHv5A">katsura tree</a> has ten, and two, a <a href="https://goo.gl/maps/WjFi3ZdhdnzqxiG38">Japanese tree lilac</a> and a <a href="https://goo.gl/maps/Ma7ErKrC9TMTSWmu8">serviceberry</a> have eleven&#8212;and things of municipal importance, such as whether there are overhead wires, or whether the roots are emerging through the sidewalk.</p>
+<p>I also included data about invasiveness, by grabbing the <a href="https://www.mass.gov/doc/prohibited-plant-list-sorted-by-scientific-name/download" class="pdf">list</a> of species considered invasive in Massachusetts, copying the scientific names to a text file, and merging.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1">invasive_species <span class="op">=</span> pd.read_csv(<span class="st">&quot;prohibited-species.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2">invasive_species[<span class="st">&quot;Invasive&quot;</span>] <span class="op">=</span> <span class="va">True</span></a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4">trees <span class="op">=</span> pd.merge(</a>
+<a class="sourceLine" id="cb1-5" title="5">    left <span class="op">=</span> trees,</a>
+<a class="sourceLine" id="cb1-6" title="6">    right <span class="op">=</span> invasive_species,</a>
+<a class="sourceLine" id="cb1-7" title="7">    how <span class="op">=</span> <span class="st">&quot;left&quot;</span>,</a>
+<a class="sourceLine" id="cb1-8" title="8">    on <span class="op">=</span> [<span class="st">&quot;Genus&quot;</span>, <span class="st">&quot;species&quot;</span>]</a>
+<a class="sourceLine" id="cb1-9" title="9">)</a>
+<a class="sourceLine" id="cb1-10" title="10"></a>
+<a class="sourceLine" id="cb1-11" title="11">trees[<span class="st">&quot;Invasive&quot;</span>].fillna(<span class="va">False</span>, inplace<span class="op">=</span><span class="va">True</span>)</a></code></pre></div>
+<p>The <code>SiteType</code> column helpfully tells us whether the tree is, in fact, a tree at all, or a stump, a plot being prepared for a tree, etc. After cleaning, I removing all of the latter cases&#8212;although really, the cleaning was a process ongoing until the end.</p>
+</section>
+<section id="sec:var" class="level1">
+<h1><span class="header-section-number">3</span> Varieties</h1>
+<p>The obvious first thing to do after cleaning is look at what varieties line the city&#8217;s streets. fig.&#160;1 shows the most popular genera as recorded in the dataset (their corresponding common names are in <a href="#appendix-a-common-names-of-trees">Appendix A</a>).</p>
+<figure>
+<object data="images/f02328914fb4b2e89df456f77c637e892345754a.svg" alt="Figure 1: The top 20 genera of street tree in Cambridge" id="fig:gen" ><img src="images/f02328914fb4b2e89df456f77c637e892345754a.svg" alt="Figure 1: The top 20 genera of street tree in Cambridge" id="fig:gen" /></object><figcaption>Figure 1: The top 20 genera of street tree in Cambridge</figcaption>
+</figure>
+<p>However, just knowing that the streets are lined with maples (genus <abbr title="maple"><em>Acer</em></abbr>) doesn&#8217;t tell us if they are towering, stately silver maples (<abbr title="silver maple"><em>A. saccharinum</em></abbr>), or splendiferous red maples (<abbr title="red maple"><em>A. rubrum</em></abbr>), or invasive Norway maples (<abbr title="Norway maple"><em>A. platanoides</em></abbr>), nor does knowing there are over 3,000 oaks (genus <abbr title="oak"><em>Quercus</em></abbr>) cast light on which of the <a href="https://en.wikipedia.org/wiki/List_of_Quercus_species">over 600 species</a> they comprise. We can break this graph down further by species (fig.&#160;2).</p>
+<figure>
+<object data="images/2ccd09bdfb13715474f5e58d83fc10bb50409348.svg" alt="Figure 2: The top 20 genera of street tree in Cambridge, broken down by species (hover over each bar to see the specific name)" id="fig:spec" ><img src="images/2ccd09bdfb13715474f5e58d83fc10bb50409348.svg" alt="Figure 2: The top 20 genera of street tree in Cambridge, broken down by species (hover over each bar to see the specific name)" id="fig:spec" /></object><figcaption>Figure 2: The top 20 genera of street tree in Cambridge, broken down by species (hover over each bar to see the specific name)</figcaption>
+</figure>
+<p>There are some interesting takeaways here. For instance, not a single public apple tree (genus <abbr title="apple"><em>Malus</em></abbr>) has been identified for species. This indicates that the data was not logged at the time of planting; possibly, the species were identified by sight in a later survey (ornamental apple trees are typically hard-to-identify hybrids). Some of the &#8220;unknown species&#8221; labels are clearly in error. <abbr title="sweetgum"><em>Liquidambar</em></abbr>, for example, contains only four species, only one of which (<abbr title="American sweetgum"><em>L. styraciflua</em></abbr>) is grown ornamentally in the U.S., and is easily distinguished from its relatives by its five-pointed leaves.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> More alarmingly, <abbr title="ginkgo"><em>Ginkgo biloba</em></abbr> is the only extant species in its entire class (a sister clade to the conifers), but 79 specimens are missing species information, and one is apparently of <em>Ginkgo triacanthos</em>! Presumably, city arborists have not discovered a new living fossil, but rather this row has gotten mixed up somehow (maybe during merging) with a honeylocust, <abbr title="honeylocust"><em>Gleditsia triacanthos</em></abbr>. We also see such botanical novelties as <em>Ulmus cordata</em>, <em>Tilia calleryana</em>, and, amusingly, <em>Acer acerifolia</em>&#8212;literally, a maple-leafed maple.</p>
+<p>Besides the missing and spurious data, we see that over a third of city-planted maples are Norway maples, which are now <a href="https://www.mass.gov/doc/prohibited-plant-list-sorted-by-scientific-name/download" class="pdf">illegal</a> in Massachusetts due to their propensity to crowd out native species. In all, 2,282 trees considered invasive, representing five species, are present in the dataset.</p>
+<p>Invasive plants are not the only menace to biodiversity. We are lucky to have over a thousand elms in Cambridge&#8212;after Dutch elm disease ravaged populations in the 1960s and &#8217;70s, disease-resistant cultivars of <abbr title="American elm"><em>Ulmus americana</em></abbr> were developed which, along with fungicide, managed the destruction. The chestnut blight fungus, introduced from East Asia around the turn of the 20th century, has made the American chestnut (<abbr title="American chestnut"><em>Castanea dentata</em></abbr>) all but extinct, with a onetime population of several billion dwindling to a few hundred today. So I was surprised to see four trees in the genus <abbr title="chestnut"><em>Castanea</em></abbr> in the dataset, but less surprised when three turned out to be misidentified horse chestnuts (<abbr title="horse chestnut"><em>Aesculus hippocastanum</em></abbr>), and the fourth was&#8230; wait for it&#8230; <a href="https://goo.gl/maps/2Jar5K1Qrc5mFW5RA">a Norway maple</a>.</p>
+</section>
+<section id="mapping" class="level1">
+<h1><span class="header-section-number">4</span> Mapping</h1>
+<p>Every tree in the dataset has an associated latitude and longitude. Indeed, the coordinates given for each tree display <a href="https://xkcd.com/2170/">incredible precision</a>, giving no fewer than 15 decimal places, making them <a href="http://gis.stackexchange.com/a/8674">accurate</a> to about 100 picometers, or approximately an atomic radius (I have no idea how they chose which atom of the tree to use as a reference). In order to map trees against Cambridge&#8217;s <a href="https://www.cambridgema.gov/GIS/gisdatadictionary/Basemap/BASEMAP_Roads">basemap shapefiles</a>, I used <a href="https://pypi.org/project/pyshp/">PyShp</a> to parse the shapefiles and <a href="https://pypi.org/project/PyCRS/">PyCRS</a> and <a href="https://pypi.org/project/pyproj/">PyProj</a> to convert from <a href="https://epsg.io/4326">WGS84</a> (i.e., standard latitude and longitude) to <a href="https://epsg.io/102686">NAD 1983</a>, the coordinate system used in the shapefiles.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="im">from</span> pyproj <span class="im">import</span> Transformer</a>
+<a class="sourceLine" id="cb2-2" title="2"></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co"># Convert between coordinate systems</span></a>
+<a class="sourceLine" id="cb2-4" title="4">transformer <span class="op">=</span> Transformer.from_crs(</a>
+<a class="sourceLine" id="cb2-5" title="5">    <span class="co"># WGS84 (EPSG:4326)</span></a>
+<a class="sourceLine" id="cb2-6" title="6">    <span class="st">&quot;+proj=longlat +a=6378137.0 +rf=298.257223563 +pm=0 +nodef&quot;</span>,</a>
+<a class="sourceLine" id="cb2-7" title="7"></a>
+<a class="sourceLine" id="cb2-8" title="8">    <span class="co"># NAD 1983 StatePlane Massachusetts Mainland FIPS 2001 Feet</span></a>
+<a class="sourceLine" id="cb2-9" title="9">    <span class="st">&quot;+proj=lcc +lat_1=41.71666666666667 +lat_2=42.68333333333333 &quot;</span> <span class="op">+</span></a>
+<a class="sourceLine" id="cb2-10" title="10">    <span class="st">&quot;+lat_0=41 +lon_0=-71.5 +x_0=200000 +y_0=750000.0000000001 &quot;</span> <span class="op">+</span></a>
+<a class="sourceLine" id="cb2-11" title="11">    <span class="st">&quot;+ellps=GRS80 +datum=NAD83 +to_meter=0.3048006096012192 no_defs&quot;</span></a>
+<a class="sourceLine" id="cb2-12" title="12">)</a>
+<a class="sourceLine" id="cb2-13" title="13"></a>
+<a class="sourceLine" id="cb2-14" title="14"><span class="co"># Convert coordinates of invasive trees and plot on basemap</span></a>
+<a class="sourceLine" id="cb2-15" title="15"><span class="cf">for</span> label <span class="kw">in</span> invasives[<span class="st">&quot;label&quot;</span>].unique():</a>
+<a class="sourceLine" id="cb2-16" title="16">    plt.scatter(</a>
+<a class="sourceLine" id="cb2-17" title="17">        <span class="op">*</span>transformer.transform(</a>
+<a class="sourceLine" id="cb2-18" title="18">            invasives[invasives[<span class="st">&quot;label&quot;</span>] <span class="op">==</span> label][<span class="st">&quot;lon&quot;</span>].to_list(),</a>
+<a class="sourceLine" id="cb2-19" title="19">            invasives[invasives[<span class="st">&quot;label&quot;</span>] <span class="op">==</span> label][<span class="st">&quot;lat&quot;</span>].to_list()</a>
+<a class="sourceLine" id="cb2-20" title="20">        ),</a>
+<a class="sourceLine" id="cb2-21" title="21">    )</a></code></pre></div>
+<p>In fig.&#160;3, we can see the locations of invasive species of tree. Norway maples (<abbr title="Norway maple"><em>Acer platanoides</em></abbr>) are predictably strewn across the city, but we see clusters of trees of heaven (<abbr title="tree of heaven"><em>Ailanthus altissima</em></abbr>), and a few sizeable black locusts (<abbr title="black locust"><em>Robinia pseudoacacia</em></abbr>), the impressive diameters indicating older trees. Of course, many more specimens of these noxious species exist on private land, and many of the worst invasive species are not trees at all, such as reeds (<abbr title="common reed"><em>Phragmites australis</em></abbr>) and garlic mustard (<abbr title="garlic mustard"><em>Alliaria petiolata</em></abbr>).</p>
+<figure>
+<object data="images/91d75c3ab7bc37c9e2637c7d2f4d626b332cf5f4.svg" alt="Figure 3: Locations of public trees in Cambridge considered invasive. Marker size is proportional to tree diameter.  &#160;Acer platanoides (2,121) &#160;Robinia pseudoacacia (55) &#160;Phellodendron amurense (54) &#160;Ailanthus altissima (50) &#160;Rhamnus cathartica (2)" id="fig:invmap" ><img src="images/91d75c3ab7bc37c9e2637c7d2f4d626b332cf5f4.svg" alt="Figure 3: Locations of public trees in Cambridge considered invasive. Marker size is proportional to tree diameter.  &#160;Acer platanoides (2,121) &#160;Robinia pseudoacacia (55) &#160;Phellodendron amurense (54) &#160;Ailanthus altissima (50) &#160;Rhamnus cathartica (2)" id="fig:invmap" /></object><figcaption>Figure 3: Locations of public trees in Cambridge considered invasive. Marker size is proportional to tree diameter.<br />
+<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#1b9e77" stroke="none" /></svg>&#160;<abbr title="Norway maple"><em>Acer platanoides</em></abbr> (2,121)<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#d95f02" stroke="none" /></svg>&#160;<abbr title="black locust"><em>Robinia pseudoacacia</em></abbr> (55)<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#7570b3" stroke="none" /></svg>&#160;<abbr title="Amur cork tree"><em>Phellodendron amurense</em></abbr> (54)<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#e7298a" stroke="none" /></svg>&#160;<abbr title="tree of heaven"><em>Ailanthus altissima</em></abbr> (50)<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#66a61e" stroke="none" /></svg>&#160;<abbr title="common buckthorn"><em>Rhamnus cathartica</em></abbr> (2)</figcaption>
+</figure>
+<p>To see what trees are popular in different areas, I downloaded the <a href="https://www.cambridgema.gov/GIS/gisdatadictionary/Boundary/BOUNDARY_CDDNeighborhoods">neighborhood boundary shapefiles</a>, and used <a href="https://pypi.org/project/Shapely/">Shapely</a> to categorize each latitude&#8211;longitude pair as being in one of the resulting polygons (dismayingly, although the dataset has a <code>Neighborhood</code> column, it doesn&#8217;t contain a single data point). By filtering, we can see what the most popular species is in each neighborhood.</p>
+<figure>
+<object data="images/f2cef4c7065c6545106b3108cd08fcf5c1ae75b8.svg" alt="Figure 4: Most popular tree per neighborhood.  &#160;Gleditsia triacanthos &#160;Acer (unknown species) &#160;Acer rubrum &#160;Fraxinus americana &#160;Acer platanoides" id="fig:neighmap" ><img src="images/f2cef4c7065c6545106b3108cd08fcf5c1ae75b8.svg" alt="Figure 4: Most popular tree per neighborhood.  &#160;Gleditsia triacanthos &#160;Acer (unknown species) &#160;Acer rubrum &#160;Fraxinus americana &#160;Acer platanoides" id="fig:neighmap" /></object><figcaption>Figure 4: Most popular tree per neighborhood.<br />
+<br />
+<svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#1b9e77" stroke="none" /></svg>&#160;<abbr title="honeylocust"><em>Gleditsia triacanthos</em></abbr><br />
+<svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#d95f02" stroke="none" /></svg>&#160;<abbr title="maple"><em>Acer</em></abbr> (unknown species)<br />
+<svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#7570b3" stroke="none" /></svg>&#160;<abbr title="red maple"><em>Acer rubrum</em></abbr><br />
+<svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#e7298a" stroke="none" /></svg>&#160;<abbr title="white ash"><em>Fraxinus americana</em></abbr><br />
+<svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#66a61e" stroke="none" /></svg>&#160;<abbr title="Norway maple"><em>Acer platanoides</em></abbr></figcaption>
+</figure>
+<p>We can get an even more granular look by plotting each individual tree:</p>
+<figure>
+<object data="images/6196b1b119d65bcb809f1bcadd3d744c826d52cf.svg" alt="Figure 5: Distributions of each neighborhood&#8217;s most popular tree. Marker size is proportional to tree diameter.  &#160;Gleditsia triacanthos &#160;Acer (unknown species) &#160;Acer rubrum &#160;Fraxinus americana &#160;Acer platanoides" id="fig:neighmapdots" ><img src="images/6196b1b119d65bcb809f1bcadd3d744c826d52cf.svg" alt="Figure 5: Distributions of each neighborhood&#8217;s most popular tree. Marker size is proportional to tree diameter.  &#160;Gleditsia triacanthos &#160;Acer (unknown species) &#160;Acer rubrum &#160;Fraxinus americana &#160;Acer platanoides" id="fig:neighmapdots" /></object><figcaption>Figure 5: Distributions of each neighborhood&#8217;s most popular tree. Marker size is proportional to tree diameter.<br />
+<br />
+<svg width="20" height="10"><circle cx="4" cy="4" r="4" fill="#1b9e77" stroke="none" /></svg>&#160;<abbr title="honeylocust"><em>Gleditsia triacanthos</em></abbr><br />
+<svg width="20" height="10"><circle cx="4" cy="4" r="4" fill="#d95f02" stroke="none" /></svg>&#160;<abbr title="maple"><em>Acer</em></abbr> (unknown species)<br />
+<svg width="20" height="10"><circle cx="4" cy="4" r="4" fill="#7570b3" stroke="none" /></svg>&#160;<abbr title="red maple"><em>Acer rubrum</em></abbr><br />
+<svg width="20" height="10"><circle cx="4" cy="4" r="4" fill="#e7298a" stroke="none" /></svg>&#160;<abbr title="white ash"><em>Fraxinus americana</em></abbr><br />
+<svg width="20" height="10"><circle cx="4" cy="4" r="4" fill="#66a61e" stroke="none" /></svg>&#160;<abbr title="Norway maple"><em>Acer platanoides</em></abbr></figcaption>
+</figure>
+<p>Here we see some interesting patterns. The unidentified maples so popular around MIT almost exclusively line the Charles River embankment. The white ashes (<abbr title="white ash"><em>Fraxinus americana</em></abbr>) in the Cambridge Highlands are concentrated in the <a href="https://www.google.com/maps/place/Lusitania+Field/@42.3879328,-71.1463062,17z">Lusitania Woods</a> by Fresh Pond.</p>
+</section>
+<section id="planting-dates" class="level1">
+<h1><span class="header-section-number">5</span> Planting dates</h1>
+<p>As mentioned above, only 17% of trees have a plant date listed, making it difficult to find trends. Of course, it is still interesting to examine the data we have&#8212;fig.&#160;6 shows recorded plantings for the genera in fig.&#160;1 starting in 2007 since there are only a handful of data points before then.</p>
+<figure>
+<object data="images/ec0e53be7c86eb67d0ece23f305b3513a19d8e78.svg" alt="Figure 6: Planting rate per year of 20 most popular genera since 2007, for those recorded." id="fig:dates" ><img src="images/ec0e53be7c86eb67d0ece23f305b3513a19d8e78.svg" alt="Figure 6: Planting rate per year of 20 most popular genera since 2007, for those recorded." id="fig:dates" /></object><figcaption>Figure 6: Planting rate per year of 20 most popular genera since 2007, for those recorded.</figcaption>
+</figure>
+<p>In particular, it is to determine when invasives were planted&#8212;of the 2,282 invasive trees in the dataset, only five Norway maples have a date listed. This is unsurprising&#8212;the &#8220;invasiveness&#8221; of invasives is precisely their ability to aggressively reproduce. However, even of these, we can see in fig.&#160;7 that two were planted in 2013 and 2014, respectively, well after the <a href="https://www.mass.gov/service-details/prohibited-plant-list-background">2006 law</a> prohibiting such species took effect.</p>
+<figure>
+<object data="images/43508119c9fb84d566ab739d34693e25270432b9.svg" alt="Figure 7: Planting dates of Acer platanoides, for those recorded.  &#160;Law banning invasive species in effect" id="fig:acerdates" ><img src="images/43508119c9fb84d566ab739d34693e25270432b9.svg" alt="Figure 7: Planting dates of Acer platanoides, for those recorded.  &#160;Law banning invasive species in effect" id="fig:acerdates" /></object><figcaption>Figure 7: Planting dates of <abbr title="Norway maple"><em>Acer platanoides</em></abbr>, for those recorded.<br />
+<br />
+<svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#e8e8e8" stroke="none" /></svg>&#160;Law banning invasive species in effect</figcaption>
+</figure>
+<p>There are some interesting trends visible in fig.&#160;6&#8212;a recent fad for magnolias, a steady increase in serviceberry plantings (genus <abbr title="serviceberry"><em>Amelanchier</em></abbr>), and spikes in pear tree plantings (nearly all of which are Callery pears, <abbr title="Callery pear"><em>Pyrus calleryana</em></abbr>) in 2009 and 2017&#8212;although given the paucity of data, it is impossible to say if they are real.</p>
+<p>We can get another sense of trends by looking at location, rather than genus.</p>
+<figure>
+<object data="images/7fda814c58fd47bea4aeebd91d7bfbc482e247b3.svg" alt="Figure 8: Planting dates of trees by location since 2007, for those with a date listed.  2007  2020" id="fig:mapdates" ><img src="images/7fda814c58fd47bea4aeebd91d7bfbc482e247b3.svg" alt="Figure 8: Planting dates of trees by location since 2007, for those with a date listed.  2007  2020" id="fig:mapdates" /></object><figcaption>Figure 8: Planting dates of trees by location since 2007, for those with a date listed.<br />
+<br />
+2007<br />
+<svg width="11" height="218"><image x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAADaCAYAAABwzrisAAAABHNCSVQICAgIfAhkiAAAAV1JREFUaIHd2ktuAkEQA9D+gdjk3Dl1aK5Qb2GpCGurZLvcnoZh/rx+7yh+zvOuKnacPSaAZfKSyQR+jBiNsstRgQTeOTfK0DHOuimBU8An5nMd6qmjdac2SD6bdbFjlXMjKRDAtJSkGwCeVgUweRON4EkBcM5ncwNId3GDJm8SKGATaJPrxaECYTJlw4IUo7HhrtaFM06WbOzU5C4Cbd0C7hIkAK/17kBjQpvrukEg5rlJkFLrtsnBx0TKupwbTcBr/3OB1qKy7pF7TPQAW/hj/Uzg0aPrco82Etik+ZMnpYzlpVD4WxxY+BECmz+XutzptkbKVYFkI+hz7FtbjnOwN5q48YXZIBq5DZob1HWxm0wX6+zOX8Yi55wbmI0WNIKTqeuCAsvYqHXiBvwHIbtuoUGczY0enAV87XTL5JhATB28ebxHaAQFAmdct7jxheumM3jt2vNXBsub1fEBZTWVbVihQd8AAAAASUVORK5CYII=" /></svg><br />
+2020</figcaption>
+</figure>
+<p>We can see several strings of orange and yellow where a whole row of trees was planted all at once. In addition, unsurprisingly, the largest trees tend to be the oldest, shown in purple.</p>
+<p>There is much more I would like to do with this data&#8212;and much more, and cleaner, data I&#8217;d like to have&#8212;but I&#8217;ve learned a lot about Cambridge&#8217;s trees, especially about the prevalence of invasive species on my local streets.</p>
+</section>
+<section id="appendix-a-common-names-of-trees" class="level1 unnumbered">
+<h1>Appendix A: Common names of trees</h1>
+<div id="tbl:latin">
+<table class="sortable">
+<caption>Table 1: Common names of the tree genera found in Cambridge. Note that, in general, there is not a one-to-one correspondence between common and scientific names, which is why the latter are generally preferred.</caption>
+<thead title="Click to sort">
+<tr class="header">
+<th>Genus</th>
+<th>Common name</th>
+<th>Family (APG IV<span class="citation" data-cites="apg4"><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></span>)</th>
+<th>Population</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Abies</em></td>
+<td>fir</td>
+<td>Pinaceae</td>
+<td>46</td>
+</tr>
+<tr class="even">
+<td><em>Acer</em></td>
+<td>maple</td>
+<td>Sapindaceae</td>
+<td>4,875</td>
+</tr>
+<tr class="odd">
+<td><em>Aesculus</em></td>
+<td>horse chestnut</td>
+<td>Sapindaceae</td>
+<td>84</td>
+</tr>
+<tr class="even">
+<td><em>Ailanthus</em></td>
+<td>tree of heaven</td>
+<td>Simaroubaceae</td>
+<td>67</td>
+</tr>
+<tr class="odd">
+<td><em>Amelanchier</em></td>
+<td>serviceberry</td>
+<td>Rosaceae</td>
+<td>499</td>
+</tr>
+<tr class="even">
+<td><em>Betula</em></td>
+<td>birch</td>
+<td>Betulaceae</td>
+<td>374</td>
+</tr>
+<tr class="odd">
+<td><em>Carpinus</em></td>
+<td>hornbeam</td>
+<td>Betulaceae</td>
+<td>205</td>
+</tr>
+<tr class="even">
+<td><em>Carya</em></td>
+<td>hickory</td>
+<td>Juglandaceae</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td><em>Castanea</em></td>
+<td>chestnut</td>
+<td>Fagaceae</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td><em>Catalpa</em></td>
+<td>catalpa</td>
+<td>Bignoniaceae</td>
+<td>27</td>
+</tr>
+<tr class="odd">
+<td><em>Cedrus</em></td>
+<td>cedar</td>
+<td>Pinaceae</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><em>Celtis</em></td>
+<td>hackberry</td>
+<td>Cannabaceae</td>
+<td>155</td>
+</tr>
+<tr class="odd">
+<td><em>Cercidiphyllum</em></td>
+<td>katsura</td>
+<td>Cercidiphyllaceae</td>
+<td>79</td>
+</tr>
+<tr class="even">
+<td><em>Cercis</em></td>
+<td>redbud</td>
+<td>Fabaceae</td>
+<td>169</td>
+</tr>
+<tr class="odd">
+<td><em>Chionanthus</em></td>
+<td>fringetre</td>
+<td>Oleaceae</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td><em>Cladrastis</em></td>
+<td>yellowwood</td>
+<td>Fabaceae</td>
+<td>122</td>
+</tr>
+<tr class="odd">
+<td><em>Cornus</em></td>
+<td>dogwood</td>
+<td>Cornaceae</td>
+<td>504</td>
+</tr>
+<tr class="even">
+<td><em>Corylus</em></td>
+<td>hazel</td>
+<td>Betulaceae</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td><em>Cotinus</em></td>
+<td>smoketree</td>
+<td>Anacardiaceae</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td><em>Crataegus</em></td>
+<td>hawthorn</td>
+<td>Rosaceae</td>
+<td>82</td>
+</tr>
+<tr class="odd">
+<td><em>Enkianthus</em></td>
+<td>enkianthus</td>
+<td>Ericaceae</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><em>Eucommia</em></td>
+<td>Chinese rubber tree</td>
+<td>Eucommiaceae</td>
+<td>51</td>
+</tr>
+<tr class="odd">
+<td><em>Fagus</em></td>
+<td>beech</td>
+<td>Fagaceae</td>
+<td>130</td>
+</tr>
+<tr class="even">
+<td><em>Fraxinus</em></td>
+<td>ash</td>
+<td>Oleaceae</td>
+<td>1,427</td>
+</tr>
+<tr class="odd">
+<td><em>Ginkgo</em></td>
+<td>ginkgo</td>
+<td>Ginkgoaceae</td>
+<td>467</td>
+</tr>
+<tr class="even">
+<td><em>Gleditsia</em></td>
+<td>honeylocust</td>
+<td>Fabaceae</td>
+<td>2,637</td>
+</tr>
+<tr class="odd">
+<td><em>Gymnocladus</em></td>
+<td>coffeetree</td>
+<td>Fabaceae</td>
+<td>171</td>
+</tr>
+<tr class="even">
+<td><em>Halesia</em></td>
+<td>silverbell</td>
+<td>Styracaceae</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td><em>Hamamelis</em></td>
+<td>witch hazel</td>
+<td>Hamamelidaceae</td>
+<td>46</td>
+</tr>
+<tr class="even">
+<td><em>Ilex</em></td>
+<td>holly</td>
+<td>Aquifoliaceae</td>
+<td>33</td>
+</tr>
+<tr class="odd">
+<td><em>Juglans</em></td>
+<td>walnut</td>
+<td>Juglandaceae</td>
+<td>19</td>
+</tr>
+<tr class="even">
+<td><em>Juniperus</em></td>
+<td>juniper</td>
+<td>Cupressaceae</td>
+<td>104</td>
+</tr>
+<tr class="odd">
+<td><em>Koelreuteria</em></td>
+<td>golden rain tree</td>
+<td>Sapindaceae</td>
+<td>106</td>
+</tr>
+<tr class="even">
+<td><em>Laburnum</em></td>
+<td>golden rain</td>
+<td>Fabaceae</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><em>Larix</em></td>
+<td>larch</td>
+<td>Pinaceae</td>
+<td>17</td>
+</tr>
+<tr class="even">
+<td><em>Liquidambar</em></td>
+<td>sweetgum</td>
+<td>Altingiaceae</td>
+<td>377</td>
+</tr>
+<tr class="odd">
+<td><em>Liriodendron</em></td>
+<td>tuliptree</td>
+<td>Magnoliaceae</td>
+<td>177</td>
+</tr>
+<tr class="even">
+<td><em>Maackia</em></td>
+<td>maackia</td>
+<td>Fabaceae</td>
+<td>26</td>
+</tr>
+<tr class="odd">
+<td><em>Magnolia</em></td>
+<td>magnolia</td>
+<td>Magnoliaceae</td>
+<td>244</td>
+</tr>
+<tr class="even">
+<td><em>Malus</em></td>
+<td>apple</td>
+<td>Rosaceae</td>
+<td>762</td>
+</tr>
+<tr class="odd">
+<td><em>Metasequoia</em></td>
+<td>dawn redwood</td>
+<td>Cupressaceae</td>
+<td>49</td>
+</tr>
+<tr class="even">
+<td><em>Morus</em></td>
+<td>mulberry</td>
+<td>Moraceae</td>
+<td>33</td>
+</tr>
+<tr class="odd">
+<td><em>Nyssa</em></td>
+<td>tupelo</td>
+<td>Nyssaceae</td>
+<td>25</td>
+</tr>
+<tr class="even">
+<td><em>Ostrya</em></td>
+<td>hophornbeam</td>
+<td>Betulaceae</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td><em>Oxydendrum</em></td>
+<td>sourwood</td>
+<td>Ericaceae</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td><em>Parrotia</em></td>
+<td>ironwood</td>
+<td>Hamamelidaceae</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td><em>Phellodendron</em></td>
+<td>cork tree</td>
+<td>Rutaceae</td>
+<td>59</td>
+</tr>
+<tr class="even">
+<td><em>Picea</em></td>
+<td>spruce</td>
+<td>Pinaceae</td>
+<td>105</td>
+</tr>
+<tr class="odd">
+<td><em>Pinus</em></td>
+<td>pine</td>
+<td>Pinaceae</td>
+<td>964</td>
+</tr>
+<tr class="even">
+<td><em>Platanus</em></td>
+<td>sycamore</td>
+<td>Platanaceae</td>
+<td>1,244</td>
+</tr>
+<tr class="odd">
+<td><em>Populus</em></td>
+<td>poplar/aspen</td>
+<td>Salicaceae</td>
+<td>192</td>
+</tr>
+<tr class="even">
+<td><em>Prunus</em></td>
+<td>cherry/plum</td>
+<td>Rosaceae</td>
+<td>1,092</td>
+</tr>
+<tr class="odd">
+<td><em>Pseudotsuga</em></td>
+<td>Douglas fir</td>
+<td>Pinaceae</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td><em>Ptelea</em></td>
+<td>hoptree</td>
+<td>Rutaceae</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><em>Pyrus</em></td>
+<td>pear</td>
+<td>Rosaceae</td>
+<td>1,072</td>
+</tr>
+<tr class="even">
+<td><em>Quercus</em></td>
+<td>oak</td>
+<td>Fagaceae</td>
+<td>3,015</td>
+</tr>
+<tr class="odd">
+<td><em>Rhamnus</em></td>
+<td>buckthorn</td>
+<td>Rhamnaceae</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td><em>Robinia</em></td>
+<td>black locust</td>
+<td>Fabaceae</td>
+<td>59</td>
+</tr>
+<tr class="odd">
+<td><em>Salix</em></td>
+<td>willow</td>
+<td>Salicaceae</td>
+<td>38</td>
+</tr>
+<tr class="even">
+<td><em>Sassafras</em></td>
+<td>sassafras</td>
+<td>Lauraceae</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><em>Sciadopitys</em></td>
+<td>umbrella pine</td>
+<td>Sciadopityaceae</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><em>Sorbus</em></td>
+<td>rowan</td>
+<td>Rosaceae</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><em>Stewartia</em></td>
+<td>tea tree</td>
+<td>Theaceae</td>
+<td>19</td>
+</tr>
+<tr class="even">
+<td><em>Styphnolobium</em></td>
+<td>pagoda tree</td>
+<td>Fabaceae</td>
+<td>357</td>
+</tr>
+<tr class="odd">
+<td><em>Styrax</em></td>
+<td>storax</td>
+<td>Styracaceae</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><em>Syringa</em></td>
+<td>lilac</td>
+<td>Oleaceae</td>
+<td>422</td>
+</tr>
+<tr class="odd">
+<td><em>Taxus</em></td>
+<td>yew</td>
+<td>Taxaceae</td>
+<td>26</td>
+</tr>
+<tr class="even">
+<td><em>Thuja</em></td>
+<td>arborvitae</td>
+<td>Cupressaceae</td>
+<td>142</td>
+</tr>
+<tr class="odd">
+<td><em>Tilia</em></td>
+<td>linden</td>
+<td>Malvaceae</td>
+<td>1,544</td>
+</tr>
+<tr class="even">
+<td><em>Tsuga</em></td>
+<td>hemlock</td>
+<td>Pinaceae</td>
+<td>101</td>
+</tr>
+<tr class="odd">
+<td><em>Ulmus</em></td>
+<td>elm</td>
+<td>Ulmaceae</td>
+<td>1,204</td>
+</tr>
+<tr class="even">
+<td><em>Viburnum</em></td>
+<td>viburnum</td>
+<td>Adoxaceae</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td><em>Zelkova</em></td>
+<td>zelokva</td>
+<td>Ulmaceae</td>
+<td>627</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>They&#8217;ve also compiled it into quite a nice <a href="https://gis.cambridgema.gov/dpw/trees/trees_walk.html">browsable map</a>.</p>
+<p><a href="https://opentrees.org/">OpenTrees.org</a> maintains a collection of such datasets (possible fodder for future projects) as well as a browsable map of all of them.<a href="#fnref1" class="footnote-back">&#8617;</a></p></li>
+<li id="fn2"><p>Like so (<a href="https://commons.wikimedia.org/wiki/File:NAS-062-c_Liquidambar_styraciflua.png">source</a>) <img src="images/2608db5b319a4695d8ab2ff5c4c02bd12123bb34.jpg" /><a href="#fnref2" class="footnote-back">&#8617;</a></p></li>
+<li id="fn3"><p>The Angiosperm Phylogeny Group, &#8220;An Update of the Angiosperm Phylogeny Group Classification for the Orders and Families of Flowering Plants: APG IV,&#8221; <em>Botanical Journal of the Linnean Society</em> 181, no. 1 (May 2016): 1&#8211;20, doi:<a href="https://doi.org/10.1111/boj.12385">10.1111/boj.12385</a>.<a href="#fnref3" class="footnote-back">&#8617;</a></p></li>
+</ol>
+</section>
+			</div>
+		</article>
+	</body>
+</html>
