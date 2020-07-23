@@ -106,7 +106,7 @@ comprise. We can break this graph down further by species (@fig:spec).
 name)](images/2ccd09bdfb13715474f5e58d83fc10bb50409348.svg){#fig:spec}
 
 There are some interesting takeaways here. For instance, not a single
-public apple tree (<abbr title="apple">*Malus*</abbr> spp.) has been
+public apple tree (genus <abbr title="apple">*Malus*</abbr>) has been
 identified for species. This indicates that the data was not logged at
 the time of planting; possibly, the species were identified by sight in
 a later survey (ornamental apple trees are typically hard-to-identify
@@ -194,12 +194,12 @@ Norway maples (<abbr title="Norway maple">*Acer platanoides*</abbr>) are
 predictably strewn across the city, but we see clusters of trees of
 heaven (<abbr title="tree of heaven">*Ailanthus altissima*</abbr>), and
 a few sizeable black locusts (<abbr title="black locust">*Robinia
-pseudoacacia*</abbr>), the impressive diameters indicating older trees.
-Of course, many more specimens of these noxious species exist on private
-land, and many of the worst invasive species are not trees at all, such
-as reeds (<abbr title="common reed">*Phragmites australis*</abbr>) and
-garlic mustard (<abbr title="garlic mustard">*Alliaria
-petiolata*</abbr>).
+pseudoacacia*</abbr>), their impressive diameters indicating older
+trees. Of course, many more specimens of these noxious species exist on
+private land, and many of the worst invasive species are not trees at
+all, such as reeds (<abbr title="common reed">*Phragmites
+australis*</abbr>) and garlic mustard
+(<abbr title="garlic mustard">*Alliaria petiolata*</abbr>).
 
 ![Locations of public trees in Cambridge considered invasive. Marker
 size is proportional to tree diameter.\
@@ -243,15 +243,15 @@ We can get an even more granular look by plotting each individual tree:
 ![Distributions of each neighborhood's most popular tree. Marker size is
 proportional to tree diameter.\
 \
-<svg width="20" height="10"><circle cx="4" cy="4" r="4" fill="#1b9e77" stroke="none" /></svg> <abbr title="honeylocust">*Gleditsia
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#1b9e77" stroke="none" /></svg> <abbr title="honeylocust">*Gleditsia
 triacanthos*</abbr>\
-<svg width="20" height="10"><circle cx="4" cy="4" r="4" fill="#d95f02" stroke="none" /></svg> <abbr title="maple">*Acer*</abbr>
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#d95f02" stroke="none" /></svg> <abbr title="maple">*Acer*</abbr>
 (unknown species)\
-<svg width="20" height="10"><circle cx="4" cy="4" r="4" fill="#7570b3" stroke="none" /></svg> <abbr title="red maple">*Acer
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#7570b3" stroke="none" /></svg> <abbr title="red maple">*Acer
 rubrum*</abbr>\
-<svg width="20" height="10"><circle cx="4" cy="4" r="4" fill="#e7298a" stroke="none" /></svg> <abbr title="white ash">*Fraxinus
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#e7298a" stroke="none" /></svg> <abbr title="white ash">*Fraxinus
 americana*</abbr>\
-<svg width="20" height="10"><circle cx="4" cy="4" r="4" fill="#66a61e" stroke="none" /></svg> <abbr title="Norway maple">*Acer
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#66a61e" stroke="none" /></svg> <abbr title="Norway maple">*Acer
 platanoides*</abbr>](images/6196b1b119d65bcb809f1bcadd3d744c826d52cf.svg){#fig:neighmapdots}
 
 Here we see some interesting patterns. The unidentified maples so
@@ -300,7 +300,7 @@ We can get another sense of trends by looking at location, rather than
 genus.
 
 ![Planting dates of trees by location since 2007, for those with a date
-listed.\
+listed. Marker size is proportional to tree diameter.\
 \
 2007\
 <svg width="11" height="218"><image x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAADaCAYAAABwzrisAAAABHNCSVQICAgIfAhkiAAAAV1JREFUaIHd2ktuAkEQA9D+gdjk3Dl1aK5Qb2GpCGurZLvcnoZh/rx+7yh+zvOuKnacPSaAZfKSyQR+jBiNsstRgQTeOTfK0DHOuimBU8An5nMd6qmjdac2SD6bdbFjlXMjKRDAtJSkGwCeVgUweRON4EkBcM5ncwNId3GDJm8SKGATaJPrxaECYTJlw4IUo7HhrtaFM06WbOzU5C4Cbd0C7hIkAK/17kBjQpvrukEg5rlJkFLrtsnBx0TKupwbTcBr/3OB1qKy7pF7TPQAW/hj/Uzg0aPrco82Etik+ZMnpYzlpVD4WxxY+BECmz+XutzptkbKVYFkI+hz7FtbjnOwN5q48YXZIBq5DZob1HWxm0wX6+zOX8Yi55wbmI0WNIKTqeuCAsvYqHXiBvwHIbtuoUGczY0enAV87XTL5JhATB28ebxHaAQFAmdct7jxheumM3jt2vNXBsub1fEBZTWVbVihQd8AAAAASUVORK5CYII=" /></svg>\
@@ -391,7 +391,7 @@ on my local streets.
   *Tsuga*            hemlock               Pinaceae                  101
   *Ulmus*            elm                   Ulmaceae                  1,204
   *Viburnum*         viburnum              Adoxaceae                 20
-  *Zelkova*          zelokva               Ulmaceae                  627
+  *Zelkova*          zelkova               Ulmaceae                  627
 
   : Common names of the tree genera found in Cambridge. Note that, in
   general, there is not a one-to-one correspondence between common and
