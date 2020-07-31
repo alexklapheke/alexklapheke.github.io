@@ -229,6 +229,10 @@ pre > code {
 	border: none;
 }
 
+pre.wrap {
+	white-space: pre-wrap;
+}
+
 ol, ul {
 	list-style-position: outside;
 	padding-left: 25px;
