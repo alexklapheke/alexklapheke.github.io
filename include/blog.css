@@ -49,6 +49,10 @@ table {
 	border-bottom: 1px solid #D1D8DE;
 }
 
+tbody tr:hover {
+	background-color: #f0f0f4;
+}
+
 tfoot td {
 	border-top-color: #090A0C;
 }
