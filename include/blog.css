@@ -199,15 +199,6 @@ blockquote {
 	border: 1px solid #D6D5CD;
 }
 
-div.sourceCode {
-	overflow: hidden;
-}
-
-pre.sourceCode {
-	overflow-y: auto;
-	overflow-x: auto;
-}
-
 .epigraph {
 	padding: 0em 1.2em;
 	font-style: italic;
@@ -224,13 +215,36 @@ math[display="block"] {
 
 pre, code, kbd, var, samp {
 	border: 1px solid #D6D5CD;
+	background: #fdfdfd;
 	font-family: "Linux Libertine Mono O", monospace;
 	font-size: 12px;
 	line-height: 14px;
 }
 
+pre {
+	padding: 0.6em;
+	overflow-x: auto;
+}
+
+/* Don't put border on <code> elements inside pre,
+ * or we'll get ugly "underlining" */
 pre > code {
 	border: none;
+}
+
+/* Allow inline code to wrap between spaces */
+p > code {
+	white-space: normal !important;
+	hyphens: none;
+}
+
+div.sourceCode {
+	overflow: hidden;
+}
+
+pre.sourceCode {
+	overflow-y: auto;
+	overflow-x: auto;
 }
 
 pre.wrap {
@@ -326,7 +340,8 @@ a.footnote-back, span.header-section-number, span.header-section-number::after {
 		text-align: left;
 	}
 
-	.sidenotes > ol > li code, figcaption.sidenote code, caption.sidenote code {
+	.sidenotes > ol > li code, figcaption.sidenote code, caption.sidenote code,
+	.sidenotes > ol > li kbd, figcaption.sidenote kbd, caption.sidenote kbd {
 		font-size: 85%;
 	}
 
