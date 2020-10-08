@@ -458,7 +458,7 @@ round-robin style; if one always prevails, that candidate wins. The
 of always electing the pairwise winner, if there is one, is sometimes
 imposed on other methods. Of course, there is not always such a winner,
 as in rock paper scissors. However, the Burlington race did have such a
-winner---Montroll---and IRV was much maligned after the fact for
+winner---[Montroll]{.dem}---and IRV was much maligned after the fact for
 eliminating him in the second round.
 
 ![Results of a Condorcet-style election, for voters who expressed
@@ -831,4 +831,4 @@ again.
 
 [^12]: (Source: [xkcd](https://xkcd.com/1844/))
 
-    []{.image}
+    ![](images/e91519b0ec0dde0046d26fe75d73530ac4ee125e.png)
