@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="68.76pt" version="1.1" viewBox="0 0 500.353125 68.76" width="500.353125pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 68.76 
+L 500.353125 68.76 
+L 500.353125 0 
+L 0 0 
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 46.753125 61.56 
+L 493.153125 61.56 
+L 493.153125 7.2 
+L 46.753125 7.2 
+z
+" style="fill:none;"/>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#p229053442e)" d="M 46.753125 22.025455 
+L 327.368715 22.025455 
+L 327.368715 9.670909 
+L 46.753125 9.670909 
+z
+" style="fill:#c55faf;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#p229053442e)" d="M 46.753125 34.38 
+L 225.130853 34.38 
+L 225.130853 22.025455 
+L 46.753125 22.025455 
+z
+" style="fill:#e93834;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_5">
+    <path clip-path="url(#p229053442e)" d="M 46.753125 46.734545 
+L 217.674283 46.734545 
+L 217.674283 34.38 
+L 46.753125 34.38 
+z
+" style="fill:#727ecf;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_6">
+    <path clip-path="url(#p229053442e)" d="M 46.753125 59.089091 
+L 154.956243 59.089091 
+L 154.956243 46.734545 
+L 46.753125 46.734545 
+z
+" style="fill:#d67c00;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="text_1">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 43.253125, 19.338026)" x="43.253125" y="19.338026">Kiss</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="text_2">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 43.253125, 31.692571)" x="43.253125" y="31.692571">Wright</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="text_3">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 43.253125, 44.047116)" x="43.253125" y="44.047116">Montroll</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="text_4">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 43.253125, 56.401662)" x="43.253125" y="56.401662">Smith</text>
+     </g>
+    </g>
+   </g>
+   <g id="text_5">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 329.228715, 19.554545)" x="329.228715" y="19.554545">38%</text>
+   </g>
+   <g id="text_6">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 226.990853, 31.909091)" x="226.990853" y="31.909091">24%</text>
+   </g>
+   <g id="text_7">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 219.534283, 44.263636)" x="219.534283" y="44.263636">23%</text>
+   </g>
+   <g id="text_8">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 156.816243, 56.618182)" x="156.816243" y="56.618182">15%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p229053442e">
+   <rect height="54.36" width="446.4" x="46.753125" y="7.2"/>
+  </clipPath>
+ </defs>
+</svg>

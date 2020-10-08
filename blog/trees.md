@@ -255,9 +255,10 @@ americana*</abbr>\
 platanoides*</abbr>](images/6196b1b119d65bcb809f1bcadd3d744c826d52cf.svg){#fig:neighmapdots}
 
 Here we see some interesting patterns. The unidentified maples so
-popular around MIT almost exclusively line the Charles River embankment.
-The white ashes (<abbr title="white ash">*Fraxinus americana*</abbr>) in
-the Cambridge Highlands are concentrated in the [Lusitania
+popular around MIT almost exclusively line the Charles River
+embankment.[^4] The white ashes (<abbr title="white ash">*Fraxinus
+americana*</abbr>) in the Cambridge Highlands are concentrated in the
+[Lusitania
 Woods](https://www.google.com/maps/place/Lusitania+Field/@42.3879328,-71.1463062,17z)
 by Fresh Pond.
 
@@ -352,7 +353,7 @@ on my local streets.
   *Juglans*          walnut                Juglandaceae              19
   *Juniperus*        juniper               Cupressaceae              104
   *Koelreuteria*     golden rain tree      Sapindaceae               106
-  *Laburnum*         golden rain           Fabaceae                  1
+  *Laburnum*         golden rain tree      Fabaceae                  1
   *Larix*            larch                 Pinaceae                  17
   *Liquidambar*      sweetgum              Altingiaceae              377
   *Liriodendron*     tuliptree             Magnoliaceae              177
@@ -416,3 +417,6 @@ on my local streets.
     [2](https://commons.wikimedia.org/wiki/File:Illustration_Castanea_sativa0.jpg)).
 
     ![](images/ca21e35e6c5bc350acb32186f4e14916d5096c2e.jpg)
+
+[^4]: Although unidentified, we can presume based on the placement that
+    these are of the same species.

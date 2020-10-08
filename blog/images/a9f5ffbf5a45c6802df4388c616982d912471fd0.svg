@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="41.58pt" version="1.1" viewBox="0 0 500.353125 41.58" width="500.353125pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 41.58 
+L 500.353125 41.58 
+L 500.353125 0 
+L 0 0 
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 46.753125 34.38 
+L 493.153125 34.38 
+L 493.153125 7.2 
+L 46.753125 7.2 
+z
+" style="fill:none;"/>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#pab03c8af2c)" d="M 46.753125 20.79 
+L 327.368715 20.79 
+L 327.368715 8.435455 
+L 46.753125 8.435455 
+z
+" style="fill:#c55faf;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#pab03c8af2c)" d="M 46.753125 33.144545 
+L 217.674283 33.144545 
+L 217.674283 20.79 
+L 46.753125 20.79 
+z
+" style="fill:#727ecf;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_5">
+    <path clip-path="url(#pab03c8af2c)" d="M 327.368715 20.79 
+L 361.91749 20.79 
+L 361.91749 8.435455 
+L 327.368715 8.435455 
+z
+" style="fill:#d67c00;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_6">
+    <path clip-path="url(#pab03c8af2c)" d="M 217.674283 33.144545 
+L 267.384751 33.144545 
+L 267.384751 20.79 
+L 217.674283 20.79 
+z
+" style="fill:#d67c00;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_7">
+    <path clip-path="url(#pab03c8af2c)" d="M 361.91749 20.79 
+L 361.91749 20.79 
+L 361.91749 8.435455 
+L 361.91749 8.435455 
+z
+" style="fill:#e93834;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_8">
+    <path clip-path="url(#pab03c8af2c)" d="M 267.384751 33.144545 
+L 368.545553 33.144545 
+L 368.545553 20.79 
+L 267.384751 20.79 
+z
+" style="fill:#e93834;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="text_1">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 43.253125, 18.102571)" x="43.253125" y="18.102571">Kiss</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="text_2">
+      <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 43.253125, 30.457116)" x="43.253125" y="30.457116">Montroll</text>
+     </g>
+    </g>
+   </g>
+   <g id="text_3">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 363.77749, 18.319091)" x="363.77749" y="18.319091">49%</text>
+   </g>
+   <g id="text_4">
+    <text style="fill:#808080;font-family:Linux Libertine O;font-size:10px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 370.405553, 30.673636)" x="370.405553" y="30.673636">51%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pab03c8af2c">
+   <rect height="27.18" width="446.4" x="46.753125" y="7.2"/>
+  </clipPath>
+ </defs>
+</svg>

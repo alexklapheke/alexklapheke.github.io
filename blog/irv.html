@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="generator" content="pandoc" />
+		<meta name="author" content="Alexander Klapheke">
+		<meta name="robots" content="index,follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="last-modified" content="">
+
+		<link rel="canonical" href="https://alexklapheke.github.io/blog/irv.html">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+		</style>
+		<link rel="stylesheet" href="../include/style.css" />
+		<link rel="stylesheet" href="../include/blog.css" />
+		<!--[if lt IE 9]>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+		<![endif]-->
+		<script src="../include/sidenotes.js" charset="utf-8"></script>
+		<script src="../include/sorttable.js" charset="utf-8"></script>
+
+		<title>Instant runoff voting</title>
+	</head>
+	<body>
+		<header>
+			<!-- http://microformats.org/wiki/hcard -->
+			<div class="author vcard">
+			<h1>
+				<a href="https://alexklapheke.github.io">
+				<span class="given-name">Alexander</span>
+				<span class="family-name"><abbr class="ipa" lang="x-ipa" title="[kl&#601;&#39;pik]">Klapheke</abbr></span>
+				</a>
+			</h1>
+
+				<div id="contact">
+					<!-- http://hcard.geekhood.net/encode/ -->
+					<a
+					class='email
+					href="mailto:x@y"
+					'
+					href
+					=	'
+					&#x20;&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;%20&#x61;&#x6c;&#x25;6&#x35;%7&#x38;&#x25;&#54;&#98;la&#x25;7&#x30;h&#37;6&#x35;&#x25;&#x36;&#x62;&#37;&#x36;&#x35;&#37;&#x34;0&#x67;&#109;&#97;%&#x36;9l&#x25;&#50;&#101;%&#x36;&#51;&#111;&#x6d;&#x3f;
+					'>&#97;&#x6c;&#x65;&#120;&#x6B;lap&#x68;&#x65;k<!--
+					mailto:abuse@hotmail.com
+					</a>
+					-->&shy;&#x65;&#64;&#103;&#109;&#x61;i&#108;&#x2E;&#99;&#x6f;&#109;</a>
+					<br>
+					<a href="../0xBCB7A837.asc">Public key</a> <span class="grayed">(<abbr title="F1BD E18B 7525 95A9 7BC4 FB04 A349 9FF5 2DF0 94AB">fingerprint</abbr>)</span>
+
+					<br><br>
+
+					<a class="social" href="https://github.com/alexklapheke">GitHub</a> <span class="bullet">&bull;</span>
+					<a class="social" href="https://linkedin.com/in/alexander-klapheke">LinkedIn</a> <span class="bullet">&bull;</span>
+					<a class="social" href="../AlexanderKlapheke-Resume.pdf">R&eacute;sum&eacute;</a>
+				</div>
+			</div>
+
+			<p id="blurb">I&rsquo;m a data scientist and self-taught coder (Python, R, Haskell) with a background in linguistics and math and over 10 years&rsquo; experience explaining technical concepts to laypeople.</p>
+
+		</header>
+		<article class="hentry">
+		<div id="titleblock">
+		<h1 class="entry-title">Instant runoff voting</h1>
+		<p>
+			<time datetime="2020-10-08T14:18:52-0400" class="published">Thursday, October 8, 2020</time>
+			<span class="bullet">&bull;</span>
+			<span class="wordcount">5,168 words</span>
+			<span class="bullet">&bull;</span>
+			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
+			<span class="bullet">&bull;</span>
+			<a class="source" href="https://raw.githubusercontent.com/alexklapheke/alexklapheke.github.io/master/blog/irv.md">View source</a>
+		</p>
+		</div>
+		<nav id="TOC">
+<ul>
+<li><a href="#instant-runoff-voting"><span class="toc-section-number">1</span> Instant Runoff Voting</a><ul>
+<li><a href="#pros"><span class="toc-section-number">1.1</span> Pros</a><ul>
+<li><a href="#nuanced-positions"><span class="toc-section-number">1.1.1</span> Nuanced positions</a></li>
+<li><a href="#immunity-to-vote-splitting"><span class="toc-section-number">1.1.2</span> Immunity to vote-splitting</a></li>
+<li><a href="#guaranteed-majority-winner"><span class="toc-section-number">1.1.3</span> Guaranteed majority winner</a></li>
+<li><a href="#more-positive-campaigning"><span class="toc-section-number">1.1.4</span> More positive campaigning</a></li>
+</ul></li>
+<li><a href="#cons"><span class="toc-section-number">1.2</span> Cons</a><ul>
+<li><a href="#complexity-and-cost"><span class="toc-section-number">1.2.1</span> Complexity and cost</a></li>
+<li><a href="#unequal-representation"><span class="toc-section-number">1.2.2</span> Unequal representation</a></li>
+<li><a href="#non-additivity"><span class="toc-section-number">1.2.3</span> Non-additivity</a></li>
+<li><a href="#paradoxical-results"><span class="toc-section-number">1.2.4</span> Paradoxical results</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#burlington-2009"><span class="toc-section-number">2</span> Burlington, 2009</a><ul>
+<li><a href="#meta-concerns"><span class="toc-section-number">2.1</span> Meta concerns</a></li>
+<li><a href="#instant-runoff-results"><span class="toc-section-number">2.2</span> Instant runoff results</a></li>
+<li><a href="#borda-count-results"><span class="toc-section-number">2.3</span> Borda count results</a></li>
+<li><a href="#condorcet-results"><span class="toc-section-number">2.4</span> Condorcet results</a></li>
+<li><a href="#summary-lessons"><span class="toc-section-number">2.5</span> Summary &amp; lessons</a></li>
+</ul></li>
+<li><a href="#probability-of-paradoxical-results"><span class="toc-section-number">3</span> Probability of paradoxical results</a></li>
+<li><a href="#propensity-to-a-two-party-system"><span class="toc-section-number">4</span> Propensity to a two-party system</a></li>
+<li><a href="#conclusion"><span class="toc-section-number">5</span> Conclusion</a></li>
+</ul>
+		</nav>
+			<div class="entry-content">
+<style>
+/* .dem { background: #727ecf; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; }
+.rep { background: #e93834; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; }
+.ind { background: #d67c00; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; }
+.prg { background: #c55faf; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; }
+.grn { background: #76a254; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; }
+.wtn { background: #666666; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; } */
+.dem { text-decoration: underline 2px #727ecf; }
+.rep { text-decoration: underline 2px #e93834; }
+.ind { text-decoration: underline 2px #d67c00; }
+.prg { text-decoration: underline 2px #c55faf; }
+.grn { text-decoration: underline 2px #76a254; }
+.wtn { text-decoration: underline 2px #666666; }
+</style>
+<div class="epigraph">
+<p>The sciences have likewise taught us to ascertain the several degrees of certainty to which we may hope to attain; [&#8230;] what are the advantages or disadvantages of various forms of election, and modes of decision dependant on the plurality of voices; the different degrees of probability which may result from such proceedings [&#8230;]. &#8212;Marquis de Condorcet</p>
+</div>
+<div class="epigraph">
+<p>I consider it completely unimportant who in the party will vote, or how; but what is extraordinarily important is this&#8212;who will count the votes, and how. &#8212;Joseph Stalin</p>
+</div>
+<p>With instant-runoff voting <a href="https://www.bostonglobe.com/2020/07/22/metro/should-person-with-most-number-one-votes-always-win/">on the ballot</a> in Massachusetts this year, I&#8217;ve been reading about the math behind voting systems. As a <a href="https://plato.stanford.edu/entries/voting-methods/">theoretical problem</a>, the literature is rife with fascinating results and paradoxes. More pertinent, though, is what effect this measure would have on the actual political process in Massachusetts. It would be a significant change to the electoral process, so it&#8217;s worth using data to weigh the pros and cons. I don&#8217;t presume to tell anyone how to vote on 2; only to collect some of my own thoughts on the matter.</p>
+<p>Instant runoff, like all voting systems, is sometimes derided as electing the &#8220;wrong&#8221; candidate based on the voters&#8217; expressed preferences. It&#8217;s important to remember that, in the absence of either perfect unanimity, there is no single correct way to generalize a set of individual preferences into a group preference; different voting methods simply represent approximations to this, and, though some are better than others, <a href="https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem">none</a> <a href="https://en.wikipedia.org/wiki/Gibbard%E2%80%93Satterthwaite_theorem">is</a> <a href="https://en.wikipedia.org/wiki/Comparison_of_electoral_systems#Compliance_of_selected_single-winner_methods">perfect</a>.</p>
+<section id="instant-runoff-voting" class="level1">
+<h1><span class="header-section-number">1</span> Instant Runoff Voting</h1>
+<p>Broadly speaking, there are two kinds of voting system. In <strong>ordinal</strong> systems, voters express relative preferences, usually by ranking candidates. Ordinal methods include <a href="https://en.wikipedia.org/wiki/Instant-runoff_voting">instant runoff voting</a>, <a href="https://en.wikipedia.org/wiki/Borda_count">Borda count</a>, and the various <a href="https://en.wikipedia.org/wiki/Condorcet_method">Condorcet methods</a>. The most common system, and perhaps the simplest, <a href="https://en.wikipedia.org/wiki/Plurality_voting">plurality voting</a>,<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> is a kind of degenerate ordinal system that only looks at (and thus only asks) voters&#8217; first choices. In <strong>cardinal</strong> systems, voters express absolute preferences, giving each individual candidate a numeric score in the case of <a href="https://en.wikipedia.org/wiki/Score_voting">range voting</a>, or a binary yes or no in the case of <a href="https://en.wikipedia.org/wiki/Approval_voting">approval voting</a>.</p>
+<p>Instant runoff (hereafter IRV) was developed in the 1870s by William Ware, an architect who also designed Harvard&#8217;s beautiful Gothic-revival <a href="https://sites.fas.harvard.edu/~memhall/img/building.jpg">Memorial Hall</a>. The usual explanation goes like this:<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> voters rank candidates from their first choice to their last. If a candidate gets a majority (more than 50%) of first-choice votes, that candidate wins. Otherwise, the candidate with the fewest first-choice votes is eliminated, and ballots for that candidate <em>run off</em> to those voters&#8217; next-choice candidates. Then the ballots are tallied again, and the process repeats, with last-place candidates eliminated, until one candidate has a majority.</p>
+<p>There&#8217;s an equivalent<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> formulation that may help to illustrate things. Imagine you&#8217;re running a traditional election, in which each person casts a single vote, but in which the winner must get a majority. If this doesn&#8217;t happen, there is a second election: you throw away ballots of the voters who voted for the least popular candidate, call those voters back, and force them to vote for one of the remaining candidates. You recount all the ballots and see if anyone has more than 50%. If not, you remove the last-place candidate from the ballots, call back all voters, and have them vote <em>again</em>. Repeat until there is a winner (or, heaven forfend, a tie). Of course, asking voters for their fully ranked choices at once means you don&#8217;t have to have multiple successive elections&#8212;that&#8217;s why instant runoff is <em>instant</em>.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p>Much support for IRV comes from dedicated advocacy nonprofits such as <a href="https://www.fairvote.org/">FairVote</a>, and from third parties vying for a fighting chance at the polls. Opposition often comes from the Democratic and Republican Parties, which allows supporters to paint IRV as a grassroots, anti-system movement. These groups have put forward various arguments for and against IRV.</p>
+<section id="pros" class="level2">
+<h2><span class="header-section-number">1.1</span> Pros</h2>
+<section id="nuanced-positions" class="level3">
+<h3><span class="header-section-number">1.1.1</span> Nuanced positions</h3>
+<p>The clearest benefit of IRV&#8212;and most systems besides plurality&#8212;is allowing voters to express nuanced positions, rather than forcing them to throw all their weight behind a single candidate. Given this information, though, it is less clear how to sensibly cohere it into a single choice; hence the existence of multiple competing voting systems.</p>
+</section>
+<section id="immunity-to-vote-splitting" class="level3">
+<h3><span class="header-section-number">1.1.2</span> Immunity to vote-splitting</h3>
+<p>The best-advertised benefit of IRV is that it prevents minor third-party candidates from &#8220;<a href="https://en.wikipedia.org/wiki/Vote_splitting#Spoiler_effect">spoiling</a>&#8221; the vote for their ideological peers&#8212;the famous examples are (for liberals) Nader taking votes from Gore in 2000, and (for conservatives) Perot taking votes from Bush in 1992. By way of example, fig.&#160;1 shows the results of an election between the Purple Party and the Yellow party.</p>
+<figure>
+<object data="images/14a4a663b03307ae34595dee74f99eac25b0dc73.svg" alt="Figure 1: Round 1: First-choice votes are tallied" id="fig:fake1" ><img src="images/14a4a663b03307ae34595dee74f99eac25b0dc73.svg" alt="Figure 1: Round 1: First-choice votes are tallied" id="fig:fake1" /></object><figcaption>Figure 1: <strong>Round 1:</strong> First-choice votes are tallied</figcaption>
+</figure>
+<p>Two candidates, B and C, ran under the Yellow platform, splitting the vote. In a plurality election, the Purple candidate A would win. Under IRV, though, Purple has failed to attain a majority, so there is a second round (fig.&#160;2).</p>
+<figure>
+<object data="images/40c4fd48291d76b3dd160898e67cddbac9152c72.svg" alt="Figure 2: Round 2: With no majority, the last-place candidate&#8217;s votes are run off" id="fig:fake2" ><img src="images/40c4fd48291d76b3dd160898e67cddbac9152c72.svg" alt="Figure 2: Round 2: With no majority, the last-place candidate&#8217;s votes are run off" id="fig:fake2" /></object><figcaption>Figure 2: <strong>Round 2:</strong> With no majority, the last-place candidate&#8217;s votes are run off</figcaption>
+</figure>
+<p>The votes of the least popular candidate, C, are reallocated to B, those voters&#8217; second choice, and B wins with a majority.</p>
+<p>Of course, in national elections, third parties rarely manage numbers like C did, because would-be C voters vote <a href="https://en.wikipedia.org/wiki/Tactical_voting">tactically</a> (i.e., against their preferences) for B to avoid an A victory. I don&#8217;t know how many major-party voters would truly have preferred a third-party candidate, but while <a href="https://news.gallup.com/poll/244094/majority-say-third-party-needed.aspx">more than half</a> of Americans think that the two major parties &#8220;do such a poor job that a third major party is needed&#8221;, fewer than <a href="https://fivethirtyeight.com/features/america-isnt-really-set-up-for-third-party-presidential-bids/">ten percent</a> of voters typically vote third-party. This is pretty damning for plurality, but not the whole story; as we will see, there are other kinds of spoilage under IRV.</p>
+</section>
+<section id="guaranteed-majority-winner" class="level3">
+<h3><span class="header-section-number">1.1.3</span> Guaranteed majority winner</h3>
+<p>Proponents of IRV often point to the majority criterion as evidence that IRV elects a &#8220;majority winner&#8221;. This is technically true, but a bit misleading, since the round in which the voters express a majority opinion may contain only a small subset of the original candidates.</p>
+</section>
+<section id="more-positive-campaigning" class="level3">
+<h3><span class="header-section-number">1.1.4</span> More positive campaigning</h3>
+<p>Proponents of IRV often claim that it reduces negative campaigning, since candidates must expand their campaigns to try to capture second-choice votes from outside their bases. The claim, <em>prima facie</em>, seems pretty fishy&#8212;after all, candidates are still jockeying for a single seat, and even in Cambridge, where the nine city councillors are chosen by a variant of IRV, candidates ask for a <a href="https://centersandsquares.com/wp-content/uploads/2013/10/Cambridge-Election-Signs.jpg">#1 vote</a>&#8212;never for #2. However, <span class="citation" data-cites="donovan2016campaign">Todd Donovan, Caroline Tolbert, and Kellen Gracey<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></span> surveyed six cities by phone in 2013, and found that voters in the three cities using IRV perceived less negativity and criticism in political campaigning than in the control cities. Of course, this doesn&#8217;t prove causation: the authors themselves note that &#8220;it may be that cities with a more civil and less adversarial political context were somehow more likely to adopt preferential voting.&#8221;<span class="citation" data-cites="donovan2016campaign"><a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></span> It would be most interesting to see voters&#8217; perceptions within a city before and after IRV is enacted. Nonetheless, this is encouraging for voters who are tired of jejune smear campaigns.</p>
+</section>
+</section>
+<section id="cons" class="level2">
+<h2><span class="header-section-number">1.2</span> Cons</h2>
+<section id="complexity-and-cost" class="level3">
+<h3><span class="header-section-number">1.2.1</span> Complexity and cost</h3>
+<p>A common bugbear is that IRV is too complex in some way&#8212;this will turn out to be overblown. A related, and serious, concern is the need to replace perfectly good voting machines at significant cost to the taxpayer. Even educating voters could be expensive: mailing informational pamphlets to <a href="https://www.census.gov/quickfacts/MA">2.6 million households</a> at a <a href="https://www.themailshark.com/resources/blog/bulk-mail-postage-rates/">19&#162; bulk rate</a> would cost nearly half a million dollars.</p>
+<p>Of course, complaints about implementing the algorithm itself are patently unfounded&#8212;it can be done in just a few lines of code, and has linear complexity in both the number of voters and the number of candidates.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">import</span> <span class="dt">Data.List</span></a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">data</span> <span class="dt">Candidate</span> <span class="ot">=</span> <span class="dt">Kiss</span> <span class="op">|</span> <span class="dt">Montroll</span> <span class="op">|</span> <span class="dt">Simpson</span> <span class="op">|</span> <span class="dt">Smith</span> <span class="op">|</span> <span class="dt">Wright</span> <span class="kw">deriving</span> (<span class="dt">Show</span>, <span class="dt">Eq</span>)</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="kw">type</span> <span class="dt">Ballot</span> <span class="ot">=</span> [<span class="dt">Candidate</span>]</a>
+<a class="sourceLine" id="cb1-5" title="5"></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="ot">irv ::</span> [<span class="dt">Candidate</span>] <span class="ot">-&gt;</span> [<span class="dt">Ballot</span>] <span class="ot">-&gt;</span> <span class="dt">Candidate</span></a>
+<a class="sourceLine" id="cb1-7" title="7">irv candidates ballots</a>
+<a class="sourceLine" id="cb1-8" title="8">    <span class="op">|</span> <span class="fu">any</span> (<span class="op">&gt;</span> <span class="fl">0.5</span>) shares <span class="ot">=</span> <span class="fu">last</span> rankings <span class="co">-- If we have a majority, return the winner</span></a>
+<a class="sourceLine" id="cb1-9" title="9">    <span class="op">|</span> <span class="fu">otherwise</span> <span class="ot">=</span> irv candidates&#39; ballots&#39; <span class="co">-- Otherwise, rerun with new parameters</span></a>
+<a class="sourceLine" id="cb1-10" title="10">      <span class="kw">where</span></a>
+<a class="sourceLine" id="cb1-11" title="11">        <span class="co">-- Get vote share of each remaining candidate</span></a>
+<a class="sourceLine" id="cb1-12" title="12">        shares <span class="ot">=</span> <span class="fu">map</span> (\c <span class="ot">-&gt;</span> (genericLength <span class="op">.</span> <span class="fu">filter</span> (<span class="op">==</span> c) <span class="op">$</span> <span class="fu">map</span> <span class="fu">head</span> ballots) <span class="op">/</span></a>
+<a class="sourceLine" id="cb1-13" title="13">                            (genericLength ballots)) candidates</a>
+<a class="sourceLine" id="cb1-14" title="14"></a>
+<a class="sourceLine" id="cb1-15" title="15">        <span class="co">-- Rank candidates in (ascending) order of share</span></a>
+<a class="sourceLine" id="cb1-16" title="16">        rankings <span class="ot">=</span> <span class="fu">map</span> <span class="fu">fst</span> <span class="op">.</span> sortOn <span class="fu">snd</span> <span class="op">$</span> <span class="fu">zip</span> candidates shares</a>
+<a class="sourceLine" id="cb1-17" title="17"></a>
+<a class="sourceLine" id="cb1-18" title="18">        <span class="co">-- Remove eliminated candidates and exhausted ballots </span></a>
+<a class="sourceLine" id="cb1-19" title="19">        candidates&#39; <span class="ot">=</span> candidates \\ [<span class="fu">head</span> rankings]</a>
+<a class="sourceLine" id="cb1-20" title="20">        ballots&#39; <span class="ot">=</span> <span class="fu">filter</span> (<span class="fu">not</span> <span class="op">.</span> <span class="fu">null</span>) <span class="op">$</span> <span class="fu">map</span> (<span class="fu">dropWhile</span> (<span class="ot">`notElem`</span> candidates&#39;)) ballots</a></code></pre></div>
+</section>
+<section id="unequal-representation" class="level3">
+<h3><span class="header-section-number">1.2.2</span> Unequal representation</h3>
+<p>Another complaint about IRV is that it doesn&#8217;t treat all votes equally. Kathy Dopp <a href="http://electionmathematics.org/ucvAnalysis/US/RCV-IRV/InstantRunoffVotingFlaws.pdf#page=10">writes</a> that:</p>
+<blockquote>
+<p>Some voters&#8217; second choices are considered in a timely fashion when their second choice candidates are still in the contest. Less lucky voters&#8217; [sic] have their second choices considered only after it is too late to help that candidate to win. Some of the most unlucky voters only have their first choice considered, even though their first choice candidate loses.</p>
+</blockquote>
+<p>and an <a href="https://www.bostonglobe.com/2020/09/20/opinion/why-ranked-choice-is-wrong-choice/">anti-IRV op-ed</a> in the <em>Globe</em> posits that:</p>
+<blockquote>
+<p>[IRV] thus gives some voters multiple bites of the election apple. At the same time, it effectively disenfranchises other voters&#8212;those who don&#8217;t rank enough candidates for their ballot to last through multiple rounds of tabulation.</p>
+</blockquote>
+<p>This seems to rest on a very strange notion of what it means for two ballots to be equal. The usual, and I think correct, rejoinder is that some voters have their first choice considered <em>multiple times</em>, while for others consideration runs down their ballot as their favorites are successively struck off. A ballot expressing <em>n</em> preferences is guaranteed to be counted in the first <em>n</em> rounds, and one expressing all preferences will always be in contention. It is the same as there being <em>n</em> consecutive elections with fewer and fewer options. Since in reality these &#8220;elections&#8221; take place at the same time, it costs voters nothing to fill in one extra bubble; if they don&#8217;t, presumably they simply don&#8217;t care.</p>
+</section>
+<section id="non-additivity" class="level3">
+<h3><span class="header-section-number">1.2.3</span> Non-additivity</h3>
+<p>In an IRV election, every ballot needs to be tallied to know whether a runoff is necessary. This means that there is no meaningful notion of a subtotal in IRV. Unlike in a plurality election, the collection of ballots from a certain district don&#8217;t add to anything, so one can&#8217;t really say who the district &#8220;voted for&#8221;. This is mostly a curiosity&#8212;its only real effect is precluding early reporting, which at any rate is <a href="https://www.nytimes.com/2016/09/11/us/politics/election-results-voting.html">notoriously unreliable</a> and possibly even detrimental, having significant effects on voter turnout.<span class="citation" data-cites="jackson1983election"><a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></span></p>
+</section>
+<section id="paradoxical-results" class="level3">
+<h3><span class="header-section-number">1.2.4</span> Paradoxical results</h3>
+<p>Much more serious are IRV&#8217;s violations of expected behavior. IRV can lead to some <a href="http://zesty.ca/voting/sim/">very strange behavior</a>, an in particular to violations of <a href="https://en.wikipedia.org/wiki/Monotonicity_criterion">monotonicity</a>, by which tactical voting by organized blocs is made possible. To see how, let&#8217;s look at the strange case of Burlington.</p>
+</section>
+</section>
+</section>
+<section id="burlington-2009" class="level1">
+<h1><span class="header-section-number">2</span> Burlington, 2009</h1>
+<p>The <a href="https://en.wikipedia.org/wiki/2009_Burlington_mayoral_election">2009 mayoral election</a> in Burlington, Vermont unintentionally became a case study in the efficacy of IRV&#8212;and a parable for anti-IRV crusaders after the controversial results led the system to be scrapped the following year.</p>
+<section id="meta-concerns" class="level2">
+<h2><span class="header-section-number">2.1</span> Meta concerns</h2>
+<p>Some commentators were concerned about the complexity of IRV&#8212;voters would either fail to understand the new system, or simply be unwilling to express preferences. The latter concern was not borne out; most voters expressed preferences, with interest predictably dropping off by an average of 25% with each successive choice after the first (fig.&#160;3).</p>
+<figure>
+<object data="images/1c5d667c159d61d876889b8b0e513cd9f6944149.svg" alt="Figure 3: Percentage of valid ballots that specified an nth choice (the sixth choice was to allow for write-ins)." id="fig:choices" ><img src="images/1c5d667c159d61d876889b8b0e513cd9f6944149.svg" alt="Figure 3: Percentage of valid ballots that specified an nth choice (the sixth choice was to allow for write-ins)." id="fig:choices" /></object><figcaption>Figure 3: Percentage of valid ballots that specified an nth choice (the sixth choice was to allow for write-ins).</figcaption>
+</figure>
+<p>Furthermore, the introduction of IRV in 2005 did not depress turnout; as fig.&#160;4 shows, it increased even as the population stagnated.</p>
+<figure>
+<object data="images/30f1d88f9ba96823b8de77accef939c54a6305c4.svg" alt="Figure 4: Turnout for triennial Burlington mayoral races. Population estimates from WolframAlpha.  &#160;City population est. &#160;Votes cast for mayor &#160;IRV in use" id="fig:turnout" ><img src="images/30f1d88f9ba96823b8de77accef939c54a6305c4.svg" alt="Figure 4: Turnout for triennial Burlington mayoral races. Population estimates from WolframAlpha.  &#160;City population est. &#160;Votes cast for mayor &#160;IRV in use" id="fig:turnout" /></object><figcaption>Figure 4: Turnout for triennial Burlington mayoral races. Population estimates from WolframAlpha.<br />
+<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#1b9e77" stroke="none" /></svg>&#160;City population est.<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#d95f02" stroke="none" /></svg>&#160;Votes cast for mayor<br />
+<svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#E0E0E0" stroke="none" /></svg>&#160;IRV in use</figcaption>
+</figure>
+<p>Some also expressed concern that introducing ranked choices would render ballots dauntingly complex for some voters. The complexity of a ballot, though, depends much more on the way it presents options than on the options themselves. A well-designed ballot works with voters; a poorly-designed ballot stymies them.</p>
+<p>A Florida ballot from the 2000 presidential election in Florida is shown in fig.&#160;5. While Palm Beach&#8217;s infamous <a href="https://commons.wikimedia.org/wiki/File:Butterfly_Ballot,_Florida_2000_(large).jpg">&#8220;butterfly ballots&#8221;</a> dominated the news cycles, these ballots from Duval County are arguably worse&#8212;the <em>New York Times</em> <a href="https://www.nytimes.com/images/2001/11/12/politics/recount/results/design-v4.html">reported</a> that the two-column layout made voters were <em>twelve</em> times as likely as other counties to accidentally vote for two candidates.</p>
+<figure>
+<img src="images/7915e51f424a9a8a4bdaf1bf6014907b13924269.gif" alt="Figure 5: Ballot from the 2000 Duval County, Florida presidential election (source)" id="fig:florida" width="400" /><figcaption>Figure 5: Ballot from the 2000 Duval County, Florida presidential election (<a href="https://www.nytimes.com/images/2001/11/12/politics/recount/index_BALLOT_fran.html">source</a>)</figcaption>
+</figure>
+<p>Other factors besides the columnar layout contribute to the poor design. The incredible preponderance of horizontal lines makes it impossible to divide the ballot into logical sections. They separate the presidential candidates from each other&#8212;though not the others&#8212;and offset the highest-level titles (&#8220;Congressional&#8221;) above and below. In addition, the party labels for the presidential candidates are the same size and style as the smaller titles (&#8220;United States Senator&#8221;). It is easy to see how a voter could mistake the presidential candidates in the middle column for those in another race entirely.</p>
+<p>By way of contrast, a ballot from the Burlington election is shown in fig.&#160;6.</p>
+<figure>
+<img src="images/011adc1e85aa54f466c119df20bab4231617051e.png" alt="Figure 6: Ballot from the 2009 Burlington mayoral election" id="fig:vermont" width="400" /><figcaption>Figure 6: Ballot from the 2009 Burlington mayoral election</figcaption>
+</figure>
+<p>This ballot admittedly has fewer races to collate, but still has to collect rank information. It does so elegantly with a tabular display, like what Tufte calls a <a href="https://en.wikipedia.org/wiki/Small_multiple"><em>small multiple</em></a>:<span class="citation" data-cites="tufte1990envisioning"><a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></span></p>
+<blockquote>
+<p>An economy of perception results; once viewers decode and comprehend the design for one slice of data, they have familiar access to data in all the other slices. As our eye moves from one image to the next, this constancy of design allows viewers to focus on changes in information rather than changes in graphical composition. A steady canvas makes for a clearer picture.</p>
+</blockquote>
+<p>Indeed, unlike Duval County, which saw fully <a href="https://www.salon.com/2000/11/13/duval/">nine percent</a> of its ballots invalidated in 2000, Burlington saw only four ballots incorrectly filled out&#8212;less than a twentieth of a percent. Exit polls from the 2006 election further showed that only <a href="https://www.uvm.edu/~vlrs/IRV.pdf#page=12">8.6%</a> of voters found the ballot confusing.</p>
+<p>Thus, concerns that IRV was too complicated seem to have been unfounded&#8212;though not entirely unfair. Voting systems can be arbitrarily complex, particularly ones that elect multiple winners, and it would not be reasonable feed citizens&#8217; votes into what may as well be a black-box algorithm and expect them to placidly accept the results. Whatever the merits of a voting system, it should also be simple enough for a typical eighteen-year-old to understand, and IRV seems to fit this bill.</p>
+</section>
+<section id="instant-runoff-results" class="level2">
+<h2><span class="header-section-number">2.2</span> Instant runoff results</h2>
+<p>After a successfully executed election, the votes were tallied.<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> The candidates were <span class="prg">Bob Kiss</span> (Progressive, incumbent), <span class="dem">Andy Montroll</span> (Democrat), <span class="grn">James Simpson</span> (Green). <span class="ind">Dan Smith</span> (Independent), and <span class="rep">Kurt Wright</span> (Republican). Had this been an ordinary plurality election, only voters&#8217; first choices (fig.&#160;7) would have been considered. The winner, with less than a third of the votes, would be the conservative <span class="rep">Wright</span>, with the liberal vote <a href="https://en.wikipedia.org/wiki/Vote_splitting">split</a> between <span class="dem">Montroll</span> and <span class="prg">Kiss</span>. In a two-round system, as used by France, <span class="prg">Kiss</span> and <span class="rep">Wright</span> would have appeared on a second ballot, and&#8212;assuming the same relative preferences as the first time&#8212;<span class="prg">Kiss</span> would have won by four points.</p>
+<figure>
+<object data="images/0703039965203dfcc0548fe1699f2563e3b8b737.svg" alt="Figure 7: Round 1: Proportion of first-choice votes. In a plurality election, this would be the sole calculation." id="fig:round1" ><img src="images/0703039965203dfcc0548fe1699f2563e3b8b737.svg" alt="Figure 7: Round 1: Proportion of first-choice votes. In a plurality election, this would be the sole calculation." id="fig:round1" /></object><figcaption>Figure 7: <strong>Round 1:</strong> Proportion of first-choice votes. In a plurality election, this would be the sole calculation.</figcaption>
+</figure>
+<p>Of course, IRV requires a majority, which, even after eliminating <span class="grn">Simpson</span> and the write-ins, we clearly do not yet have. The next-least-popular candidate is <span class="ind">Smith</span>&#8212;his votes go more or less evenly to the remaining three.</p>
+<figure>
+<object data="images/3f1f6599a3ec33b104f8afd9ffc09cbd1093fd5c.svg" alt="Figure 8: Round 2: Proportion of first-choice votes after first runoff. Simpson and write-in votes are not shown as they do not affect the totals." id="fig:round2" ><img src="images/3f1f6599a3ec33b104f8afd9ffc09cbd1093fd5c.svg" alt="Figure 8: Round 2: Proportion of first-choice votes after first runoff. Simpson and write-in votes are not shown as they do not affect the totals." id="fig:round2" /></object><figcaption>Figure 8: <strong>Round 2:</strong> Proportion of first-choice votes after first runoff. Simpson and write-in votes are not shown as they do not affect the totals.</figcaption>
+</figure>
+<p>Still no majority. Next to go is <span class="dem">Montroll</span>. His votes, and the votes of the <span class="ind">Smith</span> voters reallocated to him, are reallocated in round 3.</p>
+<figure>
+<object data="images/502f9f6c2d0cd36f85c07198c9e1734590009d14.svg" alt="Figure 9: Round 3: Proportion of first-choice votes after second runoff" id="fig:round3" ><img src="images/502f9f6c2d0cd36f85c07198c9e1734590009d14.svg" alt="Figure 9: Round 3: Proportion of first-choice votes after second runoff" id="fig:round3" /></object><figcaption>Figure 9: <strong>Round 3:</strong> Proportion of first-choice votes after second runoff</figcaption>
+</figure>
+<p>With most of the votes going to <span class="prg">Kiss</span>, he ekes out a majority. (Since some ballots didn&#8217;t specify higher choices, the percentages are of the ballots remaining after each runoff.)</p>
+<p>The problem with this result is that <span class="dem">Montroll</span> was <em>individually</em> more popular than any of the other candidates. How, then, did he fail to be elected? Basically, voters could be divided into liberal and conservative blocs, with liberals favoring <span class="dem">Montroll</span> or <span class="prg">Kiss</span>, and conservatives favoring <span class="rep">Wright</span>, but preferring the more moderate <span class="dem">Montroll</span> over the far-left <span class="prg">Kiss</span>. But since <span class="rep">Wright</span> was a contender to the last, the lower rankings of his supporters were never accounted for. This can be more easily seen by simulating the results of other voting systems.</p>
+</section>
+<section id="borda-count-results" class="level2">
+<h2><span class="header-section-number">2.3</span> Borda count results</h2>
+<p>In a Borda count, all of a candidate&#8217;s votes are weighted and added; so each first-choice vote gives a candidate 5 points, second-choice votes 4, and so on. For instance, <span class="prg">Kiss</span>&#8217; Borda score would be (2,586 &#215; 5) + (1,404 &#215; 4) + (962 &#215; 3) + (741 &#215; 2) + (491 &#215; 1) = 23,405. This method gives much more weight to lower-ranked candidates than other methods, and is therefore highly amenable to centrist candidates with broad, if tepid, appeal.</p>
+<figure>
+<object data="images/20f89197023b86097d6942ff2ddeb33d9cb0713d.svg" alt="Figure 10: Borda scores for each candidate. Montroll wins due to strong first- and second-place scores." id="fig:borda" ><img src="images/20f89197023b86097d6942ff2ddeb33d9cb0713d.svg" alt="Figure 10: Borda scores for each candidate. Montroll wins due to strong first- and second-place scores." id="fig:borda" /></object><figcaption>Figure 10: Borda scores for each candidate. Montroll wins due to strong first- and second-place scores.</figcaption>
+</figure>
+<p><span class="rep">Wright</span> and <span class="prg">Kiss</span> were popular first-choice votes, but didn&#8217;t garner many next-choice votes, while <span class="dem">Montroll</span> and <span class="ind">Smith</span> emerged as compromise candidates, with many more second- and third-choice votes than first-choice (the former would indeed have been the Borda winner). <span class="grn">Simpson</span> proved very unpopular, with mostly last-place votes.</p>
+</section>
+<section id="condorcet-results" class="level2">
+<h2><span class="header-section-number">2.4</span> Condorcet results</h2>
+<p>Condorcet voting methods pit each candidate against the others round-robin style; if one always prevails, that candidate wins. The <a href="https://en.wikipedia.org/wiki/Condorcet_criterion">Condorcet criterion</a> of always electing the pairwise winner, if there is one, is sometimes imposed on other methods. Of course, there is not always such a winner, as in rock paper scissors.  However, the Burlington race did have such a winner&#8212;Montroll&#8212;and IRV was much maligned after the fact for eliminating him in the second round.</p>
+<figure>
+<object data="images/b855eb6d114335f18dcc27e12d7057ebe58523d2.svg" alt="Figure 11: Results of a Condorcet-style election, for voters who expressed relative preferences for each pair: Montroll wins head-to-head against every other candidate." id="fig:cond" ><img src="images/b855eb6d114335f18dcc27e12d7057ebe58523d2.svg" alt="Figure 11: Results of a Condorcet-style election, for voters who expressed relative preferences for each pair: Montroll wins head-to-head against every other candidate." id="fig:cond" /></object><figcaption>Figure 11: Results of a Condorcet-style election, for voters who expressed relative preferences for each pair: Montroll wins head-to-head against every other candidate.</figcaption>
+</figure>
+</section>
+<section id="summary-lessons" class="level2">
+<h2><span class="header-section-number">2.5</span> Summary &amp; lessons</h2>
+<p>The results of different methods are summarized in tbl.&#160;1.</p>
+<div id="tbl:summary">
+<table class="sortable">
+<caption>Table 1: Full rankings produced by various methods, excluding write-ins</caption>
+<thead title="Click to sort">
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Choice 1</th>
+<th style="text-align: left;">Choice 2</th>
+<th style="text-align: left;">Choice 3</th>
+<th style="text-align: left;">Choice 4</th>
+<th style="text-align: left;">Choice 5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Plurality</td>
+<td style="text-align: left;"><span class="rep">Wright</span></td>
+<td style="text-align: left;"><span class="prg">Kiss</span></td>
+<td style="text-align: left;"><span class="dem">Montroll</span></td>
+<td style="text-align: left;"><span class="ind">Smith</span></td>
+<td style="text-align: left;"><span class="grn">Simpson</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Two-round</td>
+<td style="text-align: left;"><span class="prg">Kiss</span></td>
+<td style="text-align: left;"><span class="rep">Wright</span></td>
+<td style="text-align: left;"><span class="grayed">N/A</span></td>
+<td style="text-align: left;"><span class="grayed">N/A</span></td>
+<td style="text-align: left;"><span class="grayed">N/A</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">IRV</td>
+<td style="text-align: left;"><span class="prg">Kiss</span></td>
+<td style="text-align: left;"><span class="rep">Wright</span></td>
+<td style="text-align: left;"><span class="dem">Montroll</span></td>
+<td style="text-align: left;"><span class="ind">Smith</span></td>
+<td style="text-align: left;"><span class="grn">Simpson</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Borda Count</td>
+<td style="text-align: left;"><span class="dem">Montroll</span></td>
+<td style="text-align: left;"><span class="prg">Kiss</span></td>
+<td style="text-align: left;"><span class="rep">Wright</span></td>
+<td style="text-align: left;"><span class="ind">Smith</span></td>
+<td style="text-align: left;"><span class="grn">Simpson</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Condorcet<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></td>
+<td style="text-align: left;"><span class="dem">Montroll</span></td>
+<td style="text-align: left;"><span class="prg">Kiss</span></td>
+<td style="text-align: left;"><span class="rep">Wright</span></td>
+<td style="text-align: left;"><span class="ind">Smith</span></td>
+<td style="text-align: left;"><span class="grn">Simpson</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Since <span class="dem">Montroll</span> would have beat any other candidate head-to-head, he would have been the winner if he had made it to the final round. Of course, this would have happened if more people had ranked him first. But, incredibly, it could also have happened if a contingent of <span class="rep">Wright</span> voters had simply <a href="https://en.wikipedia.org/wiki/Participation_criterion">stayed home</a>. Let&#8217;s say that a random third of <span class="rep">Wright</span> voters had stayed home on election day.</p>
+<figure>
+<object data="images/40acd39cca08983e629a7f65dc276bcd28a6df90.svg" alt="Figure 12: Round 1: Proportion of first-choice votes with a third of Wright voters staying home. Simpson and write-ins are omitted for illustration" id="fig:nowright-round1" ><img src="images/40acd39cca08983e629a7f65dc276bcd28a6df90.svg" alt="Figure 12: Round 1: Proportion of first-choice votes with a third of Wright voters staying home. Simpson and write-ins are omitted for illustration" id="fig:nowright-round1" /></object><figcaption>Figure 12: <strong>Round 1:</strong> Proportion of first-choice votes with a third of Wright voters staying home. Simpson and write-ins are omitted for illustration</figcaption>
+</figure>
+<p><span class="rep">Wright</span> now starts out third in the rankings (fig.&#160;12), and is still last after <span class="ind">Smith</span> is eliminated (fig.&#160;13).</p>
+<figure>
+<object data="images/7ebccd894a40a8677841321e5d46ac2a3b2c23ed.svg" alt="Figure 13: Round 2: Proportion of first-choice votes after first runoff" id="fig:nowright-round2" ><img src="images/7ebccd894a40a8677841321e5d46ac2a3b2c23ed.svg" alt="Figure 13: Round 2: Proportion of first-choice votes after first runoff" id="fig:nowright-round2" /></object><figcaption>Figure 13: <strong>Round 2:</strong> Proportion of first-choice votes after first runoff</figcaption>
+</figure>
+<p>Now <span class="rep">Wright</span> is eliminated, and the bulk of his votes go to <span class="dem">Montroll</span>, carrying the latter to a four-point victory.</p>
+<figure>
+<object data="images/1d2b2e4435cb957358725e07d93e5b2321a31aeb.svg" alt="Figure 14: Round 3: Proportion of first-choice votes after second runoff" id="fig:nowright-round3" ><img src="images/1d2b2e4435cb957358725e07d93e5b2321a31aeb.svg" alt="Figure 14: Round 3: Proportion of first-choice votes after second runoff" id="fig:nowright-round3" /></object><figcaption>Figure 14: <strong>Round 3:</strong> Proportion of first-choice votes after second runoff</figcaption>
+</figure>
+<p>This may seem like an esoteric or academic concern (headline: &#8220;If Public Had Voted Differently, A Different Candidate Would Have Won&#8221;), but its threat is twofold. One is that it makes tactical voting possible. It&#8217;s hard to win the match; it&#8217;s easier to bet against yourself and take a fall. Of course, tactical voting occurs under plurality voting as well: namely, Nader supporters bubbling in Gore to hurt Bush. By not expressing their true preferences, they throw the match for their first-choice candidate in order to help their more popular second choice. The concern here is of the same kind&#8212;that a bloc of <span class="rep">Wright</span> supporters could scuttle their own candidate to get a second-favorite in.<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
+<p>The second problem is that the results now border on incongruous&#8212;surely whether <span class="prg">Kiss</span> or <span class="dem">Montroll</span> wins should not depend on the number of <span class="rep"><em>Wright</em></span> voters who turn out. This is a violation of the rule of <a href="https://en.wikipedia.org/wiki/Independence_of_irrelevant_alternatives">independence of irrelevant alternatives</a>. (A similar result, of course, would have happened if these <span class="rep">Wright</span> voters had still voted, but ranked <span class="dem">Montroll</span> first.) This, in a sense, makes <span class="rep">Wright</span> the &#8220;spoiler&#8221; in this election. It actually gets weirder; it is <a href="https://www.rangevoting.org/Burlington.html">theoretically possible</a> for just the right subset of <span class="rep">Wright</span> voters to hurt <span class="prg">Kiss</span> <em>by voting for him instead of <span class="rep">Wright</span></em>.</p>
+<figure>
+<object data="images/6838666f7b75b9fda9f81cf7c52d6dd72f189f75.svg" alt="Figure 15: Round 1: Proportion of first-choice votes with a contingent of Wright voters supporting Kiss. Simpson and write-ins are omitted for illustration" id="fig:flip-round1" ><img src="images/6838666f7b75b9fda9f81cf7c52d6dd72f189f75.svg" alt="Figure 15: Round 1: Proportion of first-choice votes with a contingent of Wright voters supporting Kiss. Simpson and write-ins are omitted for illustration" id="fig:flip-round1" /></object><figcaption>Figure 15: <strong>Round 1:</strong> Proportion of first-choice votes with a contingent of Wright voters supporting Kiss. Simpson and write-ins are omitted for illustration</figcaption>
+</figure>
+<p><span class="prg">Kiss</span> now has a very strong out-of-the-gate lead, with <span class="rep">Wright</span> barely ahead of <span class="dem">Montroll</span>.</p>
+<figure>
+<object data="images/b842154e26089de991f2c0ee6a64c001e45ed419.svg" alt="Figure 16: Round 2: Proportion of first-choice votes after first runoff" id="fig:flip-round2" ><img src="images/b842154e26089de991f2c0ee6a64c001e45ed419.svg" alt="Figure 16: Round 2: Proportion of first-choice votes after first runoff" id="fig:flip-round2" /></object><figcaption>Figure 16: <strong>Round 2:</strong> Proportion of first-choice votes after first runoff</figcaption>
+</figure>
+<p>With <span class="ind">Smith</span>&#8217;s votes reallocated, <span class="rep">Wright</span> is eliminated, and now all of his votes go to <span class="dem">Montroll</span>.</p>
+<figure>
+<object data="images/a9f5ffbf5a45c6802df4388c616982d912471fd0.svg" alt="Figure 17: Round 3: Proportion of first-choice votes after second runoff" id="fig:flip-round3" ><img src="images/a9f5ffbf5a45c6802df4388c616982d912471fd0.svg" alt="Figure 17: Round 3: Proportion of first-choice votes after second runoff" id="fig:flip-round3" /></object><figcaption>Figure 17: <strong>Round 3:</strong> Proportion of first-choice votes after second runoff</figcaption>
+</figure>
+<p>This illustrates how IRV violates the principle of <a href="https://en.wikipedia.org/wiki/Monotonicity_criterion">monotonicity</a>, which says that you shouldn&#8217;t be able to hurt a candidate by giving them more votes, or help them by taking away votes.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> <span class="citation" data-cites="riker1982liberalism">William H. Riker<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></span> writes that:</p>
+<blockquote>
+<p>If we assume that the purpose of voting is to amalgamate individual tastes into a social decision, then monotonicity requires that voting actually do so by counting all individual judgments in generating an outcome. Moral (as distinct from technical) considerations may arise in choosing between forms of monotonicity. For example, one might prefer a two-thirds majority (monotonic) to a simple majority (strongly monotonic) on ethical grounds. But that some kind of monotonicity be required is hardly a moral question. It is simply a straightforward matter of making the voting system do what it is supposed to do.</p>
+</blockquote>
+<p>Tactical voting, if prevalent enough, could neutralize the boost IRV is supposed to provide to third parties&#8212;notice that if <span class="prg">Kiss</span> voters were concerned about <em>his</em> viability hurting <span class="dem">Montroll</span> and putting <span class="rep">Wright</span> in office, they might have bailed on <span class="prg">Kiss</span> in the same way. The odds of this happening are pretty slim, as it more or less requires knowing the results in advance (if <span class="rep">Wright</span> had any kind of fighting chance, it&#8217;s unlikely his voters would have thrown the vote by staying home). But the odds of getting an monotonicity violation, as Burlington did, may be significant enough to worry about.</p>
+</section>
+</section>
+<section id="probability-of-paradoxical-results" class="level1">
+<h1><span class="header-section-number">3</span> Probability of paradoxical results</h1>
+<p>Of course, no voting system is perfect; all fall prey to unexpected results given the right input parameters. Much of the literature looks at the probability of not having a Condorcet winner at all; e.g., Riker<span class="citation" data-cites="riker1982liberalism"><a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></span> puts it at about 25% for 5 candidates, assuming people vote <a href="https://en.wikipedia.org/wiki/Impartial_culture">basically at random</a>. This is of lower import, though, because neither plurality nor IRV may deal with this kind of paradox sensibly&#8212;and under plurality, no one would ever even know it happened. More serious is the probability of nonmonotonicity&#8212;of seeing a repeat of Burlington in Massachusetts. This can be done theoretically, with Monte Carlo simulations, or empirically, by looking at datasets of past elections.</p>
+<p><span class="citation" data-cites="ornstein2014frequency">Joseph T. Ornstein and Robert Z. Norman<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></span> run simulations of three-candidate elections to find the probability of a monotonicity failure, by which giving more votes to the top-ranked candidate A might end up electing candidate C. For this to happen, C must receive more than one fourth of the total votes, and be the Condorcet winner, if there is one. A simplified version of the Burlington election satisfies these requirements, as tbl.&#160;2 shows. Here, A is <span class="prg">Kiss</span>, B is <span class="rep">Wright</span>, and C is <span class="dem">Montroll</span>.</p>
+<div id="tbl:rank">
+<table class="sortable">
+<caption>Table 2: Relative rankings of the three top candidates, from the 40% of ballots that ranked all three. Montroll emerged as a compromise over the more polarizing Kiss and Wright.</caption>
+<thead title="Click to sort">
+<tr class="header">
+<th style="text-align: left;">Relative ranking</th>
+<th>Ballots</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="prg">Kiss</span> &gt; <span class="dem">Montroll</span> &gt; <span class="rep">Wright</span></td>
+<td>2,043</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="prg">Kiss</span> &gt; <span class="rep">Wright</span> &gt; <span class="dem">Montroll</span></td>
+<td>371</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="rep">Wright</span> &gt; <span class="prg">Kiss</span> &gt; <span class="dem">Montroll</span></td>
+<td>496</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="rep">Wright</span> &gt; <span class="dem">Montroll</span> &gt; <span class="prg">Kiss</span></td>
+<td>1,513</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="dem">Montroll</span> &gt; <span class="prg">Kiss</span> &gt; <span class="rep">Wright</span></td>
+<td>1,332</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="dem">Montroll</span> &gt; <span class="rep">Wright</span> &gt; <span class="prg">Kiss</span></td>
+<td>767</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>They find that roughly 15&#8211;20% of elections exhibit this behavior, with the number reaching 50% for elections in which two of the three candidates are ideologically very close. <span class="citation" data-cites="miller2017closeness">Nicholas R. Miller<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></span> calculates similar numbers&#8212;around 50% for certain assumptions about voter distribution, and the election being competitive.</p>
+<p>What, then, is the probability of an election being &#8220;competitive&#8221;? Miller <span class="citation" data-cites="miller2017closeness"></span> analyzes U.K. Parliamentary races with only three parties, finding that only 5% could be considered competitive. This is encouraging, but Parliamentary elections use plurality voting; IRV may well lead to an increase in competitiveness as third parties vie more strongly. FairVote, a pro-IRV nonprofit, <a href="https://www.fairvote.org/data_on_rcv">claims</a> that &#8220;[o]f the 322 single-winner RCV elections in the United States since 2004 in which we have sufficient ballot data [&#8230;], 321 elections were won by the Condorcet winner&#8221;, although they don&#8217;t make their data public (the exception, of course, was Burlington). They also claim that:</p>
+<blockquote>
+<p>There have been 204 single-winner ranked choice elections in the U.S. which included at least 3 candidates. In 96 of these (or 47%), a majority winner was identified in the first round. The remaining 108 races went into the instant runoff before declaring a winner.</p>
+</blockquote>
+<p>They count 381 races total, so half had more than two candidates, and half again had no first-round majority. Miller <span class="citation" data-cites="miller2017closeness"></span> claims that 60% of the 2,642 Parliamentary elections analyzed had a majority winner. This is significantly different from FairVote&#8217;s numbers (&#967;&#178;&#160;=&#160;12.588, p&#160;&lt;&#160;0.001),<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a> but it&#8217;s unclear that IRV was the cause.</p>
+<p>As an educated guess, we can estimate that 10&#8211;20% of IRV elections will be &#8220;competitive&#8221;, and that half of those, or 5&#8211;10%, will display a monotonicity failure.</p>
+</section>
+<section id="propensity-to-a-two-party-system" class="level1">
+<h1><span class="header-section-number">4</span> Propensity to a two-party system</h1>
+<p>A well-known critique of plurality voting, known as <a href="https://en.wikipedia.org/wiki/Duverger%27s_law">Duverger&#8217;s law</a>, is that it tends toward a two-party system over time. The reasoning, of course, is that voters shy away from voting third-party for fear of splitting the vote. The United States, which has always used plurality voting nationally, has largely hewn to this law, with each <a href="https://en.wikipedia.org/wiki/Party_system#United_States">party system</a> shakeup quickly stabilizing to two dominant parties.  However, some contend that due to paradoxical results like Burlington, IRV has the same tendency over a long enough period.</p>
+<p>We can get a sense of whether this is true by looking at countries that use IRV nationally. For example, the Australian House of Representatives, the lower of its houses of parliament, has used IRV since 1918.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a> If we look at <a href="https://australianpolitics.com/elections/house-results/house-election-results-since-1972">results</a> of House elections for the past half-century, we see that while politics is largely dominated by the left-leaning Labor Party and right-leaning Liberal and National Parties, a small number of seats have gone to Greens and independent candidates.</p>
+<figure>
+<object data="images/57ef90b548ebf1eba89533793a350caaed9fece1.svg" alt="Figure 18: Party allocations from Australian House elections since 1972. Note that the number of seats increased after 1983 from ~125 to ~150  &#160;Labor &#160;Liberal &#160;Liberal National &#160;National &#160;Country Liberal &#160;Greens &#160;Independent/other" id="fig:aus-house" ><img src="images/57ef90b548ebf1eba89533793a350caaed9fece1.svg" alt="Figure 18: Party allocations from Australian House elections since 1972. Note that the number of seats increased after 1983 from ~125 to ~150  &#160;Labor &#160;Liberal &#160;Liberal National &#160;National &#160;Country Liberal &#160;Greens &#160;Independent/other" id="fig:aus-house" /></object><figcaption>Figure 18: Party allocations from Australian House elections since 1972. Note that the number of seats increased after 1983 from ~125 to ~150<br />
+<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#e93834" stroke="none" /></svg>&#160;<a href="https://en.wikipedia.org/wiki/Australian_Labor_Party">Labor</a><br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#727ecf" stroke="none" /></svg>&#160;<a href="https://en.wikipedia.org/wiki/Liberal_Party_of_Australia">Liberal</a><br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#b9bfe7" stroke="none" /></svg>&#160;<a href="https://en.wikipedia.org/wiki/Liberal_National_Party_of_Queensland">Liberal National</a><br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#e6ab02" stroke="none" /></svg>&#160;<a href="https://en.wikipedia.org/wiki/National_Party_of_Australia">National</a><br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#d67c00" stroke="none" /></svg>&#160;<a href="https://en.wikipedia.org/wiki/Country_Liberal_Party">Country Liberal</a><br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#76a254" stroke="none" /></svg>&#160;<a href="https://en.wikipedia.org/wiki/Australian_Greens">Greens</a><br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#888888" stroke="none" /></svg>&#160;Independent/other</figcaption>
+</figure>
+<p>It&#8217;s important to note that fig.&#160;18 presents statistical averages. Each bar represents the results of a 150 or so <em>individual</em> elections, each of which might have seen different local factions competing on different issues. Nevertheless, compare this with the party allocations in the U.S. House during the same period:</p>
+<figure>
+<object data="images/8e4313ef0ed26a8bc6cfa47c11e2d0c6eca6fb91.svg" alt="Figure 19: Party allocations from U.S. House of Representatives elections since 1971 (from 92nd Congress on)  &#160;Republican &#160;Democrat &#160;Independent/other" id="fig:us-house" ><img src="images/8e4313ef0ed26a8bc6cfa47c11e2d0c6eca6fb91.svg" alt="Figure 19: Party allocations from U.S. House of Representatives elections since 1971 (from 92nd Congress on)  &#160;Republican &#160;Democrat &#160;Independent/other" id="fig:us-house" /></object><figcaption>Figure 19: Party allocations from U.S. House of Representatives elections since 1971 (from 92nd Congress on)<br />
+<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#e93834" stroke="none" /></svg>&#160;Republican<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#727ecf" stroke="none" /></svg>&#160;Democrat<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#888888" stroke="none" /></svg>&#160;Independent/other</figcaption>
+</figure>
+<p>There are only a <a href="https://en.wikipedia.org/wiki/Third-party_and_independent_members_of_the_United_States_House_of_Representatives#1949%E2%80%93present:_Modern_era">handful</a> of independents, most of whom are closely affiliated with one party or another, and only one third-party candidate: Libertarian Justin Amash, MI-3, who was elected as a Republican. So the U.S., possibly because as a side effect of plurality voting, is particularly inimical to third-party representation. We don&#8217;t see this effect in <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-8647/">Commons elections</a> in the U.K., however, which also use plurality voting, but has relatively rich third-party representations (note that the pink and gray bands in fig.&#160;20 represent multiple parties).</p>
+<figure>
+<object data="images/d4144a1d1ab4adb1926d1f013da73fec161711c6.svg" alt="Figure 20: Party allocations from U.K. House of Commons elections since 1970  &#160;Labour &#160;Conservative &#160;Liberal Democrats &#160;Scottish &amp; Welsh national parties &#160;Independent/other" id="fig:uk-house" ><img src="images/d4144a1d1ab4adb1926d1f013da73fec161711c6.svg" alt="Figure 20: Party allocations from U.K. House of Commons elections since 1970  &#160;Labour &#160;Conservative &#160;Liberal Democrats &#160;Scottish &amp; Welsh national parties &#160;Independent/other" id="fig:uk-house" /></object><figcaption>Figure 20: Party allocations from U.K. House of Commons elections since 1970<br />
+<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#e93834" stroke="none" /></svg>&#160;Labour<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#727ecf" stroke="none" /></svg>&#160;Conservative<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#e6ab02" stroke="none" /></svg>&#160;Liberal Democrats<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#c55faf" stroke="none" /></svg>&#160;Scottish &amp; Welsh national parties<br />
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#888888" stroke="none" /></svg>&#160;Independent/other</figcaption>
+</figure>
+<p>This may be an effect of the parliamentary system, which allows coalitions, reducing competition between ideologically similar parties. It may also be an effect of smaller constituencies&#8212;about 100,000 people per district in the U.K., versus 750,000 in the U.S.&#8212;making it easier for smaller parties to secure local support. The final salient difference is that U.S. House elections are much less consequential than Commons or Australian House elections, because they are more frequent (compare the sizes of the graphs), and because since <a href="https://www.law.cornell.edu/constitution-conan/amendment-17">1913</a> the U.S. has also directly elected senators, though it&#8217;s unclear why this would make a difference. Possibly, the two-party system is simply too deeply set in U.S. culture to be meaningfully pried away.</p>
+</section>
+<section id="conclusion" class="level1">
+<h1><span class="header-section-number">5</span> Conclusion</h1>
+<p>The pros of adopting IRV seem to be:</p>
+<ul>
+<li>Relative simplicity, assuming the ballots are not designed by lunatics from Florida</li>
+<li>Allowing voters to express nuanced opinions</li>
+<li>Elimination of spoilage by small parties</li>
+<li>Probable reduction in tactical voting, and the slim possibility of third parties becoming serious contenders</li>
+<li>Possible reduction in negative campaigning</li>
+</ul>
+<p>and the cons are:</p>
+<ul>
+<li>A possibly nontrivial one-time cost of converting voting machines and educating voters</li>
+<li>Small (5&#8211;10%) chance of spoilage with three or more large parties</li>
+<li>The very remote possibility of tactical voting by voting blocs on the extremes of the political spectrum</li>
+</ul>
+<p>It&#8217;s important in all this to avoid two traps. One is the <a href="https://en.wikipedia.org/wiki/Lucas_critique">Lucas</a> trap: you can&#8217;t theorize about the outcome of an election using past data from a <em>different</em> voting system. Both voters and political parties will change their strategies if the system changes. Burlington voters would not likely have voted the same way in 2009 if the decision was to have been by simple plurality.<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a></p>
+<p>The second trap, of course, is of caring more about voting systems than their results. There are many more voting systems out there, many of them <a href="https://www.daneckam.com/?p=374">combining</a> the methods above, and a whole <a href="https://plato.stanford.edu/entries/social-choice/">branch of economics</a> that studies them. It&#8217;s easy to get stuck in the mire of voting system wonkery, but only IRV is on the ballot this year, so ultimately it doesn&#8217;t matter whether it is better than proportional Bayesian transferable semi-ranked-score-minimax; only whether it&#8217;s better than plurality.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a> Anthony Gottlieb in the <em>New Yorker</em> <a href="https://www.newyorker.com/magazine/2010/07/26/win-or-lose">points out</a> that:</p>
+<blockquote>
+<p>Mathematics can suggest what approaches are worth trying, but it can&#8217;t reveal what will suit a particular place, and best deliver what we want from a democratic voting system: to create a government that feels legitimate to people&#8212;to reconcile people to being governed, and give them reason to feel that, win or lose (especially lose), the game is fair.</p>
+</blockquote>
+<p>Incidentally, after a decade of dormancy, IRV is <a href="https://vtdigger.org/2020/07/14/burlington-council-puts-ranked-choice-voting-on-november-ballot-%EF%BB%BF/">back on the ballot</a> in Burlington. It will be interesting to see if the public warms to it again.</p>
+</section>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Sometimes given the hokey name &#8220;first past the post&#8221;. Note that a <strong>plurality</strong> is not the same as a <strong>majority</strong>: a majority requires more than 50% of votes, while a plurality just requires more votes than anyone else.<a href="#fnref1" class="footnote-back">&#8617;</a></p></li>
+<li id="fn2"><p>See, e.g., <a href="https://www.youtube.com/watch?v=HoAnYQZrNrQ">PBS</a> or <a href="http://www.cgpgrey.com/politics-in-the-animal-kingdom/">C.G.P. Grey</a>.<a href="#fnref2" class="footnote-back">&#8617;</a></p></li>
+<li id="fn3"><p>Assuming voters&#8217; preferences are stable across time.<a href="#fnref3" class="footnote-back">&#8617;</a></p></li>
+<li id="fn4"><p>In a <a href="https://en.wikipedia.org/wiki/Two-round_system">two-round system</a>, the second election really does take place, but with all but two candidates removed, to guarantee there will be a majority.<a href="#fnref4" class="footnote-back">&#8617;</a></p></li>
+<li id="fn5"><p>&#8220;Campaign Civility Under Preferential and Plurality Voting,&#8221; <em>Electoral Studies</em> 42 (June 2016): 157&#8211;63, doi:<a href="https://doi.org/10.1016/j.electstud.2016.02.009">10.1016/j.electstud.2016.02.009</a>.<a href="#fnref5" class="footnote-back">&#8617;</a></p></li>
+<li id="fn6"><p>Ibid., 162.<a href="#fnref6" class="footnote-back">&#8617;</a></p></li>
+<li id="fn7"><p>John E. Jackson, &#8220;Election Night Reporting and Voter Turnout,&#8221; <em>American Journal of Political Science</em> 27, no. 4 (November 1983): 615&#8211;35, doi:<a href="https://doi.org/10.2307/2110886">10.2307/2110886</a>.<a href="#fnref7" class="footnote-back">&#8617;</a></p></li>
+<li id="fn8"><p>Edward R. Tufte, <em>Envisioning Information</em> (Cheshire, CT: Graphics Press, 1990), 29.<a href="#fnref8" class="footnote-back">&#8617;</a></p></li>
+<li id="fn9"><p><a href="https://web.archive.org/web/20110725111632/http://www.burlingtonvotes.org/20090303/2009%20Mayor%20Reports.zip">Full ballot data</a> (ZIP, 72 KiB)<a href="#fnref9" class="footnote-back">&#8617;</a></p></li>
+<li id="fn10"><p><a href="https://en.wikipedia.org/wiki/Copeland%27s_method">Copeland&#8217;s method</a><a href="#fnref10" class="footnote-back">&#8617;</a></p></li>
+<li id="fn11"><p>See <a href="https://www.youtube.com/embed/JtKAScORevQ">this video</a> for another illustration.<a href="#fnref11" class="footnote-back">&#8617;</a></p></li>
+<li id="fn12"><p>The former case is known as an <em>upward monotonicity violation</em>, and the latter a <em>downward monotonicity violation</em>.<a href="#fnref12" class="footnote-back">&#8617;</a></p></li>
+<li id="fn13"><p><em>Liberalism Against Populism: A Confrontation Between the Theory of Democracy and the Theory of Social Choice</em> (Long Grove, IL: Waveland Press, 1982), 51.<a href="#fnref13" class="footnote-back">&#8617;</a></p></li>
+<li id="fn14"><p>Ibid., 122.<a href="#fnref14" class="footnote-back">&#8617;</a></p></li>
+<li id="fn15"><p>&#8220;Frequency of Monotonicity Failure Under Instant Runoff Voting: Estimates Based on a Spatial Model of Elections,&#8221; <em>Public Choice</em> 161 (October 2014): 1&#8211;9, doi:<a href="https://doi.org/10.1007/s11127-013-0118-2">10.1007/s11127-013-0118-2</a>.<a href="#fnref15" class="footnote-back">&#8617;</a></p></li>
+<li id="fn16"><p>&#8220;Closeness Matters: Nonmonotonicity Failure in IRV Election with Three Candidates,&#8221; <em>Public Choice</em> 173 (October 2017): 91&#8211;108, doi:<a href="https://doi.org/10.1007/s11127-017-0465-5">10.1007/s11127-017-0465-5</a>.<a href="#fnref16" class="footnote-back">&#8617;</a></p></li>
+<li id="fn17"><div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">chisq.test</span>(</a>
+<a class="sourceLine" id="cb2-2" title="2">    <span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">2642</span><span class="op">*</span><span class="fl">0.6</span>,</a>
+<a class="sourceLine" id="cb2-3" title="3">             <span class="dv">2642</span><span class="op">*</span><span class="fl">0.4</span>,</a>
+<a class="sourceLine" id="cb2-4" title="4">             <span class="dv">96</span>,</a>
+<a class="sourceLine" id="cb2-5" title="5">             <span class="dv">204-96</span>),</a>
+<a class="sourceLine" id="cb2-6" title="6">        <span class="dt">nrow=</span><span class="dv">2</span>))</a></code></pre></div>
+<a href="#fnref17" class="footnote-back">&#8617;</a></li>
+<li id="fn18"><p>Ireland also uses runoff voting to elect its lower house, <a href="https://en.wikipedia.org/wiki/D%C3%A1il_%C3%89ireann">D&#225;il &#201;ireann</a>, to elect its lower house, but it is more complicated as most district races have multiple winners.<a href="#fnref18" class="footnote-back">&#8617;</a></p></li>
+<li id="fn19"><p>Indeed, in the <a href="https://www.burlingtonvt.gov/sites/default/files/CT/ElectionResults/20120306/election_summary_report_20120306.pdf">2012 race</a>, after IRV was repealed, only three candidates ran, with the independent barely mustering 5%.<a href="#fnref19" class="footnote-back">&#8617;</a></p></li>
+<li id="fn20"><p>(Source: <a href="https://xkcd.com/1844/">xkcd</a>)</p>
+<p><span class="image"></span><a href="#fnref20" class="footnote-back">&#8617;</a></p></li>
+</ol>
+</section>
+			</div>
+		</article>
+	</body>
+</html>

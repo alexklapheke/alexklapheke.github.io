@@ -37,7 +37,7 @@ and goat cheese."
 These vicissitudes are due partly to economics. In 1914, avocados, then
 known as "alligator pears", [could go
 for](https://time.com/4832655/avocado-american-history/) \$1 each---more
-that \$25 today. But economics can be adulterated by public perception.
+than \$25 today. But economics can be adulterated by public perception.
 David Foster Wallace, considering the lobster, wrote that
 [-@wallace2004consider,p. 55]:
 
