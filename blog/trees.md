@@ -260,7 +260,12 @@ embankment.[^4] The white ashes (<abbr title="white ash">*Fraxinus
 americana*</abbr>) in the Cambridge Highlands are concentrated in the
 [Lusitania
 Woods](https://www.google.com/maps/place/Lusitania+Field/@42.3879328,-71.1463062,17z)
-by Fresh Pond.
+by Fresh Pond. The other neighborhoods, though, are more chaotic, are
+favor generally popular choices such as honeylocust. Mapping trees by
+census block brings this wonderful chaos to life:
+
+![Most popular tree per [census
+block](https://en.wikipedia.org/wiki/Census_block).](images/aaf055b3f1d38d8ff81ceba1ba6ab2e5499fd4ba.svg){#fig:blockmap}
 
 # Planting dates
 

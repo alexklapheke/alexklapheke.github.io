@@ -130,7 +130,7 @@ code span.wa { color: #bf0303; } /* Warning */
 		<p>
 			<time datetime="2020-10-08T14:18:52-0400" class="published">Thursday, October 8, 2020</time>
 			<span class="bullet">&bull;</span>
-			<span class="wordcount">5,170 words</span>
+			<span class="wordcount">5,160 words</span>
 			<span class="bullet">&bull;</span>
 			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
 			<span class="bullet">&bull;</span>
@@ -227,7 +227,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <section id="complexity-and-cost" class="level3">
 <h3><span class="header-section-number">1.2.1</span> Complexity and cost</h3>
 <p>A common bugbear is that IRV is too complex in some way&#8212;this will turn out to be overblown. A related, and serious, concern is the need to replace perfectly good voting machines at significant cost to the taxpayer. Even educating voters could be expensive: mailing informational pamphlets to <a href="https://www.census.gov/quickfacts/MA">2.6 million households</a> at a <a href="https://www.themailshark.com/resources/blog/bulk-mail-postage-rates/">19&#162; bulk rate</a> would cost nearly half a million dollars.</p>
-<p>Of course, complaints about implementing the algorithm itself are patently unfounded&#8212;it can be done in just a few lines of code, and has linear complexity in both the number of voters and the number of candidates.</p>
+<p>Of course, complaints about implementing the algorithm itself are patently unfounded&#8212;it can be done in just a few lines of code, and has linear time complexity in both the number of voters and the number of candidates.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">import</span> <span class="dt">Data.List</span></a>
 <a class="sourceLine" id="cb1-2" title="2"></a>
 <a class="sourceLine" id="cb1-3" title="3"><span class="kw">data</span> <span class="dt">Candidate</span> <span class="ot">=</span> <span class="dt">Kiss</span> <span class="op">|</span> <span class="dt">Montroll</span> <span class="op">|</span> <span class="dt">Simpson</span> <span class="op">|</span> <span class="dt">Smith</span> <span class="op">|</span> <span class="dt">Wright</span> <span class="kw">deriving</span> (<span class="dt">Show</span>, <span class="dt">Eq</span>)</a>
@@ -324,7 +324,7 @@ code span.wa { color: #bf0303; } /* Warning */
 </section>
 <section id="borda-count-results" class="level2">
 <h2><span class="header-section-number">2.3</span> Borda count results</h2>
-<p>In a Borda count, all of a candidate&#8217;s votes are weighted and added; so each first-choice vote gives a candidate 5 points, second-choice votes 4, and so on. For instance, <span class="prg">Kiss</span>&#8217; Borda score would be (2,586 &#215; 5) + (1,404 &#215; 4) + (962 &#215; 3) + (741 &#215; 2) + (491 &#215; 1) = 23,405. This method gives much more weight to lower-ranked candidates than other methods, and is therefore highly amenable to centrist candidates with broad, if tepid, appeal.</p>
+<p>In a Borda count, all of a candidate&#8217;s votes are weighted and added; so each first-choice vote gives a candidate 5 points, second-choice votes 4, and so on. For instance, <span class="prg">Kiss</span>&#8217; Borda score would be (2,586&#160;&#215;&#160;5) + (1,404&#160;&#215;&#160;4) + (962&#160;&#215;&#160;3) + (741&#160;&#215;&#160;2) + (491&#160;&#215;&#160;1) = 23,405. This method gives much more weight to lower-ranked candidates than other methods, and is therefore highly amenable to centrist candidates with broad, if tepid, appeal.</p>
 <figure>
 <object data="images/20f89197023b86097d6942ff2ddeb33d9cb0713d.svg" alt="Figure 10: Borda scores for each candidate. Montroll wins due to strong first- and second-place scores." id="fig:borda" ><img src="images/20f89197023b86097d6942ff2ddeb33d9cb0713d.svg" alt="Figure 10: Borda scores for each candidate. Montroll wins due to strong first- and second-place scores." id="fig:borda" /></object><figcaption>Figure 10: Borda scores for each candidate. Montroll wins due to strong first- and second-place scores.</figcaption>
 </figure>
@@ -435,7 +435,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <p><span class="citation" data-cites="ornstein2014frequency">Joseph T. Ornstein and Robert Z. Norman<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></span> run simulations of three-candidate elections to find the probability of a monotonicity failure, by which giving more votes to the top-ranked candidate A might end up electing candidate C. For this to happen, C must receive more than one fourth of the total votes, and be the Condorcet winner, if there is one. A simplified version of the Burlington election satisfies these requirements, as tbl.&#160;2 shows. Here, A is <span class="prg">Kiss</span>, B is <span class="rep">Wright</span>, and C is <span class="dem">Montroll</span>.</p>
 <div id="tbl:rank">
 <table class="sortable">
-<caption>Table 2: Relative rankings of the three top candidates, from the 40% of ballots that ranked all three. Montroll emerged as a compromise over the more polarizing Kiss and Wright.</caption>
+<caption>Table 2: Relative rankings of the three top candidates, from the ballots that ranked at least two. Montroll emerged as a compromise over the more polarizing Kiss and Wright.</caption>
 <thead title="Click to sort">
 <tr class="header">
 <th style="text-align: left;">Relative ranking</th>
@@ -501,7 +501,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#727ecf" stroke="none" /></svg>&#160;Democrat<br />
 <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#888888" stroke="none" /></svg>&#160;Independent/other</figcaption>
 </figure>
-<p>There are only a <a href="https://en.wikipedia.org/wiki/Third-party_and_independent_members_of_the_United_States_House_of_Representatives#1949%E2%80%93present:_Modern_era">handful</a> of independents, most of whom are closely affiliated with one party or another, and only one third-party candidate: Libertarian Justin Amash, MI-3, who was elected as a Republican. So the U.S., possibly because as a side effect of plurality voting, is particularly inimical to third-party representation. We don&#8217;t see this effect in <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-8647/">Commons elections</a> in the U.K., however, which also use plurality voting, but has relatively rich third-party representations (note that the pink and gray bands in fig.&#160;20 represent multiple parties).</p>
+<p>There are only a <a href="https://en.wikipedia.org/wiki/Third-party_and_independent_members_of_the_United_States_House_of_Representatives#1949%E2%80%93present:_Modern_era">handful</a> of independents, most of whom are closely affiliated with one party or another, and only one third-party candidate: Libertarian Justin Amash, MI-3, who was elected as a Republican. So the U.S., possibly because as a side effect of plurality voting, is particularly inimical to third-party representation. We don&#8217;t see this effect in <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-8647/">Commons elections</a> in the U.K., however, which also use plurality voting, but afford relatively rich third-party representation (note that the pink and gray bands in fig.&#160;20 represent multiple parties).</p>
 <figure>
 <object data="images/d4144a1d1ab4adb1926d1f013da73fec161711c6.svg" alt="Figure 20: Party allocations from U.K. House of Commons elections since 1970  &#160;Labour &#160;Conservative &#160;Liberal Democrats &#160;Scottish &amp; Welsh national parties &#160;Independent/other" id="fig:uk-house" ><img src="images/d4144a1d1ab4adb1926d1f013da73fec161711c6.svg" alt="Figure 20: Party allocations from U.K. House of Commons elections since 1970  &#160;Labour &#160;Conservative &#160;Liberal Democrats &#160;Scottish &amp; Welsh national parties &#160;Independent/other" id="fig:uk-house" /></object><figcaption>Figure 20: Party allocations from U.K. House of Commons elections since 1970<br />
 <br />

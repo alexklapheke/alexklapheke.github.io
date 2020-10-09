@@ -196,7 +196,7 @@ would cost nearly half a million dollars.
 
 Of course, complaints about implementing the algorithm itself are
 patently unfounded---it can be done in just a few lines of code, and has
-linear complexity in both the number of voters and the number of
+linear time complexity in both the number of voters and the number of
 candidates.
 
 ``` {.haskell}
@@ -433,9 +433,9 @@ simulating the results of other voting systems.
 
 In a Borda count, all of a candidate's votes are weighted and added; so
 each first-choice vote gives a candidate 5 points, second-choice votes
-4, and so on. For instance, [Kiss]{.prg}' Borda score would be (2,586 ×
-5) + (1,404 × 4) + (962 × 3) + (741 × 2) + (491 × 1) = 23,405. This
-method gives much more weight to lower-ranked candidates than other
+4, and so on. For instance, [Kiss]{.prg}' Borda score would be
+(2,586 × 5) + (1,404 × 4) + (962 × 3) + (741 × 2) + (491 × 1) = 23,405.
+This method gives much more weight to lower-ranked candidates than other
 methods, and is therefore highly amenable to centrist candidates with
 broad, if tepid, appeal.
 
@@ -608,9 +608,9 @@ version of the Burlington election satisfies these requirements, as
   [Montroll]{.dem} \> [Kiss]{.prg} \> [Wright]{.rep}   1,332
   [Montroll]{.dem} \> [Wright]{.rep} \> [Kiss]{.prg}   767
 
-  : Relative rankings of the three top candidates, from the 40% of
-  ballots that ranked all three. Montroll emerged as a compromise over
-  the more polarizing Kiss and Wright. {\#tbl:rank}
+  : Relative rankings of the three top candidates, from the ballots that
+  ranked at least two. Montroll emerged as a compromise over the more
+  polarizing Kiss and Wright. {\#tbl:rank}
 
 They find that roughly 15--20% of elections exhibit this behavior, with
 the number reaching 50% for elections in which two of the three
@@ -702,8 +702,8 @@ MI-3, who was elected as a Republican. So the U.S., possibly because as
 a side effect of plurality voting, is particularly inimical to
 third-party representation. We don't see this effect in [Commons
 elections](https://commonslibrary.parliament.uk/research-briefings/cbp-8647/)
-in the U.K., however, which also use plurality voting, but has
-relatively rich third-party representations (note that the pink and gray
+in the U.K., however, which also use plurality voting, but afford
+relatively rich third-party representation (note that the pink and gray
 bands in @fig:uk-house represent multiple parties).
 
 ![Party allocations from U.K. House of Commons elections since 1970\
