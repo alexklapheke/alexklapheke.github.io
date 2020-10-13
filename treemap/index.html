@@ -92,9 +92,34 @@
 
 			// Load basemaps
 			function setupMap() {
-				var map = d3.select("#map").style("width", width + "px").style("height", height + "px");
-				var span = map.append("span").classed("loadingtext", true).text("Loading basemaps...")
-				var svg = map.append("svg").style("width", width + "px").style("height", height + "px");
+				var map = d3.select("#map")
+					.style("width", width + "px")
+					.style("height", height + "px");
+
+				var span = map.append("span")
+					.classed("loadingtext", true)
+					.text("Loading basemaps...")
+
+				// <https://observablehq.com/@d3/zoom>
+				var svg = map.append("svg")
+					.style("width", width + "px")
+					.style("height", height + "px")
+
+				var g = svg.append("g")
+					.attr("id", "mapwrapper")
+
+					svg.call(d3.zoom()
+						.extent([
+							[0, 0],
+							[width, height]
+						])
+						.scaleExtent([1, 8])
+						.on("zoom", function({
+							transform
+						}) {
+							g.attr("transform", transform);
+						}));
+
 
 				var shapes = [
 					{"id": "Boundary",   "color": "#fffaf0" },
@@ -117,7 +142,7 @@
 					for (var i = 0, len = jsons.length; i < len; i++) {
 						json = jsons[i]
 						shape = shapes[i]
-						d3.select("#map svg")
+						d3.select("#mapwrapper")
 							.append("g")
 							.attr("id", shape.id)
 							.classed("baselayer", true)
@@ -138,7 +163,7 @@
 				var sci = formatName(sci)
 				var sci_class = sci.replace(" ", "_")
 
-				d3.select("#map svg")
+				d3.select("#mapwrapper")
 					.append("g")
 					.attr("id", "layer_" + sci_class)
 					.classed("treelayer", true)
@@ -238,7 +263,7 @@
 					.attr("title", "Remove")
 					.classed("close", true)
 					.on("click", function(){deleteTrees(sci)})
-					.text("✖")
+					.text("✕")
 
 				numBoxes++;
 
