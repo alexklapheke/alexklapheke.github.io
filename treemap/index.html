@@ -5,7 +5,15 @@
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<meta name="apple-mobile-web-app-title" content="Cambridge Tree Map">
+		<meta name="msapplication-TileColor" content="#2c501f">
+		<meta name="msapplication-TileImage" content="tile-icon.png">
+
 		<meta name="author" content="Alexander Klapheke">
+		<link rel="canonical" href="http://alexklapheke.github.io/treemap">
 
 		<link rel="stylesheet" type="text/css" href="../include/style.css">
 		<style type="text/css" media="all">
@@ -64,9 +72,6 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<script src="https://d3js.org/d3.v6.min.js"></script>
 		<script>
-			// TODO: Check if checkbox already exists, and just set it to checked
-			// TODO: Autocomplete these names
-
 			var width = 1000;
 			var height = 800;
 			var numBoxes = 0;
@@ -276,7 +281,6 @@
 				projection.fitSize([width, height], json);
 				setupMap();
 			});
-
 		</script>
 	</head>
 	<body>
@@ -493,7 +497,8 @@
 	</main>
 
 	<footer>
-	Tree data is from the <a href="https://data.cambridgema.gov/Public-Works/Street-Trees/ni4i-5bnn">Camrbidge Open Data portal</a>.
+	Created by <a href="https://alexklapheke.github.io">Alexander Klapheke</a>.
+	Tree data is from the <a href="https://data.cambridgema.gov/Public-Works/Street-Trees/ni4i-5bnn">Cambridge Open Data portal</a>.
 	Basefiles are from <a href="https://www.cambridgema.gov/GIS">Cambridge GIS</a>.
 	Erroneous tree diameters are fixed (to the best of my knowledge) but not erroneous genus or species labels.
 	The color scheme is from <a href="https://colorbrewer2.org/">ColorBrewer</a>.
