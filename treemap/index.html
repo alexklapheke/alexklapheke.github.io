@@ -25,6 +25,11 @@
 				overflow: hidden;
 			}
 
+			#map {
+				border: 1px solid #888888;
+				background: #fafafa;
+			}
+
 			#map.loading {
 				background-color: #e8e8e8;
 			}
@@ -46,7 +51,7 @@
 				background: #DFE8F7;
 			}
 
-			label.sci {
+			.sci {
 				font-style: italic;
 			}
 
@@ -68,10 +73,19 @@
 				font-style: normal;
 			}
 
+			.help, .help a {
+				font-size: 10pt;
+			}
+
 		</style>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<script src="https://d3js.org/d3.v6.min.js"></script>
 		<script>
+			// TODO: Fix dot sizes, especially when zoomed in
+			// TODO: Clean up specific names
+			// TODO: Mobile-friendly layout
+			// TODO: Add street names (only when zoomed in enough?) <https://www.cambridgema.gov/GIS/gisdatadictionary/Trans/TRANS_MajorRoads>
+
 			var width = 1000;
 			var height = 800;
 			var numBoxes = 0;
@@ -127,7 +141,7 @@
 
 
 				var shapes = [
-					{"id": "Boundary",   "color": "#fffaf0" },
+					{"id": "Boundary",   "color": "#fffaf0" }, // was: 
 					{"id": "Vegetation", "color": "#73d05f" },
 					{"id": "OpenSpace",  "color": "#73d05f" },
 					{"id": "Water",      "color": "#bdd1ee" },
@@ -145,8 +159,8 @@
 					d3.json("BASEMAP_PublicFootpaths.json"),
 				]).then(function(jsons) {
 					for (var i = 0, len = jsons.length; i < len; i++) {
-						json = jsons[i]
-						shape = shapes[i]
+						var json = jsons[i]
+						var shape = shapes[i]
 						d3.select("#mapwrapper")
 							.append("g")
 							.attr("id", shape.id)
@@ -179,7 +193,7 @@
 						if (sci.indexOf(" ") == -1) {
 							return tree.properties.Genus == sci
 						} else {
-							s = sci.split(" ")
+							var s = sci.split(" ")
 							return (tree.properties.Genus == s[0]) && (tree.properties.species == s[1])
 						}
 					})
@@ -212,10 +226,12 @@
 				d3.select("#box_" + sci_class).remove();
 				d3.select("#label_" + sci_class).remove();
 				// numBoxes--;
+				return false;
 			}
 
 			function toggleTrees(box, sci, col) {
 				if (box.checked) {showTrees(sci, col)} else {hideTrees(sci)}
+				return false;
 			}
 
 			function dimBasemap(elem) {
@@ -224,6 +240,7 @@
 				} else {
 					d3.selectAll("g.baselayer").classed("dimmed", false);
 				}
+				return true;
 			}
 
 			function addBox(sci) {
@@ -245,7 +262,7 @@
 					.attr("name", "box_" + sci_class)
 					.attr("id", "box_" + sci_class)
 					.attr("checked", true)
-					.on("click", function(){toggleTrees(this, sci, col)})
+					.on("click", function(){return toggleTrees(this, sci, col)})
 
 				var label = div.append("label")
 					.attr("for", "box_" + sci_class)
@@ -267,13 +284,13 @@
 					.attr("href", "#")
 					.attr("title", "Remove")
 					.classed("close", true)
-					.on("click", function(){deleteTrees(sci)})
+					.on("click", function(){return deleteTrees(sci)})
 					.text("✕")
 
 				numBoxes++;
 
-				addTrees(sci, col)
-				return false
+				addTrees(sci, col);
+				return false;
 			}
 
 			d3.json("trees.json").then(function(json) {
@@ -287,6 +304,7 @@
 
 	<header>
 		<form id="form" action="#" onsubmit="return addBox(this.genus.value)">
+			<p class="help">Type the scientific name of a tree below and hit enter to add it to the map. For example, <a href="#" onclick="return addBox('Ulmus pumila')"><abbr class="sci" title="Siberian elm">Ulmus pumila</abbr></a>, <a href="#" onclick="return addBox('Tilia tomentosa')"><abbr class="sci" title="Silver linden">Tilia tomentosa</abbr></a>, or <a href="#" onclick="return addBox('Phellodendron amurense')"><abbr class="sci" title="Amur cork tree">Phellodendron amurense</abbr></a>.</p>
 			<input type="text" name="genus" id="genus" value="" size="30" placeholder="Scientific name" list="genera">
 			<datalist id="genera">
 				<option value="Abies">
@@ -482,7 +500,7 @@
 				<option value="Zelkova serrata">
 			</datalist>
 			<br>
-			<input type="checkbox" name="dimmer" id="dimmer" onclick="dimBasemap(this)">
+			<input type="checkbox" name="dimmer" id="dimmer" onclick="return dimBasemap(this)">
 			<label for="dimmer">Dim basemap</label>
 			<br><br>
 		</form>
