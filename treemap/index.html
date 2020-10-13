@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Cambridge Tree Map</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Alexander Klapheke">
+
+		<link rel="stylesheet" type="text/css" href="/home/alex/Documents/Website/alexklapheke.github.io/include/style.css">
+		<style type="text/css" media="all">
+			main, #map, #map svg {
+				overflow: hidden;
+			}
+
+			#map.loading {
+				background-color: #e8e8e8;
+			}
+
+			.loadingtext, noscript {
+				font-size: 28px;
+				margin: auto;
+			}
+
+			main {
+				padding: 30px 0px 30px 30px;
+				margin-left: 280px;
+			}
+
+			footer {
+				padding: 30px;
+				margin-left: 280px;
+				background: #DFE8F7;
+			}
+
+			label.sci {
+				font-style: italic;
+			}
+
+			label svg {
+				margin: 0pt 2pt;
+			}
+
+			g.baselayer, g.treelayer {
+				transition: opacity 0.5s ease;
+			}
+
+			.dimmed {
+				opacity: 0.2;
+			}
+
+			.close {
+				color: #081220;
+				margin-left: 5pt;
+				font-style: normal;
+			}
+
+		</style>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<script src="https://d3js.org/d3.v6.min.js"></script>
+		<script>
+			// TODO: Check if checkbox already exists, and just set it to checked
+			// TODO: Autocomplete these names
+
+			var width = 1000;
+			var height = 800;
+			var numBoxes = 0;
+			var trees;
+
+			var projection = d3.geoMercator();
+			var geoGenerator = d3.geoPath().projection(projection)
+
+			// Cycle through colors
+			function colors(i) {
+				var colorlist = ["#1b9e77", "#d95f02", "#7570b3", "#e7298a", "#66a61e", "#e6ab02", "#a6761d", "#666666"]
+				return colorlist[i % colorlist.length]
+			}
+
+			// Format user-provided scientific name with proper capitalization etc.
+			function formatName(sci) {
+				var s = sci.trim().split(" ")
+				var g = s.shift()
+				var genus = g[0].toUpperCase() + g.substring(1).toLowerCase()
+				var species = s.join(" ").toLowerCase()
+				return species ? genus + " " + species : genus
+			}
+
+			// Load basemaps
+			function setupMap() {
+				var map = d3.select("#map").style("width", width + "px").style("height", height + "px");
+				var span = map.append("span").classed("loadingtext", true).text("Loading basemaps...")
+				var svg = map.append("svg").style("width", width + "px").style("height", height + "px");
+
+				var shapes = [
+					{"id": "Boundary",   "color": "#fffaf0" },
+					{"id": "Vegetation", "color": "#73d05f" },
+					{"id": "OpenSpace",  "color": "#73d05f" },
+					{"id": "Water",      "color": "#bdd1ee" },
+					{"id": "Roads",      "color": "#333e47" },
+					{"id": "Paths",      "color": "#333e47" },
+				]
+
+				// <https://stackoverflow.com/a/51113326>
+				Promise.all([
+					d3.json("BOUNDARY_CityBoundary.json"),
+					d3.json("BASEMAP_Vegetation.json"),
+					d3.json("RECREATION_OpenSpace.json"),
+					d3.json("HYDRO_WaterBodies.json"),
+					d3.json("BASEMAP_Roads.json"),
+					d3.json("BASEMAP_PublicFootpaths.json"),
+				]).then(function(jsons) {
+					for (var i = 0, len = jsons.length; i < len; i++) {
+						json = jsons[i]
+						shape = shapes[i]
+						d3.select("#map svg")
+							.append("g")
+							.attr("id", shape.id)
+							.classed("baselayer", true)
+							.selectAll("path")
+							.data(json.features)
+							.enter()
+							.append("path")
+							.attr("d", geoGenerator)
+							.attr("fill", shape.color)
+							.classed("basepath", true)
+					}
+					map.classed("loading", false);
+					span.remove();
+				});
+			}
+
+			function addTrees(sci, col) {
+				var sci = formatName(sci)
+				var sci_class = sci.replace(" ", "_")
+
+				d3.select("#map svg")
+					.append("g")
+					.attr("id", "layer_" + sci_class)
+					.classed("treelayer", true)
+					.selectAll("path")
+					.data(trees.features)
+					.enter()
+					.filter(function(tree) {
+						if (sci.indexOf(" ") == -1) {
+							return tree.properties.Genus == sci
+						} else {
+							s = sci.split(" ")
+							return (tree.properties.Genus == s[0]) && (tree.properties.species == s[1])
+						}
+					})
+					.append("path")
+					.attr("d", function(tree) {
+						return geoGenerator.pointRadius(2.5 * Math.log10(tree.properties.diameter))(tree)
+					})
+					.attr("fill", col)
+					.attr("stroke", "#000")
+					.classed(sci_class, true)
+					.classed("treepath", true)
+			}
+
+			function showTrees(sci) {
+				var sci = formatName(sci)
+				var sci_class = sci.replace(" ", "_")
+				d3.select("#layer_" + sci_class).style("opacity", 1);
+			}
+
+			function hideTrees(sci) {
+				var sci = formatName(sci)
+				var sci_class = sci.replace(" ", "_")
+				d3.select("#layer_" + sci_class).style("opacity", 0);
+			}
+
+			function deleteTrees(sci) {
+				var sci = formatName(sci)
+				var sci_class = sci.replace(" ", "_")
+				d3.select("#layer_" + sci_class).remove();
+				d3.select("#box_" + sci_class).remove();
+				d3.select("#label_" + sci_class).remove();
+				// numBoxes--;
+			}
+
+			function toggleTrees(box, sci, col) {
+				if (box.checked) {showTrees(sci, col)} else {hideTrees(sci)}
+			}
+
+			function dimBasemap(elem) {
+				if (elem.checked) {
+					d3.selectAll("g.baselayer").classed("dimmed", true);
+				} else {
+					d3.selectAll("g.baselayer").classed("dimmed", false);
+				}
+			}
+
+			function addBox(sci) {
+				var sci = formatName(sci)
+				var sci_class = sci.replace(" ", "_")
+
+				// Don't clutter with many boxes with the same label
+				var box = d3.select("#box_" + sci_class)
+				if (!box.empty()) {
+					box.attr("checked", true);
+					return false;
+				}
+
+				var col = colors(numBoxes)
+
+				var div = d3.select("#form").append("div")
+				div.append("input")
+					.attr("type", "checkbox")
+					.attr("name", "box_" + sci_class)
+					.attr("id", "box_" + sci_class)
+					.attr("checked", true)
+					.on("click", function(){toggleTrees(this, sci, col)})
+
+				var label = div.append("label")
+					.attr("for", "box_" + sci_class)
+					.attr("id", "label_" + sci_class)
+					.classed("sci", true)
+					.text(sci)
+
+				var svg = label.append("svg")
+					.attr("width", 12)
+					.attr("height", 12)
+					.lower()
+				svg.append("circle")
+					.attr("cx", 6)
+					.attr("cy", 6)
+					.attr("r", 6)
+					.attr("fill", col)
+
+				label.append("a")
+					.attr("href", "#")
+					.attr("title", "Remove")
+					.classed("close", true)
+					.on("click", function(){deleteTrees(sci)})
+					.text("✖")
+
+				numBoxes++;
+
+				addTrees(sci, col)
+				return false
+			}
+
+			d3.json("trees.json").then(function(json) {
+				trees = json;
+				projection.fitSize([width, height], json);
+				setupMap();
+			});
+
+		</script>
+	</head>
+	<body>
+
+	<header>
+		<form id="form" action="#" onsubmit="return addBox(this.genus.value)">
+			<input type="text" name="genus" id="genus" value="" size="30" placeholder="Scientific name" list="genera">
+			<datalist id="genera">
+				<option value="Abies">
+				<option value="Acer">
+				<option value="Aesculus">
+				<option value="Ailanthus">
+				<option value="Amelanchier">
+				<option value="Betula">
+				<option value="Carpinus">
+				<option value="Carya">
+				<option value="Castanea">
+				<option value="Catalpa">
+				<option value="Cedrus">
+				<option value="Celtis">
+				<option value="Cercidiphyllum">
+				<option value="Cercis">
+				<option value="Chionanthus">
+				<option value="Cladrastis">
+				<option value="Cornus">
+				<option value="Corylus">
+				<option value="Cotinus">
+				<option value="Crataegus">
+				<option value="Enkianthus">
+				<option value="Eucommia">
+				<option value="Fagus">
+				<option value="Fraxinus">
+				<option value="Ginkgo">
+				<option value="Gleditsia">
+				<option value="Gymnocladus">
+				<option value="Halesia">
+				<option value="Hamamelis">
+				<option value="Ilex">
+				<option value="Juglans">
+				<option value="Juniperus">
+				<option value="Koelreuteria">
+				<option value="Laburnum">
+				<option value="Larix">
+				<option value="Liquidambar">
+				<option value="Liriodendron">
+				<option value="Maackia">
+				<option value="Magnolia">
+				<option value="Malus">
+				<option value="Metasequoia">
+				<option value="Morus">
+				<option value="Nyssa">
+				<option value="Ostrya">
+				<option value="Oxydendrum">
+				<option value="Parrotia">
+				<option value="Phellodendron">
+				<option value="Picea">
+				<option value="Pinus">
+				<option value="Platanus">
+				<option value="Populus">
+				<option value="Prunus">
+				<option value="Pseudotsuga">
+				<option value="Ptelea">
+				<option value="Pyrus">
+				<option value="Quercus">
+				<option value="Rhamnus">
+				<option value="Robinia">
+				<option value="Salix">
+				<option value="Sassafras">
+				<option value="Sciadopitys">
+				<option value="Sorbus">
+				<option value="Stewartia">
+				<option value="Styphnolobium">
+				<option value="Styrax">
+				<option value="Syringa">
+				<option value="Taxus">
+				<option value="Thuja">
+				<option value="Tilia">
+				<option value="Tsuga">
+				<option value="Ulmus">
+				<option value="Viburnum">
+				<option value="Zelkova">
+				<option value="Tilia cordata">
+				<option value="Acer campestre">
+				<option value="Acer rubrum">
+				<option value="Acer saccharum">
+				<option value="Gleditsia triacanthos">
+				<option value="Quercus palustris">
+				<option value="Cercis canadensis">
+				<option value="Styphnolobium japonicum">
+				<option value="Fraxinus pennsylvanica">
+				<option value="Quercus rubra">
+				<option value="Acer platanoides">
+				<option value="Zelkova serrata">
+				<option value="Platanus occidentalis">
+				<option value="Pyrus calleryana">
+				<option value="Syringa reticulata">
+				<option value="Liquidambar styraciflua">
+				<option value="Platanus acerifolia">
+				<option value="Ulmus americana">
+				<option value="Ulmus parvifolia">
+				<option value="Ginkgo biloba">
+				<option value="Fraxinus americana">
+				<option value="Acer saccharinum">
+				<option value="Prunus sargentii">
+				<option value="Liriodendron tulipfera">
+				<option value="Maackia amurensis">
+				<option value="Prunus serrulata">
+				<option value="Parrotia persica">
+				<option value="Koelreuteria paniculata">
+				<option value="Celtis occidentalis">
+				<option value="Populus tremuloides">
+				<option value="Quercus bicolor">
+				<option value="Thuja occidentalis">
+				<option value="Tilia tomentosa">
+				<option value="Robinia pseudoacacia">
+				<option value="Acer acerifolia">
+				<option value="Ulmus pumila">
+				<option value="Prunus cordata">
+				<option value="Gymnocladus dioicus">
+				<option value="Tilia rubrum">
+				<option value="Quercus alba">
+				<option value="Ulmus cordata">
+				<option value="Prunus yedoensis">
+				<option value="Syringa serrata">
+				<option value="Prunus platanoides">
+				<option value="Fagus grandifolia">
+				<option value="Prunus × incamp">
+				<option value="Pyrus cordata">
+				<option value="Betula nigra">
+				<option value="Ailanthus altissima">
+				<option value="Carpinus caroliniana">
+				<option value="Acer ginnala">
+				<option value="Ulmus serrata">
+				<option value="Phellodendron amurense">
+				<option value="Acer griseum">
+				<option value="Aesculus hippocastanum">
+				<option value="Catalpa speciosa">
+				<option value="Acer buergerianum">
+				<option value="Ulmus bicolor">
+				<option value="Carya platanoides">
+				<option value="Zelkova parvifolia">
+				<option value="Nyssa sylvatica">
+				<option value="Cladrastis kentukea">
+				<option value="Prunus americana">
+				<option value="Metasequoia glyptostroboides">
+				<option value="Syringa styraciflua">
+				<option value="Acer freemanii">
+				<option value="Styphnolobium triacanthos">
+				<option value="Betula pendula">
+				<option value="Pinus nigra">
+				<option value="Picea abies">
+				<option value="Cornus kousa">
+				<option value="Fagus sylvatica">
+				<option value="Tsuga canadensis">
+				<option value="Picea glauca">
+				<option value="Prunus serotina">
+				<option value="Pseudotsuga menziesii">
+				<option value="Morus alba">
+				<option value="Picea pungens">
+				<option value="Prunus virginiana">
+				<option value="Prunus pensylvanica">
+				<option value="Pinus sylvestris">
+				<option value="Eucommia ulmoides">
+				<option value="Abies concolor">
+				<option value="Juniperus virginiana">
+				<option value="Prunus canadensis">
+				<option value="Quercus robur">
+				<option value="Amelanchier × grandiflora">
+				<option value="Quercus imbricaria">
+				<option value="Ptelea trifoliata">
+				<option value="Gleditsia japonica">
+				<option value="Castanea hippocastanum">
+				<option value="Acer americana">
+				<option value="Salix babylonica">
+				<option value="Acer cordata">
+				<option value="Betula papyrifera">
+				<option value="Juglans nigra">
+				<option value="Populus deltoides">
+				<option value="Ginkgo triacanthos">
+				<option value="Populus nigra">
+				<option value="Salix nigra">
+				<option value="Tilia calleryana">
+				<option value="Pinus parviflora">
+				<option value="Acer rubra">
+				<option value="Prunus calleryana">
+				<option value="Ostrya virginiana">
+				<option value="Pinus rubrum">
+				<option value="Acer negundo">
+				<option value="Gleditsia palustris">
+				<option value="Prunus persica">
+				<option value="Acer tataricum">
+				<option value="Rhamnus cathartica">
+				<option value="Amelanchier ginnala">
+				<option value="Ulmus japonica× wilsoniana">
+				<option value="Styphnolobium japonica">
+				<option value="Aesculus × carnea">
+				<option value="Prunus incam">
+				<option value="Fraxinus excelsior">
+				<option value="Corylus colurna">
+			</datalist>
+			<br>
+			<input type="checkbox" name="dimmer" id="dimmer" onclick="dimBasemap(this)">
+			<label for="dimmer">Dim basemap</label>
+			<br><br>
+		</form>
+	</header>
+	<main role="main">
+		<h1>Cambridge Tree Map</h1>
+		<div id="map" class="loading">
+			<noscript>
+				<p>Sorry, this map relies on <a href="https://d3js.org/">D3.js</a>, so it won't work without JavaScript enabled.</p>
+			</noscript>
+		</div>
+	</main>
+
+	<footer>
+	Tree data is from the <a href="https://data.cambridgema.gov/Public-Works/Street-Trees/ni4i-5bnn">Camrbidge Open Data portal</a>.
+	Basefiles are from <a href="https://www.cambridgema.gov/GIS">Cambridge GIS</a>.
+	Erroneous tree diameters are fixed (to the best of my knowledge) but not erroneous genus or species labels.
+	The color scheme is from <a href="https://colorbrewer2.org/">ColorBrewer</a>.
+	This code is released under the <a rel="license" href="https://mit-license.org/">MIT license</a>.
+	For more information, see <a href="https://alexklapheke.github.io/blog/trees.html">my blog post</a> on the subject.
+	</footer>
+	</body>
+</html>
