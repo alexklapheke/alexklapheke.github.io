@@ -733,8 +733,7 @@ deeply set in U.S. culture to be meaningfully pried away.
 
 The pros of adopting IRV seem to be:
 
--   Relative simplicity, assuming the ballots are not designed by
-    lunatics from Florida
+-   Relative simplicity, assuming the ballots are designed properly
 -   Allowing voters to express nuanced opinions
 -   Elimination of spoilage by small parties
 -   Probable reduction in tactical voting, and the slim possibility of
