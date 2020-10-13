@@ -13,7 +13,7 @@
 		<meta name="msapplication-TileImage" content="tile-icon.png">
 
 		<meta name="author" content="Alexander Klapheke">
-		<link rel="canonical" href="http://alexklapheke.github.io/treemap">
+		<link rel="canonical" href="http://alexklapheke.github.io/treemap/">
 
 		<link rel="stylesheet" type="text/css" href="../include/style.css">
 		<style type="text/css" media="all">
@@ -102,7 +102,6 @@
 		<script>
 			// TODO: Fix dot sizes, especially when zoomed in
 			// TODO: Clean up specific names
-			// TODO: Mobile-friendly layout
 			// TODO: Add street names (only when zoomed in enough?) <https://www.cambridgema.gov/GIS/gisdatadictionary/Trans/TRANS_MajorRoads>
 
 			var width = 1000;
@@ -111,7 +110,7 @@
 			var trees;
 
 			var projection = d3.geoMercator();
-			var geoGenerator = d3.geoPath().projection(projection)
+			var geoGenerator = d3.geoPath().projection(projection);
 
 			// Cycle through colors
 			function colors(i) {
@@ -121,11 +120,11 @@
 
 			// Format user-provided scientific name with proper capitalization etc.
 			function formatName(sci) {
-				var s = sci.trim().split(" ")
-				var g = s.shift()
-				var genus = g[0].toUpperCase() + g.substring(1).toLowerCase()
-				var species = s.join(" ").toLowerCase()
-				return species ? genus + " " + species : genus
+				var s = sci.trim().split(" ");
+				var g = s.shift();
+				var genus = g[0].toUpperCase() + g.substring(1).toLowerCase();
+				var species = s.join(" ").toLowerCase();
+				return species ? genus + " " + species : genus;
 			}
 
 			// Load basemaps
@@ -146,26 +145,39 @@
 				var g = svg.append("g")
 					.attr("id", "mapwrapper")
 
-					svg.call(d3.zoom()
-						.extent([
-							[0, 0],
-							[width, height]
-						])
-						.scaleExtent([1, 8])
-						.on("zoom", function({
-							transform
-						}) {
-							g.attr("transform", transform);
-						}));
+				svg.call(d3.zoom()
+					.extent([
+						[0, 0],
+						[width, height]
+					])
+					.scaleExtent([1, 8])
+					.on("zoom", function({
+						transform
+					}) {
+						g.attr("transform", transform);
+					}));
 
 
-				var shapes = [
-					{"id": "Boundary",   "color": "#fffaf0" }, // was: 
-					{"id": "Vegetation", "color": "#73d05f" },
-					{"id": "OpenSpace",  "color": "#73d05f" },
-					{"id": "Water",      "color": "#bdd1ee" },
-					{"id": "Roads",      "color": "#333e47" },
-					{"id": "Paths",      "color": "#333e47" },
+				var shapes = [{
+						"id": "Boundary",
+						"color": "#fffaf0"
+					}, // was: 
+					{
+						"id": "Vegetation",
+						"color": "#73d05f"
+					}, {
+						"id": "OpenSpace",
+						"color": "#73d05f"
+					}, {
+						"id": "Water",
+						"color": "#bdd1ee"
+					}, {
+						"id": "Roads",
+						"color": "#333e47"
+					}, {
+						"id": "Paths",
+						"color": "#333e47"
+					},
 				]
 
 				// <https://stackoverflow.com/a/51113326>
@@ -226,16 +238,11 @@
 					.classed("treepath", true)
 			}
 
-			function showTrees(sci) {
+			function showHideTrees(box, sci) {
 				var sci = formatName(sci)
 				var sci_class = sci.replace(" ", "_")
-				d3.select("#layer_" + sci_class).style("opacity", 1);
-			}
-
-			function hideTrees(sci) {
-				var sci = formatName(sci)
-				var sci_class = sci.replace(" ", "_")
-				d3.select("#layer_" + sci_class).style("opacity", 0);
+				d3.select("#layer_" + sci_class).style("opacity", box.checked ? 1 : 0);
+				return false;
 			}
 
 			function deleteTrees(sci) {
@@ -248,17 +255,8 @@
 				return false;
 			}
 
-			function toggleTrees(box, sci, col) {
-				if (box.checked) {showTrees(sci, col)} else {hideTrees(sci)}
-				return false;
-			}
-
-			function dimBasemap(elem) {
-				if (elem.checked) {
-					d3.selectAll("g.baselayer").classed("dimmed", true);
-				} else {
-					d3.selectAll("g.baselayer").classed("dimmed", false);
-				}
+			function dimBasemap(box) {
+				d3.selectAll("g.baselayer").classed("dimmed", box.checked);
 				return true;
 			}
 
@@ -281,7 +279,9 @@
 					.attr("name", "box_" + sci_class)
 					.attr("id", "box_" + sci_class)
 					.attr("checked", true)
-					.on("click", function(){return toggleTrees(this, sci, col)})
+					.on("click", function() {
+						return showHideTrees(this, sci)
+					})
 
 				var label = div.append("label")
 					.attr("for", "box_" + sci_class)
@@ -293,7 +293,7 @@
 					.attr("width", 12)
 					.attr("height", 12)
 					.lower()
-				svg.append("circle")
+					.append("circle")
 					.attr("cx", 6)
 					.attr("cy", 6)
 					.attr("r", 6)
@@ -303,7 +303,9 @@
 					.attr("href", "#")
 					.attr("title", "Remove")
 					.classed("close", true)
-					.on("click", function(){return deleteTrees(sci)})
+					.on("click", function() {
+						return deleteTrees(sci)
+					})
 					.text("✕")
 
 				numBoxes++;
@@ -534,13 +536,13 @@
 	</main>
 
 	<footer>
-	Created by <a href="https://alexklapheke.github.io">Alexander Klapheke</a>.
+	<p>Created by <a href="https://alexklapheke.github.io">Alexander Klapheke</a> using <a href="https://d3js.org/">D3.js</a>.
 	Tree data is from the <a href="https://data.cambridgema.gov/Public-Works/Street-Trees/ni4i-5bnn">Cambridge Open Data portal</a>.
 	Basefiles are from <a href="https://www.cambridgema.gov/GIS">Cambridge GIS</a>.
 	Erroneous tree diameters are fixed (to the best of my knowledge) but not erroneous genus or species labels.
 	The color scheme is from <a href="https://colorbrewer2.org/">ColorBrewer</a>.
 	This code is released under the <a rel="license" href="https://mit-license.org/">MIT license</a>.
-	For more information, see <a href="https://alexklapheke.github.io/blog/trees.html">my blog post</a> on the subject.
+	For more information, see <a href="https://alexklapheke.github.io/blog/trees.html">my blog post</a> on the subject.</p>
 	</footer>
 	</body>
 </html>
