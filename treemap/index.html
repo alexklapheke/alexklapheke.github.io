@@ -28,6 +28,8 @@
 			#map {
 				border: 1px solid #888888;
 				background: #fafafa;
+				max-width: 100%;
+				max-height: 80vh;
 			}
 
 			#map.loading {
@@ -40,7 +42,7 @@
 			}
 
 			main {
-				padding: 30px 0px 30px 30px;
+				padding: 30px;
 				margin-left: 280px;
 				background: #ffffff;
 			}
@@ -81,18 +83,11 @@
 				header {
 					position: static;
 					width: auto;
+					padding: 30px;
 				}
 				
 				main, footer {
 					margin-left: 0px;
-				}
-				
-				main, header {
-					padding: 30px;
-				}
-				
-				#map {
-					max-width: 100%;
 				}
 			}
 
@@ -160,30 +155,35 @@
 
 				var shapes = [{
 						"id": "Boundary",
-						"color": "#fffaf0"
-					}, // was: 
-					{
-						"id": "Vegetation",
-						"color": "#73d05f"
+						"fill": "#fff8ea",
+						"stroke": "none"
 					}, {
+					// 	"id": "Vegetation",
+					// 	"fill": "#73d05f",
+					// 	"stroke": "none"
+					// }, {
 						"id": "OpenSpace",
-						"color": "#73d05f"
+						"fill": "#73d05f",
+						"stroke": "none"
 					}, {
 						"id": "Water",
-						"color": "#bdd1ee"
+						"fill": "#bdd1ee",
+						"stroke": "none"
 					}, {
 						"id": "Roads",
-						"color": "#333e47"
+						"fill": "#333e47",
+						"stroke": "none"
 					}, {
 						"id": "Paths",
-						"color": "#333e47"
+						"fill": "#333e47",
+						"stroke": "none"
 					},
 				]
 
 				// <https://stackoverflow.com/a/51113326>
 				Promise.all([
 					d3.json("BOUNDARY_CityBoundary.json"),
-					d3.json("BASEMAP_Vegetation.json"),
+					// d3.json("BASEMAP_Vegetation.json"),
 					d3.json("RECREATION_OpenSpace.json"),
 					d3.json("HYDRO_WaterBodies.json"),
 					d3.json("BASEMAP_Roads.json"),
@@ -201,7 +201,9 @@
 							.enter()
 							.append("path")
 							.attr("d", geoGenerator)
-							.attr("fill", shape.color)
+							.attr("fill", shape.fill)
+							.attr("stroke", shape.stroke)
+							.attr("stroke-width", 2)
 							.classed("basepath", true)
 					}
 					map.classed("loading", false);
