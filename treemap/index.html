@@ -77,6 +77,25 @@
 				font-size: 10pt;
 			}
 
+			@media only screen and (max-width: 960px){
+				header {
+					position: static;
+					width: auto;
+				}
+				
+				main, footer {
+					margin-left: 0px;
+				}
+				
+				main, header {
+					padding: 30px;
+				}
+				
+				#map {
+					max-width: 100%;
+				}
+			}
+
 		</style>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<script src="https://d3js.org/d3.v6.min.js"></script>
