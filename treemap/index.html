@@ -30,6 +30,11 @@
 				background: #fafafa;
 				max-width: 100%;
 				max-height: 80vh;
+				cursor: grab;
+			}
+
+			#map:active {
+				cursor: grabbing;
 			}
 
 			#map.loading {
@@ -104,7 +109,7 @@
 			// TODO: Clean up specific names
 			// TODO: Add street names (only when zoomed in enough?) <https://www.cambridgema.gov/GIS/gisdatadictionary/Trans/TRANS_MajorRoads>
 
-			var width = 1000;
+			var width = 1200;
 			var height = 800;
 			var numBoxes = 0;
 			var trees;
