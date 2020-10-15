@@ -68,7 +68,8 @@
 				cursor: pointer;
 			}
 
-			input[type="color"]::-moz-color-swatch, input[type="color"]::-webkit-color-swatch {
+			input[type="color"]::-moz-color-swatch,
+			input[type="color"]::-webkit-color-swatch {
 				border: 1px solid #DFE8F7;
 				border-radius: 100%
 			}
@@ -124,8 +125,9 @@
 			var width = 1200;
 			var height = 800;
 			var numBoxes = 0;
-			var trees;
 			var zoomLevel = 1;
+			var trees;
+			var names;
 
 			var projection = d3.geoMercator();
 			var geoGenerator = d3.geoPath().projection(projection);
@@ -143,6 +145,20 @@
 				var genus = g[0].toUpperCase() + g.substring(1).toLowerCase();
 				var species = s.join(" ").toLowerCase();
 				return species ? genus + " " + species : genus;
+			}
+
+			function loadNames() {
+				d3.json("names.json").then(function(json) {
+					names = json;
+					for (var sci in names) {
+						common = names[sci]
+						datalist = d3.select("#genera")
+						// Add both options to autocomplete list to allow completing
+						// either common or scientific name
+						datalist.append("option").attr("value", sci)
+						datalist.append("option").attr("value", sci).text(common)
+					}
+				});
 			}
 
 			// Load basemaps
@@ -316,6 +332,9 @@
 				var label = div.append("label")
 					.attr("for", "box_" + sci_class)
 					.attr("id", "label_" + sci_class)
+
+				label.append("abbr")
+					.attr("title", names[sci])
 					.classed("sci", true)
 					.text(sci)
 
@@ -357,6 +376,7 @@
 			d3.json("trees.json").then(function(json) {
 				trees = json;
 				projection.fitSize([width, height], json);
+				loadNames();
 				setupMap();
 			});
 		</script>
@@ -365,201 +385,9 @@
 
 	<header>
 		<form id="form" action="#" onsubmit="return addBox(this.genus.value)">
-			<p class="help">Type the scientific name of a tree below and hit enter to add it to the map. For example, <a href="#" onclick="return addBox('Ulmus pumila')"><abbr class="sci" title="Siberian elm">Ulmus pumila</abbr></a>, <a href="#" onclick="return addBox('Tilia tomentosa')"><abbr class="sci" title="Silver linden">Tilia tomentosa</abbr></a>, or <a href="#" onclick="return addBox('Phellodendron amurense')"><abbr class="sci" title="Amur cork tree">Phellodendron amurense</abbr></a>.</p>
+			<p class="help">Type the common or scientific name of a tree below and hit enter to add it to the map. For example, <a href="#" onclick="return addBox('Ulmus pumila')"><abbr class="sci" title="Siberian elm">Ulmus pumila</abbr></a>, <a href="#" onclick="return addBox('Tilia tomentosa')"><abbr class="sci" title="Silver linden">Tilia tomentosa</abbr></a>, or <a href="#" onclick="return addBox('Phellodendron amurense')">Amur cork tree</a>.</p>
 			<input type="text" name="genus" id="genus" value="" size="30" placeholder="Scientific name" list="genera">
-			<datalist id="genera">
-				<option value="Abies">
-				<option value="Abies concolor">
-				<option value="Acer">
-				<option value="Acer acerifolia">
-				<option value="Acer americana">
-				<option value="Acer buergerianum">
-				<option value="Acer campestre">
-				<option value="Acer cordata">
-				<option value="Acer freemanii">
-				<option value="Acer ginnala">
-				<option value="Acer griseum">
-				<option value="Acer negundo">
-				<option value="Acer platanoides">
-				<option value="Acer rubra">
-				<option value="Acer rubrum">
-				<option value="Acer saccharinum">
-				<option value="Acer saccharum">
-				<option value="Acer tataricum">
-				<option value="Aesculus">
-				<option value="Aesculus hippocastanum">
-				<option value="Aesculus × carnea">
-				<option value="Ailanthus">
-				<option value="Ailanthus altissima">
-				<option value="Amelanchier">
-				<option value="Amelanchier ginnala">
-				<option value="Amelanchier × grandiflora">
-				<option value="Betula">
-				<option value="Betula nigra">
-				<option value="Betula papyrifera">
-				<option value="Betula pendula">
-				<option value="Carpinus">
-				<option value="Carpinus caroliniana">
-				<option value="Carya">
-				<option value="Carya platanoides">
-				<option value="Castanea">
-				<option value="Castanea hippocastanum">
-				<option value="Catalpa">
-				<option value="Catalpa speciosa">
-				<option value="Cedrus">
-				<option value="Celtis">
-				<option value="Celtis occidentalis">
-				<option value="Cercidiphyllum">
-				<option value="Cercis">
-				<option value="Cercis canadensis">
-				<option value="Chionanthus">
-				<option value="Cladrastis">
-				<option value="Cladrastis kentukea">
-				<option value="Cornus">
-				<option value="Cornus kousa">
-				<option value="Corylus">
-				<option value="Corylus colurna">
-				<option value="Cotinus">
-				<option value="Crataegus">
-				<option value="Enkianthus">
-				<option value="Eucommia">
-				<option value="Eucommia ulmoides">
-				<option value="Fagus">
-				<option value="Fagus grandifolia">
-				<option value="Fagus sylvatica">
-				<option value="Fraxinus">
-				<option value="Fraxinus americana">
-				<option value="Fraxinus excelsior">
-				<option value="Fraxinus pennsylvanica">
-				<option value="Ginkgo">
-				<option value="Ginkgo biloba">
-				<option value="Ginkgo triacanthos">
-				<option value="Gleditsia">
-				<option value="Gleditsia japonica">
-				<option value="Gleditsia palustris">
-				<option value="Gleditsia triacanthos">
-				<option value="Gymnocladus">
-				<option value="Gymnocladus dioicus">
-				<option value="Halesia">
-				<option value="Hamamelis">
-				<option value="Ilex">
-				<option value="Juglans">
-				<option value="Juglans nigra">
-				<option value="Juniperus">
-				<option value="Juniperus virginiana">
-				<option value="Koelreuteria">
-				<option value="Koelreuteria paniculata">
-				<option value="Laburnum">
-				<option value="Larix">
-				<option value="Liquidambar">
-				<option value="Liquidambar styraciflua">
-				<option value="Liriodendron">
-				<option value="Liriodendron tulipfera">
-				<option value="Maackia">
-				<option value="Maackia amurensis">
-				<option value="Magnolia">
-				<option value="Malus">
-				<option value="Metasequoia">
-				<option value="Metasequoia glyptostroboides">
-				<option value="Morus">
-				<option value="Morus alba">
-				<option value="Nyssa">
-				<option value="Nyssa sylvatica">
-				<option value="Ostrya">
-				<option value="Ostrya virginiana">
-				<option value="Oxydendrum">
-				<option value="Parrotia">
-				<option value="Parrotia persica">
-				<option value="Phellodendron">
-				<option value="Phellodendron amurense">
-				<option value="Picea">
-				<option value="Picea abies">
-				<option value="Picea glauca">
-				<option value="Picea pungens">
-				<option value="Pinus">
-				<option value="Pinus nigra">
-				<option value="Pinus parviflora">
-				<option value="Pinus rubrum">
-				<option value="Pinus sylvestris">
-				<option value="Platanus">
-				<option value="Platanus acerifolia">
-				<option value="Platanus occidentalis">
-				<option value="Populus">
-				<option value="Populus deltoides">
-				<option value="Populus nigra">
-				<option value="Populus tremuloides">
-				<option value="Prunus">
-				<option value="Prunus americana">
-				<option value="Prunus calleryana">
-				<option value="Prunus canadensis">
-				<option value="Prunus cordata">
-				<option value="Prunus incam">
-				<option value="Prunus pensylvanica">
-				<option value="Prunus persica">
-				<option value="Prunus platanoides">
-				<option value="Prunus sargentii">
-				<option value="Prunus serotina">
-				<option value="Prunus serrulata">
-				<option value="Prunus virginiana">
-				<option value="Prunus yedoensis">
-				<option value="Prunus × incamp">
-				<option value="Pseudotsuga">
-				<option value="Pseudotsuga menziesii">
-				<option value="Ptelea">
-				<option value="Ptelea trifoliata">
-				<option value="Pyrus">
-				<option value="Pyrus calleryana">
-				<option value="Pyrus cordata">
-				<option value="Quercus">
-				<option value="Quercus alba">
-				<option value="Quercus bicolor">
-				<option value="Quercus imbricaria">
-				<option value="Quercus palustris">
-				<option value="Quercus robur">
-				<option value="Quercus rubra">
-				<option value="Rhamnus">
-				<option value="Rhamnus cathartica">
-				<option value="Robinia">
-				<option value="Robinia pseudoacacia">
-				<option value="Salix">
-				<option value="Salix babylonica">
-				<option value="Salix nigra">
-				<option value="Sassafras">
-				<option value="Sciadopitys">
-				<option value="Sorbus">
-				<option value="Stewartia">
-				<option value="Styphnolobium">
-				<option value="Styphnolobium japonica">
-				<option value="Styphnolobium japonicum">
-				<option value="Styphnolobium triacanthos">
-				<option value="Styrax">
-				<option value="Syringa">
-				<option value="Syringa reticulata">
-				<option value="Syringa serrata">
-				<option value="Syringa styraciflua">
-				<option value="Taxus">
-				<option value="Thuja">
-				<option value="Thuja occidentalis">
-				<option value="Tilia">
-				<option value="Tilia calleryana">
-				<option value="Tilia cordata">
-				<option value="Tilia rubrum">
-				<option value="Tilia tomentosa">
-				<option value="Tsuga">
-				<option value="Tsuga canadensis">
-				<option value="Ulmus">
-				<option value="Ulmus americana">
-				<option value="Ulmus bicolor">
-				<option value="Ulmus cordata">
-				<option value="Ulmus japonica× wilsoniana">
-				<option value="Ulmus parvifolia">
-				<option value="Ulmus pumila">
-				<option value="Ulmus serrata">
-				<option value="Viburnum">
-				<option value="Zelkova">
-				<option value="Zelkova parvifolia">
-				<option value="Zelkova serrata">
-			</datalist>
+			<datalist id="genera"></datalist>
 			<br>
 			<input type="checkbox" name="dimmer" id="dimmer" onclick="return dimBasemap(this)">
 			<label for="dimmer">Dim basemap</label>
@@ -579,7 +407,7 @@
 	<p>Created by <a href="https://alexklapheke.github.io">Alexander Klapheke</a> using <a href="https://d3js.org/">D3.js</a>.
 	Tree data is from the <a href="https://data.cambridgema.gov/Public-Works/Street-Trees/ni4i-5bnn">Cambridge Open Data portal</a>.
 	Basefiles are from <a href="https://www.cambridgema.gov/GIS">Cambridge GIS</a>.
-	Erroneous tree diameters are fixed (to the best of my knowledge) but not erroneous genus or species labels.
+	Erroneous scientific names and tree diameters are fixed (to the best of my knowledge).
 	The color scheme is from <a href="https://colorbrewer2.org/">ColorBrewer</a>.
 	This code is released under the <a rel="license" href="https://mit-license.org/">MIT license</a>.
 	For more information, see <a href="https://alexklapheke.github.io/blog/trees.html">my blog post</a> on the subject.</p>
