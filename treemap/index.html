@@ -58,12 +58,23 @@
 				background: #DFE8F7;
 			}
 
-			.sci {
-				font-style: italic;
+			input[type="color"] {
+				width: 16px;
+				height: 16px;
+				padding: 0px;
+				margin: 0pt 2pt;
+				background: none;
+				border: none;
+				cursor: pointer;
 			}
 
-			label svg {
-				margin: 0pt 2pt;
+			input[type="color"]::-moz-color-swatch, input[type="color"]::-webkit-color-swatch {
+				border: 1px solid #DFE8F7;
+				border-radius: 100%
+			}
+
+			.sci {
+				font-style: italic;
 			}
 
 			g.baselayer, g.treelayer {
@@ -107,12 +118,14 @@
 		<script>
 			// TODO: Fix dot sizes, especially when zoomed in
 			// TODO: Clean up specific names
+			// TODO: Add in common names somehow
 			// TODO: Add street names (only when zoomed in enough?) <https://www.cambridgema.gov/GIS/gisdatadictionary/Trans/TRANS_MajorRoads>
 
 			var width = 1200;
 			var height = 800;
 			var numBoxes = 0;
 			var trees;
+			var zoomLevel = 1;
 
 			var projection = d3.geoMercator();
 			var geoGenerator = d3.geoPath().projection(projection);
@@ -138,15 +151,18 @@
 					.style("width", width + "px")
 					.style("height", height + "px");
 
+				// Temporary loading text
 				var span = map.append("span")
 					.classed("loadingtext", true)
 					.text("Loading basemaps...")
 
-				// <https://observablehq.com/@d3/zoom>
+				// The SVG object itself
 				var svg = map.append("svg")
 					.style("width", width + "px")
 					.style("height", height + "px")
 
+				// A wrapper to use for zooming
+				// <https://observablehq.com/@d3/zoom>
 				var g = svg.append("g")
 					.attr("id", "mapwrapper")
 
@@ -155,14 +171,15 @@
 						[0, 0],
 						[width, height]
 					])
-					.scaleExtent([1, 8])
-					.on("zoom", function({
-						transform
-					}) {
+					.scaleExtent([0.5, 10])
+					.on("zoom", function({transform}) {
 						g.attr("transform", transform);
+						zoomLevel = transform.k // scale factor
+						// console.log(zoomLevel)
+						// d3.selectAll(".treepath").attr("transform", d3.zoomIdentity.scale(1/zoomLevel))
 					}));
 
-
+				// The base layers from Cambridge GIS
 				var shapes = [{
 						"id": "Boundary",
 						"fill": "#fff8ea",
@@ -214,6 +231,7 @@
 							.attr("fill", shape.fill)
 							.attr("stroke", shape.stroke)
 							.attr("stroke-width", 2)
+							.text(function(d){return d.properties.STREET})
 							.classed("basepath", true)
 					}
 					map.classed("loading", false);
@@ -246,7 +264,7 @@
 					})
 					.attr("fill", col)
 					.attr("stroke", "#000")
-					.classed(sci_class, true)
+					.classed("tree_" + sci_class, true)
 					.classed("treepath", true)
 			}
 
@@ -301,15 +319,25 @@
 					.classed("sci", true)
 					.text(sci)
 
-				var svg = label.append("svg")
-					.attr("width", 12)
-					.attr("height", 12)
+				var colorpicker = label.append("input")
 					.lower()
-					.append("circle")
-					.attr("cx", 6)
-					.attr("cy", 6)
-					.attr("r", 6)
-					.attr("fill", col)
+					.attr("type", "color")
+					.attr("value", col)
+					.attr("title", "Change color")
+					.on("change", function(e) {
+						d3.selectAll(".tree_" + sci_class)
+						.attr("fill", e.target.value)
+					});
+
+				// var svg = label.append("svg")
+				// 	.attr("width", 12)
+				// 	.attr("height", 12)
+				// 	.lower()
+				// 	.append("circle")
+				// 	.attr("cx", 6)
+				// 	.attr("cy", 6)
+				// 	.attr("r", 6)
+				// 	.attr("fill", col)
 
 				label.append("a")
 					.attr("href", "#")
