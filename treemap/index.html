@@ -118,8 +118,6 @@
 		<script src="https://d3js.org/d3.v6.min.js"></script>
 		<script>
 			// TODO: Fix dot sizes, especially when zoomed in
-			// TODO: Clean up specific names
-			// TODO: Add in common names somehow
 			// TODO: Add street names (only when zoomed in enough?) <https://www.cambridgema.gov/GIS/gisdatadictionary/Trans/TRANS_MajorRoads>
 
 			var width = 1200;
@@ -385,7 +383,7 @@
 
 	<header>
 		<form id="form" action="#" onsubmit="return addBox(this.genus.value)">
-			<p class="help">Type the common or scientific name of a tree below and hit enter to add it to the map. For example, <a href="#" onclick="return addBox('Ulmus pumila')"><abbr class="sci" title="Siberian elm">Ulmus pumila</abbr></a>, <a href="#" onclick="return addBox('Tilia tomentosa')"><abbr class="sci" title="Silver linden">Tilia tomentosa</abbr></a>, or <a href="#" onclick="return addBox('Phellodendron amurense')">Amur cork tree</a>.</p>
+			<p class="help">Type the common or scientific name of a tree below and hit enter to add it to the map. For example, <a href="#" onclick="return addBox('Ulmus pumila')"><abbr class="sci" title="Siberian elm">Ulmus pumila</abbr></a>, <a href="#" onclick="return addBox('Tilia tomentosa')"><abbr class="sci" title="silver linden">Tilia tomentosa</abbr></a>, or <a href="#" onclick="return addBox('Phellodendron amurense')">Amur cork tree</a>.</p>
 			<input type="text" name="genus" id="genus" value="" size="30" placeholder="Scientific name" list="genera">
 			<datalist id="genera"></datalist>
 			<br>
