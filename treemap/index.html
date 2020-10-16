@@ -86,6 +86,10 @@
 				opacity: 0.2;
 			}
 
+			header a {
+				display: inline;
+			}
+
 			a.close {
 				color: #888888;
 				margin-left: 5pt;
@@ -384,7 +388,7 @@
 	<header>
 		<form id="form" action="#" onsubmit="return addBox(this.genus.value)">
 			<p class="help">Type the common or scientific name of a tree below and hit enter to add it to the map. For example, <a href="#" onclick="return addBox('Ulmus pumila')"><abbr class="sci" title="Siberian elm">Ulmus pumila</abbr></a>, <a href="#" onclick="return addBox('Tilia tomentosa')"><abbr class="sci" title="silver linden">Tilia tomentosa</abbr></a>, or <a href="#" onclick="return addBox('Phellodendron amurense')">Amur cork tree</a>.</p>
-			<input type="text" name="genus" id="genus" value="" size="30" placeholder="Scientific name" list="genera">
+			<input type="text" name="genus" id="genus" value="" size="30" placeholder="Common or scientific name" list="genera">
 			<datalist id="genera"></datalist>
 			<br>
 			<input type="checkbox" name="dimmer" id="dimmer" onclick="return dimBasemap(this)">
@@ -408,7 +412,7 @@
 	Erroneous scientific names and tree diameters are fixed (to the best of my knowledge).
 	The color scheme is from <a href="https://colorbrewer2.org/">ColorBrewer</a>.
 	This code is released under the <a rel="license" href="https://mit-license.org/">MIT license</a>.
-	For more information, see <a href="https://alexklapheke.github.io/blog/trees.html">my blog post</a> on the subject.</p>
+	For more information, see <a href="https://alexklapheke.github.io/blog/trees.html">my blog post</a>.</p>
 	</footer>
 	</body>
 </html>
