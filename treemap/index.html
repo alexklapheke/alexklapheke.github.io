@@ -157,8 +157,8 @@
 						datalist = d3.select("#genera")
 						// Add both options to autocomplete list to allow completing
 						// either common or scientific name
-						datalist.append("option").attr("value", sci)
-						datalist.append("option").attr("value", sci).text(common)
+						// datalist.append("option").attr("value", sci)
+						datalist.append("option").attr("value", sci).text(sci + " (" + common + ")")
 					}
 				});
 			}
@@ -310,6 +310,18 @@
 
 			function addBox(sci) {
 				var sci = formatName(sci)
+
+				// Scientific name not in dataset
+				if (Object.keys(names).indexOf(sci) == -1) {
+					// User typed common name and hit enter
+					if (Object.values(names).map(x => x.toLowerCase()).indexOf(sci.toLowerCase()) != -1) {
+						sci = Object.keys(names).find(k => names[k].toLowerCase() == sci.toLowerCase());
+					} else {
+						// No results---nothing to map
+						return false;
+					}
+				}
+
 				var sci_class = sci.replace(" ", "_")
 
 				// Don't clutter with many boxes with the same label
