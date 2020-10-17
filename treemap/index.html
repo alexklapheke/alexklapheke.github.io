@@ -189,11 +189,12 @@
 						[0, 0],
 						[width, height]
 					])
-					.scaleExtent([0.5, 10])
+					.scaleExtent([0.5, 8])
 					.on("zoom", function({transform}) {
 						g.attr("transform", transform);
 						zoomLevel = transform.k // scale factor
 						// console.log(zoomLevel)
+						d3.selectAll(".treepath").attr("stroke-width", 1/zoomLevel);
 						// d3.selectAll(".treepath").attr("transform", d3.zoomIdentity.scale(1/zoomLevel))
 					}));
 
@@ -278,10 +279,11 @@
 					})
 					.append("path")
 					.attr("d", function(tree) {
-						return geoGenerator.pointRadius(2.5 * Math.log10(tree.properties.diameter))(tree)
+						return geoGenerator.pointRadius((Math.max(tree.properties.diameter, 1)+50)/30)(tree)
 					})
 					.attr("fill", col)
 					.attr("stroke", "#000")
+					.attr("stroke-width", 1/zoomLevel)
 					.classed("tree_" + sci_class, true)
 					.classed("treepath", true)
 			}
