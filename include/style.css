@@ -14,39 +14,44 @@
  *
  */
 
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lora:400i&display=swap&subset=latin-ext');
 
 @font-face {
-	font-family: 'Linux Libertine O';
-	src: url('fonts/LinLibertine_Rah.ttf') format('truetype');
+	font-family: "Libertinus Serif";
+	src: url("fonts/LibertinusSerif-Regular.woff2") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Linux Libertine O';
-	src: url('fonts/LinLibertine_RIah.ttf') format('truetype');
+	font-family: "Libertinus Serif";
+	src: url("fonts/LibertinusSerif-Italic.woff2") format("truetype");
 	font-weight: normal;
 	font-style: italic;
 }
 
 @font-face {
-	font-family: 'Linux Libertine O';
-	src: url('fonts/LinLibertine_RBah.ttf') format('truetype');
+	font-family: "Libertinus Serif";
+	src: url("fonts/LibertinusSerif-Bold.woff2") format("truetype");
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Linux Libertine O';
-	src: url('fonts/LinLibertine_RBIah.ttf') format('truetype');
+	font-family: "Libertinus Serif";
+	src: url("fonts/LibertinusSerif-BoldItalic.woff2") format("truetype");
 	font-weight: bold;
 	font-style: italic;
 }
 
 @font-face {
-	font-family: 'Linux Libertine O Mono';
-	src: url('fonts/LinLibertine_Mah.ttf') format('truetype');
+	font-family: "Libertinus Mono";
+	src: url("fonts/LibertinusMono-Regular.woff2") format("truetype");
+}
+
+@font-face {
+	font-family: "Libertinus Math";
+	src: url("fonts/LibertinusMath-Regular.woff2") format("truetype");
 }
 
 html {
@@ -56,7 +61,7 @@ html {
 }
 
 body {
-	font-family: "Linux Libertine O", serif;
+	font-family: "Libertinus Serif", serif;
 	font-size: 14px;
 	font-weight: normal;
 	font-style: normal;
@@ -209,6 +214,10 @@ blockquote {
 	margin-right: 0em;
 	padding-left: 1em;
 	border-left: 0.5em solid #9BA0A9;
+}
+
+math {
+	font-family: "Libertinus Math";
 }
 
 .smallcaps {
