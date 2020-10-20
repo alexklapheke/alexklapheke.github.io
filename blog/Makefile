@@ -19,7 +19,7 @@ ghraw = https://raw.githubusercontent.com/alexklapheke/alexklapheke.github.io/ma
 
 # now = $(shell date -Iseconds)
 now = $(shell date +%s)
-now_full = $(shell date -Iseconds -d @$(now))
+now_full = $(shell date -R -d @$(now))
 
 define pandoc_body_options
 --ascii \

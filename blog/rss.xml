@@ -5,11 +5,11 @@
 		<link>https://alexklapheke.github.io/</link>
 		<description></description>
 		<language>en-US</language>
-		<lastBuildDate>2020-10-20T16:32:28-04:00</lastBuildDate>
+		<lastBuildDate>Tue, 20 Oct 2020 17:17:57 -0400</lastBuildDate>
 		<item>
 			<title>Useful shell scripts</title>
 			<link>https://alexklapheke.github.io/blog/publish/bash.md</link>
-			<pubDate>2020-10-20T16:23:10-0400</pubDate>
+			<pubDate>Tue, 20 Oct 2020 16:23:10 -0400</pubDate>
 	<description>
 &lt;div class=&quot;epigraph&quot;&gt;
 &lt;p&gt;You should have brought many things, he thought. But you did not bring them, old man. Now is no time to think of what you do not have. Think of what you can do with what there is.&lt;/p&gt;
@@ -188,7 +188,7 @@ Now, typing &lt;kbd&gt;Caps % %&lt;/kbd&gt; (sequentially, not holding any keys 
 		<item>
 			<title>Instant runoff voting</title>
 			<link>https://alexklapheke.github.io/blog/publish/irv.md</link>
-			<pubDate>2020-10-08T14:18:52-0400</pubDate>
+			<pubDate>Thu, 08 Oct 2020 14:18:52 -0400</pubDate>
 	<description>
 &lt;style&gt;
 /* .dem { background: #727ecf; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; }
@@ -596,7 +596,7 @@ But it can&apos;t be inferred whether I prefer C to D.
 		<item>
 			<title>Cambridge street trees</title>
 			<link>https://alexklapheke.github.io/blog/publish/trees.md</link>
-			<pubDate>2020-07-21T20:49:29-0400</pubDate>
+			<pubDate>Tue, 21 Jul 2020 20:49:29 -0400</pubDate>
 	<description>
 &lt;div class=&quot;epigraph&quot;&gt;
 &lt;p&gt;I think that I shall never see&lt;br /&gt;
@@ -1176,7 +1176,7 @@ I&#8217;ll never see a tree at all.&lt;/p&gt;
 		<item>
 			<title>Automated essay scoring</title>
 			<link>https://alexklapheke.github.io/blog/publish/essay.md</link>
-			<pubDate>2020-07-12T18:20:44-0400</pubDate>
+			<pubDate>Sun, 12 Jul 2020 18:20:44 -0400</pubDate>
 	<description>
 &lt;!-- https://www.forbes.com/sites/petergreene/2020/05/25/no-software-still-cant-grade-student-essays/ --&gt;
 &lt;!-- https://www.ets.org/research/topics/as_nlp --&gt;
@@ -1694,7 +1694,7 @@ essays[&quot;type_ratio&quot;] = essays[&quot;types&quot;] / essays[&quot;tokens
 		<item>
 			<title>How I use org-mode to organize my recipes</title>
 			<link>https://alexklapheke.github.io/blog/publish/recipes.md</link>
-			<pubDate>2020-07-05T14:28:24-0400</pubDate>
+			<pubDate>Sun, 05 Jul 2020 14:28:24 -0400</pubDate>
 	<description>
 &lt;div class=&quot;epigraph&quot;&gt;
 &lt;p&gt;Here the Red Queen began again. &#8220;Can you answer useful questions?&#8221; she said. &#8220;How is bread made?&#8221;&lt;/p&gt;
@@ -1883,7 +1883,7 @@ Here&apos;s one I made for the [mother sauces](https://en.wikipedia.org/wiki/Sau
 		<item>
 			<title>Menu Categorization</title>
 			<link>https://alexklapheke.github.io/blog/publish/menu.md</link>
-			<pubDate>2020-07-03T18:11:59-0400</pubDate>
+			<pubDate>Fri, 03 Jul 2020 18:11:59 -0400</pubDate>
 	<description>
 &lt;div class=&quot;epigraph&quot;&gt;
 &lt;p&gt;The History of every major Galactic Civilization tends to pass through three distinct and recognizable phases, those of Survival, Inquiry and Sophistication, otherwise known as the How, Why and Where phases.&lt;/p&gt;
@@ -2092,7 +2092,7 @@ Here&apos;s one I made for the [mother sauces](https://en.wikipedia.org/wiki/Sau
 		<item>
 			<title>COVID-19 Sentiment Analysis</title>
 			<link>https://alexklapheke.github.io/blog/publish/covid-sentiment.md</link>
-			<pubDate>2020-06-23T15:58:12-04:00</pubDate>
+			<pubDate>Tue, 23 Jun 2020 15:58:12 -0400</pubDate>
 	<description>
 &lt;p&gt;This project is joint work with Luken Weaver, Jon Godin, and Reza Farrokhi.&lt;/p&gt;
 &lt;div class=&quot;epigraph&quot;&gt;
@@ -2278,7 +2278,7 @@ Here&apos;s one I made for the [mother sauces](https://en.wikipedia.org/wiki/Sau
 		<item>
 			<title>Foreword</title>
 			<link>https://alexklapheke.github.io/blog/publish/foreword.md</link>
-			<pubDate>2020-06-22T06:10:59-04:00</pubDate>
+			<pubDate>Mon, 22 Jun 2020 06:10:59 -0400</pubDate>
 	<description>
 &lt;div class=&quot;epigraph&quot;&gt;
 &lt;p&gt;I should not talk so much about myself if there were anybody else whom I knew as well.&lt;/p&gt;
