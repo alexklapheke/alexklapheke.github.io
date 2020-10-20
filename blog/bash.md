@@ -251,7 +251,7 @@ and a typical [diceware
 wordlist](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt)
 contains $6^5 = 7,776$ of those. Choosing six words from the list,
 without replacement, provides
-$\log_2\left(\frac{ {6^5}!}{{(6^5-6)}!}\right) \approx 77$ bits of
+$\log_2\left(\frac{ {6^5}!}{ {(6^5-6)}!}\right) \approx 77$ bits of
 entropy.[^4]
 
 ``` {.bash}
