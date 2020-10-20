@@ -5,6 +5,9 @@ date: 1595378969
 title: Cambridge street trees
 ---
 
+This project now features an [interactive
+map](https://alexklapheke.github.io/treemap/).
+
 ::: {.epigraph}
 I think that I shall never see\
 A billboard lovely as a tree.\

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="generator" content="pandoc" />
+		<meta name="author" content="Alexander Klapheke">
+		<meta name="robots" content="index,follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="last-modified" content="">
+
+		<link rel="canonical" href="https://alexklapheke.github.io/blog/bash.html">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+		</style>
+		<link rel="stylesheet" href="../include/style.css" />
+		<link rel="stylesheet" href="../include/blog.css" />
+		<!--[if lt IE 9]>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+		<![endif]-->
+		<script src="../include/sidenotes.js" charset="utf-8"></script>
+		<script src="../include/sorttable.js" charset="utf-8"></script>
+		<script src="../include/mspace.js" charset="utf-8"></script>
+
+		<title>Useful shell scripts</title>
+	</head>
+	<body>
+		<header>
+			<!-- http://microformats.org/wiki/hcard -->
+			<div class="author vcard">
+			<h1>
+				<a href="https://alexklapheke.github.io">
+				<span class="given-name">Alexander</span>
+				<span class="family-name"><abbr class="ipa" lang="x-ipa" title="[kl&#601;&#39;pik]">Klapheke</abbr></span>
+				</a>
+			</h1>
+
+				<div id="contact">
+					<!-- http://hcard.geekhood.net/encode/ -->
+					<a
+					class='email
+					href="mailto:x@y"
+					'
+					href
+					=	'
+					&#x20;&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;%20&#x61;&#x6c;&#x25;6&#x35;%7&#x38;&#x25;&#54;&#98;la&#x25;7&#x30;h&#37;6&#x35;&#x25;&#x36;&#x62;&#37;&#x36;&#x35;&#37;&#x34;0&#x67;&#109;&#97;%&#x36;9l&#x25;&#50;&#101;%&#x36;&#51;&#111;&#x6d;&#x3f;
+					'>&#97;&#x6c;&#x65;&#120;&#x6B;lap&#x68;&#x65;k<!--
+					mailto:abuse@hotmail.com
+					</a>
+					-->&shy;&#x65;&#64;&#103;&#109;&#x61;i&#108;&#x2E;&#99;&#x6f;&#109;</a>
+					<br>
+					<a href="../0xBCB7A837.asc">Public key</a> <span class="grayed">(<abbr title="F1BD E18B 7525 95A9 7BC4 FB04 A349 9FF5 2DF0 94AB">fingerprint</abbr>)</span>
+
+					<br><br>
+
+					<a class="social" href="https://github.com/alexklapheke">GitHub</a> <span class="bullet">&bull;</span>
+					<a class="social" href="https://linkedin.com/in/alexander-klapheke">LinkedIn</a> <span class="bullet">&bull;</span>
+					<a class="social" href="../AlexanderKlapheke-Resume.pdf">R&eacute;sum&eacute;</a>
+				</div>
+			</div>
+
+			<p id="blurb">I&rsquo;m a data scientist and self-taught coder (Python, R, Haskell) with a background in linguistics and math and over 10 years&rsquo; experience explaining technical concepts to laypeople.</p>
+
+		</header>
+		<article class="hentry">
+		<div id="titleblock">
+		<h1 class="entry-title">Useful shell scripts</h1>
+		<p>
+			<time datetime="2020-10-20T16:23:10-0400" class="published">Tuesday, October 20, 2020</time>
+			<span class="bullet">&bull;</span>
+			<span class="wordcount">1,766 words</span>
+			<span class="bullet">&bull;</span>
+			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
+			<span class="bullet">&bull;</span>
+			<a class="source" href="https://raw.githubusercontent.com/alexklapheke/alexklapheke.github.io/master/blog/bash.md">View source</a>
+		</p>
+		</div>
+		<nav id="TOC">
+<ul>
+<li><a href="#data-science"><span class="toc-section-number">1</span> Data science</a></li>
+<li><a href="#jupyter"><span class="toc-section-number">2</span> Jupyter</a></li>
+<li><a href="#tmux"><span class="toc-section-number">3</span> tmux</a></li>
+<li><a href="#man-page-replacements"><span class="toc-section-number">4</span> Man page replacements</a></li>
+<li><a href="#passwords"><span class="toc-section-number">5</span> Passwords</a></li>
+<li><a href="#music"><span class="toc-section-number">6</span> Music</a></li>
+</ul>
+		</nav>
+			<div class="entry-content">
+<div class="epigraph">
+<p>You should have brought many things, he thought. But you did not bring them, old man. Now is no time to think of what you do not have. Think of what you can do with what there is.</p>
+</div>
+<p>With increasingly sophisticated tools available, it may seem silly to mess around with shell scripts, which are nearly half a century old and have a clunky, unintuitive syntax. Nevertheless, shell scripts are fast, ubiquitous on UNIX-based systems, and, if they live in your <code>~/.bashrc</code> (or equivalent) file, always at hand. Much of their power lies in the pipe operator (<code class="sourceCode bash"><span class="kw">|</span></code>), which is basically function composition in reverse, allowing commands to be strung together without storing intermediate results. In addition, you can add custom tab completion to any function in one line with the <code class="sourceCode bash"><span class="bu">complete</span></code> command. This can make them an excellent replacement for high-level tools that, while powerful, are often built on an Indra&#8217;s net of dependencies.  Below are some of the everyday tasks I&#8217;ve used the shell to make simpler.</p>
+<section id="data-science" class="level1">
+<h1><span class="header-section-number">1</span> Data science</h1>
+<p>A lot of data processing can be done using standard commands such as <code>cut</code>, <code>paste</code>, <code>column</code>, <code>comm</code>, and <code>combine</code>. For example, the following displays the first ten lines of a CSV file of any size, even a multi-gigabyte file too large to load into pandas.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">head</span> -10 file.csv <span class="kw">|</span> <span class="ex">column</span> -ts, <span class="kw">|</span> <span class="fu">less</span> -S</a></code></pre></div>
+<p>Here, <code class="sourceCode bash"><span class="ex">column</span> -ts,</code> formats the file into columns with a comma delimiter, and <code class="sourceCode bash"><span class="fu">less</span> -S</code> overflows long lines rather than wrapping them. It&#8217;s simple enough to package this into a function that can live in your <code>~/.bashrc</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="co"># Show the first few lines of a (potentially large) CSV file</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="fu">csv_head ()</span> <span class="kw">{</span></a>
+<a class="sourceLine" id="cb2-3" title="3">    <span class="bu">local</span> <span class="va">file=${1:?</span>Usage: csv_head file [rows]<span class="va">}</span></a>
+<a class="sourceLine" id="cb2-4" title="4">    <span class="fu">head</span> -<span class="va">${2:-</span>10<span class="va">}</span> <span class="st">&quot;</span><span class="va">$file</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="ex">column</span> -ts, <span class="kw">|</span> <span class="fu">less</span> -S</a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="kw">}</span></a></code></pre></div>
+<p>Using <code>sed</code> and <code>cut</code>, we can also write a function that navigates through CSV files, &#224; la pandas&#8217; <code class="sourceCode python">.loc[]</code> function, taking either single numbers or ranges (<code>1-2</code>) as arguments:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="co"># Navigate through cells in a CSV file</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="fu">csv_loc ()</span> <span class="kw">{</span></a>
+<a class="sourceLine" id="cb3-3" title="3">    <span class="bu">local</span> <span class="va">file=${1:?</span>Usage: csv_loc file.csv [rows] [cols]<span class="va">}</span></a>
+<a class="sourceLine" id="cb3-4" title="4">    <span class="fu">sed</span> -n <span class="st">&quot;</span><span class="va">${2/</span>-<span class="va">/</span>,<span class="va">}</span><span class="st">p&quot;</span> <span class="st">&quot;</span><span class="va">$file</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">cut</span> -d, -f <span class="st">&quot;</span><span class="va">${3:-</span>1-<span class="va">}</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="kw">}</span></a></code></pre></div>
+<p>You can do more interesting file processing tasks as well. For a CSV file that&#8217;s truly massive, the <code class="sourceCode bash"><span class="fu">split</span></code> utility can parse it out into equally-sized chunks, and a simple wrapper script can do this while preserving the header in each file:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">split_csv ()</span> <span class="kw">{</span></a>
+<a class="sourceLine" id="cb4-2" title="2">    <span class="bu">local</span> <span class="va">file=${1:?</span>Usage: split_csv file<span class="va">}</span></a>
+<a class="sourceLine" id="cb4-3" title="3">    <span class="bu">local</span> <span class="va">base=</span><span class="st">&quot;</span><span class="va">${file%</span>.*<span class="va">}</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb4-4" title="4">    <span class="bu">local</span> <span class="va">ext=</span><span class="st">&quot;</span><span class="va">${file##</span>*.<span class="va">}</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb4-5" title="5"></a>
+<a class="sourceLine" id="cb4-6" title="6">    <span class="co"># Write out header</span></a>
+<a class="sourceLine" id="cb4-7" title="7">    <span class="bu">local</span> <span class="va">header=$(</span><span class="fu">head</span> -1 <span class="st">&quot;</span><span class="va">$file</span><span class="st">&quot;</span><span class="va">)</span></a>
+<a class="sourceLine" id="cb4-8" title="8"></a>
+<a class="sourceLine" id="cb4-9" title="9">    <span class="co"># Split into 100MB chunks, minus header</span></a>
+<a class="sourceLine" id="cb4-10" title="10">    <span class="fu">tail</span> +2 <span class="st">&quot;</span><span class="va">$file</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">split</span> -d -C 100MB - <span class="st">&quot;</span><span class="va">$base</span><span class="st">-&quot;</span> \</a>
+<a class="sourceLine" id="cb4-11" title="11">        --additional-suffix=<span class="st">&quot;.</span><span class="va">$ext</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb4-12" title="12"></a>
+<a class="sourceLine" id="cb4-13" title="13">    <span class="co"># Write header onto each chunk</span></a>
+<a class="sourceLine" id="cb4-14" title="14">    <span class="kw">for</span> <span class="ex">chunk</span> in <span class="st">&quot;</span><span class="va">$base</span><span class="st">&quot;</span>-*.<span class="st">&quot;</span><span class="va">$ext</span><span class="st">&quot;</span><span class="kw">;</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="cb4-15" title="15">        <span class="fu">cat</span> <span class="op">&lt;(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$header</span><span class="st">&quot;</span><span class="op">)</span> <span class="st">&quot;</span><span class="va">$chunk</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="ex">sponge</span> <span class="st">&quot;</span><span class="va">$chunk</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb4-16" title="16">    <span class="kw">done</span></a>
+<a class="sourceLine" id="cb4-17" title="17"><span class="kw">}</span></a></code></pre></div>
+<p>Now you can process the file one piece at a time.</p>
+</section>
+<section id="jupyter" class="level1">
+<h1><span class="header-section-number">2</span> Jupyter</h1>
+<p>Of course, data analyses of any sophistication require more advanced tools. <a href="https://jupyter.org/">Jupyter</a> notebooks are a great mini-IDE for creating <a href="https://en.wikipedia.org/wiki/Literate_programming">literate</a> Python programs, but hard to work with in the terminal; one glaring omission is a way to create a new notebook from the command line. This script, which lives in my <code>~/.bashrc</code>, lets me type <code class="sourceCode bash"><span class="ex">jn</span> <span class="op">&lt;</span>filename<span class="op">&gt;</span></code> (with or without file extension) at the command line, opening the file if it exists and creating it if not.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">jn ()</span> <span class="kw">{</span></a>
+<a class="sourceLine" id="cb6-2" title="2">    <span class="co"># Complete filename with .ipynb extension if not present</span></a>
+<a class="sourceLine" id="cb6-3" title="3">    <span class="bu">local</span> <span class="va">filename=${1%</span>.ipynb<span class="va">}</span>.ipynb</a>
+<a class="sourceLine" id="cb6-4" title="4"></a>
+<a class="sourceLine" id="cb6-5" title="5">    <span class="co"># Create notebook if it doesn&#39;t already exist</span></a>
+<a class="sourceLine" id="cb6-6" title="6">    <span class="kw">if [[</span> <span class="ot">!</span> <span class="ot">-f</span> <span class="st">&quot;</span><span class="va">$filename</span><span class="st">&quot;</span><span class="kw"> ]]</span>; <span class="kw">then</span></a>
+<a class="sourceLine" id="cb6-7" title="7">        <span class="bu">echo</span> <span class="st">&#39;{&quot;cells&quot;: [], &quot;metadata&quot;: {}, &quot;nbformat&quot;: 4, &quot;nbformat_minor&quot;: 4}&#39;</span> <span class="op">&gt;</span> <span class="st">&quot;</span><span class="va">$filename</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb6-8" title="8">    <span class="kw">fi</span></a>
+<a class="sourceLine" id="cb6-9" title="9"></a>
+<a class="sourceLine" id="cb6-10" title="10">    <span class="co"># Open notebook</span></a>
+<a class="sourceLine" id="cb6-11" title="11">    <span class="ex">jupyter-notebook</span> <span class="st">&quot;</span><span class="va">$filename</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb6-12" title="12"><span class="kw">}</span></a></code></pre></div>
+<p>Sometimes, though, I don&#8217;t want to start a whole Jupyter server just to examine the source code in a notebook. You can export the notebooks as pure code with <code class="sourceCode bash"><span class="ex">jupyter-nbconvert</span> --to python</code>, but this is slow and include a lot of cruft like cell numbers. Fortunately, the notebooks themselves are just JSON files, and are easy to parse with a tool like <a href="https://stedolan.github.io/jq/">jq</a>. The following function extracts the code from a notebook:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="co"># Extract code cells from a Jupyter notebook</span></a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="fu">jn_src ()</span> <span class="kw">{</span></a>
+<a class="sourceLine" id="cb7-3" title="3">    <span class="ex">jq</span> -j <span class="st">&#39;.cells[] | select(.cell_type == &quot;code&quot;).source[], &quot;\n\n&quot;&#39;</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="kw">}</span></a></code></pre></div>
+<p>This makes it easy to treat the notebooks just like <code>.py</code> files:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="co"># Run code from Jupyter notebook</span></a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="ex">jn_src</span> notebook.ipynb <span class="kw">|</span> <span class="ex">python3</span></a>
+<a class="sourceLine" id="cb8-3" title="3"></a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="co"># Edit in Vim</span></a>
+<a class="sourceLine" id="cb8-5" title="5"><span class="ex">jn_src</span> notebook.ipynb <span class="kw">|</span> <span class="ex">vim</span> -c <span class="st">&quot;setf python&quot;</span> -</a>
+<a class="sourceLine" id="cb8-6" title="6"></a>
+<a class="sourceLine" id="cb8-7" title="7"><span class="co"># Show differences between two notebooks</span></a>
+<a class="sourceLine" id="cb8-8" title="8"><span class="fu">diff</span> <span class="op">&lt;(</span><span class="ex">jn_src</span> notebook1.ipynb<span class="op">)</span> <span class="op">&lt;(</span><span class="ex">jn_src</span> notebook2.ipynb<span class="op">)</span></a></code></pre></div>
+<p>Finally, you can add tab completion to both these functions to quickly navigate to your notebook files.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="co"># Tab complete files with .ipynb extension</span></a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="bu">complete</span> -o plusdirs -f -X <span class="st">&#39;!*.ipynb&#39;</span> jn</a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="bu">complete</span> -o plusdirs -f -X <span class="st">&#39;!*.ipynb&#39;</span> jn_src</a></code></pre></div>
+</section>
+<section id="tmux" class="level1">
+<h1><span class="header-section-number">3</span> tmux</h1>
+<p>Another nuisance of Jupyter is that it keeps open the terminal it was launched from for writing log output, which is rarely useful. The solution is to use <a href="https://tmux.github.io/">tmux</a>, a &#8220;terminal multiplexer&#8221; that allows you to manage terminals by naming them, splitting them onscreen into windows, and moving them into the background (&#8220;detaching&#8221;) and foreground (&#8220;attaching&#8221;). I have a shortcut that executes <code class="sourceCode bash"><span class="ex">tmux</span> new-session -A -s Jupyter</code>&#8212;this opens a &#8220;Jupyter&#8221; session, creating it if it doesn&#8217;t exist. From there, I create a new window in the session with <kbd>C-b c</kbd>, give it a name with <kbd>C-b ,</kbd>, and launch the notebook server with <code class="sourceCode bash"><span class="ex">jn</span></code>. I can then detach it with <kbd>C-b d</kbd> so that it&#8217;s running in the background. If I want to close down the server, I can get back to it from any terminal with <kbd>C-b w</kbd>.</p>
+<p>For times when I just want to jump into a detached session to close it, I have the following helper function:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="co"># Attach a detached tmux session from tmux</span></a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="fu">t ()</span> <span class="kw">{</span></a>
+<a class="sourceLine" id="cb10-3" title="3">    <span class="bu">local</span> <span class="va">curr=</span><span class="st">&quot;</span><span class="va">$(</span><span class="ex">tmux</span> display-message -p <span class="st">&quot;#S&quot;</span><span class="va">)</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb10-4" title="4">    <span class="ex">tmux</span> switch -t <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb10-5" title="5">    <span class="ex">tmux</span> kill-session -t <span class="st">&quot;</span><span class="va">$curr</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb10-6" title="6"><span class="kw">}</span></a>
+<a class="sourceLine" id="cb10-7" title="7"></a>
+<a class="sourceLine" id="cb10-8" title="8"><span class="co"># Tab complete with detached tmux sessions</span></a>
+<a class="sourceLine" id="cb10-9" title="9"><span class="bu">complete</span> -W <span class="st">&quot;</span><span class="va">$(</span><span class="ex">tmux</span> list-sessions -F <span class="st">&quot;#{?session_attached,,#S}&quot;</span><span class="va">)</span><span class="st">&quot;</span> t</a></code></pre></div>
+<p>This ability to detach windows is also invaluable when using ssh. For instance, when logging onto an <a href="https://aws.amazon.com/ec2/">EC2</a> instance, I can attach a tmux instance on the server, name it, then detach and close the connection, coming back to it later when I think it&#8217;s almost finished. That way, I am never logged out of the server, and even if my connection breaks, the command won&#8217;t. To automate this, I put the following block in my <code>~/.ssh/config</code>:</p>
+<pre class="sshconf"><code>Host *.amazonaws.com
+User ubuntu
+IdentityFile ~/.ssh/aws-ssh.pem
+RequestTTY force
+RemoteCommand tmux new -A -s aws
+LocalForward 9999 localhost:8888</code></pre>
+<p>Now, when I <code class="sourceCode bash"><span class="fu">ssh</span> ec2-whatever.compute.amazonaws.com</code>, it will automatically log in and attach to the tmux instance called <code>aws</code>, creating it if there is none (the <code class="sshconf">RequestTTY</code> line is there to make sure that tmux starts in a shell). After running a command, I hit <kbd>C-b C-b d</kbd> to detach the remote session,<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> and I am disconnected from the server, but the command is still running on the server.</p>
+<p>(The <code class="sshconf">LocalForward</code> line, incidentally, sets up port forwarding for Jupyter notebooks&#8212;using one, though, means I can&#8217;t detach the remote session, as that would sever the connection between local notebook interface and remote kernel.)</p>
+</section>
+<section id="man-page-replacements" class="level1">
+<h1><span class="header-section-number">4</span> Man page replacements</h1>
+<p>Lots of small utilities like <a href="https://github.com/cheat/cheat">cheat</a> and <a href="https://tldr.sh/">tldr</a> offer &#8220;example pages&#8221;, supplementing man pages by storing oft-used formulas. The pages themselves are extremely useful, making this one of my most-used commands,<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> but the utilities themselves tend to be on the bloated side. It&#8217;s simple enough to implement this in a few lines of BASH.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1"><span class="bu">export</span> <span class="va">cheatdir=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/.cheat/&quot;</span></a>
+<a class="sourceLine" id="cb13-2" title="2"></a>
+<a class="sourceLine" id="cb13-3" title="3"><span class="co"># Easy user-defined man pages</span></a>
+<a class="sourceLine" id="cb13-4" title="4"><span class="fu">cheat ()</span> <span class="kw">{</span></a>
+<a class="sourceLine" id="cb13-5" title="5">    <span class="kw">case</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span><span class="kw"> in</span> <span class="st">&quot;-e&quot;</span><span class="kw">)</span> <span class="bu">shift</span><span class="kw">;</span> <span class="va">$EDITOR</span> <span class="st">&quot;</span><span class="va">${cheatdir%</span>/<span class="va">}</span><span class="st">/</span><span class="va">$1</span><span class="st">&quot;</span> <span class="kw">;;</span> <span class="kw">esac</span></a>
+<a class="sourceLine" id="cb13-6" title="6">    <span class="fu">cat</span> <span class="st">&quot;</span><span class="va">${cheatdir%</span>/<span class="va">}</span><span class="st">/</span><span class="va">${1:?</span>Usage: cheat [-e] command_name<span class="va">}</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb13-7" title="7"><span class="kw">}</span></a>
+<a class="sourceLine" id="cb13-8" title="8"></a>
+<a class="sourceLine" id="cb13-9" title="9"><span class="co"># Tab complete entries in $cheatdir</span></a>
+<a class="sourceLine" id="cb13-10" title="10"><span class="bu">complete</span> -W <span class="st">&quot;</span><span class="va">$(</span><span class="fu">ls</span> <span class="va">${cheatdir})</span><span class="st">&quot;</span> cheat</a></code></pre></div>
+<p>Just run <code>cheat &lt;command&gt;</code> to view its page, and <code>cheat -e &lt;command&gt;</code> to edit it.</p>
+<p>This template can be expanded on; for instance, if you want syntax highlighting, you can install <a href="http://www.gnu.org/software/src-highlite/">source-highlight</a>, and replace <code class="sourceCode bash"><span class="fu">cat</span></code> with <code class="sourceCode bash"><span class="ex">source-highlight</span> --src-lang shell --out-format esc --input</code>.</p>
+</section>
+<section id="passwords" class="level1">
+<h1><span class="header-section-number">5</span> Passwords</h1>
+<p>I like to use <a href="https://xkcd.com/936/">XKCD-style</a> passwords. They are memorable and secure because they draw from a massive entropy pool we already carry around in our heads: the lexicon. A typical English speaker knows on the order of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mn>4</mn></msup><annotation encoding="application/x-tex">10^4</annotation></semantics></math> words,<span class="citation" data-cites="nagy1984how"><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></span> and a typical <a href="https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt">diceware wordlist</a> contains <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>6</mn><mn>5</mn></msup><mo>=</mo><mn>7</mn><mo>,</mo><mn>776</mn></mrow><annotation encoding="application/x-tex">6^5 = 7,776</annotation></semantics></math> of those. Choosing six words from the list, without replacement, provides <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>log</mo><mn>2</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><msup><mn>6</mn><mn>5</mn></msup><mi>!</mi></mrow><mrow><mrow><mo stretchy="false" form="prefix">(</mo><msup><mn>6</mn><mn>5</mn></msup><mo>&#8722;</mo><mn>6</mn><mo stretchy="false" form="postfix">)</mo></mrow><mi>!</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>&#8776;</mo><mn>77</mn></mrow><annotation encoding="application/x-tex">\log_2\left(\frac{{6^5}!}{{(6^5-6)}!}\right) \approx 77</annotation></semantics></math> bits of entropy.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1"><span class="co"># Generate a memorable passphrase of n words (default: 6)</span></a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="fu">diceware ()</span> <span class="kw">{</span></a>
+<a class="sourceLine" id="cb14-3" title="3">    <span class="ex">shuf</span> --random-source=/dev/random -n <span class="va">${1:-</span>6<span class="va">}</span> eff_diceware.txt <span class="kw">|</span> <span class="fu">cut</span> -f 2 <span class="kw">|</span> <span class="ex">paste</span> -s -d <span class="st">&#39; &#39;</span></a>
+<a class="sourceLine" id="cb14-4" title="4"><span class="kw">}</span></a></code></pre></div>
+<p>The <code>--random-source</code> flag is important here: it provides true hardware randomness, like you&#8217;d get rolling physical dice. By default, the command uses a pseudorandom number generator, which is deterministic; these can be <a href="https://www.wired.com/story/meet-alex-the-russian-casino-hacker-who-makes-millions-targeting-slot-machines/">guessed</a> and even <a href="https://www.schneier.com/blog/archives/2007/11/the_strange_sto.html">gamed</a>, hurting security by making some permutations of words more likely than others.</p>
+<p>Of course, if <a href="https://www.wsj.com/articles/the-man-who-wrote-those-password-rules-has-a-new-tip-n3v-r-m1-d-1502124118">fatuous</a> <a href="https://www.microsoft.com/en-us/research/publication/where-do-security-policies-come-from/">rules</a> like including punctuation are enforced, you can easily generate &#8220;old-fashioned&#8221; passwords:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1"><span class="co"># Generate a random password of n characters (default: 16)</span></a>
+<a class="sourceLine" id="cb15-2" title="2"><span class="fu">bad_password ()</span> <span class="kw">{</span></a>
+<a class="sourceLine" id="cb15-3" title="3">    <span class="fu">strings</span> /dev/urandom <span class="kw">|</span> <span class="fu">tr</span> -d <span class="st">&#39;[:space:]&#39;</span> <span class="kw">|</span> <span class="fu">head</span> -c <span class="va">${1:-</span>16<span class="va">}</span><span class="kw">;</span> <span class="bu">echo</span></a>
+<a class="sourceLine" id="cb15-4" title="4"><span class="kw">}</span></a></code></pre></div>
+</section>
+<section id="music" class="level1">
+<h1><span class="header-section-number">6</span> Music</h1>
+<p>It&#8217;s not really known for it, but Reddit is home to a huge network of <a href="https://old.reddit.com/r/Music/wiki/musicsubreddits">music subreddits</a>, each representing a genre or subgenre, to which users post YouTube or SoundCloud links. There are services that aggregate these into an internet radio station, but it is simple enough to parse the JSON yourself and pipe it to VLC (make sure it&#8217;s running an updated version of <a href="https://github.com/videolan/vlc/blob/master/share/lua/playlist/youtube.lua"><code>youtube.lua</code></a>), or your media player of choice.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" title="1"><span class="co"># Play youtube links from music subreddits</span></a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="fu">reddit_music ()</span> <span class="kw">{</span></a>
+<a class="sourceLine" id="cb16-3" title="3">    <span class="ex">curl</span> <span class="st">&quot;https://www.reddit.com/r/</span><span class="va">${1:-</span>listentothis<span class="va">}</span><span class="st">/.json?limit=100&quot;</span> <span class="kw">|</span> <span class="kw">\</span></a>
+<a class="sourceLine" id="cb16-4" title="4">        <span class="ex">jq</span> -r <span class="st">&#39;.data.children[].data.url&#39;</span> <span class="kw">|</span> <span class="kw">\</span></a>
+<a class="sourceLine" id="cb16-5" title="5">        <span class="ex">vlc</span> --novideo --preferred-resolution=360 --network-caching=30000 - <span class="kw">&amp;</span></a>
+<a class="sourceLine" id="cb16-6" title="6"><span class="kw">}</span></a></code></pre></div>
+<p>The <code>--novideo</code> and <code>--preferred-resolution=360</code> flags save bandwidth by getting only the audio stream, and <code>--network-caching=30000</code> makes sure the songs buffer long enough that there&#8217;s no lag.</p>
+<p>We can even add &#8220;stations&#8221; manually to the tab completion command as a way of bookmarking them:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" title="1"><span class="co"># Add your favorite genres here</span></a>
+<a class="sourceLine" id="cb17-2" title="2"><span class="bu">complete</span> -W <span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb17-3" title="3"><span class="st">    listentothis</span></a>
+<a class="sourceLine" id="cb17-4" title="4"><span class="st">    SoundsVintage</span></a>
+<a class="sourceLine" id="cb17-5" title="5"><span class="st">    90sAlternative</span></a>
+<a class="sourceLine" id="cb17-6" title="6"><span class="st">    MFPMPPJWFA</span></a>
+<a class="sourceLine" id="cb17-7" title="7"><span class="st">&quot;</span> reddit_music</a></code></pre></div>
+<p>If you want to combine subreddits, you can just concatenate them with a plus sign (<code>swinghouse+triphop</code>); VLC will play the top songs from both.</p>
+</section>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The <code>nbformat</code> and <code>nbformat_minor</code> keys are for my version of Jupyter. For other versions, you can get the appropriate numbers with:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" title="1"><span class="im">import</span> nbformat</a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="bu">print</span>(</a>
+<a class="sourceLine" id="cb5-3" title="3">    nbformat.current_nbformat,</a>
+<a class="sourceLine" id="cb5-4" title="4">    nbformat.current_nbformat_minor</a>
+<a class="sourceLine" id="cb5-5" title="5">)</a></code></pre></div>
+<a href="#fnref1" class="footnote-back">&#8617;</a></li>
+<li id="fn2"><p>The extra prefix tells local tmux to send the command through to the server.<a href="#fnref2" class="footnote-back">&#8617;</a></p></li>
+<li id="fn3"><p>In fact, it ties for sixth in the past ten weeks: <object data="images/d6c75039891a6afce2bdf2c01f9486ba6fa51ed2.svg" ><img src="images/d6c75039891a6afce2bdf2c01f9486ba6fa51ed2.svg" /></object> <code class="sourceCode bash"><span class="ex">y</span></code> is a wrapper for <a href="https://youtube-dl.org/">youtube-dl</a>, and <code class="sourceCode bash"><span class="ex">lyrics</span></code> is a BASH script that, well, looks up song lyrics. To get these stats:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="bu">history</span> \</a>
+<a class="sourceLine" id="cb12-2" title="2">    <span class="kw">|</span> <span class="fu">cut</span> -d <span class="st">&#39; &#39;</span> -f 4 \</a>
+<a class="sourceLine" id="cb12-3" title="3">    <span class="kw">|</span> <span class="fu">sort</span> \</a>
+<a class="sourceLine" id="cb12-4" title="4">    <span class="kw">|</span> <span class="fu">uniq</span> -c \</a>
+<a class="sourceLine" id="cb12-5" title="5">    <span class="kw">|</span> <span class="fu">sort</span> -n \</a>
+<a class="sourceLine" id="cb12-6" title="6">    <span class="kw">|</span> <span class="fu">tail</span> -10</a></code></pre></div>
+<a href="#fnref3" class="footnote-back">&#8617;</a></li>
+<li id="fn4"><p>See, e.g., William E. Nagy and Richard C. Anderson, &#8220;How Many Words Are There in Printed School English?&#8221; <em>Reading Research Quarterly</em> 19, no. 3 (1984): 304&#8211;30, doi:<a href="https://doi.org/10.2307/747823">10.2307/747823</a>.<a href="#fnref4" class="footnote-back">&#8617;</a></p></li>
+<li id="fn5"><p>Assuming <a href="https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle">Kerckhoffs&#8217;s principle</a>, which I guess we&#8217;ll have to now that I&#8217;ve blogged about it.<a href="#fnref5" class="footnote-back">&#8617;</a></p></li>
+</ol>
+</section>
+			</div>
+		</article>
+	</body>
+</html>

@@ -434,7 +434,7 @@ simulating the results of other voting systems.
 In a Borda count, all of a candidate's votes are weighted and added; so
 each first-choice vote gives a candidate 5 points, second-choice votes
 4, and so on. For instance, [Kiss]{.prg}' Borda score would be
-(2,586 × 5) + (1,404 × 4) + (962 × 3) + (741 × 2) + (491 × 1) = 23,405.
+$(2,586 \times 5) + (1,404 \times 4) + (962 \times 3) + (741 \times 2) + (491 \times 1) = 23,405$.
 This method gives much more weight to lower-ranked candidates than other
 methods, and is therefore highly amenable to centrist candidates with
 broad, if tepid, appeal.
@@ -639,7 +639,8 @@ They count 381 races total, so half had more than two candidates, and
 half again had no first-round majority. Miller [-@miller2017closeness]
 claims that 60% of the 2,642 Parliamentary elections analyzed had a
 majority winner. This is significantly different from FairVote's numbers
-(χ² = 12.588, p \< 0.001),[^9] but it's unclear that IRV was the cause.
+($\chi^2 = 12.588$, $p < 0.001$),[^9] but it's unclear that IRV was the
+cause.
 
 As an educated guess, we can estimate that 10--20% of IRV elections will
 be "competitive", and that half of those, or 5--10%, will display a

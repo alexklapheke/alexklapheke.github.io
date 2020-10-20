@@ -43,7 +43,7 @@ clean :
 	rm -f rss.xml
 
 %.html : publish/%.md templates/index-item.html templates/rss.xml templates/blogpost.html $(bibfile)
-	proselint $<;                                                                                 \
+	prosecheck $<;                                                                                \
 	sed -i 's/\$$DATE\$$/$(now)/' $<;                                                             \
 	if [ ! -e $@ ]; then                                                                          \
 		pandoc -t html5+smart                                                                     \

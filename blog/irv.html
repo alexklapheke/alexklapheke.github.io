@@ -83,6 +83,7 @@ code span.wa { color: #bf0303; } /* Warning */
 		<![endif]-->
 		<script src="../include/sidenotes.js" charset="utf-8"></script>
 		<script src="../include/sorttable.js" charset="utf-8"></script>
+		<script src="../include/mspace.js" charset="utf-8"></script>
 
 		<title>Instant runoff voting</title>
 	</head>
@@ -130,7 +131,7 @@ code span.wa { color: #bf0303; } /* Warning */
 		<p>
 			<time datetime="2020-10-08T14:18:52-0400" class="published">Thursday, October 8, 2020</time>
 			<span class="bullet">&bull;</span>
-			<span class="wordcount">5,156 words</span>
+			<span class="wordcount">5,148 words</span>
 			<span class="bullet">&bull;</span>
 			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
 			<span class="bullet">&bull;</span>
@@ -324,7 +325,7 @@ code span.wa { color: #bf0303; } /* Warning */
 </section>
 <section id="borda-count-results" class="level2">
 <h2><span class="header-section-number">2.3</span> Borda count results</h2>
-<p>In a Borda count, all of a candidate&#8217;s votes are weighted and added; so each first-choice vote gives a candidate 5 points, second-choice votes 4, and so on. For instance, <span class="prg">Kiss</span>&#8217; Borda score would be (2,586&#160;&#215;&#160;5) + (1,404&#160;&#215;&#160;4) + (962&#160;&#215;&#160;3) + (741&#160;&#215;&#160;2) + (491&#160;&#215;&#160;1) = 23,405. This method gives much more weight to lower-ranked candidates than other methods, and is therefore highly amenable to centrist candidates with broad, if tepid, appeal.</p>
+<p>In a Borda count, all of a candidate&#8217;s votes are weighted and added; so each first-choice vote gives a candidate 5 points, second-choice votes 4, and so on. For instance, <span class="prg">Kiss</span>&#8217; Borda score would be <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>586</mn><mo>&#215;</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>404</mn><mo>&#215;</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>962</mn><mo>&#215;</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>741</mn><mo>&#215;</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>491</mn><mo>&#215;</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>23</mn><mo>,</mo><mn>405</mn></mrow><annotation encoding="application/x-tex">(2,586 \times 5) + (1,404 \times 4) + (962 \times 3) + (741 \times 2) + (491 \times 1) = 23,405</annotation></semantics></math>. This method gives much more weight to lower-ranked candidates than other methods, and is therefore highly amenable to centrist candidates with broad, if tepid, appeal.</p>
 <figure>
 <object data="images/20f89197023b86097d6942ff2ddeb33d9cb0713d.svg" alt="Figure 10: Borda scores for each candidate. Montroll wins due to strong first- and second-place scores." id="fig:borda" ><img src="images/20f89197023b86097d6942ff2ddeb33d9cb0713d.svg" alt="Figure 10: Borda scores for each candidate. Montroll wins due to strong first- and second-place scores." id="fig:borda" /></object><figcaption>Figure 10: Borda scores for each candidate. Montroll wins due to strong first- and second-place scores.</figcaption>
 </figure>
@@ -475,7 +476,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <blockquote>
 <p>There have been 204 single-winner ranked choice elections in the U.S. which included at least 3 candidates. In 96 of these (or 47%), a majority winner was identified in the first round. The remaining 108 races went into the instant runoff before declaring a winner.</p>
 </blockquote>
-<p>They count 381 races total, so half had more than two candidates, and half again had no first-round majority. Miller <span class="citation" data-cites="miller2017closeness"></span> claims that 60% of the 2,642 Parliamentary elections analyzed had a majority winner. This is significantly different from FairVote&#8217;s numbers (&#967;&#178;&#160;=&#160;12.588, p&#160;&lt;&#160;0.001),<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a> but it&#8217;s unclear that IRV was the cause.</p>
+<p>They count 381 races total, so half had more than two candidates, and half again had no first-round majority. Miller <span class="citation" data-cites="miller2017closeness"></span> claims that 60% of the 2,642 Parliamentary elections analyzed had a majority winner. This is significantly different from FairVote&#8217;s numbers (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>&#967;</mi><mn>2</mn></msup><mo>=</mo><mn>12.588</mn></mrow><annotation encoding="application/x-tex">\chi^2 = 12.588</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&lt;</mo><mn>0.001</mn></mrow><annotation encoding="application/x-tex">p &lt; 0.001</annotation></semantics></math>),<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a> but it&#8217;s unclear that IRV was the cause.</p>
 <p>As an educated guess, we can estimate that 10&#8211;20% of IRV elections will be &#8220;competitive&#8221;, and that half of those, or 5&#8211;10%, will display a monotonicity failure.</p>
 </section>
 <section id="propensity-to-a-two-party-system" class="level1">
