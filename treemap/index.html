@@ -121,7 +121,6 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<script src="https://d3js.org/d3.v6.min.js"></script>
 		<script>
-			// TODO: Fix dot sizes, especially when zoomed in
 			// TODO: Add street names (only when zoomed in enough?) <https://www.cambridgema.gov/GIS/gisdatadictionary/Trans/TRANS_MajorRoads>
 
 			var width = 1200;
@@ -163,6 +162,10 @@
 				});
 			}
 
+			function resizeTree(baseDiam) {
+				return 5 * baseDiam / (2 * zoomLevel + 2)
+			}
+
 			// Load basemaps
 			function setupMap() {
 				var map = d3.select("#map")
@@ -184,6 +187,7 @@
 				var g = svg.append("g")
 					.attr("id", "mapwrapper")
 
+				// TODO: this is very laggy
 				svg.call(d3.zoom()
 					.extent([
 						[0, 0],
@@ -193,10 +197,12 @@
 					.on("zoom", function({transform}) {
 						g.attr("transform", transform);
 						zoomLevel = transform.k // scale factor
-						// console.log(zoomLevel)
-						d3.selectAll(".treepath").attr("stroke-width", 1/zoomLevel);
-						// d3.selectAll(".treepath").attr("transform", d3.zoomIdentity.scale(1/zoomLevel))
-					}));
+						d3.selectAll(".treepath")
+							.attr("stroke-width", 1 / zoomLevel)
+							.attr("r", function(d, i) {
+								return resizeTree(d3.select(this).attr("diameter"));
+							});
+						}));
 
 				// The base layers from Cambridge GIS
 				var shapes = [{
@@ -250,7 +256,7 @@
 							.attr("fill", shape.fill)
 							.attr("stroke", shape.stroke)
 							.attr("stroke-width", 2)
-							.text(function(d){return d.properties.STREET})
+							.text(d => d.properties.STREET)
 							.classed("basepath", true)
 					}
 					map.classed("loading", false);
@@ -277,10 +283,11 @@
 							return (tree.properties.Genus == s[0]) && (tree.properties.species == s[1])
 						}
 					})
-					.append("path")
-					.attr("d", function(tree) {
-						return geoGenerator.pointRadius((Math.max(tree.properties.diameter, 1)+50)/30)(tree)
-					})
+					.append("circle")
+					.attr("cx", tree => geoGenerator.centroid(tree)[0])
+					.attr("cy", tree => geoGenerator.centroid(tree)[1])
+					.attr("diameter", tree => (Math.max(tree.properties.diameter, 1) + 50) / 30)
+					.attr("r", function(d, i) {return resizeTree(d3.select(this).attr("diameter"));})
 					.attr("fill", col)
 					.attr("stroke", "#000")
 					.attr("stroke-width", 1/zoomLevel)
