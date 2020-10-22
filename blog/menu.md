@@ -76,7 +76,7 @@ are in turn referenced in `Menu.csv` to the particular bills of fare on
 which they appear.
 
 ![Menu dataset table schema (some columns omitted). [Source
-code](https://gist.github.com/alexklapheke/a197eed2a9ba742aa0080c1bdbfa579c)](images/e21ef90bc35863a4987861c018579662522e923c.svg){#fig:schema}
+code](https://gist.github.com/alexklapheke/a197eed2a9ba742aa0080c1bdbfa579c)](images/4d154e57d6df0416cf701d69981f6bae88eed8fe.svg){#fig:schema}
 
 Since all I wanted was the name of the dish (from `Dish.csv`), the date
 (from `Menu.csv`), and the menu ID (in case I wanted to group dishes by
@@ -147,7 +147,7 @@ full 63% of menus and 62% of items---are from the initial two decades of
 the twentieth century.
 
 ![Number of menus (left) and menu items (right) by
-decade](images/1dd20f58075aee57f212300ff5e6b2ffe63a6034.svg){#fig:decade}
+decade](images/7502a3a9a209b6c4f11f0d413b5e8b0f70aa98ba.svg){#fig:decade}
 
 This could cause problems during modeling, not only because a naïve
 model could latch onto the majority class and return it without
@@ -163,7 +163,7 @@ although 22.7% of them feature fewer than a hundred items, several reach
 into the thousands, with one startling outlier:
 
 ![Number of items on menus (log~10~
-scale)](images/ac4a666eef8d26a4926f0acf2cf8ff6de67feb93.svg){#fig:items}
+scale)](images/26ce88875a31388d57f1141e8d37a34b3aeb513a.svg){#fig:items}
 
 That last menu, a [1933 Plaza Hotel
 menu](http://menus.nypl.org/menus/31054), is actually 62 menus bound
@@ -182,7 +182,7 @@ transcribed by hand, eliminating the need to deal with OCR errors, but
 many items were unreasonably long.
 
 ![Character length of menu items (log~10~
-scale)](images/a47dd4bf94ca107a2ea087828d7ec1885d4141b9.svg){#fig:length}
+scale)](images/d19c350830bce586580d3cae3af853c809024b5f.svg){#fig:length}
 
 As the histogram in @fig:length shows, these go well beyond gusty
 descriptions like our "poached farmed Norwegian salmon"---the longest,
@@ -271,7 +271,7 @@ I first examined the top words from each decade, excerpted in
 @fig:1850--@fig:1990.
 
 ![Most common words on menus from the
-1850s](images/3a04acfdc390f9309b3cf78806d685e9b02434ea.svg){#fig:1850}
+1850s](images/6e3dca1d3b160f543fc7d067dc11b8c50fc0410f.svg){#fig:1850}
 
 There are only a few menus from the 1850s in the collection, but we can
 get a sense of the palate. Names of wines---*madeira*, *sherry*, and
@@ -279,7 +279,7 @@ get a sense of the palate. Names of wines---*madeira*, *sherry*, and
 and the most common cooking methods are boiling and roasting.
 
 ![Most common words on menus from the
-1910s](images/122b6b74e110c1dc2b7425adaed5d377da8df865.svg){#fig:1910}
+1910s](images/dbbbb2361c192f91f34cccff3ee52c94641c4ee6.svg){#fig:1910}
 
 By the 1910s, we have a new picture: fried foods are popular, as are
 cream sauces. Chicken and beef have made the list, as, notably, does
@@ -287,14 +287,14 @@ salad, as fresh fruits and vegetables become more available to the
 average patron.
 
 ![Most common words on menus from the
-1950s](images/0da635cbd4d4a354db51f4e5ab3017b5fa4a120d.svg){#fig:1950}
+1950s](images/6bad491f2037e7777287d8af12bc1b854b58c62f.svg){#fig:1950}
 
 We see fewer changes in the post-war era, but "fresh" has been advanced,
 as have French *de* 'of' and German *mit* 'with', indicating European
 dishes, or at least European phrasings, coming into vogue.
 
 ![Most common words on menus from the
-1990s](images/723984e59c0e4e8141e3374f230a6946b946f0a6.svg){#fig:1990}
+1990s](images/bb89f273ca5937f26cf2c364cc2f422893a53a99.svg){#fig:1990}
 
 In the 1990s, "fried" has been replaced by "grilled", and a renewed
 interest in French cuisine seems to be the *dernier cri*, as five of the
@@ -318,23 +318,23 @@ The Madeira that was so popular in the 1850s dropped off steeply soon
 after (@fig:madeira).
 
 ![Percent of menu items per year containing the word
-"Madeira"](images/55176d110106bf97c9df11bc5d37b3dec891fa5b.svg){#fig:madeira}
+"Madeira"](images/343ef09ad9f4bfb55221bd3a492741f2355429eb.svg){#fig:madeira}
 
 We see the Sun rise and set on the age of Jell-O in @fig:jello, and in
 @fig:tofu the nascence of tofu.
 
 ![Percent of menu items per year containing the word
-"Jell-O"](images/d7650987a52a9968e759d9e982fa315a003a784c.svg){#fig:jello}
+"Jell-O"](images/54d05c7c37a3182b242a18cd5cdc629e8fcc2c5a.svg){#fig:jello}
 
 ![Percent of menu items per year containing the word
-"tofu"](images/242a8f0179d5369eece0428dc40c34d25f421627.svg){#fig:tofu}
+"tofu"](images/100ed0172d3ff2235a04ffe2a974d5aa026e31c5.svg){#fig:tofu}
 
 It is also interesting to look at descriptors. Organic food is rooted in
 the environmental movement of the '60s and '70s, but doesn't appear on
 restaurant menus until the turn of the millennium.
 
 ![Percent of menu items per year containing the word
-"organic"](images/465c7e3374dde92e731b828ea2f3f4e57c9f567e.svg){#fig:organic}
+"organic"](images/9e7f78e9145e15c29f593d1d347fdaa786b1501d.svg){#fig:organic}
 
 Health terms such as "diet" show a similar trend, appearing in numbers
 in the '70s.
@@ -345,7 +345,7 @@ in the '70s.
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#66a61e" /></svg> "healthy"\
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#e6ab02" /></svg> "diet"\
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#a6761d" /></svg> "lite"\
-](images/b21f5423a476f59753e4714af6e8367e55d951a1.svg){#fig:health}
+](images/157925ff4b6674cd1230c5eeec590a5e5a2bdb22.svg){#fig:health}
 
 We can also use foreign words that commonly appear on menus as a rough
 proxy for how fashionable those cuisines were in different periods.
@@ -358,7 +358,7 @@ proxy for how fashionable those cuisines were in different periods.
 (It. 'in the style of')\
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#e6ab02" /></svg> *mit*
 (Gm.
-'with')](images/1d1e57611acc1f871be5269d4c4febffa43f7369.svg){#fig:auallamit}
+'with')](images/5d566b287e1e0a98d99f9619694791aafd703f3b.svg){#fig:auallamit}
 
 A clear post-war interest in French and German cuisine manifests
 itself---although the 40% of menu items in 2005 containing *mit* is more

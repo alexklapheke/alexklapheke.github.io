@@ -1,0 +1,92 @@
+<svg height="280.9" viewBox="0 0 208.4 210.7" width="277.8" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 210.7h208.4V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M33.8 170.3h167.4V7.2H33.8z" fill="none" id="patch_2"/>
+            <path clip-path="url(#p19516d5d7d)" d="M41.4 24456.2h10.9V14.6h-11z" fill="#e6ab02" stroke="#fff" id="patch_3"/>
+            <path clip-path="url(#p19516d5d7d)" d="M52.3 24456.2H63V70.7H52.3z" fill="#e6ab02" stroke="#fff" id="patch_4"/>
+            <path clip-path="url(#p19516d5d7d)" d="M63.1 24456.2H74V96.4H63.1z" fill="#e6ab02" stroke="#fff" id="patch_5"/>
+            <path clip-path="url(#p19516d5d7d)" d="M74 24456.2h10.9V118H74z" fill="#e6ab02" stroke="#fff" id="patch_6"/>
+            <path clip-path="url(#p19516d5d7d)" d="M84.9 24456.2h10.8V134.3H85z" fill="#e6ab02" stroke="#fff" id="patch_7"/>
+            <path clip-path="url(#p19516d5d7d)" d="M95.7 24456.2h11V137.6h-11z" fill="#e6ab02" stroke="#fff" id="patch_8"/>
+            <path clip-path="url(#p19516d5d7d)" d="M106.6 24456.2h10.9V148.2h-10.9z" fill="#e6ab02" stroke="#fff" id="patch_9"/>
+            <path clip-path="url(#p19516d5d7d)" d="M117.5 24456.2h10.9V151.2h-11z" fill="#e6ab02" stroke="#fff" id="patch_10"/>
+            <path clip-path="url(#p19516d5d7d)" d="M128.4 24456.2h10.8V163h-10.8z" fill="#e6ab02" stroke="#fff" id="patch_11"/>
+            <path clip-path="url(#p19516d5d7d)" d="M139.2 24456.2h10.9V155.6h-10.9z" fill="#e6ab02" stroke="#fff" id="patch_12"/>
+            <path clip-path="url(#p19516d5d7d)" d="M150 24456.2h11-11z" fill="#e6ab02" stroke="#fff" id="patch_13"/>
+            <path clip-path="url(#p19516d5d7d)" d="M161 24456.2h10.8H161z" fill="#e6ab02" stroke="#fff" id="patch_14"/>
+            <path clip-path="url(#p19516d5d7d)" d="M171.8 24456.2h11-11z" fill="#e6ab02" stroke="#fff" id="patch_15"/>
+            <path clip-path="url(#p19516d5d7d)" d="M182.7 24456.2h10.9V163h-10.9z" fill="#e6ab02" stroke="#fff" id="patch_16"/>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <text x="41.4" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        0
+                    </text>
+                </g>
+                <g id="xtick_2">
+                    <text x="95.7" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_2">
+                        500
+                    </text>
+                </g>
+                <g id="xtick_3">
+                    <text x="150.1" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_3">
+                        1000
+                    </text>
+                </g>
+                <text x="117.5" y="200.6" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_4">
+                    Length (characters)
+                </text>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text transform="translate(22.4 166.4)" fill="gray" id="text_5">
+                        <tspan x="0 4.649994" y="-.2" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">0</tspan>
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text transform="translate(22.4 142)" fill="gray" id="text_6">
+                        <tspan x="0 4.649994" y="-.3" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">1</tspan>
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text transform="translate(22.4 117.8)" fill="gray" id="text_7">
+                        <tspan x="0 4.649994" y="-.2" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">2</tspan>
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text transform="translate(22.4 93.5)" fill="gray" id="text_8">
+                        <tspan x="0 4.649994" y="-.2" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">3</tspan>
+                    </text>
+                </g>
+                <g id="ytick_5">
+                    <text transform="translate(22.4 69.2)" fill="gray" id="text_9">
+                        <tspan x="0 4.649994" y="-.2" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">4</tspan>
+                    </text>
+                </g>
+                <g id="ytick_6">
+                    <text transform="translate(22.4 44.9)" fill="gray" id="text_10">
+                        <tspan x="0 4.649994" y="-.2" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">5</tspan>
+                    </text>
+                </g>
+                <g id="ytick_7">
+                    <text transform="translate(22.4 20.6)" fill="gray" id="text_11">
+                        <tspan x="0 4.649994" y="-.2" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">6</tspan>
+                    </text>
+                </g>
+                <text transform="rotate(-90 15.6 88.7)" x="15.6" y="88.7" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_12">
+                    No. menu items
+                </text>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="p19516d5d7d">
+            <path d="M33.8 7.2h167.4v163.1H33.8z"/>
+        </clipPath>
+    </defs>
+</svg>

@@ -43,7 +43,7 @@ code](https://gist.github.com/alexklapheke/5077fe330ca6a307b8700d0af4c4adf9)<br>
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#081220" /></svg> Cases<br>
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#CE2A07" /></svg> Deaths<br>
 <svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#E0E0E0" stroke="none" /></svg> Lockdown
-(statewide)](images/3f1e7e6df86e8f9fd018a392563d41c599aa0188.svg){#fig:nychou}
+(statewide)](images/5c1e70817d8798d15de76e48631cc077cf36194b.svg){#fig:nychou}
 
 A naïve hypothesis would be that Houstonians, faring better overall,
 would speak with more positive affect. Complicating this, of course, is
@@ -216,7 +216,7 @@ year, without filtering by keyword (@fig:2019).
 mean)<br><br>
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#FF5500" /></svg> New
 York<br>
-<svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#0658CF" /></svg> Houston<br>](images/d89180b2553b6e5cd53d96829abd4c6acf722a35.svg){#fig:2020}
+<svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#0658CF" /></svg> Houston<br>](images/2da9d373c128936e9fc288dbdf73f52c007e9989.svg){#fig:2020}
 
 The overall results were unilluminating; the only particularly positive
 or negative periods, in February 2020, are essentially artifacts due to
@@ -225,7 +225,7 @@ insufficient data (the virus had not yet seized the nation's attention).
 ![General sentiment across cities, 2019 (5-day rolling mean)<br><br>
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#FF5500" /></svg> New
 York<br>
-<svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#0658CF" /></svg> Houston<br>](images/b5ca49f637a5e4007a3da8506aafdc19e706b258.svg){#fig:2019}
+<svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#0658CF" /></svg> Houston<br>](images/9c8e4a73f52e3fcbe1adcc0bee7eaa6498ffac1a.svg){#fig:2019}
 
 A clearer picture arose around public figures. After filtering by the
 surname of each state's governor, we see a positive spike in New York in
@@ -239,7 +239,7 @@ mean)<br><br>
 York (Keyword "Cuomo")<br>
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#0658CF" /></svg> Houston
 (Keyword
-"Abbott")<br>](images/8c8f9d11ec59d39e31be63fd9eb8df6ac232e28a.svg){#fig:gov}
+"Abbott")<br>](images/6544dc85384235aacfcc35bd24e6686b3ab8c9d6.svg){#fig:gov}
 
 This seems to imply that New Yorkers, having been much harder hit, were
 more sanguine about curtailments of public life than the relatively
@@ -256,7 +256,7 @@ mean)<br><br>
 York (Keyword "Trump")<br>
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#0658CF" /></svg> Houston
 (Keyword
-"Trump")<br>](images/b27797c4e7d81546407d8e69449b18b8f905a9fc.svg){#fig:trump}
+"Trump")<br>](images/66ef7a0fe8d3a4f8bc57cb95cb52fdefb573d8aa.svg){#fig:trump}
 
 # Conclusions
 

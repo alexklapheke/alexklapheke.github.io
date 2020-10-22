@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="311.8" onload="init(event)" viewBox="0 0 539.6 233.8" width="719.4">
+    <script type="text/ecmascript">
+        function init(event) { if ( window.svgDocument == null ) { svgDocument = event.target.ownerDocument; } } function ShowTooltip(obj) { var cur = obj.id.split(&quot;_&quot;)[1]; var tip = svgDocument.getElementById(&apos;mytooltip_&apos; + cur); tip.setAttribute(&apos;visibility&apos;, &quot;visible&quot;) } function HideTooltip(obj) { var cur = obj.id.split(&quot;_&quot;)[1]; var tip = svgDocument.getElementById(&apos;mytooltip_&apos; + cur); tip.setAttribute(&apos;visibility&apos;, &quot;hidden&quot;) }
+    </script>
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 233.8h539.6V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M70.8 224.6h446.4V7.2H70.8z" fill="none" id="patch_2"/>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="67.3" y="213.5" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_1">
+                        Carpinus
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="67.3" y="204.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_2">
+                        Magnolia
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="67.3" y="194.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_3">
+                        Styphnolobium
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text x="67.3" y="185.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_4">
+                        Betula
+                    </text>
+                </g>
+                <g id="ytick_5">
+                    <text x="67.3" y="175.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_5">
+                        Liquidambar
+                    </text>
+                </g>
+                <g id="ytick_6">
+                    <text x="67.3" y="166.5" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_6">
+                        Syringa
+                    </text>
+                </g>
+                <g id="ytick_7">
+                    <text x="67.3" y="157.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_7">
+                        Ginkgo
+                    </text>
+                </g>
+                <g id="ytick_8">
+                    <text x="67.3" y="147.6" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_8">
+                        Amelanchier
+                    </text>
+                </g>
+                <g id="ytick_9">
+                    <text x="67.3" y="138.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_9">
+                        Cornus
+                    </text>
+                </g>
+                <g id="ytick_10">
+                    <text x="67.3" y="128.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_10">
+                        Zelkova
+                    </text>
+                </g>
+                <g id="ytick_11">
+                    <text x="67.3" y="119.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_11">
+                        Malus
+                    </text>
+                </g>
+                <g id="ytick_12">
+                    <text x="67.3" y="110" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_12">
+                        Pinus
+                    </text>
+                </g>
+                <g id="ytick_13">
+                    <text x="67.3" y="100.6" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_13">
+                        Pyrus
+                    </text>
+                </g>
+                <g id="ytick_14">
+                    <text x="67.3" y="91.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_14">
+                        Prunus
+                    </text>
+                </g>
+                <g id="ytick_15">
+                    <text x="67.3" y="81.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_15">
+                        Ulmus
+                    </text>
+                </g>
+                <g id="ytick_16">
+                    <text x="67.3" y="72.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_16">
+                        Platanus
+                    </text>
+                </g>
+                <g id="ytick_17">
+                    <text x="67.3" y="62.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_17">
+                        Fraxinus
+                    </text>
+                </g>
+                <g id="ytick_18">
+                    <text x="67.3" y="53.5" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_18">
+                        Tilia
+                    </text>
+                </g>
+                <g id="ytick_19">
+                    <text x="67.3" y="44.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_19">
+                        Gleditsia
+                    </text>
+                </g>
+                <g id="ytick_20">
+                    <text x="67.3" y="34.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_20">
+                        Quercus
+                    </text>
+                </g>
+                <g id="ytick_21">
+                    <text x="67.3" y="25.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-style="italic" font-weight="400" text-anchor="end" id="text_21">
+                        Acer
+                    </text>
+                </g>
+            </g>
+            <path clip-path="url(#p393834bebe)" d="M70.8 214.8h10v-9.5h-10z" fill="#1b9e77" stroke="#fff" id="mypatch_000" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M80.7 214.8h8v-9.5h-8z" fill="#d95f02" stroke="#fff" id="mypatch_001" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 205.3H92V196H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_002" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 196h22.1v-9.5H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_003" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M93 196h5.4v-9.5H93z" fill="#d95f02" stroke="#fff" id="mypatch_004" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M98.4 196h3.3v-9.5h-3.3z" fill="#7570b3" stroke="#fff" id="mypatch_005" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M101.7 196h.2v-9.5h-.2z" fill="#e7298a" stroke="#fff" id="mypatch_006" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 186.5h19.5v-9.4H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_007" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M90.3 186.5h11.8v-9.4H90.3z" fill="#d95f02" stroke="#fff" id="mypatch_008" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M102 186.5h1v-9.4h-1z" fill="#7570b3" stroke="#fff" id="mypatch_009" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M103 186.5h.4v-9.4h-.4z" fill="#e7298a" stroke="#fff" id="mypatch_010" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 177.1H98v-9.4H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_011" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M98 177.1h5.7v-9.4H98z" fill="#d95f02" stroke="#fff" id="mypatch_012" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 167.7h32.5v-9.4H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_013" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M103.3 167.7h4.1v-9.4h-4z" fill="#d95f02" stroke="#fff" id="mypatch_014" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M107.4 167.7h0v-9.4h0z" fill="#7570b3" stroke="#fff" id="mypatch_015" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M107.5 167.7h0v-9.4h0z" fill="#e7298a" stroke="#fff" id="mypatch_016" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 158.3h33.7v-9.4H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_017" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M104.5 158.3h7v-9.4h-7z" fill="#d95f02" stroke="#fff" id="mypatch_018" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M111.4 158.3h.1v-9.4h0z" fill="#7570b3" stroke="#fff" id="mypatch_019" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 148.9h38v-9.4h-38z" fill="#1b9e77" stroke="#fff" id="mypatch_020" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M108.7 148.9h5.5v-9.4h-5.5z" fill="#d95f02" stroke="#fff" id="mypatch_021" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M114.2 148.9h.1v-9.4h0z" fill="#7570b3" stroke="#fff" id="mypatch_022" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 139.5h38.4V130H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_023" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M109.2 139.5h5.5V130h-5.5z" fill="#d95f02" stroke="#fff" id="mypatch_024" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 130H106v-9.4H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_025" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M106.1 130h19.1v-9.4h-19.1z" fill="#d95f02" stroke="#fff" id="mypatch_026" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M125.2 130h.3v-9.4h-.3z" fill="#7570b3" stroke="#fff" id="mypatch_027" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 120.6h66.4v-9.4H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_028" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 111.2h70.4v-9.4H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_029" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M141.2 111.2h13.2v-9.4h-13.2z" fill="#d95f02" stroke="#fff" id="mypatch_030" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M154.4 111.2h.3v-9.4h-.3z" fill="#7570b3" stroke="#fff" id="mypatch_031" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M154.7 111.2h0v-9.4h0z" fill="#e7298a" stroke="#fff" id="mypatch_032" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M154.8 111.2h0v-9.4h0z" fill="#66a61e" stroke="#fff" id="mypatch_033" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 101.8h83v-9.4h-83z" fill="#1b9e77" stroke="#fff" id="mypatch_034" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M153.8 101.8h10.4v-9.4h-10.4z" fill="#d95f02" stroke="#fff" id="mypatch_035" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M164.2 101.8h0v-9.4h0z" fill="#7570b3" stroke="#fff" id="mypatch_036" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 92.4h50.6V83H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_037" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M121.4 92.4H137V83h-15.7z" fill="#d95f02" stroke="#fff" id="mypatch_038" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M137.1 92.4h12.6V83h-12.6z" fill="#7570b3" stroke="#fff" id="mypatch_039" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M149.7 92.4h5.3V83h-5.3z" fill="#e7298a" stroke="#fff" id="mypatch_040" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M155 92.4h4.7V83H155z" fill="#66a61e" stroke="#fff" id="mypatch_041" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M159.7 92.4h4V83h-4z" fill="#e6ab02" stroke="#fff" id="mypatch_042" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M163.7 92.4h.6V83h-.6z" fill="#a6761d" stroke="#fff" id="mypatch_043" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M164.3 92.4h.4V83h-.4z" fill="#666" stroke="#fff" id="mypatch_044" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M164.7 92.4h.4V83h-.4z" fill="#1b9e77" stroke="#fff" id="mypatch_045" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M165 92.4h.4V83h-.3z" fill="#d95f02" stroke="#fff" id="mypatch_046" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M165.4 92.4h.2V83h-.2z" fill="#7570b3" stroke="#fff" id="mypatch_047" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M165.6 92.4h.2V83h-.2z" fill="#e7298a" stroke="#fff" id="mypatch_048" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M165.8 92.4h0V83h0z" fill="#66a61e" stroke="#fff" id="mypatch_049" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M165.8 92.4h.1V83h0z" fill="#e6ab02" stroke="#fff" id="mypatch_050" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M166 92.4h0V83h0z" fill="#a6761d" stroke="#fff" id="mypatch_051" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 83h54.4v-9.4H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_052" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M125.2 83h36.9v-9.4h-36.9z" fill="#d95f02" stroke="#fff" id="mypatch_053" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M162 83h8.7v-9.4h-8.6z" fill="#7570b3" stroke="#fff" id="mypatch_054" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M170.7 83h2.7v-9.4h-2.7z" fill="#e7298a" stroke="#fff" id="mypatch_055" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M173.4 83h2.1v-9.4h-2z" fill="#66a61e" stroke="#fff" id="mypatch_056" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M175.5 83h.1v-9.4h0z" fill="#e6ab02" stroke="#fff" id="mypatch_057" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M175.6 83h0v-9.4h0z" fill="#a6761d" stroke="#fff" id="mypatch_058" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M175.7 83h0v-9.4h0z" fill="#666" stroke="#fff" id="mypatch_059" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 73.6h55V64h-55z" fill="#1b9e77" stroke="#fff" id="mypatch_060" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M125.7 73.6H168V64h-42.3z" fill="#d95f02" stroke="#fff" id="mypatch_061" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M168 73.6h11.3V64H168z" fill="#7570b3" stroke="#fff" id="mypatch_062" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 64.1H128v-9.4H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_063" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M128 64.1h49.7v-9.4h-49.6z" fill="#d95f02" stroke="#fff" id="mypatch_064" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M177.7 64.1h17.4v-9.4h-17.4z" fill="#7570b3" stroke="#fff" id="mypatch_065" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M195.1 64.1h.1v-9.4h0z" fill="#e7298a" stroke="#fff" id="mypatch_066" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 54.7h73.8v-9.4H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_067" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M144.6 54.7h51.3v-9.4h-51.3z" fill="#d95f02" stroke="#fff" id="mypatch_068" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M196 54.7h9.2v-9.4h-9.3z" fill="#7570b3" stroke="#fff" id="mypatch_069" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M205.2 54.7h.1v-9.4h-.1z" fill="#e7298a" stroke="#fff" id="mypatch_070" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M205.3 54.7h.1v-9.4h0z" fill="#66a61e" stroke="#fff" id="mypatch_071" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 45.3h188.7V36H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_072" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M259.5 45.3h41V36h-41z" fill="#d95f02" stroke="#fff" id="mypatch_073" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M300.5 45.3h.2V36h-.2z" fill="#7570b3" stroke="#fff" id="mypatch_074" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M300.7 45.3h0V36h0z" fill="#e7298a" stroke="#fff" id="mypatch_075" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 36h98v-9.5h-98z" fill="#1b9e77" stroke="#fff" id="mypatch_076" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M168.8 36h93.8v-9.5h-93.8z" fill="#d95f02" stroke="#fff" id="mypatch_077" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M262.6 36h45v-9.5h-45z" fill="#7570b3" stroke="#fff" id="mypatch_078" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M307.6 36h22.2v-9.5h-22.2z" fill="#e7298a" stroke="#fff" id="mypatch_079" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M329.8 36h2.3v-9.5h-2.3z" fill="#66a61e" stroke="#fff" id="mypatch_080" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M332.1 36h1v-9.5h-1z" fill="#e6ab02" stroke="#fff" id="mypatch_081" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M333 36h.7v-9.5h-.7z" fill="#a6761d" stroke="#fff" id="mypatch_082" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M70.8 26.5H214v-9.4H70.8z" fill="#1b9e77" stroke="#fff" id="mypatch_083" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M214 26.5h135v-9.4H214z" fill="#d95f02" stroke="#fff" id="mypatch_084" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M349 26.5h89.6v-9.4H349z" fill="#7570b3" stroke="#fff" id="mypatch_085" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M438.6 26.5H462v-9.4h-23.4z" fill="#e7298a" stroke="#fff" id="mypatch_086" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M462 26.5h15.8v-9.4H462z" fill="#66a61e" stroke="#fff" id="mypatch_087" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M477.8 26.5h11.7v-9.4h-11.7z" fill="#e6ab02" stroke="#fff" id="mypatch_088" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M489.5 26.5h2.3v-9.4h-2.3z" fill="#a6761d" stroke="#fff" id="mypatch_089" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M491.8 26.5h1.2v-9.4h-1.2z" fill="#666" stroke="#fff" id="mypatch_090" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M493 26.5h1v-9.4h-1z" fill="#1b9e77" stroke="#fff" id="mypatch_091" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M494 26.5h.5v-9.4h-.6z" fill="#d95f02" stroke="#fff" id="mypatch_092" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M494.5 26.5h.6v-9.4h-.6z" fill="#7570b3" stroke="#fff" id="mypatch_093" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M495.1 26.5h.5v-9.4h-.5z" fill="#e7298a" stroke="#fff" id="mypatch_094" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M495.6 26.5h0v-9.4h0z" fill="#66a61e" stroke="#fff" id="mypatch_095" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M495.7 26.5h0v-9.4h0z" fill="#e6ab02" stroke="#fff" id="mypatch_096" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M495.7 26.5h.1v-9.4h0z" fill="#a6761d" stroke="#fff" id="mypatch_097" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+            <path clip-path="url(#p393834bebe)" d="M495.8 26.5h.1v-9.4h0z" fill="#666" stroke="#fff" id="mypatch_098" onmouseout="HideTooltip(this)" onmouseover="ShowTooltip(this)"/>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="p393834bebe">
+            <path d="M70.8 7.2h446.4v217.4H70.8z"/>
+        </clipPath>
+    </defs>
+</svg>

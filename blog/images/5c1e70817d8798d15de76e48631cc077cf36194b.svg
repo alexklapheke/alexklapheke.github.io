@@ -1,0 +1,104 @@
+<svg height="272.9" viewBox="0 0 503 204.7" width="670.7" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 204.7h503V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M29.8 184.7h202.9V21.6h-203z" fill="none" id="patch_2"/>
+            <path clip-path="url(#pe766b2a4ad)" d="M73.3 184.7V21.6h150.2v163z" fill="#e8e8e8" stroke="#e8e8e8" id="patch_3"/>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <text x="39" y="195.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        Mar
+                    </text>
+                </g>
+                <g id="xtick_2">
+                    <text x="89.6" y="195.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_2">
+                        Apr
+                    </text>
+                </g>
+                <g id="xtick_3">
+                    <text x="138.6" y="195.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_3">
+                        May
+                    </text>
+                </g>
+                <g id="xtick_4">
+                    <text x="189.2" y="195.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_4">
+                        Jun
+                    </text>
+                </g>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="26.3" y="122.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_5">
+                        100k
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="26.3" y="57.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_6">
+                        200k
+                    </text>
+                </g>
+            </g>
+            <path clip-path="url(#pe766b2a4ad)" d="M39 184.7h16.3l1.7-.1h1.6l1.6-.1h1.6l1.7-.1 1.6-.2 1.6-.4 1.7-.8 1.6-1.2 1.6-1.2 1.7-1.9 1.6-2 1.6-1.8 1.7-3.3 1.6-2 1.6-1.6 1.7-3.5 1.6-2 1.6-2.9 1.7-3.3 1.6-2.9 1.6-3L93 147l1.6-4.2 1.6-2.9 1.7-3.1 1.6-3.3 1.6-3.3 1.7-3.6 1.6-3.6 1.6-4 1.7-3.4 1.6-2.4 1.6-2.6 1.7-5.2 1.6-3.2 1.6-2.9 1.6-2.6 1.7-2.2 1.6-1.6 1.6-1.8L124 89l1.6-2.3 1.6-3.1 1.7-3.1 1.6-2.1 1.6-1.6 1.7-1.3 1.6-1.7L137 72l1.7-1.4 1.6-1.6 1.6-1.5 1.7-.8 1.6-.9 1.6-1 1.7-1.1 1.6-1 1.6-1 1.7-.7 1.6-.5 1.6-.5 1.7-.7 1.6-.9 1.6-1.2 1.7-.6 1.6-.7 1.6-.4 1.7-.4 1.6-.4 1.6-.7 1.7-.6 1.6-.5 1.6-.5 1.6-.4 1.7-.4 1.6-.4 1.6-.7 1.7-.6 1.6-.5 1.6-.4 1.7-.3 1.6-.4 1.6-.3 1.7-.4 1.6-.3 1.6-.4 1.7-.3 1.6-.2 1.6-.2 1.7-.3 1.6-.3 1.6-.2 1.7-.4 1.6-.2 1.6-.3 1.7-.2 1.6-.2 1.6-.3 1.7-.2 1.6-.3 1.6-.2" fill="none" stroke="#081220" stroke-linecap="square" stroke-width="1.5" id="line2d_7"/>
+            <path clip-path="url(#pe766b2a4ad)" d="M39 184.7h32.6l1.7-.1h3.2l1.7-.2h1.6l1.6-.1 1.7-.2h1.6l1.6-.2 1.7-.2 1.6-.2 1.6-.2 1.7-.4 1.6-.3 1.6-.3 1.7-.8 1.6-.5 1.6-.5 1.7-.6 1.6-.5 1.6-.4 1.7-.5 1.6-.4 1.6-.5 1.7-.5 1.6-.3 1.6-.2h1.6l1.7-.8 1.6-.3 1.6-.3 1.7-.3 1.6-.3 1.6-.2 1.7-.3 1.6-.2 1.6-.2 1.7-.3 1.6-.2 1.6-.2h1.7l1.6-.1 1.6-.3h1.7l1.6-.2 1.6-.1 1.7-.1h1.6l1.6-.1 1.7-.1 1.6-.1 1.6-.1h1.7l1.6-.1h1.6l1.7-.1 1.6-.1h1.6l1.7-.1h1.6l1.6-.1h1.7l1.6-.1h3.2l1.7-.1h3.2l1.7-.1h3.2l1.7-.1h3.2l1.7-.1h6.5l1.6-.1h4.9l1.7-.1h8.1l1.7-.1h3.2" fill="none" stroke="#ce2a07" stroke-linecap="square" stroke-width="1.5" id="line2d_8"/>
+            <text x="225.1" y="43.6" fill="#081220" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_7">
+                217,189
+            </text>
+            <text x="225.1" y="171.1" fill="#ce2a07" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_8">
+                21,753
+            </text>
+            <text x="131.2" y="15.6" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_9">
+                New York City
+            </text>
+        </g>
+        <g id="axes_2">
+            <path d="M273.3 184.7h202.9V21.6h-203z" fill="none" id="patch_4"/>
+            <path clip-path="url(#p92593a4b43)" d="M330.3 184.7V21.6h47.8v163z" fill="#e8e8e8" stroke="#e8e8e8" id="patch_5"/>
+            <g id="matplotlib.axis_3">
+                <g id="xtick_5">
+                    <text x="275.7" y="195.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_10">
+                        Mar
+                    </text>
+                </g>
+                <g id="xtick_6">
+                    <text x="328.6" y="195.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_11">
+                        Apr
+                    </text>
+                </g>
+                <g id="xtick_7">
+                    <text x="379.8" y="195.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_12">
+                        May
+                    </text>
+                </g>
+                <g id="xtick_8">
+                    <text x="432.8" y="195.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_13">
+                        Jun
+                    </text>
+                </g>
+            </g>
+            <path clip-path="url(#p92593a4b43)" d="M282.5 184.7h29l1.7-.1h6.9l1.7-.2h1.7l1.7-.1h1.7l1.7-.2h1.7l1.7-.1 1.7-.2h1.7l1.7-.3 1.7-.2 1.8-.2 1.7-.4 1.7-.2 1.7-.2h3.4l1.7-.2 1.7-.1 1.7-.2h1.7l1.7-.2h1.7l1.8-.2 1.7-.1h1.7l1.7-.1 1.7-.1 1.7-.1h1.7l1.7-.1 1.7-.1 1.7-.2h1.7l1.7-.2 1.7-.1 1.8-.1h1.7l1.7-.2h1.7l1.7-.2 1.7-.1 1.7-.1h1.7l1.7-.3 1.7-.1 1.7-.2 1.7-.1 1.8-.1 1.7-.1 1.7-.2 1.7-.1 1.7-.2 1.7-.1 1.7-.2 1.7-.1 1.7-.2h3.4l1.7-.3 1.7-.2 1.8-.1 1.7-.2 1.7-.1h1.7l1.7-.3 1.7-.2 1.7-.2 1.7-.2 1.7-.2 1.7-.4h1.7l1.7-.3 1.8-.2 1.7-.2 1.7-.2 1.7-.2 1.7-.3h1.7l1.7-.4 1.7-.3 1.7-.3 1.7-.2 1.7-.8 1.7-.8h1.7" fill="none" stroke="#081220" stroke-linecap="square" stroke-width="1.5" id="line2d_13"/>
+            <path clip-path="url(#p92593a4b43)" d="M282.5 184.7h76.8l1.8-.1h66.6l1.7-.1h37.5" fill="none" stroke="#ce2a07" stroke-linecap="square" stroke-width="1.5" id="line2d_14"/>
+            <text x="470.4" y="171.6" fill="#081220" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_14">
+                21,053
+            </text>
+            <text x="470.4" y="185.1" fill="#ce2a07" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_15">
+                325
+            </text>
+            <text x="374.7" y="15.6" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_16">
+                Harris County, Texas
+            </text>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="pe766b2a4ad">
+            <path d="M29.8 21.6h202.9v163.1H29.8z"/>
+        </clipPath>
+        <clipPath id="p92593a4b43">
+            <path d="M273.3 21.6h202.9v163.1H273.3z"/>
+        </clipPath>
+    </defs>
+</svg>

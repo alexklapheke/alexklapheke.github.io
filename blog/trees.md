@@ -91,7 +91,7 @@ recorded in the dataset (their corresponding common names are in
 [Appendix A](#appendix-a-common-names-of-trees)).
 
 ![The top 20 genera of street tree in
-Cambridge](images/f02328914fb4b2e89df456f77c637e892345754a.svg){#fig:gen}
+Cambridge](images/da3f95eb33086953a47a0eb4da5320ef1f195493.svg){#fig:gen}
 
 However, just knowing that the streets are lined with maples
 (<abbr title="maple">*Acer*</abbr> spp.) doesn't tell us if they are
@@ -106,7 +106,7 @@ comprise. We can break this graph down further by species (@fig:spec).
 
 ![The top 20 genera of street tree in Cambridge, broken down by species
 (hover over each bar to see the specific
-name)](images/2ccd09bdfb13715474f5e58d83fc10bb50409348.svg){#fig:spec}
+name)](images/c3b8cbbaf16380c0cd1dda95a99cc6148d2d6918.svg){#fig:spec}
 
 There are some interesting takeaways here. For instance, not a single
 public apple tree (genus <abbr title="apple">*Malus*</abbr>) has been
@@ -217,7 +217,7 @@ amurense*</abbr> (54)\
 altissima*</abbr> (50)\
 <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#66a61e" stroke="none" /></svg> <abbr title="common buckthorn">*Rhamnus
 cathartica*</abbr>
-(2)](images/91d75c3ab7bc37c9e2637c7d2f4d626b332cf5f4.svg){#fig:invmap}
+(2)](images/789518acbec0030f9ca769c2bd1425d7020ff6b6.svg){#fig:invmap}
 
 To see what trees are popular in different areas, I downloaded the
 [neighborhood boundary
@@ -239,7 +239,7 @@ rubrum*</abbr>\
 <svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#e7298a" stroke="none" /></svg> <abbr title="white ash">*Fraxinus
 americana*</abbr>\
 <svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#66a61e" stroke="none" /></svg> <abbr title="Norway maple">*Acer
-platanoides*</abbr>](images/f2cef4c7065c6545106b3108cd08fcf5c1ae75b8.svg){#fig:neighmap}
+platanoides*</abbr>](images/66ffa614bb35b3a5299db00ebbc21343f8fb4791.svg){#fig:neighmap}
 
 We can get an even more granular look by plotting each individual tree:
 
@@ -255,7 +255,7 @@ rubrum*</abbr>\
 <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#e7298a" stroke="none" /></svg> <abbr title="white ash">*Fraxinus
 americana*</abbr>\
 <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#66a61e" stroke="none" /></svg> <abbr title="Norway maple">*Acer
-platanoides*</abbr>](images/6196b1b119d65bcb809f1bcadd3d744c826d52cf.svg){#fig:neighmapdots}
+platanoides*</abbr>](images/1364a7eecb3d2e9dc8c53b6b1f6a933e83c610d8.svg){#fig:neighmapdots}
 
 Here we see some interesting patterns. The unidentified maples so
 popular around MIT almost exclusively line the Charles River
@@ -279,7 +279,7 @@ genera in @fig:gen starting in 2007 since there are only a handful of
 data points before then.
 
 ![Planting rate per year of 20 most popular genera since 2007, for those
-recorded.](images/ec0e53be7c86eb67d0ece23f305b3513a19d8e78.svg){#fig:dates}
+recorded.](images/bb9014a71a6b7a803aa64954ad3f1c068d957971.svg){#fig:dates}
 
 In particular, it is to determine when invasives were planted---of the
 2,282 invasive trees in the dataset, only five Norway maples have a date
@@ -295,7 +295,7 @@ platanoides*</abbr>, for those recorded.\
 \
 <svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#e8e8e8" stroke="none" /></svg> Law
 banning invasive species in
-effect](images/43508119c9fb84d566ab739d34693e25270432b9.svg){#fig:acerdates}
+effect](images/6f25db9880909aa2c085b5cfc027f4e5d5d541f1.svg){#fig:acerdates}
 
 There are some interesting trends visible in @fig:dates---a recent fad
 for magnolias, a steady increase in serviceberry plantings
@@ -313,7 +313,7 @@ listed. Marker size is proportional to tree diameter.\
 \
 2007\
 <svg width="11" height="218"><image x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAADaCAYAAABwzrisAAAABHNCSVQICAgIfAhkiAAAAV1JREFUaIHd2ktuAkEQA9D+gdjk3Dl1aK5Qb2GpCGurZLvcnoZh/rx+7yh+zvOuKnacPSaAZfKSyQR+jBiNsstRgQTeOTfK0DHOuimBU8An5nMd6qmjdac2SD6bdbFjlXMjKRDAtJSkGwCeVgUweRON4EkBcM5ncwNId3GDJm8SKGATaJPrxaECYTJlw4IUo7HhrtaFM06WbOzU5C4Cbd0C7hIkAK/17kBjQpvrukEg5rlJkFLrtsnBx0TKupwbTcBr/3OB1qKy7pF7TPQAW/hj/Uzg0aPrco82Etik+ZMnpYzlpVD4WxxY+BECmz+XutzptkbKVYFkI+hz7FtbjnOwN5q48YXZIBq5DZob1HWxm0wX6+zOX8Yi55wbmI0WNIKTqeuCAsvYqHXiBvwHIbtuoUGczY0enAV87XTL5JhATB28ebxHaAQFAmdct7jxheumM3jt2vNXBsub1fEBZTWVbVihQd8AAAAASUVORK5CYII=" /></svg>\
-2020](images/7fda814c58fd47bea4aeebd91d7bfbc482e247b3.svg){#fig:mapdates}
+2020](images/921f4433c60b16c9687e3c112f42bb36cc06f8fd.svg){#fig:mapdates}
 
 We can see several strings of orange and yellow where a whole row of
 trees was planted all at once. In addition, unsurprisingly, the largest

@@ -1,0 +1,110 @@
+<svg height="164.2" viewBox="0 0 390.1 123.1" width="520.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 123.1h390V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M43.7 116h334.8V7.1H43.7z" fill="none" id="patch_2"/>
+            <path clip-path="url(#p1b9f3aef59)" d="M43.7 113.3h118.6V103H43.7z" fill="#a6761d" stroke="#fff" id="patch_3"/>
+            <path clip-path="url(#p1b9f3aef59)" d="M43.7 103h120.5V92.6H43.7z" fill="#a6761d" stroke="#fff" id="patch_4"/>
+            <path clip-path="url(#p1b9f3aef59)" d="M43.7 92.6h129.8V82.3H43.7z" fill="#a6761d" stroke="#fff" id="patch_5"/>
+            <path clip-path="url(#p1b9f3aef59)" d="M43.7 82.3h172.4V71.9H43.7z" fill="#a6761d" stroke="#fff" id="patch_6"/>
+            <path clip-path="url(#p1b9f3aef59)" d="M43.7 72h176.1V61.5H43.7z" fill="#a6761d" stroke="#fff" id="patch_7"/>
+            <path clip-path="url(#p1b9f3aef59)" d="M43.7 61.6h176.1V51.2H43.7z" fill="#a6761d" stroke="#fff" id="patch_8"/>
+            <path clip-path="url(#p1b9f3aef59)" d="M43.7 51.2h204V41h-204z" fill="#a6761d" stroke="#fff" id="patch_9"/>
+            <path clip-path="url(#p1b9f3aef59)" d="M43.7 40.9h220.6V30.5H43.7z" fill="#a6761d" stroke="#fff" id="patch_10"/>
+            <path clip-path="url(#p1b9f3aef59)" d="M43.7 30.5h239.1V20.1H43.7z" fill="#a6761d" stroke="#fff" id="patch_11"/>
+            <path clip-path="url(#p1b9f3aef59)" d="M43.7 20.1h318.9V9.8H43.7z" fill="#a6761d" stroke="#fff" id="patch_12"/>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="40.2" y="111.6" fill="#090a0c" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_1">
+                        pale
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="40.2" y="101.3" fill="#090a0c" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_2">
+                        chateau
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="40.2" y="90.9" fill="#090a0c" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_3">
+                        pts
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text x="40.2" y="80.6" fill="#090a0c" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_4">
+                        roast
+                    </text>
+                </g>
+                <g id="ytick_5">
+                    <text x="40.2" y="70.2" fill="#090a0c" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_5">
+                        claret
+                    </text>
+                </g>
+                <g id="ytick_6">
+                    <text x="40.2" y="59.9" fill="#090a0c" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_6">
+                        sauce
+                    </text>
+                </g>
+                <g id="ytick_7">
+                    <text x="40.2" y="49.5" fill="#090a0c" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_7">
+                        boiled
+                    </text>
+                </g>
+                <g id="ytick_8">
+                    <text x="40.2" y="39.2" fill="#090a0c" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_8">
+                        old
+                    </text>
+                </g>
+                <g id="ytick_9">
+                    <text x="40.2" y="28.8" fill="#090a0c" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_9">
+                        sherry
+                    </text>
+                </g>
+                <g id="ytick_10">
+                    <text x="40.2" y="18.5" fill="#090a0c" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_10">
+                        madeira
+                    </text>
+                </g>
+            </g>
+            <text x="168.7" y="112.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_11">
+                64
+            </text>
+            <text x="170.6" y="101.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_12">
+                65
+            </text>
+            <text x="179.8" y="91.6" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_13">
+                70
+            </text>
+            <text x="222.5" y="81.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_14">
+                93
+            </text>
+            <text x="226.2" y="70.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_15">
+                95
+            </text>
+            <text x="226.2" y="60.5" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_16">
+                95
+            </text>
+            <text x="254" y="50.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_17">
+                110
+            </text>
+            <text x="270.7" y="39.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_18">
+                119
+            </text>
+            <text x="289.2" y="29.5" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_19">
+                129
+            </text>
+            <text x="368.9" y="19.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_20">
+                172
+            </text>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="p1b9f3aef59">
+            <path d="M43.7 7.2h334.8v108.7H43.7z"/>
+        </clipPath>
+    </defs>
+</svg>

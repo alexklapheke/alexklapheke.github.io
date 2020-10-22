@@ -1,0 +1,136 @@
+<svg height="227.3" viewBox="0 0 326.8 170.5" width="435.7" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 170.5h326.8V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M34.8 130.3h121.3V21.6H34.8z" fill="none" id="patch_2"/>
+            <path clip-path="url(#pd2dfbdef0f)" d="M40.3 130.3H68v-6.2H40.3z" fill="#727ecf" stroke="#fff" id="patch_3"/>
+            <path clip-path="url(#pd2dfbdef0f)" d="M68 130.3h27.5V34.6H67.9z" fill="#727ecf" stroke="#fff" id="patch_4"/>
+            <path clip-path="url(#pd2dfbdef0f)" d="M95.5 130.3H123V26.8H95.5z" fill="#727ecf" stroke="#fff" id="patch_5"/>
+            <path clip-path="url(#pd2dfbdef0f)" d="M123 130.3h27.6V63.6h-27.5z" fill="#727ecf" stroke="#fff" id="patch_6"/>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <text x="54.1" y="145.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        0
+                    </text>
+                </g>
+                <g id="xtick_2">
+                    <text x="81.7" y="145.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_2">
+                        1
+                    </text>
+                </g>
+                <g id="xtick_3">
+                    <text x="109.3" y="145.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_3">
+                        2
+                    </text>
+                </g>
+                <g id="xtick_4">
+                    <text x="136.8" y="145.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_4">
+                        3
+                    </text>
+                </g>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="36.3" y="133.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_5">
+                        0
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="36.3" y="102.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_6">
+                        200
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="36.3" y="70.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_7">
+                        400
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text x="36.3" y="39.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_8">
+                        600
+                    </text>
+                </g>
+                <text transform="rotate(-90 15.6 76)" x="15.6" y="75.9" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_9">
+                    No. essays
+                </text>
+            </g>
+            <text x="95.5" y="15.6" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_10">
+                Essay set 3
+            </text>
+        </g>
+        <g id="axes_2">
+            <path d="M192.5 130.3h121.3V21.6H192.5z" fill="none" id="patch_7"/>
+            <path clip-path="url(#p1c9bda03c2)" d="M198 130.3h27.6V79.7H198z" fill="#727ecf" stroke="#fff" id="patch_8"/>
+            <path clip-path="url(#p1c9bda03c2)" d="M225.6 130.3h27.6V26.8h-27.6z" fill="#727ecf" stroke="#fff" id="patch_9"/>
+            <path clip-path="url(#p1c9bda03c2)" d="M253.2 130.3h27.6V37.5h-27.6z" fill="#727ecf" stroke="#fff" id="patch_10"/>
+            <path clip-path="url(#p1c9bda03c2)" d="M280.8 130.3h27.5V89.1h-27.5z" fill="#727ecf" stroke="#fff" id="patch_11"/>
+            <g id="matplotlib.axis_3">
+                <g id="xtick_5">
+                    <text x="211.8" y="145.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_11">
+                        0
+                    </text>
+                </g>
+                <g id="xtick_6">
+                    <text x="239.4" y="145.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_12">
+                        1
+                    </text>
+                </g>
+                <g id="xtick_7">
+                    <text x="267" y="145.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_13">
+                        2
+                    </text>
+                </g>
+                <g id="xtick_8">
+                    <text x="294.5" y="145.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_14">
+                        3
+                    </text>
+                </g>
+            </g>
+            <g id="matplotlib.axis_4">
+                <g id="ytick_5">
+                    <text x="194" y="133.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_15">
+                        0
+                    </text>
+                </g>
+                <g id="ytick_6">
+                    <text x="194" y="101.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_16">
+                        200
+                    </text>
+                </g>
+                <g id="ytick_7">
+                    <text x="194" y="68.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_17">
+                        400
+                    </text>
+                </g>
+                <g id="ytick_8">
+                    <text x="194" y="36.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_18">
+                        600
+                    </text>
+                </g>
+            </g>
+            <text x="253.2" y="15.6" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_19">
+                Essay set 4
+            </text>
+        </g>
+        <g id="axes_3">
+            <g id="matplotlib.axis_5">
+                <text x="174.3" y="160.5" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_26">
+                    Score
+                </text>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="pd2dfbdef0f">
+            <path d="M34.8 21.6h121.3v108.7H34.8z"/>
+        </clipPath>
+        <clipPath id="p1c9bda03c2">
+            <path d="M192.5 21.6h121.3v108.7H192.5z"/>
+        </clipPath>
+    </defs>
+</svg>

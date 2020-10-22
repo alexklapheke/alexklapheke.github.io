@@ -341,7 +341,7 @@ plus sign (`swinghouse+triphop`); VLC will play the top songs from both.
     the server.
 
 [^3]: In fact, it ties for sixth in the past ten weeks:
-    ![](images/d6c75039891a6afce2bdf2c01f9486ba6fa51ed2.svg) `y`{.bash}
+    ![](images/3da1ed6788c9ae0f4eef370ef8a85be021c144a6.svg) `y`{.bash}
     is a wrapper for [youtube-dl](https://youtube-dl.org/), and
     `lyrics`{.bash} is a BASH script that, well, looks up song lyrics.
     To get these stats:

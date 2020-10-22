@@ -1,0 +1,192 @@
+<svg height="195.2" viewBox="0 0 482.9 146.4" width="643.9" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 146.4h482.9V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M29.3 121.4h446.4V7.2H29.3z" fill="none" id="patch_2"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 119.4h132.1v-7.9H29.3z" fill="#e93834" stroke="#fff" id="patch_3"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 111.5h171.4v-7.9H29.3z" fill="#e93834" stroke="#fff" id="patch_4"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 103.6h151v-7.8h-151z" fill="#e93834" stroke="#fff" id="patch_5"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 95.8H198v-7.9H29.3z" fill="#e93834" stroke="#fff" id="patch_6"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 87.9h233.6V80H29.3z" fill="#e93834" stroke="#fff" id="patch_7"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 80h265.8v-7.8H29.3z" fill="#e93834" stroke="#fff" id="patch_8"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 72.2H299v-8H29.3z" fill="#e93834" stroke="#fff" id="patch_9"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 64.3h177v-7.9h-177z" fill="#e93834" stroke="#fff" id="patch_10"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 56.4h149.8v-7.9H29.3z" fill="#e93834" stroke="#fff" id="patch_11"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 48.5H166v-7.8H29.3z" fill="#e93834" stroke="#fff" id="patch_12"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 40.7h180.1v-8H29.3z" fill="#e93834" stroke="#fff" id="patch_13"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 32.8h213.6v-7.9H29.3z" fill="#e93834" stroke="#fff" id="patch_14"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 25h201.5v-8H29.3z" fill="#e93834" stroke="#fff" id="patch_15"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M29.3 17H223V9.2H29.3z" fill="#e93834" stroke="#fff" id="patch_16"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M161.4 119.4h238.8v-7.9H161.4z" fill="#727ecf" stroke="#fff" id="patch_17"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M200.7 111.5H408v-7.9H200.7z" fill="#727ecf" stroke="#fff" id="patch_18"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M180.4 103.6h215.8v-7.8H180.4z" fill="#727ecf" stroke="#fff" id="patch_19"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M198 95.8h200.2v-7.9H198z" fill="#727ecf" stroke="#fff" id="patch_20"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M263 87.9h130.2V80H263z" fill="#727ecf" stroke="#fff" id="patch_21"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M295 80h107.2v-7.8H295z" fill="#727ecf" stroke="#fff" id="patch_22"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M299 72.2h106.4v-8H299z" fill="#727ecf" stroke="#fff" id="patch_23"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M206.3 64.3h219.4v-7.9H206.3z" fill="#727ecf" stroke="#fff" id="patch_24"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M179 56.4h246v-7.9H179z" fill="#727ecf" stroke="#fff" id="patch_25"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M166 48.5h259.7v-7.8H166z" fill="#727ecf" stroke="#fff" id="patch_26"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M209.4 40.7h227v-8h-227z" fill="#727ecf" stroke="#fff" id="patch_27"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M242.9 32.8h185.4v-7.9H243z" fill="#727ecf" stroke="#fff" id="patch_28"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M230.8 25H429v-8H230.8z" fill="#727ecf" stroke="#fff" id="patch_29"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M223 17h222.7V9.2H223z" fill="#727ecf" stroke="#fff" id="patch_30"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M400.2 119.4h7.2v-7.9h-7.2z" fill="#e6ab02" stroke="#fff" id="patch_31"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M408 111.5h7.9v-7.9H408z" fill="#e6ab02" stroke="#fff" id="patch_32"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M396.2 103.6h5.3v-7.8h-5.3z" fill="#e6ab02" stroke="#fff" id="patch_33"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M398.2 95.8h37.3v-7.9h-37.3z" fill="#e6ab02" stroke="#fff" id="patch_34"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M393.2 87.9H434V80h-40.8z" fill="#e6ab02" stroke="#fff" id="patch_35"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M402.2 80h33.5v-7.8h-33.5z" fill="#e6ab02" stroke="#fff" id="patch_36"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M405.4 72.2h29.7v-8h-29.7z" fill="#e6ab02" stroke="#fff" id="patch_37"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M425.7 64.3h13v-7.9h-13z" fill="#e6ab02" stroke="#fff" id="patch_38"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M425 56.4h14.4v-7.9H425z" fill="#e6ab02" stroke="#fff" id="patch_39"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M425.7 48.5h15v-7.8h-15z" fill="#e6ab02" stroke="#fff" id="patch_40"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M436.4 40.7h7.3v-8h-7.3z" fill="#e6ab02" stroke="#fff" id="patch_41"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M428.3 32.8h8.7v-7.9h-8.7z" fill="#e6ab02" stroke="#fff" id="patch_42"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M429 25h9.4v-8H429z" fill="#e6ab02" stroke="#fff" id="patch_43"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M445.7 17h4V9.2h-4z" fill="#e6ab02" stroke="#fff" id="patch_44"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M407.4 119.4h34v-7.9h-34z" fill="#c55faf" stroke="#fff" id="patch_45"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M415.9 111.5h25.5v-7.9h-25.5z" fill="#c55faf" stroke="#fff" id="patch_46"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M401.5 103.6H440v-7.8h-38.6z" fill="#c55faf" stroke="#fff" id="patch_47"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M435.5 95.8h5.9v-7.9h-6z" fill="#c55faf" stroke="#fff" id="patch_48"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M434 87.9h6V80h-6z" fill="#c55faf" stroke="#fff" id="patch_49"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M435.7 80h5.8v-7.8h-5.8z" fill="#c55faf" stroke="#fff" id="patch_50"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M435 72.2h6.5v-8h-6.4z" fill="#c55faf" stroke="#fff" id="patch_51"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M438.8 64.3h4.5v-7.9h-4.5z" fill="#c55faf" stroke="#fff" id="patch_52"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M439.4 56.4h4v-7.9h-4z" fill="#c55faf" stroke="#fff" id="patch_53"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M440.7 48.5h2.6v-7.8h-2.6z" fill="#c55faf" stroke="#fff" id="patch_54"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M443.7 40.7h2.7v-8h-2.7z" fill="#c55faf" stroke="#fff" id="patch_55"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M437 32.8h9.4v-7.9H437z" fill="#c55faf" stroke="#fff" id="patch_56"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M438.4 25h6v-8h-6z" fill="#c55faf" stroke="#fff" id="patch_57"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M449.7 17h.7V9.2h-.7z" fill="#c55faf" stroke="#fff" id="patch_58"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M441.4 119.4h13v-7.9h-13z" fill="#888" stroke="#fff" id="patch_59"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M441.4 111.5h13v-7.9h-13z" fill="#888" stroke="#fff" id="patch_60"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M440 103.6h14.4v-7.8h-14.3z" fill="#888" stroke="#fff" id="patch_61"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M441.4 95.8h13v-7.9h-13z" fill="#888" stroke="#fff" id="patch_62"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M440 87.9h14.4V80H440z" fill="#888" stroke="#fff" id="patch_63"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M441.5 80h13v-7.8h-13z" fill="#888" stroke="#fff" id="patch_64"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M441.5 72.2h13v-8h-13z" fill="#888" stroke="#fff" id="patch_65"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M443.3 64.3h11.1v-7.9h-11z" fill="#888" stroke="#fff" id="patch_66"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M443.3 56.4h11.1v-7.9h-11z" fill="#888" stroke="#fff" id="patch_67"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M443.3 48.5h11.1v-7.8h-11z" fill="#888" stroke="#fff" id="patch_68"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M446.4 40.7h8v-8h-8z" fill="#888" stroke="#fff" id="patch_69"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M446.4 32.8h8v-7.9h-8z" fill="#888" stroke="#fff" id="patch_70"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M444.4 25h10v-8h-10z" fill="#888" stroke="#fff" id="patch_71"/>
+            <path clip-path="url(#p1cff6d0dd4)" d="M450.4 17h4V9.2h-4z" fill="#888" stroke="#fff" id="patch_72"/>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <text x="29.3" y="136.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        0%
+                    </text>
+                </g>
+                <g id="xtick_2">
+                    <text x="114.3" y="136.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_2">
+                        20%
+                    </text>
+                </g>
+                <g id="xtick_3">
+                    <text x="199.4" y="136.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_3">
+                        40%
+                    </text>
+                </g>
+                <g id="xtick_4">
+                    <text x="284.4" y="136.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_4">
+                        60%
+                    </text>
+                </g>
+                <g id="xtick_5">
+                    <text x="369.4" y="136.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_5">
+                        80%
+                    </text>
+                </g>
+                <g id="xtick_6">
+                    <text x="454.4" y="136.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_6">
+                        100%
+                    </text>
+                </g>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="25.8" y="118.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_7">
+                        2019
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="25.8" y="111.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_8">
+                        2017
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="25.8" y="103.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_9">
+                        2015
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text x="25.8" y="95.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_10">
+                        2010
+                    </text>
+                </g>
+                <g id="ytick_5">
+                    <text x="25.8" y="87.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_11">
+                        2005
+                    </text>
+                </g>
+                <g id="ytick_6">
+                    <text x="25.8" y="79.6" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_12">
+                        2001
+                    </text>
+                </g>
+                <g id="ytick_7">
+                    <text x="25.8" y="71.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_13">
+                        1997
+                    </text>
+                </g>
+                <g id="ytick_8">
+                    <text x="25.8" y="63.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_14">
+                        1992
+                    </text>
+                </g>
+                <g id="ytick_9">
+                    <text x="25.8" y="56" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_15">
+                        1987
+                    </text>
+                </g>
+                <g id="ytick_10">
+                    <text x="25.8" y="48.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_16">
+                        1983
+                    </text>
+                </g>
+                <g id="ytick_11">
+                    <text x="25.8" y="40.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_17">
+                        1979
+                    </text>
+                </g>
+                <g id="ytick_12">
+                    <text x="25.8" y="32.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_18">
+                        1974
+                    </text>
+                </g>
+                <g id="ytick_13">
+                    <text x="25.8" y="24.5" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_19">
+                        1974
+                    </text>
+                </g>
+                <g id="ytick_14">
+                    <text x="25.8" y="16.6" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_20">
+                        1970
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="p1cff6d0dd4">
+            <path d="M29.3 7.2h446.4v114.2H29.3z"/>
+        </clipPath>
+    </defs>
+</svg>

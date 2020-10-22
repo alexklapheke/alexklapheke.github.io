@@ -1,0 +1,42 @@
+<svg height="55.4" viewBox="0 0 500.4 41.6" width="667.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 41.6h500.4V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M46.8 34.4h446.4V7.2H46.8z" fill="none" id="patch_2"/>
+            <path clip-path="url(#p1d7b53947f)" d="M46.8 20.8h240.7V8.4H46.8z" fill="#c55faf" stroke="#fff" id="patch_3"/>
+            <path clip-path="url(#p1d7b53947f)" d="M46.8 33.1h192V20.8h-192z" fill="#727ecf" stroke="#fff" id="patch_4"/>
+            <path clip-path="url(#p1d7b53947f)" d="M287.5 20.8h38.8V8.4h-38.8z" fill="#d67c00" stroke="#fff" id="patch_5"/>
+            <path clip-path="url(#p1d7b53947f)" d="M238.8 33.1h55.8V20.8h-55.8z" fill="#d67c00" stroke="#fff" id="patch_6"/>
+            <path clip-path="url(#p1d7b53947f)" d="M326.3 20.8h22.9V8.4h-23z" fill="#e93834" stroke="#fff" id="patch_7"/>
+            <path clip-path="url(#p1d7b53947f)" d="M294.6 33.1h77V20.8h-77z" fill="#e93834" stroke="#fff" id="patch_8"/>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="43.3" y="18.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_1">
+                        Kiss
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="43.3" y="30.5" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_2">
+                        Montroll
+                    </text>
+                </g>
+            </g>
+            <text x="351" y="18.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_3">
+                48%
+            </text>
+            <text x="373.5" y="30.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_4">
+                52%
+            </text>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="p1d7b53947f">
+            <path d="M46.8 7.2h446.4v27.2H46.8z"/>
+        </clipPath>
+    </defs>
+</svg>

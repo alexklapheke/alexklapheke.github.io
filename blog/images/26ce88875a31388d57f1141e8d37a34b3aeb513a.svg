@@ -1,0 +1,142 @@
+<svg height="284.4" viewBox="0 0 599 213.3" width="798.6" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 213.3h599V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M33.8 170.3h558V7.2h-558z" fill="none" id="patch_2"/>
+            <path clip-path="url(#pc08ffc12af)" d="M59.1 36188.6h11.6V14.6H59z" fill="#7570b3" stroke="#fff" id="patch_3"/>
+            <path clip-path="url(#pc08ffc12af)" d="M70.7 36188.6h11.5V41.5H70.7z" fill="#7570b3" stroke="#fff" id="patch_4"/>
+            <path clip-path="url(#pc08ffc12af)" d="M82.2 36188.6h11.5V57.2H82.2z" fill="#7570b3" stroke="#fff" id="patch_5"/>
+            <path clip-path="url(#pc08ffc12af)" d="M93.7 36188.6h11.6V67.9H93.7z" fill="#7570b3" stroke="#fff" id="patch_6"/>
+            <path clip-path="url(#pc08ffc12af)" d="M105.3 36188.6h11.5V82h-11.5z" fill="#7570b3" stroke="#fff" id="patch_7"/>
+            <path clip-path="url(#pc08ffc12af)" d="M116.8 36188.6h11.5V98h-11.5z" fill="#7570b3" stroke="#fff" id="patch_8"/>
+            <path clip-path="url(#pc08ffc12af)" d="M128.3 36188.6H140V120.5h-11.6z" fill="#7570b3" stroke="#fff" id="patch_9"/>
+            <path clip-path="url(#pc08ffc12af)" d="M139.9 36188.6h11.5V132.4h-11.5z" fill="#7570b3" stroke="#fff" id="patch_10"/>
+            <path clip-path="url(#pc08ffc12af)" d="M151.4 36188.6h11.5V141.2h-11.5z" fill="#7570b3" stroke="#fff" id="patch_11"/>
+            <path clip-path="url(#pc08ffc12af)" d="M163 36188.6h11.4V162.9H163z" fill="#7570b3" stroke="#fff" id="patch_12"/>
+            <path clip-path="url(#pc08ffc12af)" d="M174.4 36188.6H186h-11.6z" fill="#7570b3" stroke="#fff" id="patch_13"/>
+            <path clip-path="url(#pc08ffc12af)" d="M186 36188.6h11.5V152H186z" fill="#7570b3" stroke="#fff" id="patch_14"/>
+            <path clip-path="url(#pc08ffc12af)" d="M197.5 36188.6H209V162.9h-11.5z" fill="#7570b3" stroke="#fff" id="patch_15"/>
+            <path clip-path="url(#pc08ffc12af)" d="M209 36188.6h11.6V162.9H209z" fill="#7570b3" stroke="#fff" id="patch_16"/>
+            <path clip-path="url(#pc08ffc12af)" d="M220.6 36188.6H232h-11.5z" fill="#7570b3" stroke="#fff" id="patch_17"/>
+            <path clip-path="url(#pc08ffc12af)" d="M232 36188.6h11.6-11.5z" fill="#7570b3" stroke="#fff" id="patch_18"/>
+            <path clip-path="url(#pc08ffc12af)" d="M243.6 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_19"/>
+            <path clip-path="url(#pc08ffc12af)" d="M255.1 36188.6h11.6H255z" fill="#7570b3" stroke="#fff" id="patch_20"/>
+            <path clip-path="url(#pc08ffc12af)" d="M266.7 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_21"/>
+            <path clip-path="url(#pc08ffc12af)" d="M278.2 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_22"/>
+            <path clip-path="url(#pc08ffc12af)" d="M289.7 36188.6h11.6-11.6z" fill="#7570b3" stroke="#fff" id="patch_23"/>
+            <path clip-path="url(#pc08ffc12af)" d="M301.3 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_24"/>
+            <path clip-path="url(#pc08ffc12af)" d="M312.8 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_25"/>
+            <path clip-path="url(#pc08ffc12af)" d="M324.3 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_26"/>
+            <path clip-path="url(#pc08ffc12af)" d="M335.8 36188.6h11.6-11.6z" fill="#7570b3" stroke="#fff" id="patch_27"/>
+            <path clip-path="url(#pc08ffc12af)" d="M347.4 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_28"/>
+            <path clip-path="url(#pc08ffc12af)" d="M358.9 36188.6h11.5H359z" fill="#7570b3" stroke="#fff" id="patch_29"/>
+            <path clip-path="url(#pc08ffc12af)" d="M370.4 36188.6H382h-11.6z" fill="#7570b3" stroke="#fff" id="patch_30"/>
+            <path clip-path="url(#pc08ffc12af)" d="M382 36188.6h11.5H382z" fill="#7570b3" stroke="#fff" id="patch_31"/>
+            <path clip-path="url(#pc08ffc12af)" d="M393.5 36188.6H405h-11.5z" fill="#7570b3" stroke="#fff" id="patch_32"/>
+            <path clip-path="url(#pc08ffc12af)" d="M405 36188.6h11.5H405z" fill="#7570b3" stroke="#fff" id="patch_33"/>
+            <path clip-path="url(#pc08ffc12af)" d="M416.5 36188.6h11.6-11.6z" fill="#7570b3" stroke="#fff" id="patch_34"/>
+            <path clip-path="url(#pc08ffc12af)" d="M428 36188.6h11.6-11.5z" fill="#7570b3" stroke="#fff" id="patch_35"/>
+            <path clip-path="url(#pc08ffc12af)" d="M439.6 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_36"/>
+            <path clip-path="url(#pc08ffc12af)" d="M451.1 36188.6h11.6H451z" fill="#7570b3" stroke="#fff" id="patch_37"/>
+            <path clip-path="url(#pc08ffc12af)" d="M462.7 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_38"/>
+            <path clip-path="url(#pc08ffc12af)" d="M474.2 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_39"/>
+            <path clip-path="url(#pc08ffc12af)" d="M485.7 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_40"/>
+            <path clip-path="url(#pc08ffc12af)" d="M497.2 36188.6h11.6-11.6z" fill="#7570b3" stroke="#fff" id="patch_41"/>
+            <path clip-path="url(#pc08ffc12af)" d="M508.8 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_42"/>
+            <path clip-path="url(#pc08ffc12af)" d="M520.3 36188.6h11.5V162.9h-11.5z" fill="#7570b3" stroke="#fff" id="patch_43"/>
+            <path clip-path="url(#pc08ffc12af)" d="M531.8 36188.6h11.6-11.6z" fill="#7570b3" stroke="#fff" id="patch_44"/>
+            <path clip-path="url(#pc08ffc12af)" d="M543.4 36188.6h11.5-11.5z" fill="#7570b3" stroke="#fff" id="patch_45"/>
+            <path clip-path="url(#pc08ffc12af)" d="M554.9 36188.6h11.5H555z" fill="#7570b3" stroke="#fff" id="patch_46"/>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <text x="59.1" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        0
+                    </text>
+                </g>
+                <g id="xtick_2">
+                    <text x="82.2" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_2">
+                        200
+                    </text>
+                </g>
+                <g id="xtick_3">
+                    <text x="105.3" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_3">
+                        400
+                    </text>
+                </g>
+                <g id="xtick_4">
+                    <text x="128.3" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_4">
+                        600
+                    </text>
+                </g>
+                <g id="xtick_5">
+                    <text x="151.4" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_5">
+                        800
+                    </text>
+                </g>
+                <g id="xtick_6">
+                    <text x="174.4" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_6">
+                        1000
+                    </text>
+                </g>
+                <g id="xtick_7">
+                    <text x="197.5" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_7">
+                        1200
+                    </text>
+                </g>
+                <g id="xtick_8">
+                    <text x="220.6" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_8">
+                        1400
+                    </text>
+                </g>
+                <g id="xtick_9">
+                    <text x="520.3" y="185.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_9">
+                        4000
+                    </text>
+                </g>
+                <text x="145.4" y="203.2" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_10">
+                    Length (items)
+                </text>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text transform="translate(22.4 166.4)" fill="gray" id="text_11">
+                        <tspan x="0 4.649994" y="-.2" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">0</tspan>
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text transform="translate(22.4 130.3)" fill="gray" id="text_12">
+                        <tspan x="0 4.649994" y="-.3" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">1</tspan>
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text transform="translate(22.4 94.3)" fill="gray" id="text_13">
+                        <tspan x="0 4.649994" y="-.2" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">2</tspan>
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text transform="translate(22.4 58.3)" fill="gray" id="text_14">
+                        <tspan x="0 4.649994" y="-.2" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">3</tspan>
+                    </text>
+                </g>
+                <g id="ytick_5">
+                    <text transform="translate(22.4 22.3)" fill="gray" id="text_15">
+                        <tspan x="0 4.649994" y="-.2" font-family="Linux Libertine O" font-size="10" font-style="regular" font-weight="regular">10</tspan> <tspan x="9.4" y="-3.5" font-family="Linux Libertine O" font-size="7" font-style="regular" font-weight="regular">4</tspan>
+                    </text>
+                </g>
+                <text transform="rotate(-90 15.6 88.7)" x="15.6" y="88.7" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_16">
+                    No. menus
+                </text>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="pc08ffc12af">
+            <path d="M33.8 7.2h558v163.1h-558z"/>
+        </clipPath>
+    </defs>
+</svg>

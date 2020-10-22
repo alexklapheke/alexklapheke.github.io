@@ -1,0 +1,47 @@
+<svg height="73.6" viewBox="0 0 471.3 55.2" width="628.3" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 55.2h471.3V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M17.6 48h446.5V7.2H17.6z" fill="none" id="patch_2"/>
+            <path clip-path="url(#pe003339f80)" d="M17.6 21.4H372V9.1H17.6z" fill="#913140" stroke="#fff" id="patch_3"/>
+            <path clip-path="url(#pe003339f80)" d="M17.6 33.8h283.5V21.4H17.6z" fill="#e6ab02" stroke="#fff" id="patch_4"/>
+            <path clip-path="url(#pe003339f80)" d="M17.6 46.1H124V33.8H17.6z" fill="#a6761d" stroke="#fff" id="patch_5"/>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="14.2" y="18.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_1">
+                        A
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="14.2" y="31.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_2">
+                        B
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="14.2" y="43.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_3">
+                        C
+                    </text>
+                </g>
+            </g>
+            <text x="373.8" y="18.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_4">
+                48%
+            </text>
+            <text x="302.9" y="31.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_5">
+                38%
+            </text>
+            <text x="125.8" y="43.6" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_6">
+                14%
+            </text>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="pe003339f80">
+            <path d="M17.6 7.2H464V48H17.6z"/>
+        </clipPath>
+    </defs>
+</svg>

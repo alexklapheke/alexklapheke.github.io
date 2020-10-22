@@ -155,7 +155,7 @@ We can then look at the way scores are distributed among the essays in
 our chosen subset.
 
 ![Number of essays given each
-score](images/8e503ead0daf85d31b1e8b56c98b2100c920af67.svg){#fig:score}
+score](images/cb53112bbb52749a826cc4b0c1a6f9ba85614465.svg){#fig:score}
 
 In @fig:score, we see that the scorers of the fourth essay set were
 somewhat less lenient than those grading the third, the latter of whom
@@ -182,7 +182,7 @@ equal, adding 82 words corresponds with a point increase in score.
 
 ![Length of essays (number of word tokens) by score. Box shows IQR.
 Whiskers show full range of
-data.](images/5915a4d1521553a23cc9eea3951100155f51975d.svg){#fig:length}
+data.](images/fc09881f5110b4e14bab8953e42d22472702d680.svg){#fig:length}
 
 One interesting thing we see is that, despite the correlation, there are
 many essays earning top marks that are almost impossibly short. The
@@ -236,7 +236,7 @@ scorers.
 
 ![Percent of words misspelled by score. Box shows IQR. Whiskers show
 full range of
-data.](images/076017236c51b117019e69cc4114e8efc6da9824.svg){#fig:missp}
+data.](images/717f650811080e19dcc1dbe5225fb4314d5279da.svg){#fig:missp}
 
 The question of assessing prompt-relevance is trickier. One way of
 tackling it is to calculate the document vector of the story to which
@@ -247,7 +247,7 @@ document vector of each essay. We can see the results in @fig:prompt.
 ![Vector similarity to prompt, calculated as the cosine similarity of
 the mean of the word vectors in each text. Box shows IQR. Whiskers show
 full range of
-data.](images/bfecc4a9e215d44e1c24d44a89c8791aad191963.svg){#fig:prompt}
+data.](images/56dae79894d9b96827118e196efc6dfb13e1175b.svg){#fig:prompt}
 
 The results aren't bad ($R^2 = 0.28$), especially considering the
 outliers for score 3 are the same bizarrely short essays we saw above,
@@ -568,7 +568,7 @@ as shown in @fig:zipf, and is part-of-speech tagged, so homographs of
 different frequencies (e.g., saw~V~ vs. saw~N~) can be distinguished.
 
 ![Demonstration of Zipf's Law on
-ANC](images/08b2a0e5b56aa76027b293e3c5e414ba34d0479a.svg){#fig:zipf}
+ANC](images/ace6c3e90ff37b7934c98166100c6c6262f8702d.svg){#fig:zipf}
 
 The actual frequency measure used was the sum of word token ranks. While
 this gave higher results for longer sentences, and was therefore
@@ -687,4 +687,4 @@ with open("anc_frequency_list.csv", "w") as file:
     notebook](https://github.com/alexklapheke/essay/blob/master/code/4-Neural_net.ipynb)
 
 [^10]: The schema is,
-    roughly:![](images/331f1af10ac73831153a1ed141a565529edacc6c.svg)
+    roughly:![](images/1b55e669fef5943381f600043f4abe01cad18f4f.svg)

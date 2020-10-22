@@ -1,0 +1,110 @@
+<svg height="164.2" viewBox="0 0 138.6 123.1" width="184.8" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 123.1h138.6V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M39 116h83.6V7.1H39z" fill="none" id="patch_2"/>
+            <path clip-path="url(#p708e55b630)" d="M39 113.3h11.2V103H39z" fill="#7570b3" stroke="#fff" id="patch_3"/>
+            <path clip-path="url(#p708e55b630)" d="M39 103h12.6V92.6H38.9z" fill="#7570b3" stroke="#fff" id="patch_4"/>
+            <path clip-path="url(#p708e55b630)" d="M39 92.6h16.4V82.3H38.9z" fill="#7570b3" stroke="#fff" id="patch_5"/>
+            <path clip-path="url(#p708e55b630)" d="M39 82.3h18.4V71.9H38.9z" fill="#7570b3" stroke="#fff" id="patch_6"/>
+            <path clip-path="url(#p708e55b630)" d="M39 72h18.4V61.5H38.9z" fill="#7570b3" stroke="#fff" id="patch_7"/>
+            <path clip-path="url(#p708e55b630)" d="M39 61.6h20V51.2H39z" fill="#7570b3" stroke="#fff" id="patch_8"/>
+            <path clip-path="url(#p708e55b630)" d="M39 51.2h20.3V41H39z" fill="#7570b3" stroke="#fff" id="patch_9"/>
+            <path clip-path="url(#p708e55b630)" d="M39 40.9h54V30.5H39z" fill="#7570b3" stroke="#fff" id="patch_10"/>
+            <path clip-path="url(#p708e55b630)" d="M39 30.5h72V20.1H39z" fill="#7570b3" stroke="#fff" id="patch_11"/>
+            <path clip-path="url(#p708e55b630)" d="M39 20.1h79.6V9.8H39z" fill="#7570b3" stroke="#fff" id="patch_12"/>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="37.9" y="111" fill="#090a0c" font-family="Linux Libertine Mono O" font-size="8" font-weight="400" text-anchor="end" id="text_1">
+                        lyrics
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="37.9" y="100.6" fill="#090a0c" font-family="Linux Libertine Mono O" font-size="8" font-weight="400" text-anchor="end" id="text_2">
+                        t
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="37.9" y="90.2" fill="#090a0c" font-family="Linux Libertine Mono O" font-size="8" font-weight="400" text-anchor="end" id="text_3">
+                        sed
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text x="37.9" y="79.9" fill="#090a0c" font-family="Linux Libertine Mono O" font-size="8" font-weight="400" text-anchor="end" id="text_4">
+                        cheat
+                    </text>
+                </g>
+                <g id="ytick_5">
+                    <text x="37.9" y="69.5" fill="#090a0c" font-family="Linux Libertine Mono O" font-size="8" font-weight="400" text-anchor="end" id="text_5">
+                        grep
+                    </text>
+                </g>
+                <g id="ytick_6">
+                    <text x="37.9" y="59.2" fill="#090a0c" font-family="Linux Libertine Mono O" font-size="8" font-weight="400" text-anchor="end" id="text_6">
+                        jn
+                    </text>
+                </g>
+                <g id="ytick_7">
+                    <text x="37.9" y="48.8" fill="#090a0c" font-family="Linux Libertine Mono O" font-size="8" font-weight="400" text-anchor="end" id="text_7">
+                        y
+                    </text>
+                </g>
+                <g id="ytick_8">
+                    <text x="37.9" y="38.5" fill="#090a0c" font-family="Linux Libertine Mono O" font-size="8" font-weight="400" text-anchor="end" id="text_8">
+                        git
+                    </text>
+                </g>
+                <g id="ytick_9">
+                    <text x="37.9" y="28.1" fill="#090a0c" font-family="Linux Libertine Mono O" font-size="8" font-weight="400" text-anchor="end" id="text_9">
+                        cd
+                    </text>
+                </g>
+                <g id="ytick_10">
+                    <text x="37.9" y="17.8" fill="#090a0c" font-family="Linux Libertine Mono O" font-size="8" font-weight="400" text-anchor="end" id="text_10">
+                        mv
+                    </text>
+                </g>
+            </g>
+            <text x="51.8" y="112.3" fill="gray" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_11">
+                98
+            </text>
+            <text x="53.2" y="101.9" fill="gray" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_12">
+                110
+            </text>
+            <text x="57" y="91.6" fill="gray" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_13">
+                143
+            </text>
+            <text x="58.9" y="81.2" fill="gray" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_14">
+                160
+            </text>
+            <text x="58.9" y="70.9" fill="gray" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_15">
+                160
+            </text>
+            <text x="60.6" y="60.5" fill="gray" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_16">
+                174
+            </text>
+            <text x="60.9" y="50.2" fill="gray" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_17">
+                177
+            </text>
+            <text x="94.5" y="39.8" fill="gray" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_18">
+                469
+            </text>
+            <text x="112.6" y="29.5" fill="gray" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_19">
+                626
+            </text>
+            <text x="120.2" y="19.1" fill="gray" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_20">
+                692
+            </text>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="p708e55b630">
+            <path d="M38.9 7.2h83.7v108.7H38.9z"/>
+        </clipPath>
+    </defs>
+</svg>

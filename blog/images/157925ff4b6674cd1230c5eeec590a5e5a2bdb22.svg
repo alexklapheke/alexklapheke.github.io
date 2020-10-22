@@ -1,0 +1,86 @@
+<svg height="187.9" viewBox="0 0 370.2 140.9" width="493.6" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 141h370.2V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M28.2 116H363V7.1H28.2z" fill="none" id="patch_2"/>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <text x="41.6" y="131.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        1850
+                    </text>
+                </g>
+                <g id="xtick_2">
+                    <text x="88" y="131.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_2">
+                        1875
+                    </text>
+                </g>
+                <g id="xtick_3">
+                    <text x="134.4" y="131.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_3">
+                        1900
+                    </text>
+                </g>
+                <g id="xtick_4">
+                    <text x="180.8" y="131.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_4">
+                        1925
+                    </text>
+                </g>
+                <g id="xtick_5">
+                    <text x="227.2" y="131.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_5">
+                        1950
+                    </text>
+                </g>
+                <g id="xtick_6">
+                    <text x="273.6" y="131.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_6">
+                        1975
+                    </text>
+                </g>
+                <g id="xtick_7">
+                    <text x="320" y="131.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_7">
+                        2000
+                    </text>
+                </g>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="29.7" y="114.5" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_8">
+                        0%
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="29.7" y="89.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_9">
+                        0.25%
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="29.7" y="65" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_10">
+                        0.5%
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text x="29.7" y="40.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_11">
+                        0.75%
+                    </text>
+                </g>
+                <g id="ytick_5">
+                    <text x="29.7" y="15.6" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_12">
+                        1%
+                    </text>
+                </g>
+            </g>
+            <path clip-path="url(#pb1f3156f67)" d="M43.4 111h89.1l1.9-.4 7.4.4 1.9-1 1.8 1h11.1l1.9-2.1 1.9 1.5 1.8-3 1.9 3.6h1.8l1.9-.2 1.8-1 1.9 1.2 1.8-4.3 2 4.3h7.3l1.9-7.7 1.8 7.7 1.9-15.2 1.9 15.2h7.4l1.8-2.6 1.9 2.6h1.8l1.9-3.1 1.9.8h1.8l1.9 1.4 1.8.9 1.9-2.8 1.8-1.5 1.9-6.6 1.8 9.4 3.8-5.9 1.8 7.4h13l1.9-2.8 1.8 2.8 1.9-2.6 1.8 2.6H257l1.8-2.5 1.9 2.5 1.8-5.2 1.9 5.2H281l1.8-5.2 1.9 5.2h9.3l1.8-1.3 1.9 1.3h18.6l1.8-44 1.9 44h27.8" fill="none" stroke="#e7298a" stroke-linecap="square" stroke-width="1.5" id="line2d_1"/>
+            <path clip-path="url(#pb1f3156f67)" d="M43.4 111H205l1.9-.8 1.8.8H242l1.9-.7 1.8.7 1.9-1 1.8 1h9.3l1.9-3.2 1.8 3.2h16.7l1.9-12 1.8 11.9h5.6l1.9-8.4 1.8 5.3 1.9 3 1.8-1.2 1.9-8.3 1.8-4.3 2 13.9h46.3" fill="none" stroke="#66a61e" stroke-linecap="square" stroke-width="1.5" id="line2d_2"/>
+            <path clip-path="url(#pb1f3156f67)" d="M43.4 111h120.7l1.8-.1h1.9l1.8-3.3 1.9 3.4H203l1.9-4.7 1.9 4.7 1.8-6.2 1.9 3.6 1.8 2.6 1.9-8.4 1.8-1.7 2-9.9 1.8 14 1.9-.7 1.9 6.7 1.8-1.2 1.9 1.2h11.1l1.9-1 3.7.3 1.8.7h1.9l1.8-1 1.9 1h3.7l1.9-3.4 1.8 3.4h1.9l1.8-1 1.9-1.7 1.8 2.7h5.6l1.9-6 1.8 6h5.6l1.8-10.3 1.9 10.3h1.9l1.8-14.8 1.9-18.8 1.8 27.4 1.9-2.7 1.8-9.7 1.9-10.2 1.8 1 2 6.1 1.8 21.7 1.6-99 2 99h5.5l1.9-38.5 1.9 25.1L318 111h29.7" fill="none" stroke="#e6ab02" stroke-linecap="square" stroke-width="1.5" id="line2d_3"/>
+            <path clip-path="url(#pb1f3156f67)" d="M43.4 111h202.3l1.9-1 1.8 1 1.9-1.1 1.9 1h22.2l1.9-5 1.8 5h1.9l1.8-5 1.9.3 1.9 4.8 1.8-14.8 1.9 6.4 1.8 5.3 1.9 3 1.8-6.5 1.9-3 1.8 2.6 2 7h7.3l1.9-43.2 1.8 43.2h35.3" fill="none" stroke="#a6761d" stroke-linecap="square" stroke-width="1.5" id="line2d_4"/>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="pb1f3156f67">
+            <path d="M28.2 7.2H363v108.7H28.2z"/>
+        </clipPath>
+    </defs>
+</svg>

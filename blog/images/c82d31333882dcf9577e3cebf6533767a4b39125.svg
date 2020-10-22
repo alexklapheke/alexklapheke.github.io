@@ -1,0 +1,214 @@
+<svg height="332.9" viewBox="0 0 282.2 249.7" width="376.2" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 249.7h282.2V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M51.8 224.6H275V7.2H51.8z" fill="none" id="patch_2"/>
+            <g id="QuadMesh_1" stroke="#fff">
+                <path clip-path="url(#pe6b00b2dd6)" d="M51.8 224.6h44.6v-43.4H51.8v43.4" fill="#666"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M96.4 224.6H141v-43.4H96.4v43.4" fill="#727ecf"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M141 224.6h44.7v-43.4H141v43.4m44.7 0h44.6v-43.4h-44.6v43.4m44.6 0H275v-43.4h-44.7v43.4" fill="#c55faf"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M51.8 181.2h44.6v-43.5H51.8v43.5" fill="#727ecf"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M96.4 181.2H141v-43.5H96.4v43.5" fill="#666"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M141 181.2h44.7v-43.5H141v43.5m44.7 0h44.6v-43.5h-44.6v43.5m44.6 0H275v-43.5h-44.7v43.5" fill="#727ecf"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M51.8 137.7h44.6V94.2H51.8v43.5" fill="#c55faf"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M96.4 137.7H141V94.2H96.4v43.5" fill="#727ecf"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M141 137.7h44.7V94.2H141v43.5" fill="#666"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M185.7 137.7h44.6V94.2h-44.6v43.5" fill="#d67c00"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M230.3 137.7H275V94.2h-44.7v43.5" fill="#e93834"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M51.8 94.2h44.6V50.7H51.8v43.5" fill="#c55faf"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M96.4 94.2H141V50.7H96.4v43.5" fill="#727ecf"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M141 94.2h44.7V50.7H141v43.5" fill="#d67c00"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M185.7 94.2h44.6V50.7h-44.6v43.5" fill="#666"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M230.3 94.2H275V50.7h-44.7v43.5" fill="#e93834"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M51.8 50.7h44.6V7.2H51.8v43.5" fill="#c55faf"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M96.4 50.7H141V7.2H96.4v43.5" fill="#727ecf"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M141 50.7h44.7V7.2H141v43.5m44.7 0h44.6V7.2h-44.6v43.5" fill="#e93834"/>
+                <path clip-path="url(#pe6b00b2dd6)" d="M230.3 50.7H275V7.2h-44.7v43.5" fill="#666"/>
+            </g>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <text x="74.1" y="240.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        Kiss
+                    </text>
+                </g>
+                <g id="xtick_2">
+                    <text x="118.7" y="240.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_2">
+                        Montroll
+                    </text>
+                </g>
+                <g id="xtick_3">
+                    <text x="163.4" y="240.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_3">
+                        Simpson
+                    </text>
+                </g>
+                <g id="xtick_4">
+                    <text x="208" y="240.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_4">
+                        Smith
+                    </text>
+                </g>
+                <g id="xtick_5">
+                    <text x="252.6" y="240.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_5">
+                        Wright
+                    </text>
+                </g>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="43.3" y="206.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_6">
+                        Kiss
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="43.3" y="162.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_7">
+                        Montroll
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="43.3" y="119.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_8">
+                        Simpson
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text x="43.3" y="75.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_9">
+                        Smith
+                    </text>
+                </g>
+                <g id="ytick_5">
+                    <text x="43.3" y="32.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_10">
+                        Wright
+                    </text>
+                </g>
+            </g>
+            <text x="118.7" y="200.6" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_11">
+                Montroll
+            </text>
+            <text x="118.7" y="211.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_12">
+                51%
+            </text>
+            <text x="163.4" y="200.6" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_13">
+                Kiss
+            </text>
+            <text x="163.4" y="211.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_14">
+                79%
+            </text>
+            <text x="208" y="200.6" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_15">
+                Kiss
+            </text>
+            <text x="208" y="211.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_16">
+                53%
+            </text>
+            <text x="252.6" y="200.6" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_17">
+                Kiss
+            </text>
+            <text x="252.6" y="211.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_18">
+                52%
+            </text>
+            <text x="74.1" y="157.1" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_19">
+                Montroll
+            </text>
+            <text x="74.1" y="167.8" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_20">
+                51%
+            </text>
+            <text x="163.4" y="157.1" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_21">
+                Montroll
+            </text>
+            <text x="163.4" y="167.8" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_22">
+                86%
+            </text>
+            <text x="208" y="157.1" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_23">
+                Montroll
+            </text>
+            <text x="208" y="167.8" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_24">
+                59%
+            </text>
+            <text x="252.6" y="157.1" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_25">
+                Montroll
+            </text>
+            <text x="252.6" y="167.8" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_26">
+                53%
+            </text>
+            <text x="74.1" y="113.7" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_27">
+                Kiss
+            </text>
+            <text x="74.1" y="124.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_28">
+                79%
+            </text>
+            <text x="118.7" y="113.7" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_29">
+                Montroll
+            </text>
+            <text x="118.7" y="124.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_30">
+                86%
+            </text>
+            <text x="208" y="113.7" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_31">
+                Smith
+            </text>
+            <text x="208" y="124.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_32">
+                84%
+            </text>
+            <text x="252.6" y="113.6" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_33">
+                Wright
+            </text>
+            <text x="252.6" y="124.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_34">
+                72%
+            </text>
+            <text x="74.1" y="70.2" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_35">
+                Kiss
+            </text>
+            <text x="74.1" y="80.8" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_36">
+                53%
+            </text>
+            <text x="118.7" y="70.2" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_37">
+                Montroll
+            </text>
+            <text x="118.7" y="80.8" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_38">
+                59%
+            </text>
+            <text x="163.4" y="70.2" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_39">
+                Smith
+            </text>
+            <text x="163.4" y="80.8" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_40">
+                84%
+            </text>
+            <text x="252.6" y="70.2" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_41">
+                Wright
+            </text>
+            <text x="252.6" y="80.8" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_42">
+                52%
+            </text>
+            <text x="74.1" y="26.7" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_43">
+                Kiss
+            </text>
+            <text x="74.1" y="37.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_44">
+                52%
+            </text>
+            <text x="118.7" y="26.7" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_45">
+                Montroll
+            </text>
+            <text x="118.7" y="37.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_46">
+                53%
+            </text>
+            <text x="163.4" y="26.7" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_47">
+                Wright
+            </text>
+            <text x="163.4" y="37.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_48">
+                72%
+            </text>
+            <text x="208" y="26.7" fill="#fff" font-family="Linux Libertine O" font-size="9" font-weight="400" text-anchor="middle" id="text_49">
+                Wright
+            </text>
+            <text x="208" y="37.3" fill="#fff" font-family="Linux Libertine O" font-size="8" font-weight="400" text-anchor="middle" id="text_50">
+                52%
+            </text>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="pe6b00b2dd6">
+            <path d="M51.8 7.2H275v217.4H51.8z"/>
+        </clipPath>
+    </defs>
+</svg>

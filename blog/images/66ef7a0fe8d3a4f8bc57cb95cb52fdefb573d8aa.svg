@@ -1,0 +1,87 @@
+<svg height="288" viewBox="0 0 504 216" width="672" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 216h504V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M29 190.7h464.2V10.8H29.1z" fill="none" id="patch_2"/>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <text x="69.8" y="201.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        Feb
+                    </text>
+                </g>
+                <g id="xtick_2">
+                    <text x="189.9" y="201.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_2">
+                        Mar
+                    </text>
+                </g>
+                <g id="xtick_3">
+                    <text x="318.4" y="201.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_3">
+                        Apr
+                    </text>
+                </g>
+                <g id="xtick_4">
+                    <text x="442.7" y="201.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_4">
+                        May
+                    </text>
+                </g>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="25.6" y="176.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_5">
+                        −40
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="25.6" y="140.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_6">
+                        −20
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="25.6" y="104.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_7">
+                        0
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text x="25.6" y="68.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_8">
+                        20
+                    </text>
+                </g>
+                <g id="ytick_5">
+                    <text x="25.6" y="32.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_9">
+                        40
+                    </text>
+                </g>
+            </g>
+            <path clip-path="url(#pc1345b5c9f)" d="M290.1 46.8v54" fill="none" stroke="#909090" stroke-dasharray="1,1.65" id="LineCollection_1"/>
+            <path clip-path="url(#pc1345b5c9f)" d="M294.3 169.1v-68.3" fill="none" stroke="#909090" stroke-dasharray="1,1.65" id="LineCollection_2"/>
+            <path clip-path="url(#pc1345b5c9f)" d="M368.9 64.8v36" fill="none" stroke="#909090" stroke-dasharray="1,1.65" id="LineCollection_3"/>
+            <path clip-path="url(#pc1345b5c9f)" d="M29 100.8h464.2" fill="none" stroke="gray" stroke-linecap="square" stroke-width="1.5" id="line2d_10"/>
+            <path clip-path="url(#pc1345b5c9f)" d="M215.5 119.3l4.2 1.4 8.3 10.1 4.1 12 4.2 11.9 4.1 7.7 8.3 1.1 8.3 3.6 4.1-1 4.2-1.8 8.3-5 4.1.2 4.1-9 4.2.1 4.1-3.6 4.2-1.3h4.1l4.2-.4 4.1-.8 4.2 2.4 4.1 3.1 4.1-2.3 8.3 6.5 8.3-1.1 4.2.3 4.1 4.8 4.2 10.3 4.1-2.5 4.1.2 4.2-5.2 4.1-16.3 8.3-19.1 4.2-5.4 4.1-7 4.2.4 8.2 17.9 4.2 24 4.1 15.4 4.2 18.5 4.1 12.9 4.2-7.9 8.2-20.9 4.2-19.3 4.1-20 8.3-22.5 8.3-5 4.2 5.2 4.1 3.2 4.1 3.5 4.2 7.6 8.3 1 4.1-4.6 4.2 3.7 8.3 11.9" fill="none" stroke="#0658cf" stroke-linecap="square" stroke-width="2" id="line2d_11"/>
+            <path clip-path="url(#pc1345b5c9f)" d="M232.1 158l4.2-10 4.1-6.8 4.1-5 4.2-6.2 4.1.6 4.2 8.2 4.1 6.7 4.2 7.5 4.1 6.9 4.2-1 4.1-11 4.1-11.4 4.2-13.4 4.1-17 4.2-13.2 4.1-8.1 4.2-5.5 4.1-3.5 4.2.1h8.2l4.2 2.3 4.1-1.8 4.2 5.5 4.1 7.7 4.2 11.8 4.1 6.7 4.2 13 4.1.3 4.1 1.5 4.2-6.1 4.1-1.6 4.2-6.5 4.1-.9 4.2-7 4.1-1.6 4.2-1.8 4.1-1.4 4.1 1 4.2 7.2 4.1 4.4 4.2 2.7 4.1 9 4.2 12.2 4.1 4.5 4.1 6.2 4.2 3.6 8.3-4.6 4.1-11 4.2.1 4.1-3.6 4.2-3.3 4.1 4.3 4.1 4.7 4.2-6.3 4.1 1.5 4.2 2.7 4.1-2.3 4.2.1 4.1 5.5 4.2-4.4" fill="none" stroke="#f50" stroke-linecap="square" stroke-width="2" id="line2d_12"/>
+            <g id="text_10" font-family="Linux Libertine O" font-size="8" font-weight="400">
+                <text transform="translate(290.1 38.2)">
+                    Trump announces hospital
+                </text>
+                <text transform="translate(290.1 46.8)">
+                    ship deployed to NYC
+                </text>
+            </g>
+            <text x="294.3" y="181.7" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_11">
+                Trump signs CARES Act
+            </text>
+            <text x="368.9" y="64.8" font-family="Linux Libertine O" font-size="8" font-weight="400" id="text_12">
+                Trump cuts WHO funding
+            </text>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="pc1345b5c9f">
+            <path d="M29.1 10.8h464.1v179.9H29.1z"/>
+        </clipPath>
+    </defs>
+</svg>

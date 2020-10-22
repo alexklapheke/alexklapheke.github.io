@@ -1,0 +1,97 @@
+<svg height="279.2" viewBox="0 0 263.1 209.4" width="350.8" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 209.4h263.1V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M25.5 169.2H256V7.2H25.5z" fill="none" id="patch_2"/>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <text x="36" y="184.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        0%
+                    </text>
+                </g>
+                <g id="xtick_2">
+                    <text x="86.3" y="184.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_2">
+                        10%
+                    </text>
+                </g>
+                <g id="xtick_3">
+                    <text x="136.5" y="184.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_3">
+                        20%
+                    </text>
+                </g>
+                <g id="xtick_4">
+                    <text x="186.8" y="184.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_4">
+                        30%
+                    </text>
+                </g>
+                <g id="xtick_5">
+                    <text x="237.1" y="184.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_5">
+                        40%
+                    </text>
+                </g>
+                <text x="140.7" y="199.4" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_6">
+                    Words misspelled
+                </text>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="27" y="152.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_7">
+                        0
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="27" y="111.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_8">
+                        1
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="27" y="71.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_9">
+                        2
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text x="27" y="30.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_10">
+                        3
+                    </text>
+                </g>
+                <text transform="rotate(-90 15.6 88.2)" x="15.6" y="88.2" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_11">
+                    Score
+                </text>
+            </g>
+            <path clip-path="url(#pe99cd30265)" d="M36 158v-18.2h24v18.3H36" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_1"/>
+            <path clip-path="url(#pe99cd30265)" d="M36 149h0" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_2"/>
+            <path clip-path="url(#pe99cd30265)" d="M60 149h185.5" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_3"/>
+            <path clip-path="url(#pe99cd30265)" d="M36 153.5v-9.1" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_4"/>
+            <path clip-path="url(#pe99cd30265)" d="M245.5 153.5v-9.1" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_5"/>
+            <path clip-path="url(#pe99cd30265)" d="M36 117.6V99.3h20.4v18.3H36" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_7"/>
+            <path clip-path="url(#pe99cd30265)" d="M36 108.5h0" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_8"/>
+            <path clip-path="url(#pe99cd30265)" d="M56.4 108.5h78" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_9"/>
+            <path clip-path="url(#pe99cd30265)" d="M36 113v-9" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_10"/>
+            <path clip-path="url(#pe99cd30265)" d="M134.4 113v-9" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_11"/>
+            <path clip-path="url(#pe99cd30265)" d="M41.5 77V58.9h13.4v18.3H41.5" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_13"/>
+            <path clip-path="url(#pe99cd30265)" d="M41.5 68H36" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_14"/>
+            <path clip-path="url(#pe99cd30265)" d="M55 68h46" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_15"/>
+            <path clip-path="url(#pe99cd30265)" d="M36 72.5v-9.1" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_16"/>
+            <path clip-path="url(#pe99cd30265)" d="M101 72.5v-9.1" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_17"/>
+            <path clip-path="url(#pe99cd30265)" d="M42.5 36.6V18.3h12.7v18.3H42.5" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_19"/>
+            <path clip-path="url(#pe99cd30265)" d="M42.5 27.4H36" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_20"/>
+            <path clip-path="url(#pe99cd30265)" d="M55.2 27.4H88" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_21"/>
+            <path clip-path="url(#pe99cd30265)" d="M36 32v-9" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_22"/>
+            <path clip-path="url(#pe99cd30265)" d="M88 32v-9" fill="none" stroke="#76a254" stroke-linecap="square" id="line2d_23"/>
+            <path clip-path="url(#pe99cd30265)" d="M49.2 158v-18.2" fill="none" stroke="#727ecf" stroke-linecap="square" id="line2d_25"/>
+            <path clip-path="url(#pe99cd30265)" d="M47.3 117.6V99.3" fill="none" stroke="#727ecf" stroke-linecap="square" id="line2d_26"/>
+            <path clip-path="url(#pe99cd30265)" d="M47.7 77V58.9" fill="none" stroke="#727ecf" stroke-linecap="square" id="line2d_27"/>
+            <path clip-path="url(#pe99cd30265)" d="M48.3 36.6V18.3" fill="none" stroke="#727ecf" stroke-linecap="square" id="line2d_28"/>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="pe99cd30265">
+            <path d="M25.5 7.2h230.4v162H25.5z"/>
+        </clipPath>
+    </defs>
+</svg>

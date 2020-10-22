@@ -1,0 +1,50 @@
+<svg height="73.6" viewBox="0 0 500.4 55.2" width="667.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 55.2h500.4V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M46.8 48h446.4V7.2H46.8z" fill="none" id="patch_2"/>
+            <path clip-path="url(#pf9ceb6a690)" d="M46.8 21.4h240.7V9.1H46.8z" fill="#c55faf" stroke="#fff" id="patch_3"/>
+            <path clip-path="url(#pf9ceb6a690)" d="M46.8 33.8h192V21.4h-192z" fill="#727ecf" stroke="#fff" id="patch_4"/>
+            <path clip-path="url(#pf9ceb6a690)" d="M46.8 46.1h183V33.8h-183z" fill="#e93834" stroke="#fff" id="patch_5"/>
+            <path clip-path="url(#pf9ceb6a690)" d="M287.5 21.4h33.1V9.1h-33.1z" fill="#d67c00" stroke="#fff" id="patch_6"/>
+            <path clip-path="url(#pf9ceb6a690)" d="M238.8 33.8h41.9V21.4h-42z" fill="#d67c00" stroke="#fff" id="patch_7"/>
+            <path clip-path="url(#pf9ceb6a690)" d="M229.8 46.1h30.5V33.8h-30.5z" fill="#d67c00" stroke="#fff" id="patch_8"/>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="43.3" y="18.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_1">
+                        Kiss
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="43.3" y="31.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_2">
+                        Montroll
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="43.3" y="43.4" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_3">
+                        Wright
+                    </text>
+                </g>
+            </g>
+            <text x="322.5" y="18.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_4">
+                38%
+            </text>
+            <text x="282.5" y="31.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_5">
+                32%
+            </text>
+            <text x="262.1" y="43.6" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" id="text_6">
+                30%
+            </text>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="pf9ceb6a690">
+            <path d="M46.8 7.2h446.4V48H46.8z"/>
+        </clipPath>
+    </defs>
+</svg>

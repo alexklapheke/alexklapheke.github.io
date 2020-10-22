@@ -1,0 +1,133 @@
+<svg height="288" viewBox="0 0 504 216" width="672" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 216h504V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M29 190.7h448.6V10.8H29z" fill="none" id="patch_2"/>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <text x="68.4" y="201.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        Feb
+                    </text>
+                </g>
+                <g id="xtick_2">
+                    <text x="184.6" y="201.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_2">
+                        Mar
+                    </text>
+                </g>
+                <g id="xtick_3">
+                    <text x="308.7" y="201.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_3">
+                        Apr
+                    </text>
+                </g>
+                <g id="xtick_4">
+                    <text x="428.9" y="201.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_4">
+                        May
+                    </text>
+                </g>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="25.6" y="176.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_5">
+                        −40
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="25.6" y="140.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_6">
+                        −20
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="25.6" y="104.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_7">
+                        0
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text x="25.6" y="68.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_8">
+                        20
+                    </text>
+                </g>
+                <g id="ytick_5">
+                    <text x="25.6" y="32.3" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_9">
+                        40
+                    </text>
+                </g>
+            </g>
+            <path clip-path="url(#pd7e5318aec)" d="M241.3 133.1v-32.3" fill="none" stroke="#909090" stroke-dasharray="1,1.65" id="LineCollection_1"/>
+            <path clip-path="url(#pd7e5318aec)" d="M309.4 178.1v-77.3" fill="none" stroke="#909090" stroke-dasharray="1,1.65" id="LineCollection_2"/>
+            <path clip-path="url(#pd7e5318aec)" d="M369.5 160.1v-59.3" fill="none" stroke="#909090" stroke-dasharray="1,1.65" id="LineCollection_3"/>
+            <path clip-path="url(#pd7e5318aec)" d="M421.6 46.8v54" fill="none" stroke="#909090" stroke-dasharray="1,1.65" id="LineCollection_4"/>
+            <path clip-path="url(#pd7e5318aec)" d="M181.3 82.8v18" fill="none" stroke="#909090" stroke-dasharray="1,1.65" id="LineCollection_5"/>
+            <path clip-path="url(#pd7e5318aec)" d="M237.3 28.8v72" fill="none" stroke="#909090" stroke-dasharray="1,1.65" id="LineCollection_6"/>
+            <path clip-path="url(#pd7e5318aec)" d="M257.4 55.8v45" fill="none" stroke="#909090" stroke-dasharray="1,1.65" id="LineCollection_7"/>
+            <path clip-path="url(#pd7e5318aec)" d="M29 100.8h448.6" fill="none" stroke="gray" stroke-linecap="square" stroke-width="1.5" id="line2d_10"/>
+            <path clip-path="url(#pd7e5318aec)" d="M245.3 110.8l4 8.3 4-5.3 4-19.2 4-2.1 4 16.2 4-8.4 4 28.5 4-1.9 4-9.3 4 3.8 4.1 11.6 12-40.8 8 11.4 4 31.5 16 17.9 8 10.3 4 8.2 4 .8 4-31.2 4 7.6 12.1-22.2 4-5.5 4-11.5 4 15.9 4-20.2 4-11.4 4-7.6 8-23.3 4-15.3 8-4.2 4-1.1 4 20 4 40.3 4 8.2 12.1 2.4 4 4.7 4-7 4-22.6" fill="none" stroke="#0658cf" stroke-linecap="square" stroke-width="2" id="line2d_11"/>
+            <path clip-path="url(#pd7e5318aec)" d="M197.3 133.2l4 48.7 4-40.4 4 26.3 12-36.9 4-4 4-57.7 4 14.9 4-34.2 4-5 4 2.1 4 28 4-1.3 4 21.6 4 1.3 4 11.5 4-7.6 4-5.7 4-14.7 4 14.1 4-6.7 4.1 6.7 4-6.3 4 5.7 4-6 4-3.9 4-7.4 4 9 4 15 4-2.4 4 9.7 4 4.9 4 6 4-29.2 4-4.5 4-.8 4-11.2 4-3.7 4 24.5 4-.8 4.1-5.6 4 16.4 4-19.3 4-3.9 4 2.3 4 6.2 4 .5 4 26.8 4-14.8 4 4 4-5.9 4-10.2 4-5.6 4 11.1 4-6.8 4 1.6 4 33.9 4-.8 4.1-3.1 4 14.6 4 7.7 4-34.5 4-2.7 4 3.4 4-6.8 4-6.2 4 7.4 4 13.8" fill="none" stroke="#f50" stroke-linecap="square" stroke-width="2" id="line2d_12"/>
+            <g id="text_10" fill="#0658cf" font-family="Linux Libertine O" font-size="8" font-weight="400">
+                <text transform="translate(241.3 137.2)">
+                    First reported
+                </text>
+                <text transform="translate(241.3 145.7)">
+                    death in Texas
+                </text>
+            </g>
+            <g id="text_11" fill="#0658cf" font-family="Linux Libertine O" font-size="8" font-weight="400">
+                <text transform="translate(309.4 182.1)">
+                    Texas stay-at-home
+                </text>
+                <text transform="translate(309.4 190.7)">
+                    order begins
+                </text>
+            </g>
+            <g id="text_12" fill="#0658cf" font-family="Linux Libertine O" font-size="8" font-weight="400">
+                <text transform="translate(369.5 164.1)">
+                    Abbott announces end
+                </text>
+                <text transform="translate(369.5 172.7)">
+                    of stay-at-home order
+                </text>
+            </g>
+            <g id="text_13" fill="#0658cf" font-family="Linux Libertine O" font-size="8" font-weight="400">
+                <text transform="translate(421.6 38.2)">
+                    Texas stay-at-home
+                </text>
+                <text transform="translate(421.6 46.8)">
+                    order ends
+                </text>
+            </g>
+            <g id="text_14" fill="#f50" font-family="Linux Libertine O" font-size="8" font-weight="400">
+                <text transform="translate(181.3 74.2)">
+                    First reported
+                </text>
+                <text transform="translate(181.3 82.8)">
+                    case in NYS
+                </text>
+            </g>
+            <g id="text_15" fill="#f50" font-family="Linux Libertine O" font-size="8" font-weight="400">
+                <text transform="translate(237.3 20.2)">
+                    NYC public schools
+                </text>
+                <text transform="translate(237.3 28.8)">
+                    ordered to close
+                </text>
+            </g>
+            <g id="text_16" fill="#f50" font-family="Linux Libertine O" font-size="8" font-weight="400">
+                <text transform="translate(257.4 47.2)">
+                    Cuomo issues
+                </text>
+                <text transform="translate(257.4 55.8)">
+                    stay-at-home order
+                </text>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="pd7e5318aec">
+            <path d="M29.1 10.8h448.6v179.9H29.1z"/>
+        </clipPath>
+    </defs>
+</svg>

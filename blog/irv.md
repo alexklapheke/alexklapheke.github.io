@@ -126,7 +126,7 @@ shows the results of an election between the Purple Party and the Yellow
 party.
 
 ![**Round 1:** First-choice votes are
-tallied](images/14a4a663b03307ae34595dee74f99eac25b0dc73.svg){#fig:fake1}
+tallied](images/23ebd915bd508f04f9d6a6feab39836592f11f90.svg){#fig:fake1}
 
 Two candidates, B and C, ran under the Yellow platform, splitting the
 vote. In a plurality election, the Purple candidate A would win. Under
@@ -135,7 +135,7 @@ second round (@fig:fake2).
 
 ![**Round 2:** With no majority, the last-place candidate's votes are
 run
-off](images/40c4fd48291d76b3dd160898e67cddbac9152c72.svg){#fig:fake2}
+off](images/88fea853ba7a9168f3f363c0d1ce6b2a265fdd3a.svg){#fig:fake2}
 
 The votes of the least popular candidate, C, are reallocated to B, those
 voters' second choice, and B wins with a majority.
@@ -298,7 +298,7 @@ an average of 25% with each successive choice after the first
 
 ![Percentage of valid ballots that specified an nth choice (the sixth
 choice was to allow for
-write-ins).](images/1c5d667c159d61d876889b8b0e513cd9f6944149.svg){#fig:choices}
+write-ins).](images/9b84951e1db92fb4d2e42cc9f6999ef0bf01167d.svg){#fig:choices}
 
 Furthermore, the introduction of IRV in 2005 did not depress turnout; as
 @fig:turnout shows, it increased even as the population stagnated.
@@ -312,7 +312,7 @@ population est.\
 cast for mayor\
 <svg width="20" height="10"><rect x="0" y="0" width="20" height="10" fill="#E0E0E0" stroke="none" /></svg> IRV
 in
-use](images/30f1d88f9ba96823b8de77accef939c54a6305c4.svg){#fig:turnout}
+use](images/fb520d52768d3c37c7b61b665778e3c2417031f1.svg){#fig:turnout}
 
 Some also expressed concern that introducing ranked choices would render
 ballots dauntingly complex for some voters. The complexity of a ballot,
@@ -397,7 +397,7 @@ time---[Kiss]{.prg} would have won by four points.
 
 ![**Round 1:** Proportion of first-choice votes. In a plurality
 election, this would be the sole
-calculation.](images/0703039965203dfcc0548fe1699f2563e3b8b737.svg){#fig:round1}
+calculation.](images/409882186b055e5ebb61f818a92b9540f0330039.svg){#fig:round1}
 
 Of course, IRV requires a majority, which, even after eliminating
 [Simpson]{.grn} and the write-ins, we clearly do not yet have. The
@@ -406,14 +406,14 @@ less evenly to the remaining three.
 
 ![**Round 2:** Proportion of first-choice votes after first runoff.
 Simpson and write-in votes are not shown as they do not affect the
-totals.](images/3f1f6599a3ec33b104f8afd9ffc09cbd1093fd5c.svg){#fig:round2}
+totals.](images/a9315eef235c2359d83014e40c7032e08c3c39ad.svg){#fig:round2}
 
 Still no majority. Next to go is [Montroll]{.dem}. His votes, and the
 votes of the [Smith]{.ind} voters reallocated to him, are reallocated in
 round 3.
 
 ![**Round 3:** Proportion of first-choice votes after second
-runoff](images/502f9f6c2d0cd36f85c07198c9e1734590009d14.svg){#fig:round3}
+runoff](images/16f6d692eec0dadc6da9b6443f7f8c4dd861d5dd.svg){#fig:round3}
 
 With most of the votes going to [Kiss]{.prg}, he ekes out a majority.
 (Since some ballots didn't specify higher choices, the percentages are
@@ -441,7 +441,7 @@ broad, if tepid, appeal.
 
 ![Borda scores for each candidate. Montroll wins due to strong first-
 and second-place
-scores.](images/20f89197023b86097d6942ff2ddeb33d9cb0713d.svg){#fig:borda}
+scores.](images/bd390c9fe63dc6a9c18649a63c1ddd8520e088d5.svg){#fig:borda}
 
 [Wright]{.rep} and [Kiss]{.prg} were popular first-choice votes, but
 didn't garner many next-choice votes, while [Montroll]{.dem} and
@@ -464,7 +464,7 @@ eliminating him in the second round.
 ![Results of a Condorcet-style election, for voters who expressed
 relative preferences for each pair: Montroll wins head-to-head against
 every other
-candidate.](images/b855eb6d114335f18dcc27e12d7057ebe58523d2.svg){#fig:cond}
+candidate.](images/c82d31333882dcf9577e3cebf6533767a4b39125.svg){#fig:cond}
 
 ## Summary & lessons
 
@@ -492,20 +492,20 @@ day.
 
 ![**Round 1:** Proportion of first-choice votes with a third of Wright
 voters staying home. Simpson and write-ins are omitted for
-illustration](images/40acd39cca08983e629a7f65dc276bcd28a6df90.svg){#fig:nowright-round1}
+illustration](images/b5be02280e8e7e37a6993c93e95c098c12cf2977.svg){#fig:nowright-round1}
 
 [Wright]{.rep} now starts out third in the rankings
 (@fig:nowright-round1), and is still last after [Smith]{.ind} is
 eliminated (@fig:nowright-round2).
 
 ![**Round 2:** Proportion of first-choice votes after first
-runoff](images/7ebccd894a40a8677841321e5d46ac2a3b2c23ed.svg){#fig:nowright-round2}
+runoff](images/83c3f85ee90a45a51a200ea9dd6f6a6a931c7067.svg){#fig:nowright-round2}
 
 Now [Wright]{.rep} is eliminated, and the bulk of his votes go to
 [Montroll]{.dem}, carrying the latter to a four-point victory.
 
 ![**Round 3:** Proportion of first-choice votes after second
-runoff](images/1d2b2e4435cb957358725e07d93e5b2321a31aeb.svg){#fig:nowright-round3}
+runoff](images/84d17c86a0e4d9cc08fe9cc95f0e2190d2cf6f4b.svg){#fig:nowright-round3}
 
 This may seem like an esoteric or academic concern (headline: "If Public
 Had Voted Differently, A Different Candidate Would Have Won"), but its
@@ -534,19 +534,19 @@ for him instead of [Wright]{.rep}*.
 
 ![**Round 1:** Proportion of first-choice votes with a contingent of
 Wright voters supporting Kiss. Simpson and write-ins are omitted for
-illustration](images/6838666f7b75b9fda9f81cf7c52d6dd72f189f75.svg){#fig:flip-round1}
+illustration](images/004bf4a319384b1dab3579213bd759ff50733181.svg){#fig:flip-round1}
 
 [Kiss]{.prg} now has a very strong out-of-the-gate lead, with
 [Wright]{.rep} barely ahead of [Montroll]{.dem}.
 
 ![**Round 2:** Proportion of first-choice votes after first
-runoff](images/b842154e26089de991f2c0ee6a64c001e45ed419.svg){#fig:flip-round2}
+runoff](images/8a300bfa80e6b7cd1e738d7e27cdff336ba5b3fc.svg){#fig:flip-round2}
 
 With [Smith]{.ind}'s votes reallocated, [Wright]{.rep} is eliminated,
 and now all of his votes go to [Montroll]{.dem}.
 
 ![**Round 3:** Proportion of first-choice votes after second
-runoff](images/a9f5ffbf5a45c6802df4388c616982d912471fd0.svg){#fig:flip-round3}
+runoff](images/e1915096ede74c4e44dbe21cfcd61923622d4d5c.svg){#fig:flip-round3}
 
 This illustrates how IRV violates the principle of
 [monotonicity](https://en.wikipedia.org/wiki/Monotonicity_criterion),
@@ -680,7 +680,7 @@ National](https://en.wikipedia.org/wiki/Liberal_National_Party_of_Queensland)\
 <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#d67c00" stroke="none" /></svg> [Country
 Liberal](https://en.wikipedia.org/wiki/Country_Liberal_Party)\
 <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#76a254" stroke="none" /></svg> [Greens](https://en.wikipedia.org/wiki/Australian_Greens)\
-<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#888888" stroke="none" /></svg> Independent/other](images/57ef90b548ebf1eba89533793a350caaed9fece1.svg){#fig:aus-house}
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#888888" stroke="none" /></svg> Independent/other](images/fbd5d046964ec008eee33763f4e3dd0ffd1cc129.svg){#fig:aus-house}
 
 It's important to note that @fig:aus-house presents statistical
 averages. Each bar represents the results of a 150 or so *individual*
@@ -693,7 +693,7 @@ allocations in the U.S. House during the same period:
 \
 <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#e93834" stroke="none" /></svg> Republican\
 <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#727ecf" stroke="none" /></svg> Democrat\
-<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#888888" stroke="none" /></svg> Independent/other](images/8e4313ef0ed26a8bc6cfa47c11e2d0c6eca6fb91.svg){#fig:us-house}
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#888888" stroke="none" /></svg> Independent/other](images/d238b1dafe15b8ad6a61111ee922217a42c86ff4.svg){#fig:us-house}
 
 There are only a
 [handful](https://en.wikipedia.org/wiki/Third-party_and_independent_members_of_the_United_States_House_of_Representatives#1949%E2%80%93present:_Modern_era)
@@ -715,7 +715,7 @@ bands in @fig:uk-house represent multiple parties).
 Democrats\
 <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#c55faf" stroke="none" /></svg> Scottish
 & Welsh national parties\
-<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#888888" stroke="none" /></svg> Independent/other](images/d4144a1d1ab4adb1926d1f013da73fec161711c6.svg){#fig:uk-house}
+<svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="#888888" stroke="none" /></svg> Independent/other](images/d64137827ca3c3e23cbbdda4e0d1ae8ca2727c01.svg){#fig:uk-house}
 
 This may be an effect of the parliamentary system, which allows
 coalitions, reducing competition between ideologically similar parties.
@@ -831,4 +831,4 @@ again.
 
 [^12]: (Source: [xkcd](https://xkcd.com/1844/))
 
-    ![](images/e91519b0ec0dde0046d26fe75d73530ac4ee125e.png)
+    ![](images/24a7302a480c504fd5634a3d9a8f8554b5269c4b.png)
