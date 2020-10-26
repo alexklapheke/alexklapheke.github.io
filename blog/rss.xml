@@ -5,7 +5,164 @@
 		<link>https://alexklapheke.github.io/</link>
 		<description></description>
 		<language>en-US</language>
-		<lastBuildDate>Thu, 22 Oct 2020 12:30:38 -0400</lastBuildDate>
+		<lastBuildDate>Mon, 26 Oct 2020 18:01:18 -0400</lastBuildDate>
+		<item>
+			<title>How to evaluate probabilities</title>
+			<link>https://alexklapheke.github.io/blog/publish/prob.md</link>
+			<pubDate>Mon, 26 Oct 2020 17:46:17 -0400</pubDate>
+	<description>
+&lt;style&gt;
+.c, .t { color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; font-size: 12px; font-family: Libertinus Mono; font-weight: bold; }
+.c { background: #727ecf; }
+.t { background: #e93834; }
+&lt;/style&gt;
+&lt;div class=&quot;epigraph&quot;&gt;
+&lt;p&gt;Oh! let us never, never doubt&lt;br /&gt;
+What nobody is sure about!&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The 2016 presidential election was an ignominious moment for pollsters, who overwhelmingly favored Clinton to the last, even as exit poll data belied their forecasts. Even &lt;em&gt;Five&#173;Thirty&#173;Eight&lt;/em&gt;, one of the &lt;a href=&quot;https://fivethirtyeight.com/features/trump-is-just-a-normal-polling-error-behind-clinton/&quot;&gt;most&lt;/a&gt; &lt;a href=&quot;https://fivethirtyeight.com/features/election-update-dont-ignore-the-polls-clinton-leads-but-its-a-close-race/&quot;&gt;generous&lt;/a&gt; toward Trump&#8217;s chances, gave him only 5 to 2 odds against.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;prob-538-header.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Of course, probabilities are &lt;a href=&quot;https://xkcd.com/2370/&quot;&gt;not&lt;/a&gt; certainties. If I assure you that a die has only a 17% chance of coming up 6 (which, if it&#8217;s fair, it does), you can&#8217;t call me a liar if you roll it once and get a 6. A presidential election is a massive, complex die roll that, for political reasons, can&#8217;t be repeated 10,000 times to generate a sampling distribution. In this light, it&#8217;s impossible to say whether &lt;em&gt;Five&#173;Thirty&#173;Eight&lt;/em&gt;&#8217;s probabilities were accurate or not&#8212;you would have to run the election many times in parallel universes, and see whether Trump was victorious in two out of every seven of them.&lt;/p&gt;
+&lt;p&gt;We can get some sense, though, by looking at the state-level predictions. This gives us 56 data points (50 states, Washington D.C., and the five independently awarded districts of &lt;a href=&quot;https://www.270towin.com/content/split-electoral-votes-maine-and-nebraska/&quot;&gt;Maine and Nebraska&lt;/a&gt;), which we can treat, roughly, as 56 separate races. In general, if the pollsters are accurate, Clinton should win about 20% of the races which they gave her a 20% chance of winning. It may seem like Trump should sweep these races&#8212;20% is low, after all. But giving a candidate 20% rather than 0% captures something about your certainty&#8212;about how surprised you&#8217;d be if she lost. For example, &lt;em&gt;Five&#173;Thirty&#173;Eight&lt;/em&gt; gave Clinton 0% in Alabama, but 20% in Georgia&#8212;and, indeed, Georgia saw a much closer race.&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; By binning together state-level predictions, we can gauge whether more or less certainty was warranted, and visualize the results with a &lt;em&gt;calibration plot&lt;/em&gt; (&lt;span class=&quot;citation&quot; data-cites=&quot;fig:538&quot;&gt;@fig:538&lt;/span&gt;).&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;prob-538.svg&quot; alt=&quot;Percent of state races won by probability projection (Maine and Nebraska are counted by individual district). Error bars show 95% confidence intervals. Source: Five&#173;Thirty&#173;Eight  &#160;Clinton win &#160;Trump win &#160;Gold standard &quot; id=&quot;fig:538&quot; /&gt;&lt;figcaption&gt;Percent of state races won by probability projection (Maine and Nebraska are counted by individual district). Error bars show 95% confidence intervals. Source: &lt;a href=&quot;https://projects.fivethirtyeight.com/2016-election-forecast/&quot;&gt;&lt;em&gt;Five&#173;Thirty&#173;Eight&lt;/em&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;svg width=&quot;20&quot; height=&quot;4&quot;&gt;&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;20&quot; y2=&quot;0&quot; stroke-width=&quot;4&quot; stroke=&quot;#727ecf&quot; /&gt;&lt;/svg&gt;&#160;Clinton win&lt;br /&gt;
+&lt;svg width=&quot;20&quot; height=&quot;4&quot;&gt;&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;20&quot; y2=&quot;0&quot; stroke-width=&quot;4&quot; stroke=&quot;#e93834&quot; /&gt;&lt;/svg&gt;&#160;Trump win&lt;br /&gt;
+&lt;svg width=&quot;20&quot; height=&quot;4&quot;&gt;&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;20&quot; y2=&quot;0&quot; stroke-width=&quot;4&quot; stroke=&quot;#e6ab02&quot; /&gt;&lt;/svg&gt;&#160;Gold standard&lt;br /&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;A line above the gold standard indicates underconfidence; below it, overconfidence. The error bars show 95% confidence intervals, which are fairly large toward the middle given the small sampling of states predicted to be swing states. Nonetheless, it is clear that Clinton was given overly favorable odds to win. &lt;em&gt;Five&#173;Thirty&#173;Eight&lt;/em&gt; computes its overall probabilities by running election simulations based on weighted aggregations of third-party polls. If they had just a little less credence in Clinton, and a little more in Trump, across the board, they might have given Trump much better odds.&lt;/p&gt;
+&lt;p&gt;Here&#8217;s the same data in tabular form:&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;Binned &lt;em&gt;Five&#173;Thirty&#173;Eight&lt;/em&gt; predictions. Hover over an abbreviation to see the full state or district name. {#tbl:538}&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th style=&quot;text-align: left;&quot;&gt;Clinton probability&lt;/th&gt;
+&lt;th&gt;Clinton won&lt;/th&gt;
+&lt;th style=&quot;text-align: left;&quot;&gt;States/districts&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;0&#8211;19%&lt;/td&gt;
+&lt;td&gt;0%&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;span class=&quot;t&quot; title=&quot;Alabama&quot;&gt;AL&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Arkansas&quot;&gt;AR&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Idaho&quot;&gt;ID&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Indiana&quot;&gt;IN&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Kansas&quot;&gt;KS&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Kentucky&quot;&gt;KY&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Louisiana&quot;&gt;LA&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Missouri&quot;&gt;MO&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Mississippi&quot;&gt;MS&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Montana&quot;&gt;MT&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;North Dakota&quot;&gt;ND&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Nebraska&quot;&gt;NE&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Nebraska, first district&quot;&gt;NE1&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Nebraska, third district&quot;&gt;NE3&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Oklahoma&quot;&gt;OK&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;South Carolina&quot;&gt;SC&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;South Dakota&quot;&gt;SD&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Tennessee&quot;&gt;TN&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Texas&quot;&gt;TX&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Utah&quot;&gt;UT&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;West Virginia&quot;&gt;WV&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Wyoming&quot;&gt;WY&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;20&#8211;39%&lt;/td&gt;
+&lt;td&gt;0%&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;span class=&quot;t&quot; title=&quot;Alaska&quot;&gt;AK&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Arizona&quot;&gt;AZ&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Georgia&quot;&gt;GA&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Iowa&quot;&gt;IA&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Ohio&quot;&gt;OH&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;40&#8211;59%&lt;/td&gt;
+&lt;td&gt;20%&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;span class=&quot;t&quot; title=&quot;Florida&quot;&gt;FL&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Maine, second district&quot;&gt;ME2&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;North Carolina&quot;&gt;NC&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Nebraska, second district&quot;&gt;NE2&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Nevada&quot;&gt;NV&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;60&#8211;79%&lt;/td&gt;
+&lt;td&gt;50%&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;span class=&quot;c&quot; title=&quot;Colorado&quot;&gt;CO&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Michigan&quot;&gt;MI&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;New Hampshire&quot;&gt;NH&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Pennsylvania&quot;&gt;PA&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;80&#8211;100%&lt;/td&gt;
+&lt;td&gt;95%&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;span class=&quot;c&quot; title=&quot;California&quot;&gt;CA&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Connecticut&quot;&gt;CT&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;District of Columbia&quot;&gt;DC&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Delaware&quot;&gt;DE&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Hawaii&quot;&gt;HI&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Illinois&quot;&gt;IL&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Massachusetts&quot;&gt;MA&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Maryland&quot;&gt;MD&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Maine&quot;&gt;ME&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Maine, first district&quot;&gt;ME1&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Minnesota&quot;&gt;MN&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;New Jersey&quot;&gt;NJ&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;New Mexico&quot;&gt;NM&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;New York&quot;&gt;NY&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Oregon&quot;&gt;OR&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Rhode Island&quot;&gt;RI&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Virginia&quot;&gt;VA&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Vermont&quot;&gt;VT&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Washington&quot;&gt;WA&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Wisconsin&quot;&gt;WI&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;States with probabilities below 20% or above 80% were won unanimously, except Wisconsin, where Clinton was given an 83.5% chance of winning, but which she ended up losing by a three-quarter-point margin. This may seem like a glaring blunder, but remember: these are probabilities. Clinton won 95% of these states, which is pretty close to the stated uncertainty. It is entirely possible that if the election were run many times, Clinton would indeed win Wisconsin 5 out of 6 times. The real trouble comes in the 0&#8211;59% range: for instance, in the five polities in which Clinton was given between a 40 and 59% chance, she won only one of the five&#8212;20%. In these areas, &lt;em&gt;Five&#173;Thirty&#173;Eight&lt;/em&gt; was &lt;em&gt;underconfident&lt;/em&gt; in Trump.&lt;/p&gt;
+&lt;p&gt;As mentioned above, these probabilities come from polling data. An idealized version is shown in &lt;span class=&quot;citation&quot; data-cites=&quot;fig:normal&quot;&gt;@fig:normal&lt;/span&gt;: given a population of 100,000 voters, in which 55% intend to vote for Clinton, you can take 10 polls of 25 people and get different results each time.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;prob-poll-normal.svg&quot; alt=&quot;Left: results of ten perfectly random polls of a population of 100,000 in which 55% are Clinton voters. Right: a possible extrapolation of poll results to a sampling distribution.&quot; id=&quot;fig:normal&quot; /&gt;&lt;figcaption&gt;Left: results of ten perfectly random polls of a population of 100,000 in which 55% are Clinton voters.&lt;a href=&quot;#fn2&quot; class=&quot;footnote-ref&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; Right: a possible extrapolation of poll results to a sampling distribution.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;!-- ```python --&gt;
+&lt;!-- # Generate population to sample from (0=Trump, 1=Clinton) --&gt;
+&lt;!-- pop = np.random.binomial(n=1, p=0.55, size=100_000) --&gt;
+&lt;!--  --&gt;
+&lt;!-- # Draw 10 samples of size 100 --&gt;
+&lt;!-- samples = [np.random.choice(pop, size=25, replace=False).mean() for _ in range(10)] --&gt;
+&lt;!-- ``` --&gt;
+&lt;p&gt;If we kept drawing perfectly random samples from this population, we &lt;a href=&quot;https://en.wikipedia.org/wiki/Central_limit_theorem&quot;&gt;would end up&lt;/a&gt; in the limit with a normal distribution, whose mean was the population mean. One way to predict the results of the election&#8212;itself a poll like any other&#8212;would be to randomly draw them from the area under this bell curve. This gives Clinton an 84% chance and Trump a 16% chance (actually a gross overestimate, as the voting population would be much larger than 25).&lt;/p&gt;
+&lt;p&gt;Of course, no poll can achieve a perfectly random sample. For various reasons, errors will creep in, and shift the results of &lt;em&gt;every&lt;/em&gt; poll one way or the other; per &lt;a href=&quot;https://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/&quot;&gt;Nate Silver&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[P]olling errors are correlated. No matter how many polls you have in a state, it&#8217;s often the case that all or most of them miss in the same direction. Furthermore, if the polls miss in one direction in one state, they often also miss in the same direction in other states, especially if those states are similar demographically.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Technically, then, since these are not independent probabilities, &lt;span class=&quot;citation&quot; data-cites=&quot;fig:538&quot;&gt;@fig:538&lt;/span&gt; is technically a little unfair to &lt;em&gt;Five&#173;Thirty&#173;Eight&lt;/em&gt;.&lt;a href=&quot;#fn3&quot; class=&quot;footnote-ref&quot; id=&quot;fnref3&quot;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; The errors inherent in methods of the polls they used compounded on them, and threw off their probability calculations.&lt;/p&gt;
+&lt;p&gt;So as not to pick on &lt;em&gt;Five&#173;Thirty&#173;Eight&lt;/em&gt; too much, let&#8217;s look at what the &lt;em&gt;New York Times&lt;/em&gt; predicted, as a calibration plot:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;prob-NYT.svg&quot; alt=&quot;Percent of state races won by probability projection (Maine and Nebraska are counted by individual district). Error bars show 95% confidence intervals. Source: The New York Times  &#160;Clinton win &#160;Trump win &#160;Gold standard &quot; id=&quot;fig:nyt&quot; /&gt;&lt;figcaption&gt;Percent of state races won by probability projection (Maine and Nebraska are counted by individual district). Error bars show 95% confidence intervals. Source: &lt;a href=&quot;https://www.nytimes.com/interactive/2016/upshot/presidential-polls-forecast.html&quot;&gt;&lt;em&gt;The New York Times&lt;/em&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;svg width=&quot;20&quot; height=&quot;4&quot;&gt;&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;20&quot; y2=&quot;0&quot; stroke-width=&quot;4&quot; stroke=&quot;#727ecf&quot; /&gt;&lt;/svg&gt;&#160;Clinton win&lt;br /&gt;
+&lt;svg width=&quot;20&quot; height=&quot;4&quot;&gt;&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;20&quot; y2=&quot;0&quot; stroke-width=&quot;4&quot; stroke=&quot;#e93834&quot; /&gt;&lt;/svg&gt;&#160;Trump win&lt;br /&gt;
+&lt;svg width=&quot;20&quot; height=&quot;4&quot;&gt;&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;20&quot; y2=&quot;0&quot; stroke-width=&quot;4&quot; stroke=&quot;#e6ab02&quot; /&gt;&lt;/svg&gt;&#160;Gold standard&lt;br /&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;and as a table:&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;Binned &lt;em&gt;New York Times&lt;/em&gt; predictions. Hover over an abbreviation to see the full state or district name. {#tbl:nyt}&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th style=&quot;text-align: left;&quot;&gt;Clinton probability&lt;/th&gt;
+&lt;th&gt;Clinton won&lt;/th&gt;
+&lt;th style=&quot;text-align: left;&quot;&gt;States/districts&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;0&#8211;19%&lt;/td&gt;
+&lt;td&gt;0%&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;span class=&quot;t&quot; title=&quot;Alaska&quot;&gt;AK&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Alabama&quot;&gt;AL&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Arkansas&quot;&gt;AR&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Arizona&quot;&gt;AZ&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Georgia&quot;&gt;GA&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Idaho&quot;&gt;ID&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Indiana&quot;&gt;IN&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Kansas&quot;&gt;KS&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Kentucky&quot;&gt;KY&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Louisiana&quot;&gt;LA&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Missouri&quot;&gt;MO&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Mississippi&quot;&gt;MS&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Montana&quot;&gt;MT&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;North Dakota&quot;&gt;ND&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Nebraska&quot;&gt;NE&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Nebraska, first district&quot;&gt;NE1&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Nebraska, second district&quot;&gt;NE2&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Nebraska, third district&quot;&gt;NE3&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Oklahoma&quot;&gt;OK&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;South Carolina&quot;&gt;SC&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;South Dakota&quot;&gt;SD&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Tennessee&quot;&gt;TN&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Texas&quot;&gt;TX&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;West Virginia&quot;&gt;WV&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Wyoming&quot;&gt;WY&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;20&#8211;39%&lt;/td&gt;
+&lt;td&gt;0%&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;span class=&quot;t&quot; title=&quot;Iowa&quot;&gt;IA&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Maine, second district&quot;&gt;ME2&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;North Carolina&quot;&gt;NC&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Utah&quot;&gt;UT&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;40&#8211;59%&lt;/td&gt;
+&lt;td&gt;0%&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;span class=&quot;t&quot; title=&quot;Ohio&quot;&gt;OH&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;60&#8211;79%&lt;/td&gt;
+&lt;td&gt;67%&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;span class=&quot;t&quot; title=&quot;Florida&quot;&gt;FL&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;New Hampshire&quot;&gt;NH&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Nevada&quot;&gt;NV&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;80&#8211;100%&lt;/td&gt;
+&lt;td&gt;87%&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;span class=&quot;c&quot; title=&quot;California&quot;&gt;CA&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Colorado&quot;&gt;CO&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Connecticut&quot;&gt;CT&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;District of Columbia&quot;&gt;DC&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Delaware&quot;&gt;DE&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Hawaii&quot;&gt;HI&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Illinois&quot;&gt;IL&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Massachusetts&quot;&gt;MA&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Maryland&quot;&gt;MD&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Maine&quot;&gt;ME&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Maine, first district&quot;&gt;ME1&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Michigan&quot;&gt;MI&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Minnesota&quot;&gt;MN&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;New Jersey&quot;&gt;NJ&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;New Mexico&quot;&gt;NM&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;New York&quot;&gt;NY&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Oregon&quot;&gt;OR&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Pennsylvania&quot;&gt;PA&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Rhode Island&quot;&gt;RI&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Virginia&quot;&gt;VA&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Vermont&quot;&gt;VT&lt;/span&gt; &lt;span class=&quot;c&quot; title=&quot;Washington&quot;&gt;WA&lt;/span&gt; &lt;span class=&quot;t&quot; title=&quot;Wisconsin&quot;&gt;WI&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We see the same pattern here as with &lt;em&gt;Five&#173;Thirty&#173;Eight&lt;/em&gt;. The &lt;em&gt;Times&lt;/em&gt; was right on the mark in assigning probabilities to Clinton above 60%. It erred in giving her odds too generous below that mark&#8212;Clinton lost each of the thirty polities in which the &lt;em&gt;Times&lt;/em&gt; gave her up to a 60% chance of winning, where realistically, at these levels, she should have snagged a few. The problem was not a failure to predict the pivots of the historically blue&lt;a href=&quot;#fn4&quot; class=&quot;footnote-ref&quot; id=&quot;fnref4&quot;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; Michigan and Wisconsin, but a gross overestimate of Clinton&#8217;s chances in states like North Carolina and Utah.&lt;/p&gt;
+&lt;p&gt;The main thing communicated by probabilities is information about certainty and uncertainty. If the weather app shows a 10% chance of rain, and it rains anyway, whether the app was &lt;em&gt;wrong&lt;/em&gt; depends on how often it rains given such a forecast. If it is more than one in ten times, you might want to start bringing an umbrella.&lt;/p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;To wit: &lt;img src=&quot;prob-al-ga.svg&quot; /&gt;&lt;a href=&quot;#fnref1&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn2&quot;&gt;&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode python&quot;&gt;&lt;code class=&quot;sourceCode python&quot;&gt;&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-1&quot; title=&quot;1&quot;&gt;&lt;span class=&quot;co&quot;&gt;# Population to sample&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-2&quot; title=&quot;2&quot;&gt;&lt;span class=&quot;co&quot;&gt;# (0=Trump, 1=Clinton)&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-3&quot; title=&quot;3&quot;&gt;pop &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; np.random.binomial(&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-4&quot; title=&quot;4&quot;&gt;        n&lt;span class=&quot;op&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;, p&lt;span class=&quot;op&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;fl&quot;&gt;0.55&lt;/span&gt;,&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-5&quot; title=&quot;5&quot;&gt;        size&lt;span class=&quot;op&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;100&lt;/span&gt;_000)&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-6&quot; title=&quot;6&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-7&quot; title=&quot;7&quot;&gt;&lt;span class=&quot;co&quot;&gt;# Draw 10 samples of 25&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-8&quot; title=&quot;8&quot;&gt;polls &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; [&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-9&quot; title=&quot;9&quot;&gt;    np.random.choice(&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-10&quot; title=&quot;10&quot;&gt;            pop, size&lt;span class=&quot;op&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;25&lt;/span&gt;,&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-11&quot; title=&quot;11&quot;&gt;            replace&lt;span class=&quot;op&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;va&quot;&gt;False&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-12&quot; title=&quot;12&quot;&gt;        ).mean()&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-13&quot; title=&quot;13&quot;&gt;    &lt;span class=&quot;cf&quot;&gt;for&lt;/span&gt; _ &lt;span class=&quot;kw&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;bu&quot;&gt;range&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;10&lt;/span&gt;)&lt;/a&gt;
+&lt;a class=&quot;sourceLine&quot; id=&quot;cb1-14&quot; title=&quot;14&quot;&gt;]&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;a href=&quot;#fnref2&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;fn3&quot;&gt;&lt;p&gt;It also technically double-counts the probabilities in Maine and Nebraska, in which the statewide predictions are based on the district predictions.&lt;a href=&quot;#fnref3&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn4&quot;&gt;&lt;p&gt;Well, since &#8217;92&lt;a href=&quot;#fnref4&quot; class=&quot;footnote-back&quot;&gt;&#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+	</description>
+		</item>
 		<item>
 			<title>Useful shell scripts</title>
 			<link>https://alexklapheke.github.io/blog/publish/bash.md</link>

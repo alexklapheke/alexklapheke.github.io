@@ -188,7 +188,7 @@ As the histogram in @fig:length shows, these go well beyond gusty
 descriptions like our "poached farmed Norwegian salmon"---the longest,
 from first class on a [1993 Virgin Atlantic
 flight](http://menus.nypl.org/menus/29358), reads with the paragraph
-breaks removed like a deranged Basil Fawlty:
+breaks removed like a deranged Basil Fawlty monologue:
 
 > Afternoon Tea- A Great British Tradition- Tea, the most universally
 > consumed of all drinks, is especially popular in Britain where the
@@ -436,7 +436,8 @@ sample_size = df.groupby("decade")["name"].count().sort_values().iloc[1]
 The results are more promising: 52.7% train and 21.7% test accuracy.
 Another consideration is that, since our classes are ordinal, even when
 the model is wrong, it may only be wrong by a decade or two. We can
-check this by defining a "fuzzy accuracy" score, and seeing how
+check this by defining a "fuzzy accuracy" score, which counts a
+prediction as accurate if it is within a given tolerance.
 
 ``` {.python}
 def fuzzy_accuracy(y_true, y_pred, tolerance):

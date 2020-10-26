@@ -4,12 +4,6 @@ title: Instant runoff voting
 ---
 
 <style>
-/* .dem { background: #727ecf; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; }
-.rep { background: #e93834; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; }
-.ind { background: #d67c00; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; }
-.prg { background: #c55faf; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; }
-.grn { background: #76a254; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; }
-.wtn { background: #666666; color: #ffffff; padding: 0.5pt 2pt; border-radius: 3pt; } */
 .dem { text-decoration: underline 2px #727ecf; }
 .rep { text-decoration: underline 2px #e93834; }
 .ind { text-decoration: underline 2px #d67c00; }

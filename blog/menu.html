@@ -131,7 +131,7 @@ code span.wa { color: #bf0303; } /* Warning */
 		<p>
 			<time datetime="2020-07-03T18:11:59-0400" class="published">Friday, July 3, 2020</time>
 			<span class="bullet">&bull;</span>
-			<span class="wordcount">2,584 words</span>
+			<span class="wordcount">2,595 words</span>
 			<span class="bullet">&bull;</span>
 			<span class="license"><abbr title="Licensed under Creative Commons Attribution 4.0"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></abbr></span>
 			<span class="bullet">&bull;</span>
@@ -241,7 +241,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <figure>
 <object data="images/d19c350830bce586580d3cae3af853c809024b5f.svg" alt="Figure 4: Character length of menu items (log10 scale)" id="fig:length" ><img src="images/d19c350830bce586580d3cae3af853c809024b5f.svg" alt="Figure 4: Character length of menu items (log10 scale)" id="fig:length" /></object><figcaption>Figure 4: Character length of menu items (log<sub>10</sub> scale)</figcaption>
 </figure>
-<p>As the histogram in fig.&#160;4 shows, these go well beyond gusty descriptions like our &#8220;poached farmed Norwegian salmon&#8221;&#8212;the longest, from first class on a <a href="http://menus.nypl.org/menus/29358">1993 Virgin Atlantic flight</a>, reads with the paragraph breaks removed like a deranged Basil Fawlty:</p>
+<p>As the histogram in fig.&#160;4 shows, these go well beyond gusty descriptions like our &#8220;poached farmed Norwegian salmon&#8221;&#8212;the longest, from first class on a <a href="http://menus.nypl.org/menus/29358">1993 Virgin Atlantic flight</a>, reads with the paragraph breaks removed like a deranged Basil Fawlty monologue:</p>
 <blockquote>
 <p>Afternoon Tea- A Great British Tradition- Tea, the most universally consumed of all drinks, is especially popular in Britain where the annual consumption is something in the region of 512 million cups. W. E. Gladstone observed &#8220;If you are cold, tea will warm you- if you are heated, it will cool you- if you are depressed, it will cheer you- if you are excited, it will calm you.&#8221; First brought to England c. 1559 by Giambattista Rusmusio, tea did not evolve into an afternoon meal until the end of the 18th century. Anna, Duchess of Bedford, invented afternoon tea to fill the long gap between early lunch and dinner which bored many house parties. It became a meal surrounded by etiquette and customs, delicate china, silver, cake stands and doilies- a time when friend and family meet. Famous tea parties include Mad Hatter&#8217;s (Alice&#8217;s Adventures in Wonderland by Lewis Carroll 1865), the Boston Tea Party, 1773, and not forgetting HM Queen Elizabeth II&#8217;s annual garden parties at Buckingham Palace. The Duke of Wellington declared that &#8220;Tea cleared my head and left no misapprehensions.&#8221; He was right- tea contains small amounts of two B vitamins, and has no calories, artificial flavourings or colourings. It is said to cure gout, apoplexy, epilepsy, gall stones and sleepiness, and one&#8217;s longevity is assured. &#8220;Thank God for Tea! What would the world do without tea?&#8221;- Sydney Smith</p>
 </blockquote>
@@ -365,7 +365,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <a class="sourceLine" id="cb10-2" title="2">bayes.score(X_test_vec.toarray(), y_test)</a></code></pre></div>
 <p>The results are pretty disappointing: 77.5% train accuracy and 17.6% test accuracy mean that the model arbitrarily latched onto some words that weren&#8217;t really indicative of their decades. This is due to our miserliness with the data: the model was only allowed to see 0.2% of the menu items. We can fix this by taking the second-lowest class rather than the lowest. This will give us <em>mostly</em> balanced classes, but with fewer in the 1870s, to which only 174 menus are dated.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb11-1" title="1">sample_size <span class="op">=</span> df.groupby(<span class="st">&quot;decade&quot;</span>)[<span class="st">&quot;name&quot;</span>].count().sort_values().iloc[<span class="dv">1</span>]</a></code></pre></div>
-<p>The results are more promising: 52.7% train and 21.7% test accuracy. Another consideration is that, since our classes are ordinal, even when the model is wrong, it may only be wrong by a decade or two. We can check this by defining a &#8220;fuzzy accuracy&#8221; score, and seeing how</p>
+<p>The results are more promising: 52.7% train and 21.7% test accuracy. Another consideration is that, since our classes are ordinal, even when the model is wrong, it may only be wrong by a decade or two. We can check this by defining a &#8220;fuzzy accuracy&#8221; score, which counts a prediction as accurate if it is within a given tolerance.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">def</span> fuzzy_accuracy(y_true, y_pred, tolerance):</a>
 <a class="sourceLine" id="cb12-2" title="2">    <span class="cf">return</span> np.mean(np.<span class="bu">abs</span>(y_true <span class="op">-</span> y_pred) <span class="op">&lt;=</span> tolerance)</a>
 <a class="sourceLine" id="cb12-3" title="3"></a>
