@@ -183,7 +183,7 @@ more than one in ten times, that's when you might want to change
 apps---or start bringing an umbrella.
 
 [^1]: To wit, excluding third parties:
-    ![](images/e78451237bcf3f681c68cf99b86d8df9b821c6d1.svg)
+    ![](images/7c7eb48455e5435befd0b1e7bd38ee434ae84b92.svg)
 
 [^2]: ``` {.python}
     # Population to sample

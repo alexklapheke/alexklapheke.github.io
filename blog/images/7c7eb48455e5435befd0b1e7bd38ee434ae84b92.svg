@@ -1,0 +1,47 @@
+<svg height="79.2" viewBox="0 0 143.3 59.4" width="191.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 59.4h143.3V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M24.5 34.4h111.6V7.2H24.5z" fill="none" id="patch_2"/>
+            <path clip-path="url(#p83f56cfc92)" d="M24.5 31.7h50.3v-11H24.5z" fill="#727ecf" stroke="#fff" id="patch_3"/>
+            <path clip-path="url(#p83f56cfc92)" d="M24.5 20.8h37.9V9.9H24.5z" fill="#727ecf" stroke="#fff" id="patch_4"/>
+            <path clip-path="url(#p83f56cfc92)" d="M74.8 31.7h56v-11h-56z" fill="#e93834" stroke="#fff" id="patch_5"/>
+            <path clip-path="url(#p83f56cfc92)" d="M62.4 20.8h68.4V9.9H62.4z" fill="#e93834" stroke="#fff" id="patch_6"/>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <g id="line2d_1">
+                        <defs>
+                            <path d="M0 0v3.5" id="m63ff36c868" stroke="gray" stroke-width=".8"/>
+                        </defs>
+                        <use x="79.6" xlink:href="#m63ff36c868" y="34.4" fill="gray" stroke="gray" stroke-width=".8"/>
+                    </g>
+                    <text x="79.6" y="49.9" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        50%
+                    </text>
+                </g>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="21" y="29.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_2">
+                        GA
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="21" y="18.8" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_3">
+                        AL
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="p83f56cfc92">
+            <path d="M24.5 7.2h111.6v27.2H24.5z"/>
+        </clipPath>
+    </defs>
+</svg>
