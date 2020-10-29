@@ -41,9 +41,12 @@ pollsters are accurate, Clinton should win about 20% of the races which
 they gave her a 20% chance of winning. It may seem like Trump should
 sweep these races---20% is low, after all. But giving a candidate 20%
 rather than 0% captures something about your certainty---about how
-surprised you'd be if she lost. For example, *Five­Thirty­Eight* gave
-Clinton 0% in Alabama, but 20% in Georgia---and, indeed, Georgia saw a
-much closer race.[^1] By binning together state-level predictions, we
+surprised you'd be if the candidate won. For example,
+*Five­Thirty­Eight* gave Clinton 0% in Alabama, but 20% in
+Georgia---and, indeed, Georgia saw a much closer race.[^1] Our
+intuitions should bear this out: if Clinton had won Georgia, it would be
+an upset; if she had won Alabama, it would be a refactoring of American
+politics as we know it. By binning together state-level predictions, we
 can gauge whether more or less certainty was warranted, and visualize
 the results with a *calibration plot* (@fig:538).
 
@@ -58,7 +61,7 @@ win\
 win\
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#e6ab02" /></svg> Gold
 standard\
-](images/9579cc10f0c76902df505eced97dbf774c122802.svg){#fig:538}
+](images/b6969e272a983223da2528fb2520b7fe50611157.svg){#fig:538}
 
 A line above the gold standard indicates underconfidence; below it,
 overconfidence. The error bars show 95% confidence intervals, which are
@@ -103,7 +106,7 @@ of 25 people and get different results each time.
 ![Left: results of ten perfectly random polls of a population of 100,000
 in which 55% are Clinton voters.[^2] Right: a possible extrapolation of
 poll results to a sampling
-distribution.](images/a009b3da2683ff43169a064cb3442f860af25771.svg){#fig:normal}
+distribution.](images/5c16af09d1f49c97524c29e0278e3f6d37b09a9e.svg){#fig:normal}
 
 If we kept drawing perfectly random samples from this population, we
 [would end up](https://en.wikipedia.org/wiki/Central_limit_theorem) in
@@ -147,7 +150,7 @@ win\
 win\
 <svg width="20" height="4"><line x1="0" y1="0" x2="20" y2="0" stroke-width="4" stroke="#e6ab02" /></svg> Gold
 standard\
-](images/a231a71d9108bb7ed08c0cf1d24366bba58db619.svg){#fig:nyt}
+](images/b5abf744ecd7f42fc8fb94598b73c1fbc00175b6.svg){#fig:nyt}
 
 and as a table:
 
@@ -179,7 +182,8 @@ and it rains anyway, you might be irritated, but whether the app was
 more than one in ten times, that's when you might want to change
 apps---or start bringing an umbrella.
 
-[^1]: To wit: ![](images/4a38b813a20c39cee3e753bcc4e951837fd4a421.svg)
+[^1]: To wit, excluding third parties:
+    ![](images/e78451237bcf3f681c68cf99b86d8df9b821c6d1.svg)
 
 [^2]: ``` {.python}
     # Population to sample

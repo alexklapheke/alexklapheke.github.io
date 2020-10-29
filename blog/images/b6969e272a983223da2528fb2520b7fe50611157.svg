@@ -1,0 +1,150 @@
+<svg height="353.2" viewBox="0 0 390.5 264.9" width="520.7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <style>
+            *{stroke-linecap:butt;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="figure_1">
+        <path d="M0 264.9h390.5V0H0z" fill="none" id="patch_1"/>
+        <g id="axes_1">
+            <path d="M46.2 224.6H381V7.2H46.2z" fill="none" id="patch_2"/>
+            <g id="PathCollection_1">
+                <defs>
+                    <path d="M0 2.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" id="me8df04bf71" stroke="#727ecf"/>
+                </defs>
+                <g clip-path="url(#p524005bc4e)" fill="#727ecf" stroke="#727ecf">
+                    <use x="61.4" xlink:href="#me8df04bf71" y="214.8"/>
+                    <use x="137.5" xlink:href="#me8df04bf71" y="214.8"/>
+                    <use x="213.6" xlink:href="#me8df04bf71" y="175.2"/>
+                    <use x="289.7" xlink:href="#me8df04bf71" y="115.9"/>
+                    <use x="365.8" xlink:href="#me8df04bf71" y="27"/>
+                </g>
+            </g>
+            <g id="PathCollection_2">
+                <defs>
+                    <path d="M0 2.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" id="mefc1c28858" stroke="#e93834"/>
+                </defs>
+                <g clip-path="url(#p524005bc4e)" fill="#e93834" stroke="#e93834">
+                    <use x="61.4" xlink:href="#mefc1c28858" y="204.9"/>
+                    <use x="137.5" xlink:href="#mefc1c28858" y="115.9"/>
+                    <use x="213.6" xlink:href="#mefc1c28858" y="56.6"/>
+                    <use x="289.7" xlink:href="#mefc1c28858" y="17.1"/>
+                    <use x="365.8" xlink:href="#mefc1c28858" y="17.1"/>
+                </g>
+            </g>
+            <g id="matplotlib.axis_1">
+                <g id="xtick_1">
+                    <text x="61.4" y="240.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_1">
+                        0–19%
+                    </text>
+                </g>
+                <g id="xtick_2">
+                    <text x="137.5" y="240.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_2">
+                        20–39%
+                    </text>
+                </g>
+                <g id="xtick_3">
+                    <text x="213.6" y="240.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_3">
+                        40–59%
+                    </text>
+                </g>
+                <g id="xtick_4">
+                    <text x="289.7" y="240.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_4">
+                        60–79%
+                    </text>
+                </g>
+                <g id="xtick_5">
+                    <text x="365.8" y="240.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="middle" id="text_5">
+                        80–100%
+                    </text>
+                </g>
+                <text x="213.6" y="254.8" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_6">
+                    Projected probability of candidate winning
+                </text>
+            </g>
+            <g id="matplotlib.axis_2">
+                <g id="ytick_1">
+                    <text x="42.7" y="218.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_7">
+                        0%
+                    </text>
+                </g>
+                <g id="ytick_2">
+                    <text x="42.7" y="178.7" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_8">
+                        20%
+                    </text>
+                </g>
+                <g id="ytick_3">
+                    <text x="42.7" y="139.2" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_9">
+                        40%
+                    </text>
+                </g>
+                <g id="ytick_4">
+                    <text x="42.7" y="99.6" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_10">
+                        60%
+                    </text>
+                </g>
+                <g id="ytick_5">
+                    <text x="42.7" y="60.1" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_11">
+                        80%
+                    </text>
+                </g>
+                <g id="ytick_6">
+                    <text x="42.7" y="20.6" fill="gray" font-family="Linux Libertine O" font-size="10" font-weight="400" text-anchor="end" id="text_12">
+                        100%
+                    </text>
+                </g>
+                <text transform="rotate(-90 15.6 116)" x="15.6" y="115.9" font-family="Linux Libertine O" font-size="12" font-weight="400" text-anchor="middle" id="text_13">
+                    Percent of such states candidate won
+                </text>
+            </g>
+            <path clip-path="url(#p524005bc4e)" d="M61.4 214.8h0m76.1 0h0m76.1-4.9v-69.3m76.1 31.2V60m76.1-28.7v-8.7" id="LineCollection_1" fill="none" stroke="#727ecf" stroke-opacity=".3" stroke-width="1.5"/>
+            <path clip-path="url(#p524005bc4e)" d="M61.4 209.2v-8.7m76.1-28.7V60m76.1 31.3V22m76.1-5h0m76.1 0h0" id="LineCollection_2" fill="none" stroke="#e93834" stroke-opacity=".3" stroke-width="1.5"/>
+            <path clip-path="url(#p524005bc4e)" d="M61.4 214.8h76.1l76.1-39.6 76.1-59.3 76-89" fill="none" stroke="#727ecf" stroke-linecap="square" stroke-width="1.5" id="line2d_1"/>
+            <g id="line2d_2">
+                <defs>
+                    <path d="M6 0H-6" id="m44c9ac9534" stroke="#727ecf" stroke-opacity=".3"/>
+                </defs>
+                <g clip-path="url(#p524005bc4e)" fill="#727ecf" fill-opacity=".3" stroke="#727ecf" stroke-opacity=".3">
+                    <use x="61.4" xlink:href="#m44c9ac9534" y="214.8"/>
+                    <use x="137.5" xlink:href="#m44c9ac9534" y="214.8"/>
+                    <use x="213.6" xlink:href="#m44c9ac9534" y="209.9"/>
+                    <use x="289.7" xlink:href="#m44c9ac9534" y="171.8"/>
+                    <use x="365.8" xlink:href="#m44c9ac9534" y="31.3"/>
+                </g>
+            </g>
+            <g clip-path="url(#p524005bc4e)" fill="#727ecf" fill-opacity=".3" stroke="#727ecf" stroke-opacity=".3" id="line2d_3">
+                <use x="61.4" xlink:href="#m44c9ac9534" y="214.8"/>
+                <use x="137.5" xlink:href="#m44c9ac9534" y="214.8"/>
+                <use x="213.6" xlink:href="#m44c9ac9534" y="140.6"/>
+                <use x="289.7" xlink:href="#m44c9ac9534" y="60"/>
+                <use x="365.8" xlink:href="#m44c9ac9534" y="22.6"/>
+            </g>
+            <path clip-path="url(#p524005bc4e)" d="M61.4 204.9l76.1-89 76.1-59.3 76.1-39.5h76" fill="none" stroke="#e93834" stroke-linecap="square" stroke-width="1.5" id="line2d_4"/>
+            <g id="line2d_5">
+                <defs>
+                    <path d="M6 0H-6" id="mffa24823ea" stroke="#e93834" stroke-opacity=".3"/>
+                </defs>
+                <g clip-path="url(#p524005bc4e)" fill="#e93834" fill-opacity=".3" stroke="#e93834" stroke-opacity=".3">
+                    <use x="61.4" xlink:href="#mffa24823ea" y="209.2"/>
+                    <use x="137.5" xlink:href="#mffa24823ea" y="171.8"/>
+                    <use x="213.6" xlink:href="#mffa24823ea" y="91.3"/>
+                    <use x="289.7" xlink:href="#mffa24823ea" y="17.1"/>
+                    <use x="365.8" xlink:href="#mffa24823ea" y="17.1"/>
+                </g>
+            </g>
+            <g clip-path="url(#p524005bc4e)" fill="#e93834" fill-opacity=".3" stroke="#e93834" stroke-opacity=".3" id="line2d_6">
+                <use x="61.4" xlink:href="#mffa24823ea" y="200.5"/>
+                <use x="137.5" xlink:href="#mffa24823ea" y="60"/>
+                <use x="213.6" xlink:href="#mffa24823ea" y="22"/>
+                <use x="289.7" xlink:href="#mffa24823ea" y="17.1"/>
+                <use x="365.8" xlink:href="#mffa24823ea" y="17.1"/>
+            </g>
+            <path clip-path="url(#p524005bc4e)" d="M61.4 214.8L365.8 17" fill="none" stroke="#e6ab02" stroke-linecap="square" stroke-width="1.5" id="line2d_7"/>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="p524005bc4e">
+            <path d="M46.2 7.2H381v217.4H46.2z"/>
+        </clipPath>
+    </defs>
+</svg>
