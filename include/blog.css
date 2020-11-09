@@ -150,6 +150,11 @@ article p, article li, article dd, article figcaption, article caption {
 	line-height: 1.25em;
 }
 
+.line-block {
+	line-height: 1.25em;
+	margin: 14px 0px;
+}
+
 /* https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/ */
 sup, sub {
 	vertical-align: baseline;
